@@ -13,10 +13,17 @@ what if kulang ung balance pag nag auto add ung subscription? is it okay negativ
 
 =============================================================================================================
 
+dashboard
+- recent transaction
+ + appearance and limit
+
 expense log???
 - itsura
 - deleting of records
 - reusability?? Sa Dashboard and sa Group Expense
+- bars to include subscription list as well???
+
+implement mga LOGO and other logo variants sa buong website
 
 mga icons:
 - profile icons
@@ -26,16 +33,13 @@ nav bar mechanism if a user is logged in or not
 - link ng user profile and nav bar profile sa database and icons
 - more info sa profile pic icon nav bar (e.g., usernamem, firstName, lastName)
 
+system settings and overspending alarm
+
 edit/set balance functionality??
 
 Input Validators
 - proper case first and last name input
 - strong passwords
-
-account setting functionality
-- mysql query to perform to update for data?
-- checks for duplicate username & email
-- password re-type validation
 
 Audit Log
 - Admin User: audit log accessible only to admin user system
@@ -56,8 +60,6 @@ Goal setting
 Statistics page
 - mechanism?
 - link sa database e.g., how to search expenses that are within 7 days ago
-
-
 
 === Other concerns ===
 
@@ -80,4 +82,3 @@ pwa manifest file??
 - Multiple Wallet
 - Messaging (for sharing)
 - Timezones
-- Panel for adding back Balance if Expense is deleted
