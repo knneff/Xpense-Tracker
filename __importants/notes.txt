@@ -1,3 +1,6 @@
+mysql --user avnadmin --password=AVNS_f8o7HWTkd-96oSm9STx --host mysql-6ef4ff5-xadd852x-362b.j.aivencloud.com --port 16921
+
+
 // use two conditions  if add expense is in your page
 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['addExpense']))
 
