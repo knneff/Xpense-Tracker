@@ -3,7 +3,7 @@
 $routes = [
     //mga page na di required ng user login
     "/" => __DIR__ . "/controllers/home.php",
-    "/signup" => __DIR__ . "/controllers/SignUp.php",
+    "/signup" => __DIR__ . "/controllers/signup.php",
     "/changepassword" => __DIR__ . "/controllers/forgot.php",
     "/login" => __DIR__ . "/controllers/login.php",
     "/logout" => __DIR__ . "/controllers/logout.php",
@@ -11,9 +11,9 @@ $routes = [
     //mga page na accessible lang kapag may nakalog-in
     "/dashboard" => __DIR__ . "/controllers/dashboard.php",
     "/usersettings" => __DIR__ . "/controllers/userSettings.php",
-    "/shared" => __DIR__ . "/controllers/expense-sharing-group.php",
+    "/shared" => __DIR__ . "/controllers/sharedExpense.php",
     "/goal" => __DIR__ . "/controllers/goal.php",
-    "/expenselog" => __DIR__ . "/controllers/expenselog.php",
+    "/expenselog" => __DIR__ . "/controllers/expenseLog.php",
     "/subscriptionList" => __DIR__ . "/controllers/subscriptionList.php",
     "/audit" => __DIR__ . "/controllers/audit.php",
     "/settings" => __DIR__ . "/controllers/settings.php",
