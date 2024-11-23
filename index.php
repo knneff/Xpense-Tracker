@@ -7,5 +7,4 @@
 
 require('Database.php'); //dito naka-setup yung PHP PDO Connection natin
 require('functions.php'); //dito naka-lagay yung mga useful functions sa website natin
-require('subscription.php');
 require('router.php'); //ito yung nag-ro-route sa iba-ibang page kaya important na last line ito kasi ma-reredirect na sa ibang page after this line
