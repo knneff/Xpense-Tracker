@@ -15,7 +15,7 @@
     <!-- NAV BAR IS HERE -->
     <?php require('navbar.php') ?>
     <!-- FLOATING ADD EXPENSE BUTTON HERE -->
-    <?php require('addexpense.php') ?>
+    <?php require('addExpense.php') ?>
     <!-- SIDE BAR AND CONTENT HERE -->
     <div class="flex flex-row flex-1 h-full">
         <!-- SIDE BAR -->
