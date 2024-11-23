@@ -1,0 +1,54 @@
+// use two conditions  if add expense is in your page
+if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['addExpense']))
+
+// use another name if add expense is in your page
+used form names in add expense {
+    amount
+    period
+    group
+    category
+    desc
+    datetime
+    type
+    addExpense
+}
+
+
+CHANGES IN THE DATABASES:
+============================================================================================
+// automatic balance deduction when an expense is added in expenses table
+
+DELIMITER $$
+
+CREATE TRIGGER deduct_amount_after_insert_expense
+AFTER INSERT ON expenses
+FOR EACH ROW
+BEGIN
+    
+    UPDATE users
+    SET amount = amount - NEW.amount
+    WHERE userID = NEW.userID;
+END $$
+
+DELIMITER ;
+
+==========================================================================================================
+// alisin ung mga casscades sa expenses table since mawawala mga records kapag nagdelete ng goal, group, subscription
+
+ALTER TABLE expenses DROP FOREIGN KEY `expenses_ibfk_2`;
+ALTER TABLE expenses DROP FOREIGN KEY `expenses_ibfk_3`;
+ALTER TABLE expenses DROP FOREIGN KEY `expenses_ibfk_4`;
+
+ALTER TABLE expenses ADD CONSTRAINT fk_goalID FOREIGN KEY (goalID) REFERENCES goals(goalID);
+ALTER TABLE expenses ADD CONSTRAINT fk_subscriptionID FOREIGN KEY (subscriptionID) REFERENCES subscriptions(subscriptionID);
+ALTER TABLE expenses ADD CONSTRAINT fk_groupID FOREIGN KEY (groupID) REFERENCES clan(groupID);
+
+======================================================================================================
+// kinonvert to decimal yung mga integer
+
+ALTER TABLE `defaultdb`.`users` CHANGE `amount` `amount` decimal(10,2) NULL DEFAULT '0' COMMENT '';
+ALTER TABLE `defaultdb`.`subscriptions` CHANGE `amount` `amount` decimal(10,2) NOT NULL COMMENT '';
+ALTER TABLE `defaultdb`.`goals` CHANGE `amount` `amount` decimal(10,2) NOT NULL COMMENT '';
+ALTER TABLE `defaultdb`.`expenses` CHANGE `amount` `amount` decimal(10,2) NOT NULL COMMENT '';
+
+========

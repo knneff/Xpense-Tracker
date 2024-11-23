@@ -1,0 +1,83 @@
+recent transactions displays the oldest to newest transaction. must change?
+
+pwede na lagyan ng list of subscriptions ung dashboard view
+
+login, forgot, home(kapag di naka login), signup pages - need to fix dropdown behavior
+
+icons need to be uploaded by user  (goal, profile, group)
+
+lagyan ng contact support page, parang chat.
+
+what if kulang ung balance pag nag auto add ung subscription? is it okay negative ung balance
+  oo nga no tangina
+
+=============================================================================================================
+
+expense log???
+- itsura
+- deleting of records
+- reusability?? Sa Dashboard and sa Group Expense
+
+mga icons:
+- profile icons
+- goal icons
+
+nav bar mechanism if a user is logged in or not
+- link ng user profile and nav bar profile sa database and icons
+- more info sa profile pic icon nav bar (e.g., usernamem, firstName, lastName)
+
+edit/set balance functionality??
+
+Input Validators
+- proper case first and last name input
+- strong passwords
+
+account setting functionality
+- mysql query to perform to update for data?
+- checks for duplicate username & email
+- password re-type validation
+
+Audit Log
+- Admin User: audit log accessible only to admin user system
+- ayusin itsura ng audit log
+
+fix head and no head system
+- use nohead in head or just individually add each component
+
+Sharing
+- expense sharing mechanism
+- link sa database
+- reusable member list (for dashboard)
+
+
+Goal setting
+- link sa database
+
+Statistics page
+- mechanism?
+- link sa database e.g., how to search expenses that are within 7 days ago
+
+
+
+=== Other concerns ===
+
+url hosting: meron na ata to
+
+finalize mysql
+- finalize columns to put
+- need ng group_token_hash column para makagawa ng link sa groups
+- clean triggers for audit log
+
+pwa manifest file??
+
+=== MGA IF MAY TIME PA ===
+- Refund balance dialogue when expense is deleted
+- Custom sharing expense (individually set for each)
+  + subscription on groups
+- Not pre-defined user icon
+- Income (automatic add ng time and transaction sa bank)
+- OCR / Receipt Scanner
+- Multiple Wallet
+- Messaging (for sharing)
+- Timezones
+- Panel for adding back Balance if Expense is deleted
