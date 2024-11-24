@@ -10,8 +10,9 @@ $userID = $_SESSION['userid'];
 //stores information about current user
 $userInfo = $db->query('select * from users where userid = ?;', [$userID])->fetch(PDO::FETCH_ASSOC);
 //fetch all the current user's expenses
-$expenses = $db->query('select expenses.amount, expenses.description, expenses.category from users join expenses on users.userID=expenses.userID where users.userID=? ORDER BY expenses.expenseTime DESC LIMIT 5;', [$userID])->fetchAll(PDO::FETCH_ASSOC);
-// $subscriptions = $db->query('select expenses.amount, expenses.description from users join expenses on users.userID=expenses.userID where users.userID=? ORDER BY expenses.expenseTime DESC;', [$userID])->fetchAll(PDO::FETCH_ASSOC);
+$expenses = $db->query('select expenses.amount, expenses.description, expenses.category from users join expenses on users.userID=expenses.userID where users.userID=? ORDER BY expenses.expenseTime DESC LIMIT 6;', [$userID])->fetchAll(PDO::FETCH_ASSOC);
+$subscriptions = $db->query('select amount, description, period, category from subscriptions WHERE userid=? ORDER BY paymentDateTime DESC LIMIT 4;', [$userID])->fetchAll(PDO::FETCH_ASSOC);
+
 
 $title = "Hello, {$userInfo['username']}!";
 
