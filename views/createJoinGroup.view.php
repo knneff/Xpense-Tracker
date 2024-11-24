@@ -1,175 +1,136 @@
-<!-- pang create or join group panel to!!!! -->
+<!--di ko alam paano ayusin tong hidden and flex cssConflict problem pero tapos na-->
+<main id="addPanel" class="hidden fixed inset-0 flex justify-center items-center bg-black bg-opacity-50">
+    <div class="tlGreen text-gray-300 p-8 rounded-3xl shadow-lg w-11/12 max-w-md">
 
-<main id="addPanel" class="hidden">
-    <div id="addOverlay" class="z-50 flex justify-center items-center fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50">
-        <div class="flex justify-center text-base sm:text-lg text-gray-300 tlGreen p-8 rounded-3xl">
-            <div>
-                <h2 class="text-4xl font-semibold text-center textGray">Add Expense</h2>
-                <hr class="my-4 border-gray-300" />
-                <div class="form-buttons space-x-1 text-lg sm:text-xl font-semibold my-8">
-                    <button
-                        id="btn1"
-                        class="btn py-1 px-4 rounded-3xl btActive"
-                        type="button"
-                        onclick="showForm('1', 'basic')"
-                        disabled>
-                        Basic
-                    </button>
-                    <button
-                        id="btn2"
-                        class="btn py-1 px-4 rounded-3xl btGreen"
-                        type="button"
-                        onclick="showForm('2', 'sub')">
-                        Subscription
-                    </button>
-                    <button
-                        id="btn3"
-                        class="btn py-1 px-4 rounded-3xl btGreen"
-                        type="button"
-                        onclick="showForm('3', 'group')">
-                        Group
-                    </button>
-                </div>
+        <h2 id="panelHeading" class="text-4xl font-semibold text-center mb-4">Create a Group</h2>
+        <hr class="my-4 border-gray-500">
+        <p id="panelDescription" class="text-center text-gray-400 mb-6">
+            Give your new group a personality with a name and an icon. You can change this anytime!
+        </p>
 
-                <form id="addForm" method="POST" class="flex flex-col text-base gap-5">
-                    <input
-                        type="number"
-                        id="amount"
-                        name="amount"
-                        placeholder="Amount"
-                        min="0"
-                        required
-                        class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none">
-                    <select
-                        id="form2"
-                        name="period"
-                        class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none hidden">
-                        <option value="" disabled selected>Subscription Plan</option>
-                        <option value="1">Daily</option>
-                        <option value="7">Weekly</option>
-                        <option value="30">Monthly</option>
-                        <option value="365">Yearly</option>
-                    </select>
-                    <select
-                        id="form3"
-                        name="group"
-                        class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none hidden">
-                        <option value="" disabled selected>No Groups Yet</option>
-                        <!-- <option value="option1">Group 1</option>
-                        <option value="option2">Group 2</option>
-                        <option value="option3">Group 3</option> -->
-                    </select>
-                    <select
-                        id="category"
-                        name="category"
-                        required
-                        class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none">
-                        <option value="" selected disabled>Category</option>
-                        <option value="Food">Food</option>
-                        <option value="Transportation">Transportation</option>
-                        <option value="Entertainment">Entertainment</option>
-                        <option value="Personal Care">Personal Care</option>
-                        <option value="Health & Wellness">Health & Wellness</option>
-                        <option value="Shopping">Shopping</option>
-                        <option value="Utilities">Utilities</option>
-                        <option value="Miscellaneous">Miscellaneous</option>
-                    </select>
-                    <input
-                        type="text"
-                        id="desc"
-                        name="desc"
-                        placeholder="Description"
-                        minlength="1"
-                        maxlength="50"
-                        required
-                        class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none">
-                    <input
-                        type="datetime-local"
-                        id="datetime"
-                        name="datetime"
-                        required
-                        class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none">
-                    <input
-                        type="hidden"
-                        id="type"
-                        name="type"
-                        value="basic">
-                    <input
-                        class="hidden"
-                        type="text"
-                        id="allow"
-                        name="allow"
-                        required>
-                    <button
-                        id="submitBtn"
-                        class="py-1 text-lg sm:text-xl font-semibold btGreen2 rounded-3xl"
-                        type="submit"
-                        name="addExpense">
-                        Add Expense
-                    </button>
-                </form>
-                <p id="message" class="hidden text-gray-300 mt-4 text-center">Insufficient Balance</p>
+        <!-- Form -->
+        <form id="addForm" method="POST" class="space-y-4">
+
+            <!-- Upload Icon -->
+            <div id="uploadSection" class="flex flex-col items-center">
+                <label for="iconUpload" class="cursor-pointer flex flex-col items-center justify-center w-24 h-24 bg-gray-700 rounded-full hover:bg-gray-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14m-7-7h14"></path>
+                    </svg>
+                    <span class="text-xs text-gray-400 mt-2">Upload</span>
+                </label>
+                <input id="iconUpload" type="file" accept="image/*" class="hidden">
             </div>
-        </div>
+
+            <!-- Group Name -->
+            <div id="groupNameSection">
+                <input
+                    type="text"
+                    id="groupName"
+                    name="groupName"
+                    placeholder="Group Name"
+                    required
+                    class="w-full p-3 border rounded-lg bg-gray-700 border-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+
+            <!-- Buttons -->
+            <button
+                id="submitBtn"
+                class="w-full py-2 bg-green-800 text-white font-bold rounded-lg hover:bg-green-700"
+                type="submit">
+                Create Group
+            </button>
+            <button
+                id="joinGroupBtn"
+                class="w-full py-2 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700"
+                type="button"
+                onclick="showJoinGroup()">
+                Join Group
+            </button>
+        </form>
     </div>
 </main>
+
 <script>
-    document.getElementById('submitBtn').addEventListener('click', () => {
-        let balance = <?php echo json_encode($_SESSION['balance']); ?>;
-        let amount = document.getElementById('amount').value;
-
-        document.getElementById('allow').setAttribute('required', 'true');
-
-        if (amount !== "") {
-            if (balance < amount) {
-                document.getElementById('message').classList.remove('hidden');
-            } else {
-                document.getElementById('allow').removeAttribute('required');
-            }
-        }
-
-    });
-
+    // Show panel
     function showPanelAdd() {
         document.getElementById('addPanel').classList.remove('hidden');
-
-        const now = new Date();
-        const year = now.getFullYear();
-        const month = String(now.getMonth() + 1).padStart(2, '0');
-        const day = String(now.getDate()).padStart(2, '0');
-        const hours = String(now.getHours()).padStart(2, '0');
-        const minutes = String(now.getMinutes()).padStart(2, '0');
-
-        const formattedDateTime = `${year}-${month}-${day}T${hours}:${minutes}`;
-        document.getElementById('datetime').value = formattedDateTime;
     }
 
-    document.getElementById('addOverlay').addEventListener('click', (event) => {
-        if (event.target === document.getElementById('addOverlay')) {
+    // Close panel
+    document.getElementById('addPanel').addEventListener('click', (event) => {
+        if (event.target === document.getElementById('addPanel')) {
             document.getElementById('addPanel').classList.add('hidden');
         }
     });
 
-    function showForm(id, type) {
-        document.querySelectorAll('.btn').forEach(btn => {
-            btn.classList.remove('btActive');
-            btn.classList.add('btGreen');
-            btn.disabled = false;
-        });
-
-        document.getElementById('btn' + id).classList.add('btActive');
-        document.getElementById('btn' + id).classList.remove('btGreen');
-        document.getElementById('btn' + id).disabled = true;
+    // Function to change panel content to "Join Group"
+    function showJoinGroup() {
 
 
-        document.getElementById('form2').classList.add('hidden');
-        document.getElementById('form3').classList.add('hidden');
-        document.getElementById('form' + id)?.classList.remove('hidden');
+        document.getElementById('panelHeading').textContent = 'Join a Group';
+        document.getElementById('panelDescription').textContent = 'Enter an invite link below to join a group.';
 
-        document.getElementById('form2').removeAttribute('required');
-        document.getElementById('form3').removeAttribute('required');
-        document.getElementById('form' + id)?.setAttribute('required', 'true');
+        // Remove upload section
+        const uploadSection = document.getElementById('uploadSection');
+        if (uploadSection) uploadSection.remove();
 
-        document.getElementById('type').value = type;
+        // Update group name section
+        const groupNameSection = document.getElementById('groupNameSection');
+        groupNameSection.innerHTML = `
+            <label for="inviteLink" class="block text-xs font-bold text-gray-400">INVITE LINK*</label>
+            <input
+                type="text"
+                id="inviteLink"
+                name="inviteLink"
+                placeholder="Enter group link"
+                required
+                class="w-full p-3 border rounded-lg bg-gray-700 border-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500">
+        `;
+
+        // Update buttons
+        document.getElementById('submitBtn').textContent = 'Join Group';
+        document.getElementById('joinGroupBtn').textContent = 'Back';
+        document.getElementById('joinGroupBtn').setAttribute('onclick', 'showCreateGroup()');
+    }
+
+    // Function to revert to "Create Group"
+    function showCreateGroup() {
+        // Update heading and description
+        document.getElementById('panelHeading').textContent = 'Create a Group';
+        document.getElementById('panelDescription').textContent =
+            'Give your new group a personality with a name and an icon. You can change this anytime!';
+
+        // Restore upload section
+        const uploadSection = document.createElement('div');
+        uploadSection.id = 'uploadSection';
+        uploadSection.className = 'flex flex-col items-center';
+        uploadSection.innerHTML = `
+            <label for="iconUpload" class="cursor-pointer flex flex-col items-center justify-center w-24 h-24 bg-gray-700 rounded-full hover:bg-gray-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14m-7-7h14"></path>
+                </svg>
+                <span class="text-xs text-gray-400 mt-2">Upload</span>
+            </label>
+            <input id="iconUpload" type="file" accept="image/*" class="hidden">
+        `;
+        document.getElementById('addForm').insertBefore(uploadSection, document.getElementById('groupNameSection'));
+
+        // Restore group name section
+        const groupNameSection = document.getElementById('groupNameSection');
+        groupNameSection.innerHTML = `
+            <input
+                type="text"
+                id="groupName"
+                name="groupName"
+                placeholder="Group Name"
+                required
+                class="w-full p-3 border rounded-lg bg-gray-700 border-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500">
+        `;
+
+        // Restore buttons
+        document.getElementById('submitBtn').textContent = 'Create Group';
+        document.getElementById('joinGroupBtn').textContent = 'Join Group';
+        document.getElementById('joinGroupBtn').setAttribute('onclick', 'showJoinGroup()');
     }
 </script>
