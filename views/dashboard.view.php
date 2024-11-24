@@ -5,35 +5,41 @@
     <div class="flex flex-col sm:flex-row gap-5">
 
         <!-- LEFT PANEL PANELS -->
-        <div class='flex-1 flex flex-wrap gap-5'>
-            <a href='/expenselog' class='shadow-lg tlGreen hover:bg-emerald-900 duration-150 rounded-3xl w-48 h-48 px-4 py-2'>
-                <p class="textGray font-semibold">Recent Transaction</p>
+        <div class='flex-1 flex flex-wrap'>
+            <div class='shadow-lg tlGreen duration-150 rounded-3xl w-80 h-48 mx-2 my-2 px-4 py-2'>
+                <div class='flex flex-row justify-between items-baseline pb-1'>
+                    <p class="textGray text-xl font-semibold">Recent Expenses</p>
+                    <a href='/expenselog' class='textTeal hover:underline'>See Full List</a>
+                </div>
+                <hr class='py-1'>
                 <ul>
                     <?php
                     foreach ($expenses as $expense) {
                         $amount = $expense['amount'];
-                        $description = stringShortener($expense['description'], 10);
-                        echo "<li class='textGray'> - $ $amount | $description </li>";
+                        $description = $expense['description'];
+                        $display = stringShortener('$ ' . $amount . ' - ' . $description, 22);
+                        $category = $expense['category'];
+                        echo "<li class='textGray flex justify-between items-center'>
+                            <p>$display</p>
+                            <span class='bgGreen2 rounded-lg px-1 text-xs'>$category</span>
+                        </li>";
                     }
                     ?>
                 </ul>
-            </a>
-            <div class='shadow-lg tlGreen hover:bg-emerald-900 duration-150 rounded-3xl w-48 h-48 textGray'>
+            </div>
+
+            <div class='shadow-lg tlGreen hover:bg-emerald-900 duration-150 rounded-3xl w-48 h-48 mx-2 my-2 textGray'>
                 Goals
             </div>
-            <div class='shadow-lg tlGreen hover:bg-emerald-900 duration-150 rounded-3xl w-48 h-48 textGray'>
+            <div class='shadow-lg tlGreen hover:bg-emerald-900 duration-150 rounded-3xl w-48 h-48 mx-2 my-2 textGray'>
                 Groups
             </div>
 
-
-
-            <a href='/subscriptionList' class='shadow-lg tlGreen hover:bg-emerald-900 duration-150 rounded-3xl w-48 h-48 textGray'>
+            <a href='/subscriptionList' class='shadow-lg tlGreen hover:bg-emerald-900 duration-150 rounded-3xl w-48 h-48 mx-2 my-2 textGray'>
                 Subscription List
             </a>
 
-
-
-            <div class='shadow-lg tlGreen hover:bg-emerald-900 duration-150 rounded-3xl w-48 h-48 textGray'>
+            <div class='shadow-lg tlGreen hover:bg-emerald-900 duration-150 rounded-3xl w-48 h-48 mx-2 my-2 textGray'>
                 Overspending Alarm
             </div>
         </div>
