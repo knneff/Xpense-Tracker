@@ -7,6 +7,7 @@ protectPage();
 if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['toDel'])) {
     $toDel = $_POST['toDel'];
     $db->query("DELETE FROM expenses WHERE expenseID = ?;", [$toDel]);
+    redirect($_SERVER['REQUEST_URI']);
 }
 
 //current user

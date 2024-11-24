@@ -1,11 +1,16 @@
 <?php require('partials/head.php') ?>
 
-<div class='flex flex-col gap-5 sm:px-8 md:px-24 lg:px-48 xl:px-64'>
+<div class='flex flex-col gap-5 sm:px-8 md:px-16 lg:px-24 xl:px-42'>
 
     <?php
     $expenseSize = sizeof($expenses);
     if ($expenseSize < 1) {
-        echo "no expense found";
+        echo "<main class='grid place-items-center bgGreen px-4 py-24 sm:py-32 lg:px-8'>
+            <div class='text-center py-6 px-8 sm:py-10 sm:px-16 tlGreen rounded-xl'>
+                <h1 class='mt-4 sm:mt-6 text-balance text-3xl sm:text-5xl font-semibold tracking-tight textGray'>No Expense Found</h1>
+                <p class='mt-4 sm:mt-6 text-pretty text-xs sm:text-lg font-medium textGray'>No expense added yet. Keep it up!</p>
+            </div>
+        </main>";
     } else {
         foreach ($expenses as $index => $expense) {
             $description = stringShortener($expense['description'], 15);
@@ -20,9 +25,9 @@
 
             echo "<div>
                 <!-- Expense Row -->
-                <div class='flex flex-row gap-5'>
+                <div class='flex flex-row gap-4 sm:gap-6 md:gap-8'>
 
-                    <!-- expenseCard --> 
+                    <!-- Expense Card --> 
                     <div class='flex-1 textGray rounded-lg border border-gray-400'>
                         <!-- title (description, dateTime) -->
                         <div class='flex justify-between items-center rounded-t-lg bgGreen2 px-4 py-2'>
@@ -44,7 +49,7 @@
 
                     <!-- delete button -->
                     <button id='$delBtnId'>
-                        <svg class='textRed h-10 w-10' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
+                        <svg class='textRed h-12 w-12 hover:text-red-400' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
                             <path fill-rule='evenodd' d='M16.5 4.478v.227a48.816 48.816 0 0 1 3.878.512.75.75 0 1 1-.256 1.478l-.209-.035-1.005 13.07a3 3 0 0 1-2.991 2.77H8.084a3 3 0 0 1-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 0 1-.256-1.478A48.567 48.567 0 0 1 7.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 0 1 3.369 0c1.603.051 2.815 1.387 2.815 2.951Zm-6.136-1.452a51.196 51.196 0 0 1 3.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 0 0-6 0v-.113c0-.794.609-1.428 1.364-1.452Zm-.355 5.945a.75.75 0 1 0-1.5.058l.347 9a.75.75 0 1 0 1.499-.058l-.346-9Zm5.48.058a.75.75 0 1 0-1.498-.058l-.347 9a.75.75 0 0 0 1.5.058l.345-9Z' clip-rule='evenodd' />
                         </svg>
                     </button>
@@ -67,7 +72,7 @@
                     </div>
                 </main>
 
-                <!-- behavior -->
+                <!-- delete button behavior -->
                 <script>
                     document.getElementById('$delBtnId').addEventListener('click', (event) => {
                         document.getElementById('$delConfId').classList.toggle('hidden');
@@ -79,7 +84,6 @@
                         }
                     });
                 </script>
-            
             </div>";
         }
     }
@@ -87,9 +91,7 @@
 
 </div>
 
-<!--  -->
 <?php
-
 /* From louie jay
 
     <!-- details (all info) -->
