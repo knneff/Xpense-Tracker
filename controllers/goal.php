@@ -8,7 +8,7 @@ $userID = $_SESSION['userid'];
 
 $userInfo = $db->query('select * from users where userid = ?;', [$userID])->fetch(PDO::FETCH_ASSOC);
 
-$title = "{$userInfo['username']}'s Goals";
+$title = "Goals and Plans";
 
 require('views/goal.view.php');
 

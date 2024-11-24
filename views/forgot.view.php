@@ -5,7 +5,7 @@
         <a href="javascript:history.back()" class="justify-start textTeal hover:underline">Go Back</a>
         <br />
         <br />
-        <h2 class="text-4xl font-semibold text-center textGray">Forgot Password</h2>
+        <h2 class="text-4xl font-semibold text-center textGray">Change Password</h2>
         <br />
         <hr class="my-4 border-gray-300" />
         <br />

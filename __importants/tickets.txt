@@ -1,9 +1,3 @@
-recent transactions displays the oldest to newest transaction. must change?
-
-pwede na lagyan ng list of subscriptions ung dashboard view
-
-login, forgot, home(kapag di naka login), signup pages - need to fix dropdown behavior
-
 lagyan ng contact support page, parang chat.
 
 what if kulang ung balance pag nag auto add ung subscription? is it okay negative ung balance

@@ -49,7 +49,8 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_FILES['icon']) && isset($_P
             try {
                 $db->query($sql, $params);
                 $_SESSION['userIcon'] = $targetFilePath;
-                $message = "Your profile is successfuly updated";
+                header("Location: {$_SERVER['REQUEST_URI']}");
+                exit;
             } catch (PDOException $e) {
                 $message = "An error occurred while processing your request. Please try again later.";
             }
@@ -84,7 +85,8 @@ else if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['changeProfile'])
 
     try {
         $db->query($sql, $params);
-        $message = "Your profile is successfuly updated";
+        header("Location: {$_SERVER['REQUEST_URI']}");
+        exit;
     } catch (PDOException $e) {
         $message = "An error occurred while processing your request. Please try again later.";
     }
