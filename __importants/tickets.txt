@@ -19,7 +19,6 @@ dashboard
 
 expense log???
 - itsura
-- deleting of records
 - reusability?? Sa Dashboard and sa Group Expense
 - bars to include subscription list as well???
 

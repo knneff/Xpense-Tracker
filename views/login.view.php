@@ -41,7 +41,7 @@
             <br><br>
 
             <!-- ERROR MESSAGE TO NAKAHIDE KAPAG WALANG ERROR -->
-            <div class="<?= isset($errorMessage) ? '' : 'hidden' ?> bg-red-400 rounded-lg text-center py-2">
+            <div class="<?= isset($errorMessage) ? '' : 'hidden' ?> bgOrange text-white rounded-3xl text-center py-2">
                 <?= $errorMessage ?>
             </div>
 

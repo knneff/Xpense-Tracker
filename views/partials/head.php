@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
-    <link rel="stylesheet" href="styles/custom_style.css">
+    <?php require('./styles/custom_style.html') ?>
     <script src="styles/scripts.js"></script>
+    <!-- for graphs and charts scripts -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 
