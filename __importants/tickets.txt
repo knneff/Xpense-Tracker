@@ -1,8 +1,16 @@
+gawin na ung goals and plans
+
 lagyan ng contact support page, parang chat.
 
-what if kulang ung balance pag nag auto add ung subscription? is it okay negative ung balance
-  oo nga no tangina
+bawasan ng resolution ing mga images
 
+integrate ung logo sa navbar and gmail acc
+
+gmail verification???
+
+gumawa ng decent custom message to welcome message and reset password message to users thru gmail
+
+kelangan i test mga functions. need major testings
 =============================================================================================================
 
 dashboard
