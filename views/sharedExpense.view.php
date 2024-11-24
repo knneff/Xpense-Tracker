@@ -2,6 +2,7 @@
 
 <!-- Sidebar -->
 <div class="bg-[#101b16db] w-16 h-screen fixed shadow-lg z-10">
+
   <!-- Sidebar Content -->
   <!-- Icon 1 -->
   <div class="group relative">
@@ -84,8 +85,11 @@
 
 <!-- Main Content Container -->
 <div class="flex ml-16 h-screen absolute top-0 left-0 right-0 bottom-0">
+
+
   <!-- Group Bar -->
   <div class="tlGreen w-80 p-4">
+
     <!-- Group Title -->
     <div class="flex items-center mb-4">
       <h5 class="text-gray-400 text-lg font-bold tracking-wider pt-0.5">
@@ -93,9 +97,14 @@
       </h5>
     </div>
 
+    <!-- Divider-->
+    <div class="h-1 bg-gradient-to-r from-green-800 via-gray-600 to-green-800 rounded-lg"></div>
+
+
     <!-- Group Form Container -->
     <div class="tlGreen p-4 rounded-lg">
       <form class="space-y-4">
+
         <!-- Amount Field -->
         <div>
           <label class="block text-gray-300 font-semibold">Amount</label>
@@ -158,6 +167,7 @@
 
   <!-- Content and Member List Section -->
   <div class="flex-grow flex flex-col">
+
     <!-- Navigation Bar -->
     <div class="bgGreen p-4 h-16 drop-shadow-lg">
       <h5 class="text-white text-lg font-semibold flex items-center">
@@ -168,6 +178,7 @@
 
     <!-- Main Content and Members List -->
     <div class="flex flex-grow">
+      
       <!-- Content Area -->
       <div class="flex-grow bgGreen p-4">
         <div class="container mx-auto p-4">
@@ -230,26 +241,13 @@
                   value="November 22, 2024" />
               </div>
 
-              <div class="flex justify-between border-b pb-3 pt-3">
+              <div class="flex justify-between pb-3 pt-3">
                 <span class="font-semibold text-gray-300">Expense Time:</span>
                 <input
                   type="text"
                   class="text-gray-300 bg-[#03352c]"
                   id="expense_time"
-                  value="03:46 PM" />
-              </div>
-
-              <div class="flex justify-start space-x-4 mt-4">
-                <button
-                  onclick="saveChanges()"
-                  class="bg-green-800 text-gray-300 px-4 py-1 rounded-lg hover:bg-green-700">
-                  Save Changes
-                </button>
-                <button
-                  onclick="deleteExpense()"
-                  class="bg-gray-600 text-gray-300 px-4 py-1 rounded-lg hover:bg-gray-700">
-                  Delete
-                </button>
+                  value="01:47 PM" />
               </div>
             </form>
 
@@ -269,24 +267,22 @@
                     "max-w-7xl mx-auto text-white rounded-lg shadow-lg cursor-pointer drop-shadow-lg";
                 }
               }
-
-              function saveChanges() {
-                fullView.className = "hidden";
-              }
-
-              function deleteExpense() {
-                fullView.className = "hidden";
-              }
             </script>
           </div>
         </div>
       </div>
 
+
+
       <!-- Members List -->
       <div class="tlGreen w-60 p-4">
+
+        <!--Members Count-->
         <h5 class="text-gray-400 text-lg font-bold tracking-wider">
           Members - 5
         </h5>
+
+        <!--Members-->
         <ul class="mt-4">
           <li
             class="flex items-center p-2 hover:bg-gray-700 cursor-pointer rounded mb-2">
@@ -296,6 +292,7 @@
               class="w-6 h-6 mr-2 rounded-3xl" />
             <span class="text-white">Anthony Dayrit</span>
           </li>
+
           <li
             class="flex items-center p-2 hover:bg-gray-700 cursor-pointer rounded mb-2">
             <img
@@ -304,6 +301,7 @@
               class="w-6 h-6 mr-2 rounded-3xl" />
             <span class="text-white">Brishia Beltran</span>
           </li>
+
           <li
             class="flex items-center p-2 hover:bg-gray-700 cursor-pointer rounded mb-2">
             <img
@@ -312,6 +310,7 @@
               class="w-6 h-6 mr-2 rounded-3xl" />
             <span class="text-white">Keith Yamzon</span>
           </li>
+
           <li
             class="flex items-center p-2 hover:bg-gray-700 cursor-pointer rounded mb-2">
             <img
@@ -320,6 +319,7 @@
               class="w-6 h-6 mr-2 rounded-3xl" />
             <span class="text-white">Aeingel Pecson</span>
           </li>
+
           <li
             class="flex items-center p-2 hover:bg-gray-700 cursor-pointer rounded mb-2">
             <img
@@ -328,6 +328,7 @@
               class="w-6 h-6 mr-2 rounded-3xl" />
             <span class="text-white">Matt Ricohermoso</span>
           </li>
+          
         </ul>
       </div>
     </div>

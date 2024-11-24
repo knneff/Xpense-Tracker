@@ -1,5 +1,4 @@
-<!--di ko alam paano ayusin tong hidden and flex cssConflict problem pero tapos na-->
-<main id="addPanel" class="hidden fixed inset-0 flex justify-center items-center bg-black bg-opacity-50">
+<main id="addPanel" class="hidden fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 transition-opacity duration-300">
     <div class="tlGreen text-gray-300 p-8 rounded-3xl shadow-lg w-11/12 max-w-md">
 
         <h2 id="panelHeading" class="text-4xl font-semibold text-center mb-4">Create a Group</h2>
@@ -54,7 +53,9 @@
 <script>
     // Show panel
     function showPanelAdd() {
-        document.getElementById('addPanel').classList.remove('hidden');
+        document.getElementById('addPanel').classList.remove('hidden', 'opacity-0');
+        document.getElementById('addPanel').classList.add('opacity-100');
+
     }
 
     // Close panel
@@ -66,33 +67,41 @@
 
     // Function to change panel content to "Join Group"
     function showJoinGroup() {
+    document.getElementById('panelHeading').textContent = 'Join a Group';
+    document.getElementById('panelDescription').textContent = 'Enter an invite link below to join a group.';
 
+    // Remove upload section
+    const uploadSection = document.getElementById('uploadSection');
+    if (uploadSection) uploadSection.remove();
 
-        document.getElementById('panelHeading').textContent = 'Join a Group';
-        document.getElementById('panelDescription').textContent = 'Enter an invite link below to join a group.';
-
-        // Remove upload section
-        const uploadSection = document.getElementById('uploadSection');
-        if (uploadSection) uploadSection.remove();
-
-        // Update group name section
-        const groupNameSection = document.getElementById('groupNameSection');
-        groupNameSection.innerHTML = `
-            <label for="inviteLink" class="block text-xs font-bold text-gray-400">INVITE LINK*</label>
+    // Update group name section
+    const groupNameSection = document.getElementById('groupNameSection');
+    groupNameSection.innerHTML = `
+        <label for="inviteLink" class="block text-xs font-bold text-gray-400 mb-1">INVITE LINK*</label>
+        <div class="relative">
+            <!-- Icon -->
+            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path d="M4.75 9a1.75 1.75 0 100 3.5h.55l2.8 7.3a1 1 0 001.89 0l2.8-7.3h.55a1.75 1.75 0 100-3.5h-9z"></path>
+                </svg>
+            </span>
+            <!-- Input -->
             <input
                 type="text"
                 id="inviteLink"
                 name="inviteLink"
                 placeholder="Enter group link"
                 required
-                class="w-full p-3 border rounded-lg bg-gray-700 border-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500">
-        `;
+                class="w-full pl-10 p-3 border rounded-lg bg-gray-700 border-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500">
+        </div>
+    `;
 
-        // Update buttons
-        document.getElementById('submitBtn').textContent = 'Join Group';
-        document.getElementById('joinGroupBtn').textContent = 'Back';
-        document.getElementById('joinGroupBtn').setAttribute('onclick', 'showCreateGroup()');
-    }
+    // Update buttons
+    document.getElementById('submitBtn').textContent = 'Join Group';
+    document.getElementById('joinGroupBtn').textContent = 'Back';
+    document.getElementById('joinGroupBtn').setAttribute('onclick', 'showCreateGroup()');
+}
+
 
     // Function to revert to "Create Group"
     function showCreateGroup() {
