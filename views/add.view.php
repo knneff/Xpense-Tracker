@@ -39,25 +39,44 @@
                         step="0.01"
                         required
                         class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none">
-                    <select
-                        id="form2"
-                        name="period"
-                        class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none hidden">
-                        <option value="" disabled selected>Subscription Plan</option>
-                        <option value="1">Daily</option>
-                        <option value="7">Weekly</option>
-                        <option value="30">Monthly</option>
-                        <option value="365">Yearly</option>
-                    </select>
-                    <select
-                        id="form3"
-                        name="group"
-                        class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none hidden">
-                        <option value="" disabled selected>No Groups Yet</option>
-                        <!-- <option value="option1">Group 1</option>
+                    <div id="forms2" class="hidden">
+                        <div class="flex">
+                            <div class="w-3/5">
+                                <select
+                                    id="form2"
+                                    name="period"
+                                    class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none w-full">
+                                    <option value="" disabled selected>Subscription Plan</option>
+                                    <option value="1">Daily</option>
+                                    <option value="7">Weekly</option>
+                                    <option value="30">Monthly</option>
+                                    <option value="365">Yearly</option>
+                                </select>
+                            </div>
+                            <div class="text-base sm:text-lg flex items-center justify-center w-2/5 gap-1">
+                                <input
+                                    type="checkbox"
+                                    id="payToday"
+                                    name="payToday"
+                                    checked>
+                                <label
+                                    for="payToday">
+                                    Pay Today
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="forms3" class="hidden">
+                        <select
+                            id="form3"
+                            name="group"
+                            class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none w-full">
+                            <option value="" disabled selected>No Groups Yet</option>
+                            <!-- <option value="option1">Group 1</option>
                         <option value="option2">Group 2</option>
                         <option value="option3">Group 3</option> -->
-                    </select>
+                        </select>
+                    </div>
                     <select
                         id="category"
                         name="category"
@@ -164,9 +183,9 @@
         document.getElementById('btn' + id).disabled = true;
 
 
-        document.getElementById('form2').classList.add('hidden');
-        document.getElementById('form3').classList.add('hidden');
-        document.getElementById('form' + id)?.classList.remove('hidden');
+        document.getElementById('forms2').classList.add('hidden');
+        document.getElementById('forms3').classList.add('hidden');
+        document.getElementById('forms' + id)?.classList.remove('hidden');
 
         document.getElementById('form2').removeAttribute('required');
         document.getElementById('form3').removeAttribute('required');

@@ -28,9 +28,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['addExpense'])) {
     }
     
     else if ($_POST['type'] === 'sub') {
+        $datetime = $_POST['datetime']; 
+        $datetimeObject = new DateTime($datetime);
+        $formattedDate = $datetimeObject->format('Y-m-d 00:00:00'); 
+
+        if ($_POST['payToday'] !== 'on') {
+            $datetimeObject->modify("+{$_POST['period']} days");
+            $formattedDate = $datetimeObject->format('Y-m-d 00:00:00');
+        }
         
         $userID = $_SESSION['userid'];
-        $paymentDateTime = $_POST['datetime'];
+        $paymentDateTime = $formattedDate;
         $period = $_POST['period'];
         $amount = $_POST['amount'];
         $category = $_POST['category'];
