@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
-    <script src="/styles/scripts.js"></script>
-    <link rel="stylesheet" href="/styles/style.css">
+    <script src="styles/scripts.js"></script>
+    <link rel="stylesheet" href="styles/custom_style.css">
 </head>
 
 <body class="bgGreen h-full">
