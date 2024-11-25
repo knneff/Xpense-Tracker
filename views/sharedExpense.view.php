@@ -178,7 +178,7 @@
 
     <!-- Main Content and Members List -->
     <div class="flex flex-grow">
-      
+
       <!-- Content Area -->
       <div class="flex-grow bgGreen p-4">
         <div class="container mx-auto p-4">
@@ -328,7 +328,7 @@
               class="w-6 h-6 mr-2 rounded-3xl" />
             <span class="text-white">Matt Ricohermoso</span>
           </li>
-          
+
         </ul>
       </div>
     </div>
