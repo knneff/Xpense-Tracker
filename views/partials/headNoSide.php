@@ -9,7 +9,7 @@
     <script src="styles/scripts.js"></script>
 </head>
 
-<body class="bgGreen h-full">
+<body class="bgGreen h-full overflow-auto">
     <!-- NAV BAR IS HERE -->
     <div class="h-full">
         <!-- DITO NA YUNG PINAKACONTENT NINYO -->
