@@ -62,8 +62,6 @@ Statistics page
 
 === Other concerns ===
 
-url hosting: meron na ata to
-
 finalize mysql
 - finalize columns to put
 - need ng group_token_hash column para makagawa ng link sa groups
