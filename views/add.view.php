@@ -4,7 +4,7 @@
             <div>
                 <h2 class="text-4xl font-semibold text-center textGray">Add Expense</h2>
                 <hr class="my-4 border-gray-300" />
-                <div class="form-buttons space-x-1 text-lg sm:text-xl font-semibold my-8">
+                <div class="grid grid-cols-2 gap-4 form-buttons space-x-1 text-lg sm:text-xl font-semibold my-8">
                     <button
                         id="btn1"
                         class="btn py-1 px-4 rounded-3xl btActive"
@@ -20,15 +20,7 @@
                         onclick="showForm('2', 'sub')">
                         Subscription
                     </button>
-                    <button
-                        id="btn3"
-                        class="btn py-1 px-4 rounded-3xl btGreen"
-                        type="button"
-                        onclick="showForm('3', 'group')">
-                        Group
-                    </button>
                 </div>
-
                 <form id="addForm" method="POST" class="flex flex-col text-base gap-5">
                     <input
                         type="number"
@@ -65,17 +57,6 @@
                                 </label>
                             </div>
                         </div>
-                    </div>
-                    <div id="forms3" class="hidden">
-                        <select
-                            id="form3"
-                            name="group"
-                            class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none w-full">
-                            <option value="" disabled selected>No Groups Yet</option>
-                            <!-- <option value="option1">Group 1</option>
-                        <option value="option2">Group 2</option>
-                        <option value="option3">Group 3</option> -->
-                        </select>
                     </div>
                     <select
                         id="category"
@@ -184,11 +165,9 @@
 
 
         document.getElementById('forms2').classList.add('hidden');
-        document.getElementById('forms3').classList.add('hidden');
         document.getElementById('forms' + id)?.classList.remove('hidden');
 
         document.getElementById('form2').removeAttribute('required');
-        document.getElementById('form3').removeAttribute('required');
         document.getElementById('form' + id)?.setAttribute('required', 'true');
 
         document.getElementById('type').value = type;

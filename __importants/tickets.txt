@@ -2,8 +2,6 @@ gawin na ung goals and plans
 
 alisin group sa add expense 
 
-combine user and system settings
-
 lagyan ng contact support page, parang chat.
 
 bawasan ng resolution ing mga images
