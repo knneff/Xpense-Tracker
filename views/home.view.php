@@ -51,9 +51,6 @@
     </section>
     <section class="-space-y-10">
       <div class="mx-20 bg-[#d5ffdf] h-72 flex">
-        <div>
-          <!-- insert svg here -->
-        </div>
         <div class="m-10">
           <div>
             <h1 class="text-[#1a664d] text-4xl font-bold">Track Your Way to Financial Freedom</h1>
@@ -61,6 +58,9 @@
           <div class="text-justify text-[#1a664d]">
             <h1>With Financial Goals, you can set, track, and achieve your financial milestones with ease. Whether you're saving for a vacation, building an emergency fund, or working towards a major investment, this feature helps you stay focused, visualize progress, and adjust your strategy to ensure success. Stay on top of your goals and turn your financial dreams into reality.</h1>
           </div>
+        </div>
+        <div>
+        <svg viewBox="-4.8 -4.8 57.60 57.60" id="a" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-4.8" y="-4.8" width="57.60" height="57.60" rx="28.8" fill="#70db99" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style>.f{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}</style></defs><rect id="b" class="f" x="6.9608" y="13.065" width="7.5178" height="21.87"></rect><rect id="c" class="f" x="20.7926" y="18.5325" width="7.5178" height="16.4025"></rect><rect id="d" class="f" x="34.994" y="27.4172" width="7.5178" height="7.5178"></rect><path id="e" class="f" d="m4.5,34.9237l14.2938-11.4905,12.4763,4.4976,12.2299-9.4265"></path></g></svg>
         </div>
       </div>
       <div class="mx-20 bg-[#1a664d] h-72 flex">
