@@ -1,4 +1,4 @@
-<main id="addPanel" class="hidden fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 transition-opacity duration-300">
+<main id="addPanel" class="hidden fixed inset-0 justify-center items-center bg-black bg-opacity-50 transition-opacity duration-300">
     <div class="tlGreen text-gray-300 p-8 rounded-3xl shadow-lg w-11/12 max-w-md">
 
         <h2 id="panelHeading" class="text-4xl font-semibold text-center mb-4">Create a Group</h2>
