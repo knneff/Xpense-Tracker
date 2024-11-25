@@ -13,6 +13,13 @@ gumawa ng decent custom message to welcome message and reset password message to
 kelangan i test mga functions. need major testings
 =============================================================================================================
 
+pagsasama user settings and system settings
+
+Sharing
+- expense sharing mechanism
+- link sa database
+- reusable member list (for dashboard)
+
 dashboard
 - subscription?
 - overspending?
@@ -47,11 +54,6 @@ Audit Log
 
 fix head and no head system
 - use nohead in head or just individually add each component
-
-Sharing
-- expense sharing mechanism
-- link sa database
-- reusable member list (for dashboard)
 
 Goal setting
 - link sa database
