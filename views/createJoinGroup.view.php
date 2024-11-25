@@ -67,16 +67,16 @@
 
     // Function to change panel content to "Join Group"
     function showJoinGroup() {
-    document.getElementById('panelHeading').textContent = 'Join a Group';
-    document.getElementById('panelDescription').textContent = 'Enter an invite link below to join a group.';
+        document.getElementById('panelHeading').textContent = 'Join a Group';
+        document.getElementById('panelDescription').textContent = 'Enter an invite link below to join a group.';
 
-    // Remove upload section
-    const uploadSection = document.getElementById('uploadSection');
-    if (uploadSection) uploadSection.remove();
+        // Remove upload section
+        const uploadSection = document.getElementById('uploadSection');
+        if (uploadSection) uploadSection.remove();
 
-    // Update group name section
-    const groupNameSection = document.getElementById('groupNameSection');
-    groupNameSection.innerHTML = `
+        // Update group name section
+        const groupNameSection = document.getElementById('groupNameSection');
+        groupNameSection.innerHTML = `
         <label for="inviteLink" class="block text-xs font-bold text-gray-400 mb-1">INVITE LINK*</label>
         <div class="relative">
             <!-- Icon -->
@@ -96,11 +96,11 @@
         </div>
     `;
 
-    // Update buttons
-    document.getElementById('submitBtn').textContent = 'Join Group';
-    document.getElementById('joinGroupBtn').textContent = 'Back';
-    document.getElementById('joinGroupBtn').setAttribute('onclick', 'showCreateGroup()');
-}
+        // Update buttons
+        document.getElementById('submitBtn').textContent = 'Join Group';
+        document.getElementById('joinGroupBtn').textContent = 'Back';
+        document.getElementById('joinGroupBtn').setAttribute('onclick', 'showCreateGroup()');
+    }
 
 
     // Function to revert to "Create Group"
