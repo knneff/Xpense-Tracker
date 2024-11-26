@@ -1,11 +1,11 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['forgotPassword'])) {
-    
+
     $token = bin2hex(random_bytes(16));
     $token_hash = hash("sha256", $token);
     $expiry = date("Y-m-d H:i:s", time() + 60 * 30);
-    $email = $_POST['email']; 
+    $email = $_POST['email'];
 
     $sql = "UPDATE users SET reset_token_hash = :resetTokenHash, reset_token_expires_at = :resetTokenExpiresAt WHERE email = :email";
 
@@ -39,6 +39,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['forgotPassword'])) {
     }
 }
 
-require('views/forgot.view.php');
-
-?>
+require('views/noBarsPages/forgot.view.php');

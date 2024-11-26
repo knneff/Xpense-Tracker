@@ -1,4 +1,4 @@
-<?php require('partials/headNoSide.php') ?>
+<?php require('partials/body.php') ?>
 
 <main class="grid place-items-center bgGreen px-4 py-24 sm:py-32 lg:px-8">
     <div class="text-center py-6 px-8 sm:py-10 sm:px-16 tlGreen rounded-xl">

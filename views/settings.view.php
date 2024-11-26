@@ -1,4 +1,4 @@
-<?php require('partials/head.php') ?>
+<?php require('partials/body.php') ?>
 
 <div class="textGray">
     <form>

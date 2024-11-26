@@ -1,4 +1,4 @@
-<?php require('partials/head.php') ?>
+<?php require('partials/body.php') ?>
 
 <div class='flex flex-col gap-5 sm:px-8 md:px-16 lg:px-24 xl:px-42'>
 

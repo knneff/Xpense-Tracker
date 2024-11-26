@@ -36,6 +36,7 @@
         </div>
     </div>
 </nav>
+
 <script>
     const button = document.querySelector("#toggleButton");
     const targetDiv = document.querySelector("#targetDiv");

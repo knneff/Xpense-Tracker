@@ -1,14 +1,14 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['addExpense'])) {
-   if ($_POST['type'] === 'basic') {
+    if ($_POST['type'] === 'basic') {
         $userID = $_SESSION['userid'];
-        $amount = $_POST['amount']; 
-        $category = $_POST['category']; 
-        $description = $_POST['desc']; 
-        $expenseType = 'basic'; 
-        $dateTime = $_POST['datetime']; 
-        
+        $amount = $_POST['amount'];
+        $category = $_POST['category'];
+        $description = $_POST['desc'];
+        $expenseType = 'basic';
+        $dateTime = $_POST['datetime'];
+
         $sql = "INSERT INTO expenses (userID, amount, category, description, expenseType, expenseTime)
         VALUES (:userID, :amount, :category, :description, :expenseType, :expenseTime)";
 
@@ -25,12 +25,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['addExpense'])) {
 
         header("Location: {$_SERVER['REQUEST_URI']}");
         exit;
-    }
-    
-    else if ($_POST['type'] === 'sub') {
-        $datetime = $_POST['datetime']; 
+    } else if ($_POST['type'] === 'sub') {
+        $datetime = $_POST['datetime'];
         $datetimeObject = new DateTime($datetime);
-        $paymentDateToday = $datetimeObject->format('Y-m-d 00:00:00'); 
+        $paymentDateToday = $datetimeObject->format('Y-m-d 00:00:00');
         $datetimeObject->modify("+{$_POST['period']} days");
 
         $userID = $_SESSION['userid'];
@@ -67,16 +65,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['addExpense'])) {
                 ':expenseTime' => $paymentDateToday,
                 ':subscriptionID' => $db->connection->lastInsertId()
             ];
-            
+
             $db->query($sql, $params);
         }
 
         header("Location: {$_SERVER['REQUEST_URI']}");
         exit;
     }
-
 }
 
-require('views/add.view.php');
-
-?>
+require('views/partials/add.view.php');

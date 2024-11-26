@@ -1,4 +1,4 @@
-<?php require('partials/headNoSide.php') ?>
+<?php require('partials/body.php') ?>
 
 <!-- Sidebar -->
 <div class="bg-[#101b16db] w-16 h-screen fixed shadow-lg z-10">
