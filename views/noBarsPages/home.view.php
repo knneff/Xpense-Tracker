@@ -1,7 +1,7 @@
 <?php require('views/partials/bodyNoBars.php') ?>
 <html>
 <head>
-<link rel="icon" type="image/x-icon" href="assets/xpense logo-01.ico">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 </html>
 
