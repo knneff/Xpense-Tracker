@@ -30,6 +30,4 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     }
 }
 
-require('views/SignUp.view.php');
-
-?>
+require('views/noBarsPages/signup.view.php');

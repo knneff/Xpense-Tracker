@@ -1,4 +1,5 @@
-<?php require('partials/headNoSide.php') ?>
+<?php require('views/partials/bodyNoBars.php') ?>
+
 <div class="grid grid-cols-1 sm:grid-cols-2 text-center items-center">
 
     <div class="hidden sm:inline">
@@ -66,4 +67,4 @@
     </div>
 </div>
 
-<?php require('partials/footer.php') ?>
+<?php require('views/partials/footer.php') ?>

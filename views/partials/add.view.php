@@ -112,6 +112,7 @@
         </div>
     </div>
 </main>
+
 <script>
     let balance = <?php echo json_encode($_SESSION['balance']); ?>;
 

@@ -1,5 +1,4 @@
-<?php require('partials/head.php') ?>
-
+<?php require('partials/body.php') ?>
 
 <!-- PANELS -->
 <main class="flex flex-col sm:flex-row gap-5">

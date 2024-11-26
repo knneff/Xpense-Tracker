@@ -1,4 +1,4 @@
-<?php require('partials/head.php') ?>
+<?php require('partials/body.php') ?>
 
 
 <div class="container mx-auto p-4">

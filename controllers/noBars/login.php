@@ -17,6 +17,4 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     }
 }
 
-require("views/login.view.php");
-
-?>
+require("views/noBarsPages/login.view.php");

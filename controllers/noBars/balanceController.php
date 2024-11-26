@@ -9,5 +9,3 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['amountToAdd'])) {
 }
 $balance = $db->query('select amount from users where userid = ?;', [$userID])->fetchColumn();
 $_SESSION['balance'] = $balance;
-?>
-

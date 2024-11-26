@@ -2,11 +2,12 @@
 
 $routes = [
     //mga page na di required ng user login
-    "/" => __DIR__ . "/controllers/home.php",
-    "/signup" => __DIR__ . "/controllers/signup.php",
-    "/changepassword" => __DIR__ . "/controllers/forgot.php",
-    "/login" => __DIR__ . "/controllers/login.php",
-    "/logout" => __DIR__ . "/controllers/logout.php",
+    "/" => __DIR__ . "/controllers/noBars/home.php",
+    "/signup" => __DIR__ . "/controllers/noBars/signup.php",
+    "/changepassword" => __DIR__ . "/controllers/noBars/forgot.php",
+    "/login" => __DIR__ . "/controllers/noBars/login.php",
+    "/logout" => __DIR__ . "/controllers/noBars/logout.php",
+    "/reset" => __DIR__ . "/controllers/noBars/reset.php",
 
     //mga page na accessible lang kapag may nakalog-in
     "/dashboard" => __DIR__ . "/controllers/dashboard.php",
@@ -17,7 +18,6 @@ $routes = [
     "/subscriptions" => __DIR__ . "/controllers/subscriptionList.php",
     "/audit" => __DIR__ . "/controllers/audit.php",
     "/settings" => __DIR__ . "/controllers/settings.php",
-    "/reset" => __DIR__ . "/controllers/reset.php",
 ];
 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
@@ -33,5 +33,5 @@ if (array_key_exists($uri, $routes)) {
 } else {
     // ito magloload kapag hindi nag-eexist yung route
     http_response_code(404);
-    require('views/404.php');
+    require('views/noBarsPages/404.php');
 }

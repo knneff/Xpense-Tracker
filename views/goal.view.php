@@ -1,4 +1,5 @@
-<?php require('partials/head.php') ?>
+<?php require('partials/body.php') ?>
+
 <?php if (isset($message)) : ?>
     <p class="text-gray-300 my-4 text-center text-xl "><?= $message ?></p>
 <?php endif; ?>
