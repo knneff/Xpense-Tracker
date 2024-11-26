@@ -1,8 +1,9 @@
 <?php require('views/partials/bodyNoBars.php') ?>
-
+<html>
 <head>
 <link rel="icon" type="image/x-icon" href="assets/xpense logo-01.ico">
 </head>
+</html>
 
 <div class="bg-[#03352c] text-gray-300">
   <div class="xl:container mx-auto relative">
