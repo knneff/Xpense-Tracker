@@ -2,7 +2,7 @@
 
 <div class="bg-[#03352c] text-gray-300">
   <div class="xl:container mx-auto relative">
-      <section class="grid lg:flex xl:m-10 justify-center">
+      <section class="grid lg:flex xl:m-10 justify-center pt-8">
         <div class="h-20 lg:w-[500px] xl:w-[600px] lg:pl-20 xl:pr-20 pt-8">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2754 1021" version="1.1">
             <g id="surface1">
@@ -29,13 +29,13 @@
           </svg>
         </div>
         <div class="text-center px-10 pt-5">
-        <h1 class="text-md sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold p-2">It is time to track your Xpense!</h1>
-        <h2 class="text-xs sm:text-sm md:text-md lg:text-base xl:text-lg p-2">Simplify Spending, Master Your Money</h2>
-        <a href="/login">
-          <button class="h-15 w-40 cursor-pointer p-2 transition-transform rounded-full text-gray-300 uppercase text-xl font-semibold hover:scale-110 bg-[#1a664d] hover:bg-[#278a6a]">
-            Get Started
-          </button>
-        </a>
+          <h1 class="text-md sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold p-2">It is time to track your Xpense!</h1>
+          <h2 class="text-xs sm:text-sm md:text-md lg:text-base xl:text-lg p-2">Simplify Spending, Master Your Money</h2>
+          <a href="/login">
+            <button class="h-15 w-40 cursor-pointer p-2 transition-transform rounded-full text-gray-300 uppercase text-xl font-semibold hover:scale-110 bg-[#1a664d] hover:bg-[#278a6a]">
+              Get Started
+            </button>
+          </a>
         </div>
       </section>
     <br><br><br><br><br><br><br><br>
@@ -55,11 +55,11 @@
         </div>
       </div>
       
-      <div class="bg-[#1a664d] md:py-20 md:px-20 px-10 grid md:flex">
-        <div class="pr-0 md:pr-10 lg:pr-20 pt-10 lg:pt-0">
-          <h1 class="text-xl md:text-2xl lg:text-4xl font-bold mb-5 ">How it works</h1>
+      <div class="bg-[#1a664d] lg:py-20 md:px-20 px-10 grid md:flex md:p-5">
+        <div class=" pr-0 lg:pl-20 lg:px-10 pt-10 lg:pt-0 text-center">
+          <h1 class="text-xl md:text-2xl lg:text-4xl font-bold mb-5">How it works</h1>
         </div>
-        <div class="pl-0 md:pl-10 lg:pl-20">
+        <div class="pl-0 md:pl-16 lg:pl-20 md:pt-10">
           <p class="text-base md:text-lg lg:text-xl text-justify max-w-2xl mx-auto">
             Xpense Tracker is a powerful yet easy-to-use web application designed to help you track, manage, and optimize your finances. With intuitive tools for budgeting, expense categorization, and real-time insights, Xpense Tracker empowers you to take control of your money and achieve your financial goals effortlessly.
           </p>
