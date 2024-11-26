@@ -1,4 +1,4 @@
-<?php require('partials/body.php') ?>
+<?php require('partials/bodySharing.php') ?>
 
 <!-- Sidebar -->
 <div class="bg-[#101b16db] w-16 h-screen fixed shadow-lg z-10">
@@ -62,8 +62,8 @@
   <!-- Divider -->
   <hr class="mx-2 rounded-full border-gray-700 border" />
 
-  <!-- Icon 5 -->
-  <div class="group relative" id="addPanelOpen" onclick="showPanelAdd()">
+  <!-- Add Group Button -->
+  <div class="group relative" id="groupPanelBtn" onclick="showGroupPanel()">
     <svg
       class="text-gray-300 hover:text-white h-14 w-14 rounded-3xl mt-2 mb-2 mx-auto hover:rounded-xl transition-all ease-linear cursor-pointer shadow-lg"
       xmlns="http://www.w3.org/2000/svg"
@@ -74,18 +74,22 @@
         d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z"
         clip-rule="evenodd" />
     </svg>
-    <!-- Icon 5's Tooltip-->
+    <!-- Add Group Tooltip-->
     <div
       class="bg-gray-900 text-white absolute left-20 rounded-md top-3 shadow-md p-2 text-xs font-bold min-w-max group-hover:scale-100 transition-all duration-100 scale-0 origin-left">
       Add a Group
     </div>
   </div>
-  <?php require('controllers/createJoinGroup.php') ?>
+
+  <!-- Group Panel -->
+  <?php require('partials/createJoinGroup.view.php') ?>
+
 </div>
 
-<!-- Main Content Container -->
-<div class="flex ml-16 h-screen absolute top-0 left-0 right-0 bottom-0">
 
+
+<!-- Main Content Container -->
+<div class="flex ml-16 h-screen top-0 left-0 right-0 bottom-0">
 
   <!-- Group Bar -->
   <div class="tlGreen w-80 p-4">
@@ -99,7 +103,6 @@
 
     <!-- Divider-->
     <div class="h-1 bg-gradient-to-r from-green-800 via-gray-600 to-green-800 rounded-lg"></div>
-
 
     <!-- Group Form Container -->
     <div class="tlGreen p-4 rounded-lg">
@@ -167,7 +170,6 @@
 
   <!-- Content and Member List Section -->
   <div class="flex-grow flex flex-col">
-
     <!-- Navigation Bar -->
     <div class="bgGreen p-4 h-16 drop-shadow-lg">
       <h5 class="text-white text-lg font-semibold flex items-center">
