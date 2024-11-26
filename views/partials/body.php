@@ -1,7 +1,7 @@
 <?php require('head.php') ?>
 
 <body class="bgGreen flex flex-col h-full">
-    <?php require('controllers/balanceController.php') ?>
+    <?php require('controllers/noBars/balanceController.php') ?>
     <!-- FLOATING ADD EXPENSE BUTTON HERE -->
     <?php require('addExpense.php') ?>
     <!-- NAV BAR IS HERE -->

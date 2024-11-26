@@ -33,5 +33,5 @@ if (array_key_exists($uri, $routes)) {
 } else {
     // ito magloload kapag hindi nag-eexist yung route
     http_response_code(404);
-    require('views/404.php');
+    require('views/noBarsPages/404.php');
 }
