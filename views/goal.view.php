@@ -15,7 +15,7 @@
         </div>
     </button>
     <?php foreach ($goals as $goal) : ?>
-        <?php $percent = $goal['paidAmount'] / $goal['amount'] * 100 ?>
+        <?php $percent = floor($goal['paidAmount'] / $goal['amount'] * 100) ?>
         <button
             class="active:scale-95 transition-transform"
             type="button"
@@ -43,9 +43,9 @@
                         </div>
                     </div>
                     <div class="mt-1 sm:mt-3 relative">
-                        <div class="w-full bg-[#064E3B] rounded-full h-4 sm:h-6 items-center flex">
-                            <div class="bg-[#15956B] h-4 sm:h-6 rounded-full" style="width: <?= $percent ?>%;"></div>
-                            <div class="absolute w-full text-center text-sm sm:text-base font-semibold"><?= $percent ?>%</div>
+                        <div class="w-full bg-[#064E3B] rounded-sm h-4 sm:h-6 items-center flex">
+                            <div class="bg-[#15956B] rounded-sm h-4 sm:h-6" style="width: <?= $percent ?>%;"></div>
+                            <div class="absolute w-full text-center text-lg sm:text-base font-semibold"><?= $percent ?>%</div>
                         </div>
                     </div>
                 </div>
@@ -176,8 +176,8 @@
                                 <span> / ₱</span>
                                 <span id="goalUpdateAmount"></span>
                             </div>
-                            <div class="w-full bg-[#064E3B] rounded-full h-4 sm:h-6 items-center flex relative">
-                                <div id="goalUpdateProgress" class="bg-[#15956B] h-4 sm:h-6 rounded-full"></div>
+                            <div class="w-full bg-[#064E3B] rounded-sm h-4 sm:h-6 items-center flex relative">
+                                <div id="goalUpdateProgress" class="bg-[#15956B] h-4 sm:h-6 rounded-sm"></div>
                                 <span id="goalUpdatePercent" class="absolute w-full text-center text-sm sm:text-base font-semibold"></span>
                             </div>
                         </div>
