@@ -5,6 +5,98 @@ protectPage();
 // Use $_SESSION['userid']; to get logged in user's userid
 $userID = $_SESSION['userid'];
 
+// if ($_SERVER['REQUEST_METHOD'] == "POST") {
+//     dd($_POST);
+// }
+
+if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['goalDelete'])) {
+    $goalID = $_POST['goalUpdateID'];
+    $currentIconPath = $_POST['goalUpdateIconPath'];
+
+    if (!empty($currentIconPath) && file_exists($currentIconPath)) {
+        unlink($currentIconPath);
+    }
+
+    $sql = "DELETE FROM goals WHERE goalID = :goalID";
+
+    $params = [
+        ':goalID' => $goalID,
+    ];
+
+    try {
+        $db->query($sql, $params);
+        header("Location: {$_SERVER['REQUEST_URI']}");
+        exit;
+    } catch (PDOException $e) {
+        $message = "An error occurred while processing your request. Please try again later.";
+    }
+}
+
+if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['goalUpdate']) && isset($_FILES['goalUpdateIcon']) && $_FILES['goalUpdateIcon']['error'] === UPLOAD_ERR_OK) {
+    $goalID = $_POST['goalUpdateID'];
+    $description = $_POST['goalUpdateDescription'];
+    $paidAmount = $_POST['goalUpdatePaidAmount'];
+    $currentIconPath = $_POST['goalUpdateIconPath'];
+    $icon = $_FILES['goalUpdateIcon'];
+
+    if (!empty($currentIconPath) && file_exists($currentIconPath)) {
+        unlink($currentIconPath);
+    }
+
+    $iconName = basename($icon['name']);
+    $fileType = strtolower(pathinfo($iconName, PATHINFO_EXTENSION));
+    $allowedTypes = ['png', 'jpg', 'jpeg'];
+
+    if (in_array($fileType, $allowedTypes)) {
+        $targetDir = "assets/icons/goal/";
+        $uniqueFileName = uniqid('goalIcon_', true) . '.' . $fileType;
+        $targetFilePath = $targetDir . $uniqueFileName;
+
+        if (move_uploaded_file($icon['tmp_name'], $targetFilePath)) {
+            $sql = "UPDATE goals SET description = :description, paidAmount = :paidAmount, groupIcon = :groupIcon WHERE goalID = :goalID";
+
+            $params = [
+                ':description' => $description,
+                ':paidAmount' => $paidAmount,
+                ':groupIcon' => $targetFilePath,
+                ':goalID' => $goalID
+            ];
+
+            try {
+                $db->query($sql, $params);
+                header("Location: {$_SERVER['REQUEST_URI']}");
+                exit;
+            } catch (PDOException $e) {
+                $message = "An error occurred while processing your request. Please try again later.";
+            }
+        } else {
+            $message = "Error uploading file.";
+        }
+    } else {
+        $message = "Invalid file type. Only PNG, JPEG, and JPG are allowed.";
+    }
+} elseif ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['goalUpdate'])) {
+    $goalID = $_POST['goalUpdateID'];
+    $description = $_POST['goalUpdateDescription'];
+    $paidAmount = $_POST['goalUpdatePaidAmount'];
+
+    $sql = "UPDATE goals SET description = :description, paidAmount = :paidAmount WHERE goalID = :goalID";
+
+    $params = [
+        ':description' => $description,
+        ':paidAmount' => $paidAmount,
+        ':goalID' => $goalID
+    ];
+
+    try {
+        $db->query($sql, $params);
+        header("Location: {$_SERVER['REQUEST_URI']}");
+        exit;
+    } catch (PDOException $e) {
+        $message = "An error occurred while processing your request. Please try again later.";
+    }
+}
+
 if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['addGoal']) && isset($_FILES['goalIcon']) && $_FILES['goalIcon']['error'] === UPLOAD_ERR_OK) {
     $description = $_POST['goalDescription'];
     $amount = $_POST['goalAmount'];
@@ -79,4 +171,3 @@ $goals = $db->query($sql, $params)->fetchAll(PDO::FETCH_ASSOC);
 $title = "Goals and Plans";
 
 require('views/goal.view.php');
-?>
