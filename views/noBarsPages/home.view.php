@@ -1,10 +1,10 @@
 <?php require('views/partials/bodyNoBars.php') ?>
 
 <div class="bg-[#03352c] text-gray-300">
-  <div class="xl:container mx-auto text-center relative">
+  <div class="xl:container mx-auto relative">
     <section>
     </section>
-    <section>
+    <section class="text-center">
       <h1 class="text-xl md:text-2xl lg:text-4xl font-bold p-5">It is time to track your Xpense!</h1>
       <h2 class="text-base md:text-lg lg:text-xl p-5">Simplify Spending, Master Your Money</h2>
       <a href="/login">
@@ -43,7 +43,7 @@
 
       <!-- SVG Separator flipped -->
       <div class="bg-[#1a664d]" style="transform: scaleX(-1);">
-        <svg style="transform: scaleY(1.5);"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 99" class="w-full pt-16 sm:pt-16 md:pt-10 lg:pt-6 h-36 md:h-44">
+        <svg style="transform: scaleY(1.5);"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 99" class="w-full pt-16 sm:pt-16 md:pt-10 lg:pt-6 h-36 md:h-44 xl:h-56">
           <path d="M737.9,94.7L0,0v100h1000V0L737.9,94.7z" fill="#03352c"></path>
         </svg>
       </div>
@@ -109,7 +109,7 @@
         </div>
         <div class="m-10">
           <div>
-            <h1 class="text-gray-300 text-xl md:text-2xl lg:text-4xl font-bold">Share, Split, and Simplify Group Expenses</h1>
+            <h1 class="text-gray-300 text-xl md:text-2xl lg:text-4xl font-bold text-right">Share, Split, and Simplify Group Expenses</h1>
           </div>
           <div class="text-justify">
             <h1 class="text-xs md:text-sm lg:text-base">Group Sharing Expenses lets you easily split costs with family, friends, or coworkers. Whether it's a weekend getaway, shared bills, or group purchases, this feature ensures everyone is on the same page. Keep track of who paid what, who owes whom, and settle up quickly. It makes group finances seamless and transparent, so you never have to worry about who’s paying for what again.</h1>
@@ -179,7 +179,7 @@
         </div>
         <div class="m-10">
           <div>
-            <h1 class="text-gray-300 text-xl md:text-2xl lg:text-4xl font-bold">Stay on Track, Avoid the Overspend</h1>
+            <h1 class="text-gray-300 text-xl md:text-2xl lg:text-4xl font-bold text-right">Stay on Track, Avoid the Overspend</h1>
           </div>
           <div class="text-justify">
             <h1 class="text-xs md:text-sm lg:text-base">The Overspending Alarm is your personal spending watchdog. It alerts you when you're getting close to or exceeding your budget, giving you the opportunity to adjust your spending habits before it's too late. Stay in control of your finances and avoid surprises, making sure your money works for you — not the other way around.</h1>
