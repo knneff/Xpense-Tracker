@@ -33,7 +33,7 @@
           <h1 class="text-md sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold p-2">It is time to track your Xpense!</h1>
           <h2 class="text-xs sm:text-sm md:text-md lg:text-base xl:text-lg p-2">Simplify Spending, Master Your Money</h2>
           <a href="/login">
-            <button class="h-15 w-40 cursor-pointer p-2 transition-transform rounded-full text-gray-300 uppercase text-xl font-semibold hover:scale-110 bg-[#1a664d] hover:bg-[#278a6a]">
+            <button class="h-14 w-40 cursor-pointer p-2 pt-0.5 transition-transform rounded-full text-gray-300 uppercase text-xl font-semibold hover:scale-110 bg-[#1a664d] hover:bg-[#278a6a]">
               Get Started
             </button>
           </a>
@@ -69,12 +69,18 @@
 
       <!-- SVG Separator flipped -->
       <div class="bg-[#1a664d]" style="transform: scaleX(-1);">
-        <svg style="transform: scaleY(1.5);"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 99" class="w-full pt-16 sm:pt-16 md:pt-10 lg:pt-6 h-36 md:h-44 xl:h-56">
+        <svg style="transform: scaleY(1.5);"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 99" class="w-full pt-16 sm:pt-16 md:pt-10 lg:pt-6 h-36 md:h-44 lg:h-52 xl:h-56">
           <path d="M737.9,94.7L0,0v100h1000V0L737.9,94.7z" fill="#03352c"></path>
         </svg>
       </div>
     </section>
-    <br><br><br><br><br>
+    <br><br><br><br><br><center>
+    <section>
+      <div class="text-center text-2xl font-bold bg-[#1a664d] p-5 w-96 h-20 border-4 rounded-full">
+          <h1>PRODUCT FEATURES</h1>
+      </div></center>
+    <br><br>
+    </section>
     <section>
       <div class="bg-[#d5ffdf] h-fit flex">
         <div class="m-10">
