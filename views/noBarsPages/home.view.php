@@ -1,12 +1,12 @@
 <?php require('views/partials/bodyNoBars.php') ?>
 
-<a href="/dashboard" class="text-teal-300 hover:underline">TEMPORARY DASHBOARD HYPERLINK HERE</a>
-
 <div class="bg-[#03352c] text-gray-300">
   <div class="xl:container mx-auto text-center relative">
     <section>
-      <h1 class="text-4xl font-bold p-5">It is time to track your Xpense!</h1>
-      <h2 class="text-xl p-5">Simplify Spending, Master Your Money</h2>
+    </section>
+    <section>
+      <h1 class="text-xl md:text-2xl lg:text-4xl font-bold p-5">It is time to track your Xpense!</h1>
+      <h2 class="text-base md:text-lg lg:text-xl p-5">Simplify Spending, Master Your Money</h2>
       <a href="/login">
         <button class="h-15 w-56 cursor-pointer p-5 transition-transform rounded-full text-gray-300 uppercase text-xl font-semibold hover:scale-110 bg-[#1a664d] hover:bg-[#278a6a]">
           Get Started
@@ -15,77 +15,71 @@
     </section>
     <br><br><br><br><br><br><br><br>
     <!-- SVG Separator -->
-    <section class=" w-auto md:w-auto lg:w-auto xl:w-auto 2xl:w-auto justify-center">
-      <div class="bg-[#1a664d] rotate-180" style="transform: scaleY(-1);">
+    <section class="justify-center">
+      <div class="bg-[#1a664d] rotate-180" style="transform: scaleY(-2);">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 99" class="w-full h-auto">
           <path d="M737.9,94.7L0,0v100h1000V0L737.9,94.7z" fill="#03352c"></path>
         </svg>
 
       </div>
-
-      <div class="absolute top-[230px] left-0 right-0 mx-auto w-full  py-10">
+    <!-- pictures -->
+      <div class="absolute top-[320px] md:top-[300px] lg:top-[230px] left-0 right-0 mx-auto w-full  py-10">
         <div class="flex justify-around items-center gap-5">
           <img src="assets\iphone-175x300.png" alt="iPhone image" class="h-24 md:h-48 lg:h-72">
           <img src="assets\main-grocery-store-1-300x208.png" alt="Grocery store image" class="h-24 md:h-48 lg:h-52">
         </div>
       </div>
-
-      <div class="bg-[#1a664d] py-20 px-20 flex justify-center">
-        <div class="pr-20">
-          <h1 class="text-4xl font-bold mb-5 ">How it works</h1>
+      
+      <div class="bg-[#1a664d] md:py-20 md:px-20 px-10 grid md:flex">
+        <div class="pr-0 md:pr-10 lg:pr-20 pt-10 lg:pt-0">
+          <h1 class="text-xl md:text-2xl lg:text-4xl font-bold mb-5 ">How it works</h1>
         </div>
-        <div class="pr-20">
-          <p class="text-xl text-justify max-w-2xl mx-auto">
+        <div class="pl-0 md:pl-10 lg:pl-20">
+          <p class="text-base md:text-lg lg:text-xl text-justify max-w-2xl mx-auto">
             Xpense Tracker is a powerful yet easy-to-use web application designed to help you track, manage, and optimize your finances. With intuitive tools for budgeting, expense categorization, and real-time insights, Xpense Tracker empowers you to take control of your money and achieve your financial goals effortlessly.
           </p>
         </div>
       </div>
 
       <!-- SVG Separator flipped -->
-      <div class="bg-[#1a664d] -rotate-180" style="transform: scaleX(-1);">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 99" class="w-full h-auto">
+      <div class="bg-[#1a664d]" style="transform: scaleX(-1);">
+        <svg style="transform: scaleY(1.5);"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 99" class="w-full pt-16 sm:pt-16 md:pt-10 lg:pt-6 h-36 md:h-44">
           <path d="M737.9,94.7L0,0v100h1000V0L737.9,94.7z" fill="#03352c"></path>
         </svg>
       </div>
     </section>
-    <section class="-space-y-10">
-      <div class="mx-20 bg-[#d5ffdf] h-72 flex">
+    <br><br><br><br><br>
+    <section>
+      <div class="bg-[#d5ffdf] h-fit flex">
         <div class="m-10">
           <div>
-            <h1 class="text-[#1a664d] text-4xl font-bold">Track Your Way to Financial Freedom</h1>
+            <h1 class="text-[#1a664d] text-xl md:text-2xl lg:text-4xl font-bold">Track Your Way to Financial Freedom</h1>
           </div>
           <div class="text-justify text-[#1a664d]">
-            <h1>With Financial Goals, you can set, track, and achieve your financial milestones with ease. Whether you're saving for a vacation, building an emergency fund, or working towards a major investment, this feature helps you stay focused, visualize progress, and adjust your strategy to ensure success. Stay on top of your goals and turn your financial dreams into reality.</h1>
+            <h1 class="text-xs md:text-sm lg:text-base">With Financial Goals, you can set, track, and achieve your financial milestones with ease. Whether you're saving for a vacation, building an emergency fund, or working towards a major investment, this feature helps you stay focused, visualize progress, and adjust your strategy to ensure success. Stay on top of your goals and turn your financial dreams into reality. </h1>
           </div>
         </div>
-        <div>
-          <svg viewBox="-4.8 -4.8 57.60 57.60" id="a" xmlns="http://www.w3.org/2000/svg" fill="#000000">
-            <g id="SVGRepo_bgCarrier" stroke-width="0">
-              <rect x="-4.8" y="-4.8" width="57.60" height="57.60" rx="28.8" fill="#70db99" strokewidth="0"></rect>
-            </g>
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
-              <defs>
-                <style>
-                  .f {
-                    fill: none;
-                    stroke: #000000;
-                    stroke-linecap: round;
-                    stroke-linejoin: round;
-                  }
-                </style>
-              </defs>
-              <rect id="b" class="f" x="6.9608" y="13.065" width="7.5178" height="21.87"></rect>
-              <rect id="c" class="f" x="20.7926" y="18.5325" width="7.5178" height="16.4025"></rect>
-              <rect id="d" class="f" x="34.994" y="27.4172" width="7.5178" height="7.5178"></rect>
-              <path id="e" class="f" d="m4.5,34.9237l14.2938-11.4905,12.4763,4.4976,12.2299-9.4265"></path>
-            </g>
-          </svg>
+        <div class="pr-10 md:pr-52 py-10">
+        <svg class="w-[8rem] h-[8rem] md:w-[9rem] md:h-[9rem] lg:w-[11rem] lg:h-[11rem]" xmlns="http://www.w3.org/2000/svg" viewBox="-4.8 -4.8 57.60 57.60" id="a" fill="#000000">
+          <g id="SVGRepo_bgCarrier" stroke-width="0">
+            <rect x="-4.8" y="-4.8" width="57.60" height="57.60" rx="28.8" fill="#70db99" strokewidth="0"/>
+          </g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+          <g id="SVGRepo_iconCarrier">
+            <defs>
+              <style>.f{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}</style>
+            </defs>
+            <rect id="b" class="f" x="6.9608" y="13.065" width="7.5178" height="21.87"/>
+            <rect id="c" class="f" x="20.7926" y="18.5325" width="7.5178" height="16.4025"/>
+            <rect id="d" class="f" x="34.994" y="27.4172" width="7.5178" height="7.5178"/>
+            <path id="e" class="f" d="m4.5,34.9237l14.2938-11.4905,12.4763,4.4976,12.2299-9.4265"/>
+          </g>
+        </svg>
         </div>
       </div>
-      <div class="mx-20 bg-[#1a664d] h-72 flex">
-        <div class="pl-52 py-10">
-          <svg height="180px" width="180px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-127.03 -127.03 762.16 762.16" xml:space="preserve" fill="#000000">
+      <div class="bg-[#1a664d] h-fit flex">
+        <div class="pl-10 md:pl-52 py-10">
+          <svg class="w-[8rem] h-[8rem] md:w-[9rem] md:h-[9rem] lg:w-[11rem] lg:h-[11rem]" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-127.03 -127.03 762.16 762.16" xml:space="preserve" fill="#000000">
             <g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)">
               <rect x="-127.03" y="-127.03" width="762.16" height="762.16" rx="381.08" fill="#70db99" strokewidth="0"></rect>
             </g>
@@ -115,29 +109,54 @@
         </div>
         <div class="m-10">
           <div>
-            <h1 class="text-gray-300 text-4xl font-bold">Share, Split, and Simplify Group Expenses</h1>
+            <h1 class="text-gray-300 text-xl md:text-2xl lg:text-4xl font-bold">Share, Split, and Simplify Group Expenses</h1>
           </div>
           <div class="text-justify">
-            <h1>Group Sharing Expenses lets you easily split costs with family, friends, or coworkers. Whether it's a weekend getaway, shared bills, or group purchases, this feature ensures everyone is on the same page. Keep track of who paid what, who owes whom, and settle up quickly. It makes group finances seamless and transparent, so you never have to worry about who’s paying for what again.</h1>
+            <h1 class="text-xs md:text-sm lg:text-base">Group Sharing Expenses lets you easily split costs with family, friends, or coworkers. Whether it's a weekend getaway, shared bills, or group purchases, this feature ensures everyone is on the same page. Keep track of who paid what, who owes whom, and settle up quickly. It makes group finances seamless and transparent, so you never have to worry about who’s paying for what again.</h1>
           </div>
         </div>
       </div>
-      <div class="mx-20 bg-[#d5ffdf] h-72 flex">
-        <div>
-          <!-- insert svg here -->
-        </div>
+      <div class="bg-[#d5ffdf] h-fit flex">
         <div class="m-10">
           <div>
-            <h1 class="text-[#1a664d] text-4xl font-bold">Never Miss a Payment, Stay in Control of Subscriptions</h1>
+            <h1 class="text-[#1a664d] text-xl md:text-2xl lg:text-4xl font-bold">Never Miss a Payment, Stay in Control of Subscriptions</h1>
           </div>
           <div class="text-justify text-[#1a664d]">
-            <h1>With the Subscription List, you can keep a detailed record of all your recurring subscriptions, whether it's streaming services, software, or memberships. Get reminders before payments are due and track your spending to see which subscriptions you use most. This feature helps you cut out unnecessary expenses and stay on top of renewals, ensuring you only pay for what you really need.</h1>
+            <h1 class="text-xs md:text-sm lg:text-base">With the Subscription List, you can keep a detailed record of all your recurring subscriptions, whether it's streaming services, software, or memberships. Get reminders before payments are due and track your spending to see which subscriptions you use most. This feature helps you cut out unnecessary expenses and stay on top of renewals, ensuring you only pay for what you really need.</h1>
           </div>
         </div>
+        <div class="pr-10 md:pr-52 py-10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-[8rem] h-[8rem] md:w-[9rem] md:h-[9rem] lg:w-[11rem] lg:h-[11rem]" viewBox="-102.4 -102.4 1228.80 1228.80" class="icon" version="1.1" fill="#000000">
+          <g id="SVGRepo_bgCarrier" stroke-width="0">
+            <rect x="-102.4" y="-102.4" width="1228.80" height="1228.80" rx="614.4" fill="#70db99" strokewidth="0"/>
+          </g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+          <g id="SVGRepo_iconCarrier">
+            <path d="M182.067 383.79h664.916v473.911H182.067z" fill="#FCE3C3"/>
+            <path d="M846.983 857.701H170.007V401.632h676.976v456.069zM189.428 838.28h638.134V421.053H189.428V838.28z" fill="#300604"/>
+            <path d="M850.483 861.201H166.507V398.132h683.977v463.069z m-676.976-7h669.977V405.132H173.507v449.069z m657.555-12.421H185.929V417.553h645.134V841.78z m-638.133-7h631.134V424.553H192.929V834.78z" fill="#300604"/>
+            <path d="M179.718 273.282h657.556v138.061H179.718z" fill="#300604"/>
+            <path d="M840.774 414.844H176.219V269.782h664.556v145.062z m-657.555-7h650.556V276.782H183.219v131.062z" fill="#300604"/>
+            <path d="M846.983 421.053H170.007V263.572h676.976v157.481z m-657.555-19.421h638.134V282.994H189.428v118.638z" fill="#300604"/>
+            <path d="M850.483 424.553H166.507v-164.48h683.977v164.48z m-676.976-7h669.977v-150.48H173.507v150.48z m657.555-12.421H185.929V279.494h645.134v125.638z m-638.133-7h631.134V286.494H192.929v111.638z" fill="#300604"/>
+            <path d="M672.215 190.225h63.426v162.87h-63.426z" fill="#ED8F27"/>
+            <path d="M745.351 362.806h-82.847V180.514h82.847v182.292z m-63.426-19.421h44.005v-143.45h-44.005v143.45z" fill="#300604"/>
+            <path d="M281.351 190.225h63.426v162.87h-63.426z" fill="#ED8F27"/>
+            <path d="M354.487 362.806H271.64V180.514h82.847v182.292z m-63.426-19.421h44.005v-143.45h-44.005v143.45z" fill="#300604"/>
+            <path d="M688.071 468.427h66.597v66.597h-66.597z" fill="#B12800"/>
+            <path d="M688.071 596.369h66.597v66.597h-66.597zM688.071 724.31h66.597v66.598h-66.597zM546.156 468.427h66.597v66.597h-66.597z" fill="#228E9D"/>
+            <path d="M546.156 596.369h66.597v66.597h-66.597z" fill="#B12800"/>
+            <path d="M546.156 724.31h66.597v66.598h-66.597zM404.239 468.427h66.598v66.597h-66.598z" fill="#228E9D"/>
+            <path d="M404.239 596.369h66.598v66.597h-66.598z" fill="#B12800"/>
+            <path d="M404.239 724.31h66.598v66.598h-66.598zM262.323 596.369h66.598v66.597h-66.598z" fill="#228E9D"/>
+            <path d="M262.323 724.31h66.598v66.598h-66.598z" fill="#B12800"/>
+          </g>
+        </svg>
+        </div>
       </div>
-      <div class="mx-20 bg-[#1a664d] h-72 flex">
-        <div class="pl-52 py-10">
-          <svg height="180px" width="180px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-51.2 -51.2 614.40 614.40" xml:space="preserve" fill="#000000">
+      <div class="bg-[#1a664d] h-fit flex">
+        <div class="pl-10 md:pl-52 py-10">
+          <svg class="w-[8rem] h-[8rem] md:w-[9rem] md:h-[9rem] lg:w-[11rem] lg:h-[11rem]" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-51.2 -51.2 614.40 614.40" xml:space="preserve" fill="#000000">
             <g id="SVGRepo_bgCarrier" stroke-width="0">
               <rect x="-51.2" y="-51.2" width="614.40" height="614.40" rx="307.2" fill="#70db99" strokewidth="0"></rect>
             </g>
@@ -160,10 +179,10 @@
         </div>
         <div class="m-10">
           <div>
-            <h1 class="text-gray-300 text-4xl font-bold">Stay on Track, Avoid the Overspend</h1>
+            <h1 class="text-gray-300 text-xl md:text-2xl lg:text-4xl font-bold">Stay on Track, Avoid the Overspend</h1>
           </div>
           <div class="text-justify">
-            <h1>The Overspending Alarm is your personal spending watchdog. It alerts you when you're getting close to or exceeding your budget, giving you the opportunity to adjust your spending habits before it's too late. Stay in control of your finances and avoid surprises, making sure your money works for you — not the other way around.</h1>
+            <h1 class="text-xs md:text-sm lg:text-base">The Overspending Alarm is your personal spending watchdog. It alerts you when you're getting close to or exceeding your budget, giving you the opportunity to adjust your spending habits before it's too late. Stay in control of your finances and avoid surprises, making sure your money works for you — not the other way around.</h1>
           </div>
         </div>
       </div>
