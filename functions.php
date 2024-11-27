@@ -62,3 +62,36 @@ function stringShortener($string, $length)
 {
     return (strlen($string) > $length) ? substr($string, 0, $length) . "..." : $string;
 }
+
+function moveResizedImage($file, $targetFilePath, $size = 128, $quality = 50)
+{
+    $fileType = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+
+    if ($fileType === 'jpg' || $fileType === 'jpeg') {
+        $image = imagecreatefromjpeg($file['tmp_name']);
+    } elseif ($fileType === 'png') {
+        $image = imagecreatefrompng($file['tmp_name']);
+    }
+
+    list($width, $height) = getimagesize($file['tmp_name']);
+
+    $size = min($width, $height);
+    $x_offset = ($width - $size) / 2;
+    $y_offset = ($height - $size) / 2;
+
+    $squareImage = imagecreatetruecolor($size, $size);
+
+    imagecopyresampled($squareImage, $image, 0, 0, $x_offset, $y_offset, $size, $size, $size, $size);
+
+    if ($fileType === 'jpg' || $fileType === 'jpeg') {
+        imagejpeg($squareImage, $targetFilePath, $quality);
+    } elseif ($fileType === 'png') {
+        imagepng($squareImage, $targetFilePath, 6); 
+    }
+
+    imagedestroy($image);
+    imagedestroy($squareImage);
+
+    return true; 
+}
+

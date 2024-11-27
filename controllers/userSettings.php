@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_FILES['icon']) && isset($_P
         $uniqueFileName = uniqid('profile_', true) . '.' . $fileType;
         $targetFilePath = $targetDir . $uniqueFileName;
 
-        if (move_uploaded_file($icon['tmp_name'], $targetFilePath)) {
+        if (moveResizedImage($icon, $targetFilePath)) {
 
             $sql = "UPDATE users SET 
                     firstName = :firstname, 

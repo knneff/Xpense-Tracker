@@ -1,5 +1,10 @@
 mysql --user avnadmin --password=AVNS_f8o7HWTkd-96oSm9STx --host mysql-6ef4ff5-xadd852x-362b.j.aivencloud.com --port 16921
 
+IMPORTANT: need i configure ung text file na "C:\xampp\php\php.ini"  since gumamit ng library for resizing the uploaded image;
+find this =>  ;extension=gd 
+then tangalin nyulang semicolon => extension=gd 
+save the file and restart the server
+
 
 // use two conditions  if add expense is in your page
 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['addExpense']))

@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['goalUpdate']) && isse
         $uniqueFileName = uniqid('goalIcon_', true) . '.' . $fileType;
         $targetFilePath = $targetDir . $uniqueFileName;
 
-        if (move_uploaded_file($icon['tmp_name'], $targetFilePath)) {
+        if (moveResizedImage($icon, $targetFilePath)) {
             $sql = "UPDATE goals SET description = :description, paidAmount = :paidAmount, groupIcon = :groupIcon WHERE goalID = :goalID";
 
             $params = [
@@ -138,7 +138,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['addGoal']) && isset($
         $uniqueFileName = uniqid('goalIcon_', true) . '.' . $fileType;
         $targetFilePath = $targetDir . $uniqueFileName;
 
-        if (move_uploaded_file($icon['tmp_name'], $targetFilePath)) {
+        if (moveResizedImage($icon, $targetFilePath)) {
             $sql = "INSERT INTO goals (userID, description, category, amount, groupIcon) 
                     VALUES (:userID, :description, :category, :amount, :groupIcon)";
 
