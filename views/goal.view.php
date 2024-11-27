@@ -5,7 +5,7 @@
 <?php endif; ?>
 <main class="grid grid-cols-1 lg:grid-cols-2 gap-7">
     <button
-        class="active:scale-95 transition-transform"
+        class="active:scale-95 transition-transform hover:scale-[1.03]"
         type="button"
         onclick="showPanelGoal()">
         <div class="flex items-center justify-center border-2 border-dashed hover:border-white border-gray-300 rounded-lg h-20 sm:h-24">
@@ -17,7 +17,7 @@
     <?php foreach ($goals as $goal) : ?>
         <?php $percent = floor($goal['paidAmount'] / $goal['amount'] * 100) ?>
         <button
-            class="active:scale-95 transition-transform"
+            class="active:scale-95 transition-transform hover:scale-[1.03]"
             type="button"
             onclick="showPanelGoalUpdate(
                 '<?= $goal['goalID'] ?>', 

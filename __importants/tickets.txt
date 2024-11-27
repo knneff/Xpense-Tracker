@@ -1,8 +1,6 @@
 
 lagyan ng contact support page, parang chat.
 
-integrate ung logo sa navbar and gmail acc
-
 gmail verification???
 
 gumawa ng decent custom message to welcome message and reset password message to users thru gmail
