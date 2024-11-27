@@ -1,9 +1,9 @@
 <?php require('views/partials/bodyNoBars.php') ?>
 
 
-<div class="bg-[#03352c] text-gray-300">
+<div class="text-gray-300">
   <div class="xl:container mx-auto relative">
-      <section class="grid lg:flex xl:m-10 justify-center pt-8">
+      <section class="grid lg:flex justify-center h-screen w-full bg-[#03352c]">
         <div class="h-20 lg:w-[500px] xl:w-[600px] lg:pl-20 xl:pr-20 pt-8">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2754 1021" version="1.1">
             <g id="surface1">
@@ -42,12 +42,6 @@
     <br><br><br><br><br><br><br><br>
     <!-- SVG Separator -->
     <section class="justify-center">
-      <div class="bg-[#1a664d] rotate-180" style="transform: scaleY(-2);">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 99" class="w-full h-auto">
-          <path d="M737.9,94.7L0,0v100h1000V0L737.9,94.7z" fill="#03352c"></path>
-        </svg>
-
-      </div>
     <!-- pictures -->
       <div class="absolute top-[320px] md:top-[300px] lg:top-[230px] left-0 right-0 mx-auto w-full  py-10">
         <div class="flex justify-around items-center gap-5">
@@ -65,13 +59,6 @@
             Xpense Tracker is a powerful yet easy-to-use web application designed to help you track, manage, and optimize your finances. With intuitive tools for budgeting, expense categorization, and real-time insights, Xpense Tracker empowers you to take control of your money and achieve your financial goals effortlessly.
           </p>
         </div>
-      </div>
-
-      <!-- SVG Separator flipped -->
-      <div class="bg-[#1a664d]" style="transform: scaleX(-1);">
-        <svg style="transform: scaleY(1.5);"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 99" class="w-full pt-16 sm:pt-16 md:pt-10 lg:pt-6 h-36 md:h-44 lg:h-52 xl:h-56">
-          <path d="M737.9,94.7L0,0v100h1000V0L737.9,94.7z" fill="#03352c"></path>
-        </svg>
       </div>
     </section>
     <br><br><br><br><br><center>
