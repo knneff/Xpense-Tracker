@@ -3,7 +3,7 @@
 
 <div class="text-gray-300">
   <div class="xl:container mx-auto relative">
-      <section class="grid lg:flex xl:m-10 justify-center pt-10 h-[640px] bg-[#03352c]">
+      <section class="grid lg:flex xl:m-10 justify-center pt-10 h-screen w-full bg-[#03352c]">
         <div class="h-20 lg:w-[500px] xl:w-[600px] lg:pl-20 xl:pr-20 pt-8">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2754 1021" version="1.1">
             <g id="surface1">
