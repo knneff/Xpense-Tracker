@@ -88,7 +88,6 @@
         groupNameSection.innerHTML = `
         <label for="inviteLink" class="block text-xs font-bold text-gray-400 mb-1">INVITE LINK*</label>
         <div class="relative">
-
             <!-- Icon -->
             <span class="absolute inset-y-0 left-0 flex items-center pl-3">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -105,6 +104,7 @@
                 required
                 class="w-full pl-10 p-3 border rounded-lg bg-gray-700 border-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500">
         </div>`;
+
         // Update buttons
         document.getElementById('submitBtn').textContent = 'Join Group';
         document.getElementById('joinGroupBtn').textContent = 'Back';
@@ -120,16 +120,16 @@
         // Restore upload section (MAY PROBLEM DITO)
         const uploadSection = document.createElement('div');
         uploadSection.id = 'uploadSection';
-        uploadSection.className = 'flex flex-col items-center';
-        uploadSection.innerHTML = `
-            <label for="iconUpload" class="cursor-pointer flex flex-col items-center justify-center w-24 h-24 bg-gray-700 rounded-full hover:bg-gray-600">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 5v14m-7-7h14"></path>
-                </svg>
-                <span class="text-xs text-gray-400 mt-2">Upload</span>
-            </label>
-            <input id="iconUpload" name='groupIcon' type="file" accept="image/*" class="hidden">
-        `;
+        // uploadSection.className = 'flex flex-col items-center';
+        // uploadSection.innerHTML = `
+        //     <label for="iconUpload" class="cursor-pointer flex flex-col items-center justify-center w-24 h-24 bg-gray-700 rounded-full hover:bg-gray-600">
+        //         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        //             <path d="M12 5v14m-7-7h14"></path>
+        //         </svg>
+        //         <span class="text-xs text-gray-400 mt-2">Upload</span>
+        //     </label>
+        //     <input id="iconUpload" name='groupIcon' type="file" accept="image/*" class="hidden">
+        // `;
         document.getElementById('addForm').insertBefore(uploadSection, document.getElementById('groupNameSection'));
 
         // Restore group name section

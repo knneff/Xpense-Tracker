@@ -11,7 +11,11 @@ gumawa ng decent custom message to welcome message and reset password message to
 kelangan i test mga functions. need major testings
 =============================================================================================================
 
-pagsasama user settings and system settings
+pagsasama user settings and system settings (SI KEN NA DITO)
+
+notification system
+- overspending
+- invite ng group?
 
 Sharing
 - ayusin html and javascript ng creation panel
