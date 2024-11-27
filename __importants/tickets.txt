@@ -1,10 +1,5 @@
-gawin na ung goals and plans
-
-alisin group sa add expense 
 
 lagyan ng contact support page, parang chat.
-
-bawasan ng resolution ing mga images
 
 integrate ung logo sa navbar and gmail acc
 

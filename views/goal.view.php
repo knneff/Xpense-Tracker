@@ -25,7 +25,9 @@
                 '<?= $goal['amount'] ?>', 
                 '<?= $goal['paidAmount'] ?>', 
                 '<?= $goal['groupIcon'] ?>',
+                '<?= $goal['category'] ?>',
                 '<?= $percent ?>'
+                
             )">
             <div class="p-4 flex rounded-lg tlGreen textGray gap-3 shadow-lg">
                 <div>
@@ -53,7 +55,7 @@
         </button>
     <?php endforeach ?>
 </main>
-<main id="goalPanel" class="">
+<main id="goalPanel" class="hidden">
     <div id="goalOverlay" class="z-50 flex justify-center items-center fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50">
         <div class="flex flex-col justify-center text-base sm:text-lg text-gray-300 tlGreen p-8 rounded-3xl">
             <h2 class="text-4xl font-semibold text-center textGray">Goals and Plans</h2>
@@ -218,6 +220,10 @@
                         id="goalUpdateAmountPaid"
                         type="hidden"
                         name="goalUpdateAmountPaid">
+                    <input
+                        id="goalUpdateCategory"
+                        type="hidden"
+                        name="goalUpdateCategory">
                 </div>
                 <div class="mt-6 grid gap-x-8 sm:gap-x-16 grid-cols-2">
                     <button
@@ -280,12 +286,13 @@
         }
     }
 
-    function showPanelGoalUpdate(goalID, description, amount, paidAmount, groupIcon, percent) {
+    function showPanelGoalUpdate(goalID, description, amount, paidAmount, groupIcon, category, percent) {
         document.getElementById('goalUpdateID').value = goalID;
         document.getElementById('goalUpdateDescription').value = description;
         document.getElementById('goalUpdateAmount').textContent = amount;
         document.getElementById('goalUpdatePaidAmount').textContent = paidAmount;
         document.getElementById('goalUpdateAmountPaid').value = paidAmount;
+        document.getElementById('goalUpdateCategory').value = category;
         document.getElementById('goalUpdatePaidAmountInput').setAttribute('max', parseFloat(amount) - parseFloat(paidAmount));
         document.getElementById('goalUpdateProgress').style.width = `${percent}%`;
         document.getElementById('goalUpdatePercent').textContent = `${percent}%`;

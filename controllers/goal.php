@@ -64,8 +64,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['goalUpdate']) && isse
 
             try {
                 $db->query($sql, $params);
-                header("Location: {$_SERVER['REQUEST_URI']}");
-                exit;
             } catch (PDOException $e) {
                 $message = "An error occurred while processing your request. Please try again later.";
             }
@@ -90,19 +88,17 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['goalUpdate']) && isse
 
     try {
         $db->query($sql, $params);
-        header("Location: {$_SERVER['REQUEST_URI']}");
-        exit;
     } catch (PDOException $e) {
         $message = "An error occurred while processing your request. Please try again later.";
     }
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['goalUpdate'])) {
-    $amount = $_POST['amount'];
-    $category = $_POST['category'];
-    $description = $_POST['desc'];
-    $expenseType = 'basic';
-    $dateTime = $_POST['datetime'];
+    $amount = $_POST['goalUpdatePaidAmount'];
+    $category = $_POST['goalUpdateCategory'];
+    $description = $_POST['goalUpdateDescription'];
+    $expenseType = 'goal';
+    $dateTime = date('Y-m-d H:i:s');;
 
     $sql = "INSERT INTO expenses (userID, amount, category, description, expenseType, expenseTime)
         VALUES (:userID, :amount, :category, :description, :expenseType, :expenseTime)";
@@ -189,7 +185,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['addGoal']) && isset($
     }
 }
 
-$sql = "SELECT goalID, description, amount, paidAmount, groupIcon FROM goals WHERE userID = :userID";
+$sql = "SELECT goalID, description, amount, paidAmount, groupIcon, category FROM goals WHERE userID = :userID";
 
 $params = [
     ':userID' => $userID,
