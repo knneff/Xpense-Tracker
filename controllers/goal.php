@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['goalDelete'])) {
 if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['goalUpdate']) && isset($_FILES['goalUpdateIcon']) && $_FILES['goalUpdateIcon']['error'] === UPLOAD_ERR_OK) {
     $goalID = $_POST['goalUpdateID'];
     $description = $_POST['goalUpdateDescription'];
-    $paidAmount = $_POST['goalUpdatePaidAmount'];
+    $paidAmount = floatval($_POST['goalUpdatePaidAmount']) + floatval($_POST['goalUpdateAmountPaid']);
     $currentIconPath = $_POST['goalUpdateIconPath'];
     $icon = $_FILES['goalUpdateIcon'];
 
@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['goalUpdate']) && isse
 } elseif ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['goalUpdate'])) {
     $goalID = $_POST['goalUpdateID'];
     $description = $_POST['goalUpdateDescription'];
-    $paidAmount = $_POST['goalUpdatePaidAmount'];
+    $paidAmount = floatval($_POST['goalUpdatePaidAmount']) + floatval($_POST['goalUpdateAmountPaid']);
 
     $sql = "UPDATE goals SET description = :description, paidAmount = :paidAmount WHERE goalID = :goalID";
 

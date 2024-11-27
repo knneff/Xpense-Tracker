@@ -182,10 +182,12 @@
                             </div>
                         </div>
                         <input
+                            id="goalUpdatePaidAmountInput"
                             type="number"
                             name="goalUpdatePaidAmount"
                             placeholder="Amount to Add"
                             min="0"
+                            max=""
                             step="0.01"
                             class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none" />
                     </div>
@@ -197,6 +199,10 @@
                         id="goalUpdateIconPath"
                         type="hidden"
                         name="goalUpdateIconPath">
+                    <input
+                        id="goalUpdateAmountPaid"
+                        type="hidden"
+                        name="goalUpdateAmountPaid">
                 </div>
                 <div class="mt-6 grid gap-x-8 sm:gap-x-16 grid-cols-2">
                     <button
@@ -260,16 +266,18 @@
     }
 
     function showPanelGoalUpdate(goalID, description, amount, paidAmount, groupIcon, percent) {
-
         document.getElementById('goalUpdateID').value = goalID;
         document.getElementById('goalUpdateDescription').value = description;
         document.getElementById('goalUpdateAmount').textContent = amount;
         document.getElementById('goalUpdatePaidAmount').textContent = paidAmount;
+        document.getElementById('goalUpdateAmountPaid').value = paidAmount;
+        document.getElementById('goalUpdatePaidAmountInput').setAttribute('max', parseFloat(amount) - parseFloat(paidAmount));
         document.getElementById('goalUpdateProgress').style.width = `${percent}%`;
         document.getElementById('goalUpdatePercent').textContent = `${percent}%`;
         document.getElementById('goalUpdatePreview').src = groupIcon;
         document.getElementById('goalUpdateIconPath').value = groupIcon;
         document.getElementById('goalUpdatePanel').classList.remove('hidden');
+
     }
 
     document.getElementById('goalUpdateOverlay').addEventListener('click', (event) => {
