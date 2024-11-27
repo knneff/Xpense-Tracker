@@ -33,7 +33,7 @@
           <h1 class="text-md sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold p-2">It is time to track your Xpense!</h1>
           <h2 class="text-xs sm:text-sm md:text-md lg:text-base xl:text-lg p-2">Simplify Spending, Master Your Money</h2>
           <a href="/login">
-            <button class="h-14 w-40 cursor-pointer p-2 pt-0.5 transition-transform rounded-full text-gray-300 uppercase text-xl font-semibold hover:scale-110 bg-[#1a664d] hover:bg-[#278a6a]">
+            <button class="h-14 w-40 cursor-pointer pb-px transition-transform rounded-full text-gray-300 uppercase text-xl font-semibold hover:scale-110 bg-[#1a664d] hover:bg-[#278a6a]">
               Get Started
             </button>
           </a>
