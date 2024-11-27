@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['goalDelete'])) {
     $goalID = $_POST['goalUpdateID'];
     $currentIconPath = $_POST['goalUpdateIconPath'];
 
-    if (!empty($currentIconPath) && file_exists($currentIconPath)) {
+    if (!empty($currentIconPath) && file_exists($currentIconPath) && $currentIconPath !== "assets/icons/goal/goalIcon_logo.jpg") {
         unlink($currentIconPath);
     }
 
@@ -97,9 +97,35 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['goalUpdate']) && isse
     }
 }
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['goalUpdate'])) {
+    $amount = $_POST['amount'];
+    $category = $_POST['category'];
+    $description = $_POST['desc'];
+    $expenseType = 'basic';
+    $dateTime = $_POST['datetime'];
+
+    $sql = "INSERT INTO expenses (userID, amount, category, description, expenseType, expenseTime)
+        VALUES (:userID, :amount, :category, :description, :expenseType, :expenseTime)";
+
+    $params = [
+        ':userID' => $userID,
+        ':amount' => $amount,
+        ':category' => $category,
+        ':description' => $description,
+        ':expenseType' => $expenseType,
+        ':expenseTime' => $dateTime,
+    ];
+
+    $db->query($sql, $params);
+
+    header("Location: {$_SERVER['REQUEST_URI']}");
+    exit;
+}
+
 if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['addGoal']) && isset($_FILES['goalIcon']) && $_FILES['goalIcon']['error'] === UPLOAD_ERR_OK) {
     $description = $_POST['goalDescription'];
     $amount = $_POST['goalAmount'];
+    $category = $_POST['goalCategory'];
 
     $icon = $_FILES['goalIcon'];
     $iconName = basename($icon['name']);
@@ -113,13 +139,14 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['addGoal']) && isset($
         $targetFilePath = $targetDir . $uniqueFileName;
 
         if (move_uploaded_file($icon['tmp_name'], $targetFilePath)) {
-            $sql = "INSERT INTO goals (userID, description, amount, groupIcon) 
-                    VALUES (:userID, :description, :amount, :groupIcon)";
+            $sql = "INSERT INTO goals (userID, description, category, amount, groupIcon) 
+                    VALUES (:userID, :description, :category, :amount, :groupIcon)";
 
             $params = [
                 ':userID' => $userID,
                 ':description' => $description,
                 ':amount' => $amount,
+                ':category' => $category,
                 ':groupIcon' => $targetFilePath
             ];
 
@@ -139,18 +166,20 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['addGoal']) && isset($
 } elseif ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['addGoal'])) {
     $description = $_POST['goalDescription'];
     $amount = $_POST['goalAmount'];
-    $targetFilePath = "assets\icons\goal\goalIcon_logo.jpg";
+    $category = $_POST['goalCategory'];
+    $targetFilePath = "assets/icons/goal/goalIcon_logo.jpg";
 
-    $sql = "INSERT INTO goals (userID, description, amount, groupIcon) 
-                    VALUES (:userID, :description, :amount, :groupIcon)";
+    $sql = "INSERT INTO goals (userID, description, category, amount, groupIcon) 
+                    VALUES (:userID, :description, :category, :amount, :groupIcon)";
 
     $params = [
         ':userID' => $userID,
         ':description' => $description,
         ':amount' => $amount,
+        ':category' => $category,
         ':groupIcon' => $targetFilePath
     ];
-
+ 
     try {
         $db->query($sql, $params);
         header("Location: {$_SERVER['REQUEST_URI']}");

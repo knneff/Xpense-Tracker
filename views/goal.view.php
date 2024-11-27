@@ -38,7 +38,7 @@
                         <div class="font-bold text-base sm:text-xl text-start">
                             <?= $goal['description'] ?>
                         </div>
-                        <div class="text-sm sm:text-lg font-semibold items-center">
+                        <div class="text-sm sm:text-lg font-semibold items-center text-start">
                             ₱ <?= $goal['paidAmount'] ?> / ₱ <?= $goal['amount'] ?>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
         </button>
     <?php endforeach ?>
 </main>
-<main id="goalPanel" class="hidden">
+<main id="goalPanel" class="">
     <div id="goalOverlay" class="z-50 flex justify-center items-center fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50">
         <div class="flex flex-col justify-center text-base sm:text-lg text-gray-300 tlGreen p-8 rounded-3xl">
             <h2 class="text-4xl font-semibold text-center textGray">Goals and Plans</h2>
@@ -108,6 +108,21 @@
                             step="0.01"
                             class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none"
                             required />
+                        <select
+                            id="goalCategory"
+                            name="goalCategory"
+                            required
+                            class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none">
+                            <option value="" selected disabled>Category</option>
+                            <option value="Food">Food</option>
+                            <option value="Transportation">Transportation</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Personal Care">Personal Care</option>
+                            <option value="Health & Wellness">Health & Wellness</option>
+                            <option value="Shopping">Shopping</option>
+                            <option value="Utilities">Utilities</option>
+                            <option value="Miscellaneous">Miscellaneous</option>
+                        </select>
                     </div>
                 </div>
                 <button
@@ -277,7 +292,6 @@
         document.getElementById('goalUpdatePreview').src = groupIcon;
         document.getElementById('goalUpdateIconPath').value = groupIcon;
         document.getElementById('goalUpdatePanel').classList.remove('hidden');
-
     }
 
     document.getElementById('goalUpdateOverlay').addEventListener('click', (event) => {
