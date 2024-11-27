@@ -8,8 +8,6 @@ $title = 'Audit Log';
 //create database instance
 $db = new Database();
 //current user
-$auditLog = $db->query('select * from audit_log;', [])->fetchAll(PDO::FETCH_ASSOC);
+$auditLog = $db->query('select * from audit_log ORDER BY logID DESC LIMIT 100;', [])->fetchAll(PDO::FETCH_ASSOC);
 
 require('views/audit.view.php');
-
-?>

@@ -86,8 +86,6 @@
 
 </div>
 
-
-
 <!-- Main Content Container -->
 <div class="flex ml-16 h-screen top-0 left-0 right-0 bottom-0">
 
@@ -335,4 +333,5 @@
       </div>
     </div>
   </div>
+
 </div>

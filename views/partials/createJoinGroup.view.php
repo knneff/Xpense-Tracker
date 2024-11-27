@@ -1,4 +1,4 @@
-<main id="createJoinGroupPanel" class="hidden fixed inset-0 justify-center items-center bg-black bg-opacity-50 transition-opacity duration-300">
+<main id="createJoinGroupPanel" class="flex hidden fixed inset-0 justify-center items-center bg-black bg-opacity-50 transition-opacity">
 
     <div class="tlGreen text-gray-300 p-8 rounded-3xl shadow-lg w-11/12 max-w-md">
 
@@ -13,9 +13,8 @@
             Give your new group a personality with a name and an icon. You can change this anytime!
         </p>
 
-        <!-- Form -->
-        <form id="addForm" method="POST" class="space-y-4">
-
+        <!-- Group Creation Form -->
+        <form id="addForm" method='POST' action='/shared' class="space-y-4">
             <!-- Upload Icon -->
             <div id="uploadSection" class="flex flex-col items-center">
                 <label for="iconUpload" class="cursor-pointer flex flex-col items-center justify-center w-24 h-24 bg-gray-700 rounded-full hover:bg-gray-600">
@@ -24,7 +23,7 @@
                     </svg>
                     <span class="text-xs text-gray-400 mt-2">Upload</span>
                 </label>
-                <input id="iconUpload" type="file" accept="image/*" class="hidden">
+                <input id="iconUpload" name='groupIcon' type="file" accept="image/*" class="hidden">
             </div>
 
             <!-- Group Name -->
@@ -38,7 +37,7 @@
                     class="w-full p-3 border rounded-lg bg-gray-700 border-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500">
             </div>
 
-            <!-- Buttons -->
+            <!-- Submit (Create Group) Button -->
             <button
                 id="submitBtn"
                 class="w-full py-2 bg-green-800 text-white font-bold rounded-lg hover:bg-green-700"
@@ -46,21 +45,23 @@
                 Create Group
             </button>
 
-            <button
-                id="joinGroupBtn"
-                class="w-full py-2 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700"
-                type="button"
-                onclick="showJoinGroup()">
-                Join Group
-            </button>
         </form>
+
+        <!-- Join Group Button -->
+        <button
+            id="joinGroupBtn"
+            class="w-full mt-4 py-2 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700"
+            type="button"
+            onclick="showJoinGroup()">
+            Join Group
+        </button>
 
     </div>
 
 </main>
 
 <script>
-    // Show panel
+    // Show whole panel
     function showGroupPanel() {
         document.getElementById('createJoinGroupPanel').classList.remove('hidden', 'opacity-0');
         document.getElementById('createJoinGroupPanel').classList.add('opacity-100');
@@ -114,10 +115,9 @@
     function showCreateGroup() {
         // Update heading and description
         document.getElementById('panelHeading').textContent = 'Create a Group';
-        document.getElementById('panelDescription').textContent =
-            'Give your new group a personality with a name and an icon. You can change this anytime!';
+        document.getElementById('panelDescription').textContent = 'Give your new group a personality with a name and an icon. You can change this anytime!';
 
-        // Restore upload section
+        // Restore upload section (MAY PROBLEM DITO)
         const uploadSection = document.createElement('div');
         uploadSection.id = 'uploadSection';
         uploadSection.className = 'flex flex-col items-center';
@@ -128,20 +128,19 @@
                 </svg>
                 <span class="text-xs text-gray-400 mt-2">Upload</span>
             </label>
-            <input id="iconUpload" type="file" accept="image/*" class="hidden">
+            <input id="iconUpload" name='groupIcon' type="file" accept="image/*" class="hidden">
         `;
         document.getElementById('addForm').insertBefore(uploadSection, document.getElementById('groupNameSection'));
 
         // Restore group name section
         const groupNameSection = document.getElementById('groupNameSection');
-        groupNameSection.innerHTML = `
-            <input
-                type="text"
-                id="groupName"
-                name="groupName"
-                placeholder="Group Name"
-                required
-                class="w-full p-3 border rounded-lg bg-gray-700 border-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500">
+        groupNameSection.innerHTML = `<input
+            type="text"
+            id="groupName"
+            name="groupName"
+            placeholder="Group Name"
+            required
+            class="w-full p-3 border rounded-lg bg-gray-700 border-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500">
         `;
 
         // Restore buttons
