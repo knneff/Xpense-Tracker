@@ -72,7 +72,7 @@
     </section>
 
 
-    <section class="px-10 md:px-20 lg:px-28 xl:px-36">
+    <section class="px-10 md:px-20 lg:px-28 xl:px-36 pb-10">
 
       <div class="p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10">
         <h1 class="text-center text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">Features</h1>
