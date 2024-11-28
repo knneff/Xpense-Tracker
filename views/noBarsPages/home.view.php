@@ -80,10 +80,10 @@
 
       <hr>
 
-      <div class="bgGreen h-fit grid sm:flex place-items-center">
+      <div class="bgGreen h-fit grid sm:flex place-items-center pb-2">
         <div class="my-auto mx-6 md:ml-8 lg:ml-14 xl:ml-20 order-2 sm:order-1">
           <div>
-            <h1 class="text-gray-300 text-base md:text-xl lg:text-2xl xl:text-4xl font-bold leading-3 md:leading-5 lg:leading-5 text-center">Track Your Way to Financial Freedom</h1>
+            <h1 class="text-gray-300 text-base md:text-xl lg:text-2xl xl:text-4xl font-bold leading-4 md:leading-5 lg:leading-5 text-center">Track Your Way to Financial Freedom</h1>
           </div>
           <br>
           <div class=" text-gray-300">
@@ -110,7 +110,7 @@
       </div>
 
 
-      <div class="bg-[#072822] h-fit grid sm:flex rounded-xl place-items-center">
+      <div class="bg-[#072822] h-fit grid sm:flex rounded-xl place-items-center pb-2">
         <div class="p-6 lg:p-8 xl:px-20 xl:py-10">
           <svg class="w-[5rem] h-[5rem] md:w-[6rem] md:h-[6rem] lg:w-[10rem] lg:h-[10rem] xl:w-[13rem] xl:h-[13rem]" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-127.03 -127.03 762.16 762.16" xml:space="preserve" fill="#000000">
             <g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)">
@@ -141,7 +141,7 @@
         </div>
         <div class="my-auto mx-6 md:mr-8 lg:mr-14 xl:mr-20">
           <div>
-            <h1 class="text-gray-300 text-base md:text-xl lg:text-2xl xl:text-4xl font-bold leading-3 md:leading-5 lg:leading-5 text-center">Share, Split, and Simplify Group Expenses</h1>
+            <h1 class="text-gray-300 text-base md:text-xl lg:text-2xl xl:text-4xl font-bold leading-4 md:leading-5 lg:leading-5 text-center">Share, Split, and Simplify Group Expenses</h1>
           </div>
           <br>
           <div>
@@ -151,10 +151,10 @@
       </div>
 
 
-      <div class="bgGreen h-fit grid sm:flex place-items-center">
+      <div class="bgGreen h-fit grid sm:flex place-items-center pb-2">
         <div class="my-auto mx-6 md:ml-8 lg:ml-14 xl:ml-20 order-2 sm:order-1">
           <div>
-            <h1 class="text-gray-300 text-base md:text-xl lg:text-2xl xl:text-4xl font-bold leading-3 md:leading-5 lg:leading-5 text-center">Never Miss a Payment, Stay in Control of Subscriptions</h1>
+            <h1 class="text-gray-300 text-base md:text-xl lg:text-2xl xl:text-4xl font-bold leading-4 md:leading-5 lg:leading-5 text-center">Never Miss a Payment, Stay in Control of Subscriptions</h1>
           </div>
           <br>
           <div class=" text-gray-300">
@@ -192,7 +192,7 @@
       </div>
 
 
-      <div class="bg-[#072822] h-fit grid sm:flex rounded-xl place-items-center">
+      <div class="bg-[#072822] h-fit grid sm:flex rounded-xl place-items-center pb-2">
         <div class="p-6 lg:p-8 xl:px-20 xl:py-10">
           <svg class="w-[5rem] h-[5rem] md:w-[6rem] md:h-[6rem] lg:w-[10rem] lg:h-[10rem] xl:w-[13rem] xl:h-[13rem]" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-51.2 -51.2 614.40 614.40" xml:space="preserve" fill="#000000">
             <g id="SVGRepo_bgCarrier" stroke-width="0">
@@ -217,7 +217,7 @@
         </div>
         <div class="my-auto mx-6 md:mr-8 lg:mr-14 xl:mr-20">
           <div>
-            <h1 class="text-gray-300 text-base md:text-xl lg:text-2xl xl:text-4xl font-bold leading-3 md:leading-4 lg:leading-5 text-center">Stay on Track, Avoid the Overspend</h1>
+            <h1 class="text-gray-300 text-base md:text-xl lg:text-2xl xl:text-4xl font-bold leading-4 md:leading-4 lg:leading-5 text-center">Stay on Track, Avoid the Overspend</h1>
           </div>
           <br>
           <div>
