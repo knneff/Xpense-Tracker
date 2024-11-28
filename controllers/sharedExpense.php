@@ -1,16 +1,10 @@
 <?php
 
-//protects the page from being accessed when no user is logged in. 
 protectPage();
 $userID = $_SESSION['userid'];
-// Use $_SESSION['userid']; to get logged in user's userid
+$groups = $db->query("select clan.* from clanMembers join clan ON clanMembers.groupID=clan.groupID WHERE clanMembers.userID=?;", [$userID])->fetchAll(PDO::FETCH_ASSOC);
 
-// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-//     //     // dd($_FILES);
-//     dd(isset($_FILES['groupIcon']), $_POST['groupName'], $_FILES['groupIcon']['error'] === UPLOAD_ERR_OK, $_FILES);
-// }
-
-
+//when group is created
 if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['groupName'])) {
     $groupName = $_POST['groupName'];
     $targetFilePath = 'assets/icons/group/_default.png'; //sets default group icon (if no file uploaded)
@@ -66,57 +60,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['groupName'])) {
             $message = "An error occurred while processing your request. Please try again later.";
         }
     }
-}
-
-// else if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['groupName'])) {
-//     $firstname = $_POST['firstName'];
-//     $lastname = $_POST['lastName'];
-//     $username = $_POST['username'];
-//     $email = $_POST['email'];
-
-//     $sql = "UPDATE users SET 
-//             firstName = :firstname, 
-//             lastName = :lastName, 
-//             username = :username,  
-//             email = :email
-//             WHERE userid = :userid";
-
-//     $params = [
-//         ':firstname' => $firstname,
-//         ':lastName' => $lastname,
-//         ':email' => $email,
-//         ':username' => $username,
-//         ':userid' => $userID
-//     ];
-
-//     try {
-//         $db->query($sql, $params);
-//         header("Location: {$_SERVER['REQUEST_URI']}");
-//         exit;
-//     } catch (PDOException $e) {
-//         $message = "An error occurred while processing your request. Please try again later.";
-//     }
-// }
-
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['groupName']) && false) {
-    $groupName = $_POST['groupName'];
-    $groupIcon = $_POST['iconUpload']; //stores name of the file that was uploaded
-    dd($groupName, $groupIcon);
-    $groupOwnerID = $_SESSION['userid'];
-    if ($groupIcon == '') { //if no group icon is uploaded
-        $groupIcon = 'assets/group/_default.png';
-    } else { //if a group icon is uploaded
-        $groupIcon = 'assets/group/' . $groupIcon;
-    }
-
-    //creates the group
-    $db->query('INSERT INTO clan(groupName, groupOwnerID, groupIcon) VALUES (?,?,?);', [$groupName, $groupOwnerID, $groupIcon]);
-    //gets the groupID of the group created by the current user
-    $groupID = $db->query("select groupID from clan WHERE groupOwnerID=? ORDER BY groupID DESC LIMIT 1;", [$groupOwnerID])->fetchColumn();
-    //inserts the current user as member/owner of the group
-    $db->query("INSERT INTO clanMembers (groupID, userID, roles) VALUES(?, ?, 'owner');", [$groupID, $groupOwnerID]);
-    redirect('/shared');
 }
 
 require('views/sharedExpense.view.php');

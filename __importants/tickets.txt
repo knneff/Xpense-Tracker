@@ -10,12 +10,20 @@ kelangan i test mga functions. need major testings
 =============================================================================================================
 
 pagsasama user settings and system settings (SI KEN NA DITO)
+- overspending alarm system
 
 notification system
 - overspending
 - invite ng group?
+- group expense notification
+
 
 Sharing
+- invite system (token)
+- user interface
+- GET accessible groups
+  + automatically redirects to created group after creation
+  + restricts non member of the group from accessing group
 - ayusin html and javascript ng creation panel
 - expense sharing mechanism
 - link sa database
@@ -30,17 +38,12 @@ dashboard
 subscription list??
 - bars to include subscription list as well???
 
-implement mga LOGO and other logo variants sa buong website
-
-mga icons:
-- profile icons
-- goal icons
+landing
+- get started behavior (dashboard kapag may nakalogin)
+- ayusin logo sa navbar
 
 nav bar mechanism if a user is logged in or not
-- link ng user profile and nav bar profile sa database and icons
 - more info sa profile pic icon nav bar (e.g., usernamem, firstName, lastName)
-
-system settings and overspending alarm
 
 edit/set balance functionality??
 
@@ -50,7 +53,6 @@ Input Validators
 
 Audit Log
 - Admin User: audit log accessible only to admin user system
-- ayusin itsura ng audit log
 
 Goal setting
 - link sa database
