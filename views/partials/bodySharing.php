@@ -2,8 +2,6 @@
 
 <body class="bgGreen flex flex-col h-full">
     <?php require('controllers/noBars/balanceController.php') ?>
-    <!-- FLOATING ADD EXPENSE BUTTON HERE -->
-    <?php require('addExpense.php') ?>
     <!-- NAV BAR IS HERE -->
     <?php require('navbar.php') ?>
     <!-- SIDE BAR AND CONTENT HERE -->

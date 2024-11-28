@@ -20,44 +20,24 @@
   <!-- Divider -->
   <hr class="mx-2 rounded-full border-gray-700 border" />
 
-  <!-- Icon 2 -->
-  <div class="group relative">
-    <img
-      src="https://randomuser.me/api/portraits/women/0.jpg"
-      alt="Icon 2"
-      class="h-12 w-12 rounded-3xl mt-2 mb-2 mx-auto hover:rounded-xl transition-all ease-linear cursor-pointer shadow-lg" />
-    <!-- Icon 2's Tooltip-->
-    <div
-      class="bg-gray-900 text-white absolute left-20 rounded-md top-2 shadow-md p-2 text-xs font-bold min-w-max group-hover:scale-100 transition-all duration-100 scale-0 origin-left">
-      Group X
-    </div>
-  </div>
-
-  <!-- Icon 3 -->
-  <div class="group relative">
-    <img
-      src="https://randomuser.me/api/portraits/men/1.jpg"
-      alt="Icon 3"
-      class="h-12 w-12 rounded-3xl mt-2 mb-2 mx-auto hover:rounded-xl transition-all ease-linear cursor-pointer shadow-lg" />
-    <!-- Icon 3's Tooltip-->
-    <div
-      class="bg-gray-900 text-white absolute left-20 rounded-md top-2 shadow-md p-2 text-xs font-bold min-w-max group-hover:scale-100 transition-all duration-100 scale-0 origin-left">
-      Group Y
-    </div>
-  </div>
-
-  <!-- Icon 4 -->
-  <div class="group relative">
-    <img
-      src="https://randomuser.me/api/portraits/women/1.jpg"
-      alt="Icon 4"
-      class="h-12 w-12 rounded-3xl mt-2 mb-2 mx-auto hover:rounded-xl transition-all ease-linear cursor-pointer shadow-lg" />
-    <!-- Icon 4's Tooltip-->
-    <div
-      class="bg-gray-900 text-white absolute left-20 rounded-md top-2 shadow-md p-2 text-xs font-bold min-w-max group-hover:scale-100 transition-all duration-100 scale-0 origin-left">
-      Group Z
-    </div>
-  </div>
+  <!-- Group List -->
+  <?php
+  foreach ($groups as $index => $group) {
+    // dd($group['groupName']);
+    $groupName = $group['groupName'];
+    $groupIcon = $group['groupIcon'];
+    echo "
+      <div class='group relative'>
+        <img
+          src='$groupIcon'
+          class='h-12 w-12 rounded-3xl mt-2 mb-2 mx-auto hover:rounded-xl transition-all ease-linear cursor-pointer shadow-lg' />
+        <div class='bg-gray-900 text-white absolute left-20 rounded-md top-2 shadow-md p-2 text-xs font-bold min-w-max group-hover:scale-100 transition-all duration-100 scale-0 origin-left'>
+          $groupName
+        </div>
+      </div>
+    ";
+  }
+  ?>
 
   <!-- Divider -->
   <hr class="mx-2 rounded-full border-gray-700 border" />
