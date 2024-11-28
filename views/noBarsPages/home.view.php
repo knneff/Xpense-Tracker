@@ -72,7 +72,7 @@
     </section>
 
 
-    <section class="px-5 sm:px-10 md:px-20 lg:px-28 xl:px-36">
+    <section class="px-10 md:px-20 lg:px-28 xl:px-36">
 
       <div class="p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10">
         <h1 class="text-center text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">Features</h1>
@@ -80,17 +80,17 @@
 
       <hr>
 
-      <div class="bgGreen h-fit flex">
-        <div class="my-auto ml-4 sm:ml-6 md:ml-8 lg:ml-14 xl:ml-20">
+      <div class="bgGreen h-fit grid sm:flex place-items-center">
+        <div class="my-auto mx-6 md:ml-8 lg:ml-14 xl:ml-20 order-2 sm:order-1">
           <div>
-            <h1 class="text-gray-300 text-sm sm:text-base md:text-xl lg:text-2xl xl:text-4xl font-bold leading-3 md:leading-5 lg:leading-5">Track Your Way to Financial Freedom</h1>
+            <h1 class="text-gray-300 text-base md:text-xl lg:text-2xl xl:text-4xl font-bold leading-3 md:leading-5 lg:leading-5 text-center">Track Your Way to Financial Freedom</h1>
           </div>
-          <br class="hidden md:block">
+          <br>
           <div class=" text-gray-300">
-            <h1 class="text-[6px] sm:text-[10px] md:text-sm lg:text-base leading-tight md:leading-3 lg:leading-4">With Financial Goals, you can set, track, and achieve your financial milestones with ease. Whether you're saving for a vacation, building an emergency fund, or working towards a major investment, this feature helps you stay focused, visualize progress, and adjust your strategy to ensure success. Stay on top of your goals and turn your financial dreams into reality. </h1>
+            <h1 class="text-[10px] md:text-sm lg:text-base leading-tight md:leading-3 lg:leading-4 text-justify">With Financial Goals, you can set, track, and achieve your financial milestones with ease. Whether you're saving for a vacation, building an emergency fund, or working towards a major investment, this feature helps you stay focused, visualize progress, and adjust your strategy to ensure success. Stay on top of your goals and turn your financial dreams into reality. </h1>
           </div>
         </div>
-        <div class="p-6 md:p-6 lg:p-8 xl:px-20 xl:py-10">
+        <div class="p-6 lg:p-8 xl:px-20 xl:py-10 order-1 sm:order-2">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-[5rem] h-[5rem] md:w-[6rem] md:h-[6rem] lg:w-[10rem] lg:h-[10rem] xl:w-[13rem] xl:h-[13rem]" viewBox="-4.8 -4.8 57.60 57.60" id="a" fill="#000000">
           <g id="SVGRepo_bgCarrier" stroke-width="0">
             <rect x="-4.8" y="-4.8" width="57.60" height="57.60" rx="28.8" fill="#1e5b50" strokewidth="0"/>
@@ -110,8 +110,8 @@
       </div>
 
 
-      <div class="bg-[#072822] h-fit flex rounded-xl">
-        <div class="p-6 sm:p-4 md:p-6 lg:p-8 xl:px-20 xl:py-10">
+      <div class="bg-[#072822] h-fit grid sm:flex rounded-xl place-items-center">
+        <div class="p-6 lg:p-8 xl:px-20 xl:py-10">
           <svg class="w-[5rem] h-[5rem] md:w-[6rem] md:h-[6rem] lg:w-[10rem] lg:h-[10rem] xl:w-[13rem] xl:h-[13rem]" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-127.03 -127.03 762.16 762.16" xml:space="preserve" fill="#000000">
             <g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)">
               <rect x="-127.03" y="-127.03" width="762.16" height="762.16" rx="381.08" fill="#1e5b50" strokewidth="0"></rect>
@@ -139,29 +139,29 @@
             </g>
           </svg>
         </div>
-        <div class="my-auto mr-4 sm:mr-6 md:mr-8 lg:mr-14 xl:mr-20">
+        <div class="my-auto mx-6 md:mr-8 lg:mr-14 xl:mr-20">
           <div>
-            <h1 class="text-gray-300 text-sm sm:text-base md:text-xl lg:text-2xl xl:text-4xl font-bold leading-3 md:leading-5 lg:leading-5">Share, Split, and Simplify Group Expenses</h1>
+            <h1 class="text-gray-300 text-base md:text-xl lg:text-2xl xl:text-4xl font-bold leading-3 md:leading-5 lg:leading-5 text-center">Share, Split, and Simplify Group Expenses</h1>
           </div>
-          <br class="hidden md:block">
+          <br>
           <div>
-            <h1 class="text-[6px] sm:text-[10px] md:text-sm lg:text-base leading-tight md:leading-3 lg:leading-4">Group Sharing Expenses lets you easily split costs with family, friends, or coworkers. Whether it's a weekend getaway, shared bills, or group purchases, this feature ensures everyone is on the same page. Keep track of who paid what, who owes whom, and settle up quickly. It makes group finances seamless and transparent, so you never have to worry about who’s paying for what again.</h1>
+            <h1 class="text-[10px] md:text-sm lg:text-base leading-tight md:leading-3 lg:leading-4 text-justify">Group Sharing Expenses lets you easily split costs with family, friends, or coworkers. Whether it's a weekend getaway, shared bills, or group purchases, this feature ensures everyone is on the same page. Keep track of who paid what, who owes whom, and settle up quickly. It makes group finances seamless and transparent, so you never have to worry about who’s paying for what again.</h1>
           </div>
         </div>
       </div>
 
 
-      <div class="bgGreen h-fit flex">
-        <div class="my-auto ml-4 sm:ml-6 md:ml-8 lg:ml-14 xl:ml-20">
+      <div class="bgGreen h-fit grid sm:flex place-items-center">
+        <div class="my-auto mx-6 md:ml-8 lg:ml-14 xl:ml-20 order-2 sm:order-1">
           <div>
-            <h1 class="text-gray-300 text-sm sm:text-base md:text-xl lg:text-2xl xl:text-4xl font-bold leading-3 md:leading-5 lg:leading-5">Never Miss a Payment, Stay in Control of Subscriptions</h1>
+            <h1 class="text-gray-300 text-base md:text-xl lg:text-2xl xl:text-4xl font-bold leading-3 md:leading-5 lg:leading-5 text-center">Never Miss a Payment, Stay in Control of Subscriptions</h1>
           </div>
-          <br class="hidden md:block">
+          <br>
           <div class=" text-gray-300">
-            <h1 class="text-[8px] sm:text-[10px] md:text-sm lg:text-base leading-tight md:leading-3 lg:leading-4">With the Subscription List, you can keep a detailed record of all your recurring subscriptions, whether it's streaming services, software, or memberships. Get reminders before payments are due and track your spending to see which subscriptions you use most. This feature helps you cut out unnecessary expenses and stay on top of renewals, ensuring you only pay for what you really need.</h1>
+            <h1 class="text-[10px] md:text-sm lg:text-base leading-tight md:leading-3 lg:leading-4 text-justify">With the Subscription List, you can keep a detailed record of all your recurring subscriptions, whether it's streaming services, software, or memberships. Get reminders before payments are due and track your spending to see which subscriptions you use most. This feature helps you cut out unnecessary expenses and stay on top of renewals, ensuring you only pay for what you really need.</h1>
           </div>
         </div>
-        <div class="p-6 sm:p-4 md:p-6 lg:p-8 xl:px-20 xl:py-10">
+        <div class="p-6 lg:p-8 xl:px-20 xl:py-10 order-1 sm:order-2">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="-102.4 -102.4 1228.80 1228.80" class="w-[5rem] h-[5rem] md:w-[6rem] md:h-[6rem] lg:w-[10rem] lg:h-[10rem] xl:w-[13rem] xl:h-[13rem]" version="1.1" fill="#000000">
           <g id="SVGRepo_bgCarrier" stroke-width="0">
           <rect x="-102.4" y="-102.4" width="1228.80" height="1228.80" rx="614.4" fill="#1e5b50" strokewidth="0"/>
@@ -192,8 +192,8 @@
       </div>
 
 
-      <div class="bg-[#072822] h-fit flex rounded-xl">
-        <div class="p-6 sm:p-4 md:p-6 lg:p-8 xl:px-20 xl:py-10">
+      <div class="bg-[#072822] h-fit grid sm:flex rounded-xl place-items-center">
+        <div class="p-6 lg:p-8 xl:px-20 xl:py-10">
           <svg class="w-[5rem] h-[5rem] md:w-[6rem] md:h-[6rem] lg:w-[10rem] lg:h-[10rem] xl:w-[13rem] xl:h-[13rem]" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-51.2 -51.2 614.40 614.40" xml:space="preserve" fill="#000000">
             <g id="SVGRepo_bgCarrier" stroke-width="0">
               <rect x="-51.2" y="-51.2" width="614.40" height="614.40" rx="307.2" fill="#1e5b50" strokewidth="0"></rect>
@@ -215,13 +215,13 @@
             </g>
           </svg>
         </div>
-        <div class="my-auto mr-4 sm:mr-6 md:mr-8 lg:mr-14 xl:mr-20">
+        <div class="my-auto mx-6 md:mr-8 lg:mr-14 xl:mr-20">
           <div>
-            <h1 class="text-gray-300 text-sm sm:text-base md:text-xl lg:text-2xl xl:text-4xl font-bold leading-3 md:leading-4 lg:leading-5">Stay on Track, Avoid the Overspend</h1>
+            <h1 class="text-gray-300 text-base md:text-xl lg:text-2xl xl:text-4xl font-bold leading-3 md:leading-4 lg:leading-5 text-center">Stay on Track, Avoid the Overspend</h1>
           </div>
-          <br class="hidden md:block">
+          <br>
           <div>
-            <h1 class="text-[8px] sm:text-[10px] md:text-sm lg:text-base leading-tight md:leading-3 lg:leading-4">The Overspending Alarm is your personal spending watchdog. It alerts you when you're getting close to or exceeding your budget, giving you the opportunity to adjust your spending habits before it's too late. Stay in control of your finances and avoid surprises, making sure your money works for you — not the other way around.</h1>
+            <h1 class="text-[10px] md:text-sm lg:text-base leading-tight md:leading-3 lg:leading-4 text-justify">The Overspending Alarm is your personal spending watchdog. It alerts you when you're getting close to or exceeding your budget, giving you the opportunity to adjust your spending habits before it's too late. Stay in control of your finances and avoid surprises, making sure your money works for you — not the other way around.</h1>
           </div>
         </div>
       </div>
