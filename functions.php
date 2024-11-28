@@ -63,35 +63,37 @@ function stringShortener($string, $length)
     return (strlen($string) > $length) ? substr($string, 0, $length) . "..." : $string;
 }
 
+//basically process yung pagmove and pagresize ng image file sa designated folder
 function moveResizedImage($file, $targetFilePath, $size = 128, $quality = 50)
 {
+    // gets file type of image
     $fileType = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
 
+    // store tmp_name of image to $image
     if ($fileType === 'jpg' || $fileType === 'jpeg') {
         $image = imagecreatefromjpeg($file['tmp_name']);
     } elseif ($fileType === 'png') {
         $image = imagecreatefrompng($file['tmp_name']);
     }
 
+    // dafuq???
     list($width, $height) = getimagesize($file['tmp_name']);
 
+    // centers and resizes the image
     $size = min($width, $height);
     $x_offset = ($width - $size) / 2;
     $y_offset = ($height - $size) / 2;
-
     $squareImage = imagecreatetruecolor($size, $size);
-
     imagecopyresampled($squareImage, $image, 0, 0, $x_offset, $y_offset, $size, $size, $size, $size);
 
     if ($fileType === 'jpg' || $fileType === 'jpeg') {
         imagejpeg($squareImage, $targetFilePath, $quality);
     } elseif ($fileType === 'png') {
-        imagepng($squareImage, $targetFilePath, 6); 
+        imagepng($squareImage, $targetFilePath, 6);
     }
 
     imagedestroy($image);
     imagedestroy($squareImage);
 
-    return true; 
+    return true;
 }
-

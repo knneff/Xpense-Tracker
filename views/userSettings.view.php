@@ -3,7 +3,9 @@
 <div class="flex flex-col gap-5 items-center justify-center">
     <div class="w-full max-w-3xl p-8 pt-0 sm:pt-8 tlBgGreen rounded-3xl shadow-none sm:shadow-lg ">
         <form method="POST" class="flex flex-col" enctype="multipart/form-data">
+            <!-- UPPER FIELD PANELS -->
             <div class="text-gray-300 text-base sm:text-lg grid grid-cols-1 sm:grid-cols-2">
+                <!-- User Icon (LEFT PANEL) -->
                 <div class="flex flex-row sm:flex-col items-center justify-center h-full gap-5 mb-16 sm:mb-0">
                     <div class="relative">
                         <img
@@ -36,7 +38,10 @@
                         onchange="previewFile()">
 
                 </div>
+
+                <!-- RIGHT PANEL -->
                 <div class="space-y-4">
+                    <!-- FIRST AND LAST NAME FIELD -->
                     <div class="flex space-x-5">
                         <div>
                             <label for="firstname" class="text-lg">First Name</label>
@@ -57,6 +62,8 @@
                                 required />
                         </div>
                     </div>
+
+                    <!-- USERNAME -->
                     <div>
                         <label for="username" class="text-lg">Username</label>
                         <input
@@ -67,6 +74,7 @@
                             required />
                     </div>
 
+                    <!-- EMAIL -->
                     <div>
                         <label for="email" class="text-lg">Email Address</label>
                         <input
@@ -79,6 +87,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- REVERT and SAVE BUTTON -->
             <div class="flex justify-center space-x-5">
                 <button
                     type="button"
@@ -93,6 +103,8 @@
                     Save Changes
                 </button>
             </div>
+
+            <!-- CHANGE PASSWORD -->
             <p class="mt-2 text-base sm:text-lg text-center textGray">
                 Change your Password?
                 <a href="/changepassword" class="textTeal hover:underline">Reset here</a>

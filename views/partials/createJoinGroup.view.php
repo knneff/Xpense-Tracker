@@ -14,16 +14,18 @@
         </p>
 
         <!-- Group Creation Form -->
-        <form id="addForm" method='POST' action='/shared' class="space-y-4">
+        <form id="addForm" class="space-y-4" method="POST" enctype="multipart/form-data">
             <!-- Upload Icon -->
-            <div id="uploadSection" class="flex flex-col items-center">
-                <label for="iconUpload" class="cursor-pointer flex flex-col items-center justify-center w-24 h-24 bg-gray-700 rounded-full hover:bg-gray-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 5v14m-7-7h14"></path>
-                    </svg>
-                    <span class="text-xs text-gray-400 mt-2">Upload</span>
-                </label>
-                <input id="iconUpload" name='groupIcon' type="file" accept="image/*" class="hidden">
+            <div id="uploadSection">
+                <div id='imageContainer' class="flex flex-col items-center">
+                    <label for="iconUpload" class="cursor-pointer flex flex-col items-center justify-center w-24 h-24 bg-gray-700 rounded-full hover:bg-gray-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14m-7-7h14"></path>
+                        </svg>
+                        <span class="text-xs text-gray-400 mt-2">Upload</span>
+                    </label>
+                </div>
+                <input id="iconUpload" type="file" name="groupIcon" accept="image/png, image/jpeg, image/jpg" class="hidden" onchange="previewFile()">
             </div>
 
             <!-- Group Name -->
@@ -81,7 +83,8 @@
 
         // Remove upload section
         const uploadSection = document.getElementById('uploadSection');
-        if (uploadSection) uploadSection.remove();
+        uploadSection.innerHTML = ``;
+        // if (uploadSection) uploadSection.remove();
 
         // Update group name section
         const groupNameSection = document.getElementById('groupNameSection');
@@ -118,23 +121,22 @@
         document.getElementById('panelDescription').textContent = 'Give your new group a personality with a name and an icon. You can change this anytime!';
 
         // Restore upload section (MAY PROBLEM DITO)
-        const uploadSection = document.createElement('div');
-        uploadSection.id = 'uploadSection';
-        // uploadSection.className = 'flex flex-col items-center';
-        // uploadSection.innerHTML = `
-        //     <label for="iconUpload" class="cursor-pointer flex flex-col items-center justify-center w-24 h-24 bg-gray-700 rounded-full hover:bg-gray-600">
-        //         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        //             <path d="M12 5v14m-7-7h14"></path>
-        //         </svg>
-        //         <span class="text-xs text-gray-400 mt-2">Upload</span>
-        //     </label>
-        //     <input id="iconUpload" name='groupIcon' type="file" accept="image/*" class="hidden">
-        // `;
-        document.getElementById('addForm').insertBefore(uploadSection, document.getElementById('groupNameSection'));
+        const uploadSection = document.getElementById('uploadSection');
+        uploadSection.innerHTML =
+            `<div class="flex flex-col items-center">
+                <label for="iconUpload" class="cursor-pointer flex flex-col items-center justify-center w-24 h-24 bg-gray-700 rounded-full hover:bg-gray-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14m-7-7h14"></path>
+                    </svg>
+                    <span class="text-xs text-gray-400 mt-2">Upload</span>
+                </label>
+            </div>
+        `;
 
         // Restore group name section
         const groupNameSection = document.getElementById('groupNameSection');
-        groupNameSection.innerHTML = `<input
+        groupNameSection.innerHTML =
+            `<input
             type="text"
             id="groupName"
             name="groupName"
@@ -147,5 +149,32 @@
         document.getElementById('submitBtn').textContent = 'Create Group';
         document.getElementById('joinGroupBtn').textContent = 'Join Group';
         document.getElementById('joinGroupBtn').setAttribute('onclick', 'showJoinGroup()');
+    }
+
+    // 
+    function previewFile() {
+        const fileInput = document.getElementById('iconUpload');
+        const file = fileInput.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                const imagePreview = document.getElementById('imageContainer');
+                imagePreview.innerHTML = `
+                    <label for="iconUpload" class="cursor-pointer flex flex-col items-center justify-center w-24 h-24 bg-gray-700 rounded-full">
+                        <img
+                            id="picID"
+                            alt="Profile"
+                            class="w-24 h-24 rounded-full border-4 border-gray-400 object-cover"/>
+                    </label>
+                    <input id="iconUpload" name='groupIcon' type="file" accept="image/*" class="hidden" onchange="previewFile()">
+                `;
+                const imgFile = document.getElementById('picID');
+                imgFile.src = e.target.result;
+            };
+
+            reader.readAsDataURL(file);
+        }
     }
 </script>
