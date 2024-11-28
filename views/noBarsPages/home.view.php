@@ -3,7 +3,7 @@
 
 <div class="text-gray-300">
   <div class="relative">
-      <section class="h-[768px] w-screen bg-[#03352c] flex justify-center items-center p-44">
+      <section class="h-screen w-screen bg-[#03352c] flex justify-center items-center p-44">
         <div class="w-1/2">
           <div class="w-[200px]">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2754 1021" version="1.1">
@@ -48,7 +48,7 @@
         </div>
       </section>
     <!-- SVG Separator -->
-    <section class="bg-[#064e3b] h-[640px] w-screen flex items-center p-8">
+    <section class="bg-[#064e3b] h-screen w-screen flex items-center p-8">
         <div class="absolute left-52 w-1/2">
           <div>
             <img src="assets\main-grocery-store-1-300x208.png" alt="Grocery store image" class="w-[300px] h-[230px]">
