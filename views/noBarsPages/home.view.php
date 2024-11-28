@@ -3,7 +3,7 @@
 
 <div class="text-gray-300">
   <div class="relative">
-      <section class="h-[641px] w-screen bg-[#03352c] flex justify-center items-center p-44">
+      <section class="h-[768px] w-screen bg-[#03352c] flex justify-center items-center p-44">
         <div class="w-1/2">
           <div class="w-[200px]">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2754 1021" version="1.1">
