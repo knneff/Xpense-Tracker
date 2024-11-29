@@ -65,8 +65,8 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['groupName'])) {
 }
 //when a user does not have a group yet
 else if (!isset($groups)) {
-    require('views/sharedExpense.view.php');
-    return;
+    require('views/sharedNoGroup.view.php');
+    die();
 }
 //when share is visited w/o a specified groupID
 else if ($_SERVER['REQUEST_METHOD'] === "GET" && !isset($_GET['groupID'])) {
@@ -90,6 +90,5 @@ else if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['groupID'])) {
         alertRedirect("Nuh uhh!", "/shared");
     }
 }
-
 
 require('views/sharedExpense.view.php');
