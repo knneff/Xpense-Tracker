@@ -25,9 +25,11 @@ Sharing
   + automatically redirects to created group after creation
   + restricts non member of the group from accessing group
 - ayusin html and javascript ng creation panel
+  + html issue sa join and create group panel
 - expense sharing mechanism
 - link sa database
 - reusable member list (for dashboard)
+- clickable copy to clipboard for invite link and token
 
 dashboard
 - subscription?
@@ -44,8 +46,6 @@ landing
 
 nav bar mechanism if a user is logged in or not
 - more info sa profile pic icon nav bar (e.g., usernamem, firstName, lastName)
-
-edit/set balance functionality??
 
 Input Validators
 - proper case first and last name input
@@ -71,6 +71,7 @@ finalize mysql
 pwa manifest file??
 
 === MGA IF MAY TIME PA ===
+- edit/set balance functionality??
 - Contacts
 - Refund balance dialogue when expense is deleted
 - Custom sharing expense (individually set for each)

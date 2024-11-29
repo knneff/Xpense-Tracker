@@ -64,7 +64,6 @@
 
 <!-- Main Content Container -->
 <div class="flex ml-16 h-screen top-0 left-0 right-0 bottom-0">
-
   <!-- Group Bar -->
   <div class="tlGreen w-80 p-4">
 
@@ -250,9 +249,52 @@
 
       <!-- Members List -->
       <div class="tlGreen w-60 p-4">
-        <!-- Add Members -->
-        <button class="textTeal hover:underline" onclick="showInvite()">Invite Members</button>
-        <?php require('views/partials/invite.view.php') ?>
+
+        <!-- Generate Invite Link or Show Invite Link -->
+        <?php
+        // for generating token
+        // function generateToken($db)
+        // {
+        //   //generate new grouptoken
+        //   $token = bin2hex(random_bytes(16));
+        //   $token_hash = hash("sha256", $token);
+        //   $expiry = date("Y-m-d H:i:s", time() + 60 * 30);
+        //   $groupID = $db->query("select groupID from clan WHERE groupOwnerID=? ORDER BY groupID DESC LIMIT 1;", [$userID])->fetchColumn();
+
+        //   //stores new token to group
+        //   $db->query("UPDATE clan SET groupTokenHash = ?, groupTokenExpiry = ? WHERE groupID = ?;", [$token_hash, $expiry, $groupID]);
+        //   redirect('/shared?groupID=' . $groupID);
+        // }
+
+        if (isset($groupTokenHash)) { //if there's an ongoing invite link
+          $tokenExpiry = new DateTime($groupTokenExpiry);
+          $currentDateTime = new DateTime();
+          // if invite link is expired (30 mins has passed since last generation)
+          if ($tokenExpiry < $currentDateTime) {
+            //deletes groupTokenHash and tokenExpiry
+            $db->query("UPDATE clan SET groupTokenHash = NULL, groupTokenExpiry = NULL WHERE groupID = ?;", [$groupID]);
+            echo "
+              <form method='POST' action='/gen_invite'>
+                <input name='groupID' value='$groupID' hidden>
+                <button type='submit' class='textTeal hover:underline'>Generate Invite Link</button>
+              </form>
+            ";
+          } else {
+            echo "<button class='textTeal hover:underline' onclick='showInvite()'>Show Invite Link</button>";
+            require('views/partials/invite.view.php');
+          }
+        } else { // when there's no onoing invite link
+          echo "
+            <form method='POST' action='/gen_invite'>
+              <input name='groupID' value='$groupID' hidden>
+              <button type='submit' class='textTeal hover:underline'>Generate Invite Link</button>
+            </form>
+          ";
+        }
+        ?>
+
+
+
 
         <!--Members Count-->
         <h5 class="text-gray-400 text-lg font-bold tracking-wider">

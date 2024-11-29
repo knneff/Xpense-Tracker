@@ -5,21 +5,15 @@
             <div>
                 <h2 class="text-4xl font-semibold text-center textGray">Invite Links</h2>
                 <hr class="my-4 border-gray-300" />
-                <form method="GET" action="/gen_invite" class="flex flex-col text-base gap-5">
-                    <?= isset($token) ? "<p class='bgGreen2'>$token</p>" : "<p>No Invite Link Yet..</p>" ?>
-                    <input name='generate' value='generate' hidden>
-                    <input name='groupID' value='<?= $groupID ?>' hidden>
-                    <button type="submit" class="py-1 text-lg sm:text-xl font-semibold btGreen2 rounded-3xl">Generate Invite Link</button>
-                    <!-- <div class="flex flex-row my-4 gap-4 items-center">
-                        <label for="amount" class="text-2xl font-semibold">Amount: </label>
-                        <input
-                            type="decimal"
-                            name="amountToAdd"
-                            placeholder="0"
-                            class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none"
-                            required />
-                    </div> -->
-                </form>
+                <div class="flex flex-col text-base">
+                    <p class="text-2xl font-semibold">Token:</p>
+                    <p> <?= $groupTokenHash ?> </p>
+                </div>
+                <br>
+                <div class="flex flex-col text-base">
+                    <p class="text-2xl font-semibold">Link:</p>
+                    <p> <?= "<a href='/shared?inviteToken={$groupTokenHash}' class='textTeal hover:underline'> --> Copy This Link <-- </a>" ?> </p>
+                </div>
             </div>
         </div>
     </div>
