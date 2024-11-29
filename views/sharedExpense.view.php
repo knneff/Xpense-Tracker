@@ -3,43 +3,39 @@
 <!-- Sidebar -->
 <div class="bg-[#101b16db] w-16 h-screen fixed shadow-lg z-10">
 
-  <!-- Sidebar Content -->
-  <!-- Icon 1 -->
+  <!-- Current Group -->
   <div class="group relative">
     <img
-      src="https://files.cults3d.com/uploaders/14013694/illustration-file/50f1a3a2-4979-4030-89fe-c7dfbaaa97ba/2023-05-25_22-38-38.png"
-      alt="Icon 1"
+      src="<?= $groupIcon ?>"
+      alt="<?= $groupName . " Icon" ?>"
       class="h-12 w-12 rounded-3xl mt-2 mb-2 mx-auto hover:rounded-xl transition-all ease-linear cursor-pointer shadow-lg" />
     <!-- Icon 1's Tooltip-->
     <div
       class="bg-gray-900 text-white absolute left-20 rounded-md top-2 shadow-md p-2 text-xs font-bold min-w-max group-hover:scale-100 transition-all duration-100 scale-0 origin-left">
-      Anthony's Group
+      <?= $groupName ?>
     </div>
   </div>
-
-  <!-- Divider -->
   <hr class="mx-2 rounded-full border-gray-700 border" />
 
-  <!-- Group List -->
+  <!-- Group List (w/o the selected group) -->
   <?php
   foreach ($groups as $index => $group) {
-    // dd($group['groupName']);
-    $groupName = $group['groupName'];
-    $groupIcon = $group['groupIcon'];
-    echo "
-      <div class='group relative'>
-        <img
-          src='$groupIcon'
-          class='h-12 w-12 rounded-3xl mt-2 mb-2 mx-auto hover:rounded-xl transition-all ease-linear cursor-pointer shadow-lg' />
-        <div class='bg-gray-900 text-white absolute left-20 rounded-md top-2 shadow-md p-2 text-xs font-bold min-w-max group-hover:scale-100 transition-all duration-100 scale-0 origin-left'>
-          $groupName
-        </div>
-      </div>
-    ";
+    if ($group['groupID'] != $groupID) {
+      $tempGroupName = $group['groupName'];
+      $tempGroupIcon = $group['groupIcon'];
+      echo "
+        <a href='/shared?groupID={$group['groupID']}' class='group relative'>
+          <img
+            src='$tempGroupIcon'
+            class='h-12 w-12 rounded-3xl mt-2 mb-2 mx-auto hover:rounded-xl transition-all ease-linear cursor-pointer shadow-lg' />
+          <div class='bg-gray-900 text-white absolute left-20 rounded-md top-2 shadow-md p-2 text-xs font-bold min-w-max group-hover:scale-100 transition-all duration-100 scale-0 origin-left'>
+            $tempGroupName
+          </div>
+        </a>
+      ";
+    }
   }
   ?>
-
-  <!-- Divider -->
   <hr class="mx-2 rounded-full border-gray-700 border" />
 
   <!-- Add Group Button -->
@@ -74,9 +70,9 @@
 
     <!-- Group Title -->
     <div class="flex items-center mb-4">
-      <h5 class="text-gray-400 text-lg font-bold tracking-wider pt-0.5">
-        Anthony's Group
-      </h5>
+      <h2 class="text-gray-400 text-lg font-bold tracking-wider pt-0.5">
+        <?= $groupName ?>
+      </h2>
     </div>
 
     <!-- Divider-->
@@ -252,10 +248,11 @@
         </div>
       </div>
 
-
-
       <!-- Members List -->
       <div class="tlGreen w-60 p-4">
+        <!-- Add Members -->
+        <button class="textTeal hover:underline" onclick="showInvite()">Invite Members</button>
+        <?php require('views/partials/invite.view.php') ?>
 
         <!--Members Count-->
         <h5 class="text-gray-400 text-lg font-bold tracking-wider">
@@ -310,7 +307,9 @@
           </li>
 
         </ul>
+
       </div>
+
     </div>
   </div>
 

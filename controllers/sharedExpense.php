@@ -2,9 +2,11 @@
 
 protectPage();
 $userID = $_SESSION['userid'];
+
+//lists all of the groups of the current user
 $groups = $db->query("select clan.* from clanMembers join clan ON clanMembers.groupID=clan.groupID WHERE clanMembers.userID=?;", [$userID])->fetchAll(PDO::FETCH_ASSOC);
 
-//when group is created
+//when a group is created
 if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['groupName'])) {
     $groupName = $_POST['groupName'];
     $targetFilePath = 'assets/icons/group/_default.png'; //sets default group icon (if no file uploaded)
@@ -55,11 +57,34 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['groupName'])) {
             $groupID = $db->query("select groupID from clan WHERE groupOwnerID=? ORDER BY groupID DESC LIMIT 1;", [$userID])->fetchColumn();
             //inserts the current user as member/owner of the group
             $db->query("INSERT INTO clanMembers (groupID, userID, roles) VALUES(?, ?, 'owner');", [$groupID, $userID]);
-            redirect('/shared');
+            redirect('/shared?groupID=' . $groupID);
         } catch (PDOException $e) {
             $message = "An error occurred while processing your request. Please try again later.";
         }
     }
 }
+//when share is visited w/o a specified groupID
+else if ($_SERVER['REQUEST_METHOD'] === "GET" && !isset($_GET['groupID'])) {
+    $groupID = $groups[0]['groupID']; //first result from the group list
+    redirect('/shared?groupID=' . $groupID);
+}
+//when a particular group is visited
+else if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['groupID'])) {
+    $groupID = $_GET['groupID'];
+
+    //search if the current user if a member of the group. If not, user will be redirected to the default group
+    $valid = $db->query("SELECT * from clanMembers WHERE userID=? AND groupID=?", [$userID, $groupID])->fetch(PDO::FETCH_ASSOC);
+    if ($valid) {
+        $groupInfo = $db->query("SELECT * from clan WHERE groupID = ?", [$groupID])->fetch(PDO::FETCH_ASSOC);
+        $groupName = $groupInfo['groupName'];
+        $groupOwnerID = $groupInfo['groupOwnerID'];
+        $groupIcon = $groupInfo['groupIcon'];
+        $groupTokenHash = $groupInfo['groupTokenHash'];
+        $groupTokenExpiry = $groupInfo['groupTokenExpiry'];
+    } else {
+        alertRedirect("Nuh uhh!", "/shared");
+    }
+}
+
 
 require('views/sharedExpense.view.php');

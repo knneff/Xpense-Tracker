@@ -71,6 +71,7 @@ finalize mysql
 pwa manifest file??
 
 === MGA IF MAY TIME PA ===
+- Contacts
 - Refund balance dialogue when expense is deleted
 - Custom sharing expense (individually set for each)
   + subscription on groups
