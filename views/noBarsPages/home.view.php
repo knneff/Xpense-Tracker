@@ -3,7 +3,7 @@
 
 <div class="text-gray-300">
   <div class="relative">
-      <section class="h-screen w-screen bg-[#03352c] flex justify-center items-center p-44 md:p-20">
+      <section class="h-screen w-screen bg-[#03352c] flex justify-center items-center p-44 md:p-24 lg:p-32 xl:p-40">
         <div class="md:w-1/2">
           <div class="w-screen px-8 md:px-0 md:w-[200px]">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2754 1021" version="1.1">
@@ -42,8 +42,8 @@
           </div>
         </div>
         <div class="w-1/2 hidden md:block">
-          <img src="assets\phone.png" alt="iPhone image" class="md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] absolute md:top-[170px] md:right-[110px] lg:top-[120px] lg:right-[110px] xl:top-[130px] xl:right-[150px]">
-          <img src="assets\phone.png" alt="iPhone image" class="md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] absolute md:top-[193px] md:right-[50px] lg:top-[143px] lg:right-[50px] xl:top-[153px] xl:right-[50px]">
+          <img src="assets\phone.png" alt="iPhone image" class="md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] absolute md:top-[170px] md:right-[110px] lg:top-[120px] lg:right-[110px] xl:top-[70px] xl:right-[190px]">
+          <img src="assets\phone.png" alt="iPhone image" class="md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] absolute md:top-[193px] md:right-[50px] lg:top-[143px] lg:right-[50px] xl:top-[93px] xl:right-[100px]">
         </div>
       </section>
     <!-- how it works section -->
