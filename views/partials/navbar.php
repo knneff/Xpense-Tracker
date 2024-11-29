@@ -42,22 +42,24 @@
         </div>
 
         <!-- NAV Right -->
-        <div class="relative ml-3">
-            <div>
-                <button type="button"
-                    class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                    id="toggleButton" aria-expanded=" false" aria-haspopup="true">
-                    <span class="absolute -inset-1.5"></span>
-                    <span class="sr-only">Open user menu</span>
-                    <img class="h-12 w-12 rounded-full object-cover"
-                        src="<?= $_SESSION['userIcon'] ?>"
-                        alt="">
-                </button>
-            </div>
-            <div id="targetDiv" class="hidden absolute z-50 right-0 mt-2 w-48 origin-top-right rounded-md py-2 tlGreen shadow-lg border border-gray-800">
-                <a href="/usersettings" class="hover:bg-emerald-900 block px-4 py-2 text-sm text-gray-300">Your Profile</a>
-                <a href="#" class="hover:bg-emerald-900 block px-4 py-2 text-sm text-gray-300">Settings</a>
-                <a href="/logout" class="hover:bg-emerald-900 block px-4 py-2 text-sm text-gray-300">Sign out</a>
+        <div class="flex">
+            <?php require('notifications.view.php') ?>
+            <div class="ml-0 sm:ml-3">
+                <div>
+                    <button
+                        type="button"
+                        class="relative flex rounded-full bg-gray-800 text-sm active:scale-95 transition-transform hover:scale-105"
+                        id="toggleButton">
+                        <img
+                            class="size-10 sm:size-12 rounded-full object-cover border-2 border-gray-300 "
+                            src="<?= $_SESSION['userIcon'] ?>">
+                    </button>
+                </div>
+                <div id="targetDiv" class="absolute hidden z-50 top-16 right-10 mt-2 w-48 rounded-md py-2 tlGreen shadow-lg text-gray-200">
+                    <a href="/usersettings" class="hover:bg-emerald-800 block px-4 py-2 text-sm">Your Profile</a>
+                    <a href="#" class="hover:bg-emerald-800 block px-4 py-2 text-sm">Settings</a>
+                    <a href="/logout" class="hover:bg-emerald-800 block px-4 py-2 text-sm">Sign out</a>
+                </div>
             </div>
         </div>
     </div>

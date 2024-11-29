@@ -5,9 +5,6 @@ protectPage();
 // Use $_SESSION['userid']; to get logged in user's userid
 $userID = $_SESSION['userid'];
 
-// if ($_SERVER['REQUEST_METHOD'] == "POST") {
-//     dd($_POST);
-// }
 
 if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['goalDelete'])) {
     $goalID = $_POST['goalUpdateID'];
@@ -185,7 +182,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['addGoal']) && isset($
     }
 }
 
-$sql = "SELECT goalID, description, amount, paidAmount, groupIcon, category FROM goals WHERE userID = :userID";
+$sql = "SELECT * FROM goals WHERE userID = :userID";
 
 $params = [
     ':userID' => $userID,
