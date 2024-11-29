@@ -1,6 +1,6 @@
 <?php require('partials/bodySharing.php') ?>
 
-<div class="flex">
+<div class="flex justify-center gap-10 h-full items-center">
 
   <!-- CREATE GROUP -->
   <div class="tlGreen text-gray-300 p-8 rounded-3xl shadow-lg w-11/12 max-w-md">
@@ -53,6 +53,7 @@
 
   </div>
 
+  <p class='textGray text-3xl'>or</p>
   <!-- JOIN GROUP -->
   <div class="tlGreen text-gray-300 p-8 rounded-3xl shadow-lg w-11/12 max-w-md">
     <!-- Heading -->
@@ -95,7 +96,7 @@
         id="submitBtn"
         class="w-full py-2 bg-green-800 text-white font-bold rounded-lg hover:bg-green-700"
         type="submit">
-        Create Group
+        Join Group
       </button>
     </form>
 

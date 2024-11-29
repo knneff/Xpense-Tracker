@@ -5,6 +5,7 @@ $userID = $_SESSION['userid'];
 
 //lists all of the groups of the current user
 $groups = $db->query("select clan.* from clanMembers join clan ON clanMembers.groupID=clan.groupID WHERE clanMembers.userID=?;", [$userID])->fetchAll(PDO::FETCH_ASSOC);
+// dd(sizeof($groups) < 1);
 
 //when a group is created
 if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['groupName'])) {
@@ -64,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['groupName'])) {
     }
 }
 //when a user does not have a group yet
-else if (!isset($groups)) {
+else if (sizeof($groups) < 1) {
     require('views/sharedNoGroup.view.php');
     die();
 }
