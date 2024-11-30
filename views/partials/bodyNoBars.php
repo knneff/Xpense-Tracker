@@ -4,4 +4,4 @@
     <!-- NAV BAR IS HERE -->
     <div class="h-full">
         <!-- DITO NA YUNG PINAKACONTENT NINYO -->
-        <content class="overflow-auto ">
+        <content class="overflow-auto">
