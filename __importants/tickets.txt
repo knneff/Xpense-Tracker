@@ -17,19 +17,18 @@ notification system
 - invite ng group?
 - group expense notification
 
-
 Sharing
 - invite system (token)
+- deleting of group?
+- editing of group info?
+- leave group option?
 - user interface
-- GET accessible groups
-  + automatically redirects to created group after creation
   + restricts non member of the group from accessing group
 - ayusin html and javascript ng creation panel
   + html issue sa join and create group panel
 - expense sharing mechanism
 - link sa database
 - reusable member list (for dashboard)
-- clickable copy to clipboard for invite link and token
 
 dashboard
 - subscription?

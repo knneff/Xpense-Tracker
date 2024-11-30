@@ -2,16 +2,14 @@
 
 <div class="grid grid-cols-1 sm:grid-cols-2 text-center items-center">
 
+    <!-- LOGO HERE -->
     <div class="hidden sm:inline">
         <h1 class="text-7xl text-gray-300 font-semibold">XPENSE</h1>
     </div>
 
-    <!-- Ayaw opacity kapag ginamit yung tlGreen -->
-
+    <!-- LOGIN PANEL -->
     <div class="tlBgGreen rounded-3xl mt-8 p-8 mx-20 sm:mx-12">
-
         <!-- <div class="tlGreen rounded-3xl md:mx-16 p-8 bg-opacity-0 sm:mx-4 md:bg-opacity-100"> -->
-
         <h2 class="text-4xl font-semibold text-center textGray">Account Login</h2>
         <br>
 
@@ -42,7 +40,7 @@
             <br><br>
 
             <!-- ERROR MESSAGE TO NAKAHIDE KAPAG WALANG ERROR -->
-            <div class="<?= isset($errorMessage) ? '' : 'hidden' ?> bgOrange text-white rounded-3xl text-center py-2">
+            <div class="<?= isset($errorMessage) ? '' : 'hidden' ?> bgRed text-white rounded-3xl text-center py-2">
                 <?= $errorMessage ?>
             </div>
 
