@@ -259,7 +259,7 @@
           if ($tokenExpiry < $currentDateTime) {
             //deletes groupTokenHash and tokenExpiry
             $db->query("UPDATE clan SET groupTokenHash = NULL, groupTokenExpiry = NULL WHERE groupID = ?;", [$groupID]);
-            echo "<form method='POST' action='/gen_invite'>
+            echo "<form method='POST' action='/invite'>
                 <input name='groupID' value='$groupID' hidden>
                 <button type='submit' class='flex flex-row justify-center w-full py-2 px-2 items-center gap-1 btGreen rounded-lg'>
                   <svg class='size-5' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'>
@@ -285,7 +285,7 @@
             require('views/partials/shared/invite.view.php');
           }
         } else { // when there's no onoing invite link
-          echo "<form method='POST' action='/gen_invite'>
+          echo "<form method='POST' action='/invite'>
               <input name='groupID' value='$groupID' hidden>
                 <button type='submit' class='flex flex-row justify-center w-full py-2 px-2 items-center gap-1 btGreen rounded-lg'>
                   <svg class='size-5' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'>

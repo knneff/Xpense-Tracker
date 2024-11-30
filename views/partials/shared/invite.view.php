@@ -31,7 +31,7 @@
                             </svg>
                         </button>
                     </div>
-                    <textarea id='inviteLink' class='mx-1 w-96 bgGreen p-1 rounded-md border border-gray-400'><?= $_SERVER['HTTP_HOST'] . '/shared?invite=' . $groupTokenHash ?></textarea>
+                    <textarea id='inviteLink' class='mx-1 w-96 bgGreen p-1 rounded-md border border-gray-400'><?= $_SERVER['HTTP_HOST'] . '/invite?token=' . $groupTokenHash ?></textarea>
                 </div>
 
             </div>

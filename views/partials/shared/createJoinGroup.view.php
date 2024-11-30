@@ -1,7 +1,6 @@
 <main id="createJoinGroupPanel" class="flex hidden fixed inset-0 justify-center items-center bg-black bg-opacity-50 transition-opacity">
 
     <div class="tlGreen text-gray-300 p-8 rounded-3xl shadow-lg w-11/12 max-w-md">
-
         <!-- Heading -->
         <h2 id="panelHeading" class="text-4xl font-semibold text-center mb-4">Create a Group</h2>
 
@@ -81,10 +80,9 @@
         document.getElementById('panelHeading').textContent = 'Join a Group';
         document.getElementById('panelDescription').textContent = 'Enter an invite link below to join a group.';
 
-        // Remove upload section
-        const uploadSection = document.getElementById('uploadSection');
-        uploadSection.innerHTML = ``;
-        // if (uploadSection) uploadSection.remove();
+        // Remove imageContainer
+        const imageContainer = document.getElementById('imageContainer');
+        imageContainer.innerHTML = ``;
 
         // Update group name section
         const groupNameSection = document.getElementById('groupNameSection');
@@ -102,7 +100,7 @@
             <input
                 type="text"
                 id="inviteLink"
-                name="inviteLink"
+                name="groupToken"
                 placeholder="Enter group link"
                 required
                 class="w-full pl-10 p-3 border rounded-lg bg-gray-700 border-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500">
@@ -120,17 +118,15 @@
         document.getElementById('panelHeading').textContent = 'Create a Group';
         document.getElementById('panelDescription').textContent = 'Give your new group a personality with a name and an icon. You can change this anytime!';
 
-        // Restore upload section (MAY PROBLEM DITO)
-        const uploadSection = document.getElementById('uploadSection');
-        uploadSection.innerHTML =
-            `<div class="flex flex-col items-center">
-                <label for="iconUpload" class="cursor-pointer flex flex-col items-center justify-center w-24 h-24 bg-gray-700 rounded-full hover:bg-gray-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 5v14m-7-7h14"></path>
-                    </svg>
-                    <span class="text-xs text-gray-400 mt-2">Upload</span>
-                </label>
-            </div>
+        // Restore imageContainer
+        const imageContainer = document.getElementById('imageContainer');
+        imageContainer.innerHTML =
+            `<label for="iconUpload" class="cursor-pointer flex flex-col items-center justify-center w-24 h-24 bg-gray-700 rounded-full hover:bg-gray-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14m-7-7h14"></path>
+                </svg>
+                <span class="text-xs text-gray-400 mt-2">Upload</span>
+            </label>
         `;
 
         // Restore group name section
@@ -151,7 +147,6 @@
         document.getElementById('joinGroupBtn').setAttribute('onclick', 'showJoinGroup()');
     }
 
-    // 
     function previewFile() {
         const fileInput = document.getElementById('iconUpload');
         const file = fileInput.files[0];
@@ -162,13 +157,12 @@
             reader.onload = function(e) {
                 const imagePreview = document.getElementById('imageContainer');
                 imagePreview.innerHTML = `
-                    <label for="iconUpload" class="cursor-pointer flex flex-col items-center justify-center w-24 h-24 bg-gray-700 rounded-full">
+                    <label for="iconUpload" class="cursor-pointer flex flex-col items-center justify-center w-24 h-24 bg-gray-700 rounded-full hover:bg-gray-600">
                         <img
                             id="picID"
                             alt="Profile"
                             class="w-24 h-24 rounded-full border-4 border-gray-400 object-cover"/>
                     </label>
-                    <input id="iconUpload" name='groupIcon' type="file" accept="image/*" class="hidden" onchange="previewFile()">
                 `;
                 const imgFile = document.getElementById('picID');
                 imgFile.src = e.target.result;

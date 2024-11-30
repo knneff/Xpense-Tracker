@@ -7,8 +7,13 @@ $userID = $_SESSION['userid'];
 $groups = $db->query("select clan.* from clanMembers join clan ON clanMembers.groupID=clan.groupID WHERE clanMembers.userID=?;", [$userID])->fetchAll(PDO::FETCH_ASSOC);
 // dd(sizeof($groups) < 1);
 
+//when a user does not have a group yet
+if (sizeof($groups) < 1) {
+    require('views/sharedNoGroup.view.php');
+    die();
+}
 //when a group is created
-if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['groupName'])) {
+else if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['groupName'])) {
     $groupName = $_POST['groupName'];
     $targetFilePath = 'assets/icons/group/_default.png'; //sets default group icon (if no file uploaded)
     $fileSuccess = true;
@@ -64,10 +69,16 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['groupName'])) {
         }
     }
 }
-//when a user does not have a group yet
-else if (sizeof($groups) < 1) {
-    require('views/sharedNoGroup.view.php');
-    die();
+//when a user joins a group using invite token
+else if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['groupToken'])) {
+    $inviteToken = $_POST['groupToken'];
+    //if invite link is pasted here instead of just the token
+    if (str_contains($inviteToken, 'invite?token=')) {
+        $query = parse_url($inviteToken, PHP_URL_QUERY);
+        parse_str($query, $params);
+        $inviteToken = $params['token'];
+    }
+    redirect('/invite?token=' . $inviteToken);
 }
 //when share is visited w/o a specified groupID
 else if ($_SERVER['REQUEST_METHOD'] === "GET" && !isset($_GET['groupID'])) {

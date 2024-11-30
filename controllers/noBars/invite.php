@@ -1,5 +1,7 @@
 <?php
 
+protectPage();
+$userID = $_SESSION['userid'];
 
 //generate token
 if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['groupID'])) {
@@ -39,31 +41,32 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['groupID'])) {
 else if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['token'])) {
     $token = $_GET['token'];
 
-    $groupTokenExpiryCopy = new DateTime($groupTokenExpiry);
-    $currentDateTime = new DateTime();
-    $tokenExpired = $currentDateTime > $groupTokenExpiryCopy;
-
-    $groupIdExist = $db->query("SELECT groupID from clan WHERE groupTokenHash=?", [$token])->fetchColumn();
-    $userFoundInGroup = $db->query("SELECT * from clanMember WHERE userID=? AND groupID=?", [$userID, $groupIdExist])->fetch(PDO::FETCH_ASSOC);
-
     //if invite link does not exist
-    if (!$groupIdExist) {
+    $joinGroupInfo = $db->query("SELECT groupID, groupTokenExpiry from clan WHERE groupTokenHash=?", [$token])->fetch(PDO::FETCH_ASSOC);
+    if (!$joinGroupInfo) {
         alertRedirect("Invalid group token!", "/shared");
     }
+
+    $joinGroupID = $joinGroupInfo['groupID'];
+    $joinGroupTokenExpiry = new DateTime($joinGroupInfo['groupTokenExpiry']);
+    $currentDateTime = new DateTime();
+
     //if invite found pero expire na
-    else if ($groupIdExist && $tokenExpired) {
+    if ($currentDateTime > $joinGroupTokenExpiry) {
         //delete token and expiry
         $db->query("UPDATE clan SET groupTokenHash = NULL, groupTokenExpiry = NULL WHERE groupTokenHash = ?;", [$token]);
         alertRedirect("Group Invitation Token is already expired!", "/shared");
     }
-    //if naka-join na sa group
-    else if ($userFoundInGroup) {
-        alertRedirect("User already in the group!", "/shared?groupID=" . $groupIdExist);
+
+    //if user is already in the group
+    $userFoundInGroup = $db->query("SELECT * from clanMembers WHERE userID=? AND groupID=?", [$userID, $joinGroupID])->fetch(PDO::FETCH_ASSOC);
+    if ($userFoundInGroup) {
+        alertRedirect("User already in the group!", "/shared?groupID=" . $joinGroupID);
     }
     //successfully joined group
     else {
-        $db->query("INSERT INTO clanMembers(groupID,userID,roles) VALUES(?, ?, 'member');", [$groupIdExist, $userID]);
-        alertRedirect("User already in the group!", "/shared?groupID=" . $groupIdExist);
+        $db->query("INSERT INTO clanMembers(groupID,userID,roles) VALUES(?, ?, 'member');", [$joinGroupID, $userID]);
+        alertRedirect("Group Joined Successfully!", "/shared?groupID=" . $joinGroupID);
     }
 }
 

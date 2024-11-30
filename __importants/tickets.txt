@@ -25,7 +25,8 @@ Sharing
 - user interface
   + restricts non member of the group from accessing group
 - ayusin html and javascript ng creation panel
-  + html issue sa join and create group panel
+  + yung unang pinreview yung tinatanggap, 
+  + di nababalik sa dating state yung from
 - expense sharing mechanism
 - link sa database
 - reusable member list (for dashboard)
