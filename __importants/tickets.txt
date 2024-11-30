@@ -21,35 +21,49 @@ Sharing
 - group members list
   + kicking of members (owner/admin)
   + reusable?
+  + hover sa user sa member ng group to show more details (e.g., full name)???
 - admin/owner functionalities
   + deleting of group?
+    + what happens to members?
+    + what happens to expenses when its group is deleted? (group deleted message?)
   + editing of group info?
   + ADD EXPENSE MECHANISM
+  + Transferring of ownership?
 - member functionalities
   + leaving group
   + CANNOT CREATE AND SEE INVITE LINK
+  + ADD EXPENSE MECHANISM NOT VISIBLE??
+- visuals improvements
 - MESSAGING?? (AJAX TO FOR SURE)
 
 dashboard
 - subscription?
 - overspending?
 - groups?
-- goals?
  + group list
+- goals?
 
 subscription list??
-- bars to include subscription list as well???
+- bars to include subscription list as well sa expense log???
+
+uniform style default icons
+- user icons
+- group icons
+- goal icons (select?)
+
+Input Validators
+- proper case first and last name input
+- strong passwords
+
+bug
+- userSettings: walang error message kapag naginput ng invalid email
 
 landing
 - get started behavior (dashboard kapag may nakalogin)
 - ayusin logo sa navbar
 
-nav bar mechanism if a user is logged in or not
+nav bar
 - more info sa profile pic icon nav bar (e.g., usernamem, firstName, lastName)
-
-Input Validators
-- proper case first and last name input
-- strong passwords
 
 Audit Log
 - Admin User: audit log accessible only to admin user system
@@ -63,25 +77,23 @@ Statistics page
 
 search sa expense history?
 
-hover sa user sa group to show more details (e.g., full name)
-
 === Other concerns ===
 
 finalize mysql
 - finalize columns to put
-- need ng group_token_hash column para makagawa ng link sa groups
 - clean triggers for audit log
 
 pwa manifest file??
 
 === MGA IF MAY TIME PA ===
 - edit/set balance functionality??
-- Contacts
+- Contacts Page
 - Refund balance dialogue when expense is deleted
 - Custom sharing expense (individually set for each)
   + subscription on groups
 - Not pre-defined user icon
 - Income (automatic add ng time and transaction sa bank)
+- currency conversion (for shared expense tapos magkaiba currency settings)
 - OCR / Receipt Scanner
 - Multiple Wallet
 - Messaging (for sharing)

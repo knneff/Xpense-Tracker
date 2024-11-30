@@ -25,17 +25,18 @@
         $memberUsername = $memberInfo['username'];
         $memberIcon = $memberInfo['userIcon'];
         echo "<li
-          class='flex items-center p-2 hover:bg-gray-700 cursor-pointer rounded mb-2'>
-          <img
-            src='$memberIcon'
-            alt='icon'
-            class='w-6 h-6 mr-2 rounded-3xl' />
-          <span class='text-white'>$memberUsername</span>
-        </li>
-      ";
+            class='flex items-center px-2 py-1 hover:bg-gray-700 cursor-pointer rounded mb-2'>
+            <img
+              src='$memberIcon'
+              alt='icon'
+              class='w-6 h-6 mr-2 rounded-3xl' />
+            <span class='text-white'>$memberUsername</span>
+          </li>
+        ";
       }
       ?>
     </ul>
+
   </div>
 
   <!-- Show Either "Generate Invite Link" or "Show Invite Link" Button -->
@@ -47,7 +48,7 @@
     if ($tokenExpiry < $currentDateTime) {
       //deletes groupTokenHash and tokenExpiry
       $db->query("UPDATE clan SET groupTokenHash = NULL, groupTokenExpiry = NULL WHERE groupID = ?;", [$groupID]);
-      require('btnGenInvite.view.php');
+      require('btnGenInvite.php');
     } else { //there's an ongoing invite link and not expired
       $expiryToNowInterval = $currentDateTime->diff($tokenExpiry);
       $expiryInMinutes = $expiryToNowInterval->i;

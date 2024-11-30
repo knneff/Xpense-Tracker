@@ -1,5 +1,6 @@
 <!-- Group Transactions -->
-<div class="flex-1 bgGreen p-4">
+<div class="flex-1">
+
     <div class="container mx-auto p-4">
         <div>
             <div
@@ -89,4 +90,5 @@
             </script>
         </div>
     </div>
+
 </div>
