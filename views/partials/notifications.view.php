@@ -1,4 +1,3 @@
-<?php require('controllers/noBars/notifications.php') ?>
 <button
     id="buttonNotif"
     class="hover:scale-105">
@@ -13,24 +12,29 @@
         </svg>
     </div>
 </button>
-<div id="panelNotif" class="hidden absolute z-40 top-16 right-10 mt-2 w-80 rounded-md py-4 pl-4 tlGreen shadow-lg text-gray-200">
+<div id="panelNotif" class="hidden absolute z-40 top-16 right-10 mt-2 w-60 sm:w-80 rounded-md py-2 pl-2 sm:py-4 sm:pl-4 tlGreen shadow-lg text-gray-200">
     <div class="flex justify-between mb-2 pr-4">
-        <div class="text-2xl font-semibold">
+        <div class="text-xl sm:text-2xl font-semibold">
             Notifications
         </div>
-        <div class="self-end hover:text-white">
-            <button class="hover:underline">
-                Clear All
-            </button>
+        <div class="text-sm sm:text-base self-end hover:text-white">
+            <form method="POST">
+                <button 
+                    name="deleteNotif"
+                    type="submit"
+                    class="hover:underline">
+                    Clear All
+                </button>
+            </form>
         </div>
     </div>
     <div class="scrollbar-custom max-h-96 overflow-auto gap-2 grid">
         <?php foreach ($notifications as $notification) : ?>
-            <div class="<?= $notification['isViewed'] ? 'bgGreen' : 'bg-emerald-900'; ?> mr-4 p-2 rounded-md">
-                <div class="font-semibold text-lg">
+            <div class="<?= $notification['isViewed'] ? 'bgGreen' : 'bg-emerald-900'; ?> mr-2 sm:mr-4 p-2 rounded-md">
+                <div class="font-semibold text-base sm:text-lg">
                     <?= $notification['title'] ?>
                 </div>
-                <div>
+                <div class="text-sm sm:text-base">
                     <?= $notification['body'] ?>
                 </div>
             </div>
