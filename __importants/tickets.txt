@@ -18,24 +18,24 @@ notification system
 - group expense notification
 
 Sharing
-- invite system (token)
-- deleting of group?
-- editing of group info?
-- leave group option?
-- user interface
-  + restricts non member of the group from accessing group
-- ayusin html and javascript ng creation panel
-  + yung unang pinreview yung tinatanggap, 
-  + di nababalik sa dating state yung from
-- expense sharing mechanism
-- link sa database
-- reusable member list (for dashboard)
+- group members list
+  + kicking of members (owner/admin)
+  + reusable?
+- admin/owner functionalities
+  + deleting of group?
+  + editing of group info?
+  + ADD EXPENSE MECHANISM
+- member functionalities
+  + leaving group
+  + CANNOT CREATE AND SEE INVITE LINK
+- MESSAGING?? (AJAX TO FOR SURE)
 
 dashboard
 - subscription?
 - overspending?
 - groups?
 - goals?
+ + group list
 
 subscription list??
 - bars to include subscription list as well???
