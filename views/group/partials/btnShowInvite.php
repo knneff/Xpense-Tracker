@@ -1,4 +1,15 @@
-<!-- Invite Panel -->
+<!-- Show Invite Button -->
+<div class='flex flex-col justify-center items-center'>
+    <button onclick='showInvite()' class='flex flex-row justify-center w-full py-2 px-2 items-center gap-1 btGreen rounded-lg'>
+        <svg class='size-5' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'>
+            <path stroke-linecap='round' stroke-linejoin='round' d='M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244' />
+        </svg>
+        <p class='pb-1'>Show Invite Link</p>
+    </button>
+    <p class='text-sm textRed'>Expires in <?= $expiryInMinutes ?> minutes</p>
+</div>
+
+<!-- Token and Invite Panel -->
 <div id="invitePanel" class="hidden fixed">
     <div id="inviteOverlay" class="z-50 flex justify-center items-center fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50">
         <div class="flex justify-center text-base sm:text-lg text-gray-300 tlGreen p-8 rounded-3xl">

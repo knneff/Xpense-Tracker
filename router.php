@@ -8,17 +8,19 @@ $routes = [
     "/login" => __DIR__ . "/controllers/noBars/login.php",
     "/logout" => __DIR__ . "/controllers/noBars/logout.php",
     "/reset" => __DIR__ . "/controllers/noBars/reset.php",
-    "/invite" => __DIR__ . "/controllers/noBars/invite.php",
 
     //mga page na accessible lang kapag may nakalog-in
     "/dashboard" => __DIR__ . "/controllers/dashboard.php",
     "/usersettings" => __DIR__ . "/controllers/userSettings.php",
-    "/shared" => __DIR__ . "/controllers/sharedExpense.php",
     "/goal" => __DIR__ . "/controllers/goal.php",
     "/expenselog" => __DIR__ . "/controllers/expenseLog.php",
     "/subscriptions" => __DIR__ . "/controllers/subscriptionList.php",
     "/audit" => __DIR__ . "/controllers/audit.php",
     "/settings" => __DIR__ . "/controllers/settings.php",
+
+    //mga shared expense shiz
+    "/group" => __DIR__ . "/controllers/group.php",
+    "/invite" => __DIR__ . "/controllers/noBars/invite.php",
 ];
 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];

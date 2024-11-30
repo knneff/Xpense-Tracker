@@ -5,8 +5,6 @@ $userID = $_SESSION['userid'];
 
 //lists all of the groups of the current user
 $groups = $db->query("select clan.* from clanMembers join clan ON clanMembers.groupID=clan.groupID WHERE clanMembers.userID=?;", [$userID])->fetchAll(PDO::FETCH_ASSOC);
-// dd(sizeof($groups) < 1);
-
 
 //when a group is created
 if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['groupName'])) {
@@ -59,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['groupName'])) {
             $groupID = $db->query("select groupID from clan WHERE groupOwnerID=? ORDER BY groupID DESC LIMIT 1;", [$userID])->fetchColumn();
             //inserts the current user as member/owner of the group
             $db->query("INSERT INTO clanMembers (groupID, userID, roles) VALUES(?, ?, 'owner');", [$groupID, $userID]);
-            redirect('/shared?groupID=' . $groupID);
+            redirect('/group?id=' . $groupID);
         } catch (PDOException $e) {
             $message = "An error occurred while processing your request. Please try again later.";
         }
@@ -78,30 +76,36 @@ else if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['groupToken'])) {
 }
 //when a user does not have a group yet
 else if (sizeof($groups) < 1) {
-    require('views/sharedNoGroup.view.php');
+    require('views/group/noGroup.view.php');
     die();
 }
 //when share is visited w/o a specified groupID
-else if ($_SERVER['REQUEST_METHOD'] === "GET" && !isset($_GET['groupID'])) {
+else if ($_SERVER['REQUEST_METHOD'] === "GET" && !isset($_GET['id'])) {
     $groupID = $groups[0]['groupID']; //first result from the group list
-    redirect('/shared?groupID=' . $groupID);
+    redirect('/group?id=' . $groupID);
 }
-//when a particular group is visited
-else if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['groupID'])) {
-    $groupID = $_GET['groupID'];
+//when a particular group is visited (success)
+else if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['id'])) {
+    $groupID = $_GET['id'];
 
-    //search if the current user if a member of the group. If not, user will be redirected to the default group
+    //search if the current user is a member of the group. If not, user will be redirected to the default group
     $valid = $db->query("SELECT * from clanMembers WHERE userID=? AND groupID=?", [$userID, $groupID])->fetch(PDO::FETCH_ASSOC);
     if ($valid) {
+        // stores the visited group's info
         $groupInfo = $db->query("SELECT * from clan WHERE groupID = ?", [$groupID])->fetch(PDO::FETCH_ASSOC);
         $groupName = $groupInfo['groupName'];
         $groupOwnerID = $groupInfo['groupOwnerID'];
         $groupIcon = $groupInfo['groupIcon'];
         $groupTokenHash = $groupInfo['groupTokenHash'];
         $groupTokenExpiry = $groupInfo['groupTokenExpiry'];
+
+        // lists all of the group's member
+        $groupOwnerInfo = $db->query("SELECT username, userIcon from users WHERE userid=?;", [$groupOwnerID])->fetch(PDO::FETCH_ASSOC);
+        $groupMembersInfo = $db->query("SELECT users.username, users.userIcon from clanMembers join users ON clanMembers.userID = users.userid WHERE clanMembers.groupID = ? AND clanMembers.roles = ? ORDER BY username ASC;", [$groupID, 'member'])->fetchAll(PDO::FETCH_ASSOC);
+        $groupMembersCount = sizeof($groupMembersInfo);
     } else {
-        alertRedirect("Nuh uhh!", "/shared");
+        alertRedirect("Inaccessable Group!", "/group");
     }
 }
 
-require('views/sharedExpense.view.php');
+require('views/group/group.view.php');

@@ -61,6 +61,10 @@ Statistics page
 - mechanism?
 - link sa database e.g., how to search expenses that are within 7 days ago
 
+search sa expense history?
+
+hover sa user sa group to show more details (e.g., full name)
+
 === Other concerns ===
 
 finalize mysql

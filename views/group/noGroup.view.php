@@ -1,4 +1,4 @@
-<?php require('partials/shared/bodySharing.php') ?>
+<?php require('partials/bodyGroup.php') ?>
 
 <div class="flex justify-center gap-10 h-full items-center">
 
