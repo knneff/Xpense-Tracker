@@ -2,7 +2,7 @@
 <?php require('controllers/noBars/notifications.php') ?>
 <?php require('controllers/noBars/balanceController.php') ?>
 
-<body class="bgGreen flex flex-col">
+<body class="tlGreen flex flex-col">
     <?php require('controllers/noBars/balanceController.php') ?>
     <!-- NAV BAR IS HERE -->
     <?php require('views/partials/navbar.php') ?>

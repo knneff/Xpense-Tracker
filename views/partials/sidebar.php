@@ -28,7 +28,7 @@
 <div id="menu" class="fixed sm:relative dsm z-40 h-screen flex-shrink-0 tlGreen textGray flex-col border-r border-one border-gray-800">
 
     <!-- HAMBURGER -->
-    <button id="menu_btn" title="Menu" class="w-12 p-3 hover:bg-emerald-900 self-end">
+    <button onclick="toggleMenu()" title="Menu" class="w-12 p-3 hover:bg-emerald-900 self-end">
         <svg class="textGray" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
@@ -96,51 +96,18 @@
         <label class="btn_label dsl textGray flex-grow">System Settings</label>
     </a>
 
-
-
-    <!-- MGA WALA PA SA BABA -->
-
-    <!-- EDIT ICON
-    <a href="#" title="Expense Log" class="p-3 hover:bg-emerald-900">
-        <svg class="textGray" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-8.4 8.4a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32l8.4-8.4Z" />
-            <path d="M5.25 5.25a3 3 0 0 0-3 3v10.5a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3V13.5a.75.75 0 0 0-1.5 0v5.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5V8.25a1.5 1.5 0 0 1 1.5-1.5h5.25a.75.75 0 0 0 0-1.5H5.25Z" />
-        </svg>
-    </a>
-
-    <!-- PROFILE ICON
-    <a href="#" title="Expense Log" class="p-3 hover:bg-emerald-900">
-        <svg class="textGray" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
-        </svg>
-    </a>
-
-    <!-- TRASH ICON
-    <a href="#" title="Expense Log" class="p-3 hover:bg-emerald-900">
-        
-    </a>
-
-    <!-- ADD USER TO GROUP ICON 
-    <a href="#" title="Expense Log" class="p-3 hover:bg-emerald-900">
-        <svg class="textGray" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M5.25 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM2.25 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM18.75 7.5a.75.75 0 0 0-1.5 0v2.25H15a.75.75 0 0 0 0 1.5h2.25v2.25a.75.75 0 0 0 1.5 0v-2.25H21a.75.75 0 0 0 0-1.5h-2.25V7.5Z" />
-        </svg>
-    </a>
-
-    -->
-
     <script>
-        const menu_btn = document.getElementById('menu_btn');
         const menu = document.getElementById('menu');
         const btn_labels = document.querySelectorAll('.btn_label');
-        menu_btn.addEventListener('click', () => {
+
+        function toggleMenu() {
             menu.classList.toggle('dsm');
             menu.classList.toggle('csm');
-
             btn_labels.forEach(btn => {
                 btn.classList.toggle('dsl');
                 btn.classList.toggle('csl');
             });
-        });
+
+        }
     </script>
 </div>

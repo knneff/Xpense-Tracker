@@ -1,4 +1,4 @@
-<!-- Pending Card -->
+<!-- Expense Card -->
 <div class='flex-1 textGray rounded-lg border border-gray-400'>
     <!-- title (description, dateTime) -->
     <div class='flex justify-between items-center rounded-t-lg bgGreen2 px-2 py-1'>
@@ -6,23 +6,14 @@
         <p class='text-lg'> <?= $expenseTime ?> </p>
     </div>
     <!-- body (category, expenseType, amount) -->
-    <div class='flex flex-row justify-between items-center px-2 py-2 bgGreen rounded-b-lg'>
+    <div class='flex flex-row justify-between items-center px-4 py-2 bgGreen rounded-b-lg'>
         <!-- left -->
-        <div class='flex flex-row textRed items-center'>
-            <svg class="size-14" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-            </svg>
-            <div class='flex flex-col'>
-                <p class='text-xl font-semibold' id='amount'> ₱ <?= $amount ?> </p>
-                <p class='text-xs textRed' id='amount'> Payment Declined! </p>
-            </div>
-        </div>
-
-        <!-- right -->
-        <div class='flex flex-col items-end gap-2'>
+        <div class='flex flex-col items-start gap-2'>
             <?php require('userIcon.view.php') ?>
             <p class='text-md text-gray-300 bgGreen2 rounded-lg px-1'> <?= $category ?> </p>
         </div>
+        <!-- right -->
+        <p class='text-2xl' id='amount'> ₱ <?= $amount ?> </p>
     </div>
 </div>
 

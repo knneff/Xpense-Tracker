@@ -6,7 +6,7 @@
 </button>
 
 <!-- Group Form Container -->
-<div id='addGroupExpenseForm' class="flex flex-col border-gray-600 border-l w-96 space-y-2 px-4 pt-2 h-screen pb-36 duration-200 ease-in-out">
+<div id='addGroupExpenseForm' class="bgGreen flex flex-col border-gray-600 border-l w-96 space-y-2 px-4 pt-2 h-screen pb-36 duration-200 ease-in-out">
     <h3 class='text-lg textGray font-semibold text-center'>Group Expense</h3>
     <div class="h-1 bg-gradient-to-r from-green-800 via-gray-600 to-green-800 rounded-lg"></div>
 
