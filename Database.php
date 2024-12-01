@@ -43,7 +43,7 @@ class Database
     }
 
     //perform a database query
-    public function query($query, $params)
+    public function query($query, $params = [])
     {
         try {
             $stmt = $this->connection->prepare($query);

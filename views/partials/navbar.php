@@ -66,17 +66,21 @@
 </nav>
 
 <script>
+    let isSettingsDisplayed = false;
     const button = document.querySelector("#toggleButton");
     const targetDiv = document.querySelector("#targetDiv");
 
     button.addEventListener("click", function(event) {
         event.stopPropagation();
         targetDiv.classList.toggle("hidden");
+        isSettingsDisplayed = true;
     });
 
     document.addEventListener("click", function(event) {
-        if (!targetDiv.contains(event.target) && event.target !== button) {
+
+        if (!targetDiv.contains(event.target) && event.target !== button && isSettingsDisplayed) {
             targetDiv.classList.add("hidden");
+            isSettingsDisplayed = false;
         }
     });
 </script>
