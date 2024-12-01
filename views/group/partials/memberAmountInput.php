@@ -14,7 +14,7 @@
             document.getElementById('addAmountField<?= $index ?>').innerHTML = `
             <p class='textGray'>$</p>
             <input
-                class='px-2 py-1 w-24 bg-gray-600 text-white border-none rounded-md'
+                class='px-2 py-1 w-24 tlGreen textGray border-none rounded-md'
                 type='decimal'
                 name='amount<?= $userInfoTemp['userid'] ?>'
                 required

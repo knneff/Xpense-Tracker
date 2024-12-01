@@ -17,6 +17,10 @@ notification system
 - invite ng group?
 - group expense notification
 
+cache or just save sa database????
+- system settings info
+- last group na visited (as default group kapag walang specified)
+
 Sharing
 - group transactions and pendings
 - group members list

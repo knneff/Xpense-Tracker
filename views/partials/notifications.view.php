@@ -6,7 +6,7 @@
         class="grid items-center textGray h-5/6 w-9 sm:w-10">
         <div
             id="notifCountDisplay"
-            class="<?= count($count) ? 'bg-gray-300' : 'hidden'; ?> text-xs scale-50 sm:scale-75 w-7 py-1 absolute justify-self-end self-start  text-gray-700 font-semibold rounded-full">
+            class="<?= count($count) ? 'bg-gray-300' : 'hidden'; ?> text-xs scale-50 sm:scale-75 w-7 py-1 absolute justify-self-end self-start text-gray-700 font-semibold rounded-full">
             <?= count($count) ?>
         </div>
         <svg class="size-7 sm:size-8 text-gray" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
@@ -65,7 +65,7 @@
             countArray.forEach((value, index) => {
                 formData.append(`count[${index}]`, value);
             });
-           
+
             var xhr = new XMLHttpRequest();
             xhr.open('POST', 'controllers/noBars/notificationsServer.php', true);
 

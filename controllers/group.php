@@ -100,11 +100,11 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         redirect('/group?id=' . $groupID);
     }
     //when a user deletes a group expense
-    else if (isset($_POST['toDel'])) {
-        $toDel = $_POST['toDel'];
-        $db->query("DELETE FROM expenses WHERE expenseID = ?;", [$toDel]);
-        redirect($_SERVER['REQUEST_URI']);
-    }
+    // else if (isset($_POST['toDel'])) {
+    //     $toDel = $_POST['toDel'];
+    //     $db->query("DELETE FROM expenses WHERE expenseID = ?;", [$toDel]);
+    //     redirect($_SERVER['REQUEST_URI']);
+    // }
 }
 //EVERYTHING GET RELATED
 else if ($_SERVER['REQUEST_METHOD'] === "GET") {
@@ -124,6 +124,7 @@ else if ($_SERVER['REQUEST_METHOD'] === "GET") {
 
         //search if the current user is a member of the group.
         $valid = $db->query("SELECT * from clanMembers WHERE userID=? AND groupID=?", [$userID, $groupID])->fetch(PDO::FETCH_ASSOC);
+
         if ($valid) {
             // stores information about the current group
             $groupInfo = $db->query("SELECT * from clan WHERE groupID = ?", [$groupID])->fetch(PDO::FETCH_ASSOC);
@@ -132,6 +133,7 @@ else if ($_SERVER['REQUEST_METHOD'] === "GET") {
             $groupIcon = $groupInfo['groupIcon'];
             $groupTokenHash = $groupInfo['groupTokenHash'];
             $groupTokenExpiry = $groupInfo['groupTokenExpiry'];
+
 
             // [FOR MEMBER LIST & GROUP EXPENSE PANEL] 
             // lists all of the group's member (owner and admin included)
@@ -146,7 +148,6 @@ else if ($_SERVER['REQUEST_METHOD'] === "GET") {
                     $groupOwnerInfo = $groupMemberInfo; //stores information about the group owner
                 }
             }
-
             // [FOR GROUP TRANSACTION]
             // stores information about group expenses
             $groupExpenses = $db->query('SELECT expenses.*, users.username, users.userIcon from expenses JOIN users ON expenses.userID=users.userid WHERE expenses.groupID=? ORDER BY expenseTime DESC;', [$groupID])->fetchAll(PDO::FETCH_ASSOC);
@@ -157,7 +158,5 @@ else if ($_SERVER['REQUEST_METHOD'] === "GET") {
         }
     }
 }
-
-
 
 require('views/group/group.view.php');

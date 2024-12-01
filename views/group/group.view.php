@@ -1,19 +1,28 @@
 <?php require('partials/bodyGroup.php'); ?>
 
-<!-- Sidebar + Everything (ROW) -->
-<div class='flex'>
+<!-- ROWS -->
+<div class='flex h-screen'>
+
+  <!-- Sidebar -->
   <?php require('partials/groupSidebar.php'); ?>
 
-  <!-- Title + Everything (COL) -->
-  <div class='flex flex-col w-full'>
-    <h2 class="bgGreen p-4 h-16 drop-shadow-lg text-gray-400 text-xl font-bold flex tracking-wider items-center"><?= $groupName ?></h2>
-
-    <!-- Expense Form + Group Content + Member List (ROW) -->
-    <div class="flex flex-row flex-1 h-screen">
-      <?php require('partials/groupExpenseForm.php') ?>
-      <?php require('partials/groupTransactions.php') ?>
-      <?php require('partials/groupMembers.php') ?>
+  <!-- Group Content -->
+  <div class='flex flex-col flex-grow'>
+    <!-- Title and Balance (ROW) -->
+    <div class='bgGreen flex flex-row justify-between items-center h-16 pr-4 py-4 drop-shadow-lg text-white font-bold border-gray-600 border-t border-b border-r rounded-tr-lg'>
+      <h2 class="text-xl flex tracking-wider items-center"><?= $groupName ?></h2>
+      <?php require('views/partials/balance.php') ?>
     </div>
 
+    <!-- Form + Group Transaction -->
+    <div class='flex flex-row'>
+      <!-- Form -->
+      <?php require('partials/groupExpenseForm.php') ?>
+      <!-- GROUP TRANSACTION -->
+      <?php require('partials/groupTransactions.php') ?>
+    </div>
   </div>
+
+  <!-- Member List -->
+  <?php require('partials/groupMembers.php') ?>
 </div>
