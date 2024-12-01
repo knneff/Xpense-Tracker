@@ -1,6 +1,6 @@
 <?php require('views/partials/head.php') ?>
 
-<body class="bgGreen flex flex-col h-full">
+<body class="bgGreen flex flex-col">
     <?php require('controllers/noBars/balanceController.php') ?>
     <!-- NAV BAR IS HERE -->
     <?php require('views/partials/navbar.php') ?>
@@ -9,4 +9,4 @@
         <!-- SIDE BAR -->
         <?php require('views/partials/sidebar.php') ?>
         <!-- DITO NA YUNG PINAKACONTENT NINYO -->
-        <content class="overflow-auto flex-1">
+        <content class="flex-1">

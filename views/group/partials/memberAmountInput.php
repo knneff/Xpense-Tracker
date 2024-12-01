@@ -1,27 +1,22 @@
-<!-- Tangina -->
-<li class='flex flex-row justify-between items-center px-2 py-1 hover:bg-gray-700 cursor-pointer rounded mb-2'>
-
-    <!--Icon and Username -->
-    <div class='flex flex-row'>
-        <img src='<?= $memberIcon ?>' class='w-6 h-6 mr-2 rounded-3xl' />
-        <span class='text-white'><?= $memberUsername ?></span>
+<li class='flex flex-row justify-end items-center relative'>
+    <!-- User panel -->
+    <div class='w-full absolute'>
+        <?php require('userPanel.view.php') ?>
     </div>
-
     <!-- Add Expense Button -->
-    <div class='flex flex-row justify-center items-center gap-1' id='addAmountField<?= $index ?>'>
+    <div class='z-10 flex flex-row justify-center items-center gap-1' id='addAmountField<?= $index ?>'>
         <button onclick='addBtn<?= $index ?>()' type='button' class='btGreen rounded-lg py-1 px-2'>Add Expense</button>
     </div>
-</li>
 
-<!-- Behavior -->
-<script>
-    function addBtn<?= $index ?>() {
-        document.getElementById('addAmountField<?= $index ?>').innerHTML = `
+    <!-- Behavior -->
+    <script>
+        function addBtn<?= $index ?>() {
+            document.getElementById('addAmountField<?= $index ?>').innerHTML = `
             <p class='textGray'>$</p>
             <input
                 class='px-2 py-1 w-24 bg-gray-600 text-white border-none rounded-md'
                 type='decimal'
-                name='amount<?= $memberUserId ?>'
+                name='amount<?= $userInfoTemp['userid'] ?>'
                 required
                 placeholder='Amount' />
             <button onclick='delBtn<?= $index ?>()' type='button' class='textRed hover:text-red-400'>
@@ -30,11 +25,12 @@
                 </svg>
             </button>
         `;
-    }
+        }
 
-    function delBtn<?= $index ?>() {
-        document.getElementById('addAmountField<?= $index ?>').innerHTML = `
+        function delBtn<?= $index ?>() {
+            document.getElementById('addAmountField<?= $index ?>').innerHTML = `
             <button onclick='addBtn<?= $index ?>()' type='button' class='btGreen rounded-lg py-1 px-2 flex flex-row'>Add Expense</button>
         `;
-    }
-</script>
+        }
+    </script>
+</li>
