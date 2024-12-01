@@ -22,7 +22,7 @@ cache or just save sa database????
 - last group na visited (as default group kapag walang specified)
 
 Sharing
-- group transactions and pendings
+- pending expenses
 - group members list
   + kicking of members (owner/admin)
   + reusable?
@@ -38,9 +38,6 @@ Sharing
   + leaving group
   + CANNOT CREATE AND SEE INVITE LINK
   + ADD EXPENSE MECHANISM NOT VISIBLE??
-- visuals improvements
- + fixed sidebar, form, and memberlist.
-- pending expenses
 - MESSAGING?? (AJAX TO FOR SURE)
 
 dashboard
@@ -55,8 +52,8 @@ subscription list??
 
 uniform style default icons
 - standard name (_defualt.png)
-- user icons
-- group icons
+- user icons (OKS NA)
+- group icons (OKS NA)
 - goal icons (select?)
 
 Input Validators
@@ -65,6 +62,7 @@ Input Validators
 
 bug
 - userSettings: walang error message kapag naginput ng invalid email
+- overlay issue sa mga absolute na element sa share
 
 landing
 - get started behavior (dashboard kapag may nakalogin)

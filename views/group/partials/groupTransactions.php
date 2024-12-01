@@ -18,12 +18,11 @@
             <?php
             $expenseSize = sizeof($groupExpenses);
             if ($expenseSize < 1) {
-                echo "<main class='grid place-items-center bgGreen px-4 py-24 sm:py-32 lg:px-8'>
-                <div class='text-center py-6 px-8 sm:py-10 sm:px-16 tlGreen rounded-xl'>
-                    <h1 class='mt-4 sm:mt-6 text-balance text-3xl sm:text-5xl font-semibold tracking-tight textGray'>No Group Expenses Found!</h1>
-                    <p class='mt-4 sm:mt-6 text-pretty text-xs sm:text-lg font-medium textGray'>No expense added yet. Keep it up!</p>
-                </div>
-            </main>";
+                echo "
+                    <div class='flex justify-center items-center h-full w-full textGray text-xl'>
+                        No Group Expense Yet..
+                    </div>
+                ";
             } else {
                 foreach ($groupExpenses as $index => $expense) {
                     $description = stringShortener($expense['description'], 15);
@@ -64,9 +63,10 @@
             $expenseSize = sizeof($groupExpenses);
             if ($expenseSize < 1) {
                 echo "
-                <div class='flex justify-center items-center h-full w-full textGray text-xl'>
-                    No Group Expense Yet..
-                </div>";
+                    <div class='flex justify-center items-center h-full w-full textGray text-xl'>
+                        No Group Expense Yet..
+                    </div>
+                ";
             } else {
                 foreach ($groupExpenses as $index => $expense) {
                     $description = stringShortener($expense['description'], 15);
