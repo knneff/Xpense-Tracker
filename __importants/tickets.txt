@@ -18,6 +18,7 @@ notification system
 - group expense notification
 
 Sharing
+- group transactions and pendings
 - group members list
   + kicking of members (owner/admin)
   + reusable?
@@ -34,6 +35,8 @@ Sharing
   + CANNOT CREATE AND SEE INVITE LINK
   + ADD EXPENSE MECHANISM NOT VISIBLE??
 - visuals improvements
+ + fixed sidebar, form, and memberlist.
+- pending expenses
 - MESSAGING?? (AJAX TO FOR SURE)
 
 dashboard
@@ -47,6 +50,7 @@ subscription list??
 - bars to include subscription list as well sa expense log???
 
 uniform style default icons
+- standard name (_defualt.png)
 - user icons
 - group icons
 - goal icons (select?)

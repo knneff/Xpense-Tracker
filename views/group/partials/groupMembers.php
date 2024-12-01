@@ -1,45 +1,35 @@
 <!-- Group Members List -->
-<div class="flex flex-col justify-between tlGreen gap-2 w-60 px-4 pt-2 pb-20">
+<div class="flex flex-col justify-between tlGreen gap-2 w-60 px-4 pt-2 pb-36">
 
-  <!-- Owner and Member -->
+  <!-- Owner and Member (TOP)-->
   <div>
     <!-- Owner -->
-    <h3 class="text-gray-400 text-lg font-bold tracking-wider">
-      Owner
-    </h3>
-    <div class="flex items-center p-2 hover:bg-gray-700 cursor-pointer rounded mb-2">
-      <img
-        src="<?= $groupOwnerInfo['userIcon'] ?>"
-        alt="icon"
-        class="w-6 h-6 mr-2 rounded-3xl" />
-      <span class="text-white"><?= $groupOwnerInfo['username'] ?></span>
+    <div>
+      <h3 class="text-gray-400 text-lg font-bold tracking-wider">Owner</h3>
+      <?php
+      $userInfoTemp = $groupOwnerInfo;
+      require('userPanel.view.php');
+      ?>
     </div>
 
     <!--Members-->
-    <h3 class="text-gray-400 text-lg font-bold tracking-wider">
-      Members - <?= $groupMembersCount ?>
-    </h3>
-    <ul>
-      <?php
-      foreach ($groupMembersInfo as $index => $memberInfo) {
-        $memberUsername = $memberInfo['username'];
-        $memberIcon = $memberInfo['userIcon'];
-        echo "<li
-            class='flex items-center px-2 py-1 hover:bg-gray-700 cursor-pointer rounded mb-2'>
-            <img
-              src='$memberIcon'
-              alt='icon'
-              class='w-6 h-6 mr-2 rounded-3xl' />
-            <span class='text-white'>$memberUsername</span>
-          </li>
-        ";
-      }
-      ?>
-    </ul>
+    <div>
+      <h3 class="text-gray-400 text-lg font-bold tracking-wider">
+        Members - <?= $groupMembersCount ?>
+      </h3>
+      <ul>
+        <?php
+        foreach ($groupMembersInfo as $memberInfo) {
+          $userInfoTemp = $memberInfo;
+          require('userPanel.view.php');
+        }
+        ?>
+      </ul>
+    </div>
 
   </div>
 
-  <!-- Show Either "Generate Invite Link" or "Show Invite Link" Button -->
+  <!-- Show Either "Generate Invite Link" or "Show Invite Link" Button (BOTTOM-->
   <?php
   if (isset($groupTokenHash)) { //if there's an ongoing invite link
     $tokenExpiry = new DateTime($groupTokenExpiry);

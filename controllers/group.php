@@ -6,6 +6,7 @@ $userID = $_SESSION['userid'];
 //lists all of the groups of the current user
 $groups = $db->query("select clan.* from clanMembers join clan ON clanMembers.groupID=clan.groupID WHERE clanMembers.userID=?;", [$userID])->fetchAll(PDO::FETCH_ASSOC);
 
+//EVERYTHING POST RELATED
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
     //when a group is created
     if (isset($_POST['groupName'])) {
@@ -76,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         redirect('/invite?token=' . $inviteToken);
     }
     //when a user adds a group expense
-    if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['type'])) {
+    else if (isset($_POST['type'])) {
         $category = $_POST['category'];
         $description = $_POST['desc'];
         $expenseType = $_POST['type'];
@@ -91,32 +92,40 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             //if an amount is set to a particular user
             if (isset($_POST[$amountUserId])) {
                 $amount = $_POST[$amountUserId];
-                $sql = "INSERT INTO expenses (userID, amount, category, description, expenseType, expenseTime) VALUES (?, ?, ?, ?, ?, ?)";
-                $params = [$userID, $amount, $category, $description, $expenseType, $currentDateTimeString];
+                $sql = "INSERT INTO expenses (userID, amount, category, description, expenseType, expenseTime, groupID) VALUES (?, ?, ?, ?, ?, ?, ?)";
+                $params = [$userID, $amount, $category, $description, $expenseType, $currentDateTimeString, $groupID];
                 $db->query($sql, $params);
             }
         }
         redirect('/group?id=' . $groupID);
     }
-} else if ($_SERVER['REQUEST_METHOD'] === "GET") {
-    //when a user does not have a group yet
+    //when a user deletes a group expense
+    else if (isset($_POST['toDel'])) {
+        $toDel = $_POST['toDel'];
+        $db->query("DELETE FROM expenses WHERE expenseID = ?;", [$toDel]);
+        redirect($_SERVER['REQUEST_URI']);
+    }
+}
+//EVERYTHING GET RELATED
+else if ($_SERVER['REQUEST_METHOD'] === "GET") {
+    // When a user does not have a group yet
     if (sizeof($groups) < 1) {
         require('views/group/noGroup.view.php');
         die();
     }
-    //when share is visited w/o a specified groupID
+    // [DEFAULT GROUP] When share is visited w/o a specified groupID (E.g., localhost/group)
     if ($_SERVER['REQUEST_METHOD'] === "GET" && !isset($_GET['id'])) {
-        $groupID = $groups[0]['groupID']; //first result from the group list
+        $groupID = $groups[0]['groupID']; //first result from the group list (DEFAULT)
         redirect('/group?id=' . $groupID);
     }
-    //when user specified a groupID
+    // When user specified a groupID (E.g., localhost/group?id=1)
     else if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET['id'])) {
         $groupID = $_GET['id'];
 
-        //search if the current user is a member of the group. If not, user will be redirected to the default group
+        //search if the current user is a member of the group.
         $valid = $db->query("SELECT * from clanMembers WHERE userID=? AND groupID=?", [$userID, $groupID])->fetch(PDO::FETCH_ASSOC);
         if ($valid) {
-            // stores the visited group's info
+            // stores information about the current group
             $groupInfo = $db->query("SELECT * from clan WHERE groupID = ?", [$groupID])->fetch(PDO::FETCH_ASSOC);
             $groupName = $groupInfo['groupName'];
             $groupOwnerID = $groupInfo['groupOwnerID'];
@@ -124,7 +133,8 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             $groupTokenHash = $groupInfo['groupTokenHash'];
             $groupTokenExpiry = $groupInfo['groupTokenExpiry'];
 
-            // lists all of the group's member (owner included)
+            // [FOR MEMBER LIST & GROUP EXPENSE PANEL] 
+            // lists all of the group's member (owner and admin included)
             $groupAllMembersInfo = $db->query("SELECT users.username, users.userIcon, users.userid, clanMembers.roles from clanMembers join users ON clanMembers.userID = users.userid WHERE clanMembers.groupID = ? ORDER BY username ASC;", [$groupID])->fetchAll(PDO::FETCH_ASSOC);
             $groupMembersInfo = array(); //stores list of all members (owner and admin not included)
             $groupMembersCount = 0; //stores member count in a group
@@ -136,7 +146,13 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                     $groupOwnerInfo = $groupMemberInfo; //stores information about the group owner
                 }
             }
-        } else {
+
+            // [FOR GROUP TRANSACTION]
+            // stores information about group expenses
+            $groupExpenses = $db->query('SELECT expenses.*, users.username, users.userIcon from expenses JOIN users ON expenses.userID=users.userid WHERE expenses.groupID=? ORDER BY expenseTime DESC;', [$groupID])->fetchAll(PDO::FETCH_ASSOC);
+        }
+        //If not a member, user will be redirected to the default group
+        else {
             alertRedirect("Inaccessable Group!", "/group");
         }
     }
