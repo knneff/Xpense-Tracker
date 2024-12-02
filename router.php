@@ -21,6 +21,9 @@ $routes = [
     //mga shared expense shiz
     "/group" => __DIR__ . "/controllers/group.php",
     "/invite" => __DIR__ . "/controllers/noBars/invite.php",
+
+    //test
+    "/test" => __DIR__ . "/views/test.view.php",
 ];
 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];

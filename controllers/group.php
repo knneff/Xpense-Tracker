@@ -84,6 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         $currentDateTime = new DateTime();
         $currentDateTimeString = $currentDateTime->format('Y-m-d H:i:s');
         $groupID = $_GET['id'];
+        $expenseState = 'pending';
         $groupAllMembersInfo = $db->query("SELECT users.username, users.userIcon, users.userid, clanMembers.roles from clanMembers join users ON clanMembers.userID = users.userid WHERE clanMembers.groupID = ? ORDER BY username ASC;", [$groupID])->fetchAll(PDO::FETCH_ASSOC);
 
         foreach ($groupAllMembersInfo as $index => $memberInfo) {
@@ -92,8 +93,8 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             //if an amount is set to a particular user
             if (isset($_POST[$amountUserId])) {
                 $amount = $_POST[$amountUserId];
-                $sql = "INSERT INTO expenses (userID, amount, category, description, expenseType, expenseTime, groupID) VALUES (?, ?, ?, ?, ?, ?, ?)";
-                $params = [$userID, $amount, $category, $description, $expenseType, $currentDateTimeString, $groupID];
+                $sql = "INSERT INTO expenseStatus (userID, amount, category, description, expenseType, expenseTime, groupID, expenseState) VALUES (?, ?, ?, ?, ?, ?, ?,?)";
+                $params = [$userID, $amount, $category, $description, $expenseType, $currentDateTimeString, $groupID, $expenseState];
                 $db->query($sql, $params);
             }
         }
@@ -148,9 +149,12 @@ else if ($_SERVER['REQUEST_METHOD'] === "GET") {
                     $groupOwnerInfo = $groupMemberInfo; //stores information about the group owner
                 }
             }
+
             // [FOR GROUP TRANSACTION]
             // stores information about group expenses
             $groupExpenses = $db->query('SELECT expenses.*, users.username, users.userIcon from expenses JOIN users ON expenses.userID=users.userid WHERE expenses.groupID=? ORDER BY expenseTime DESC;', [$groupID])->fetchAll(PDO::FETCH_ASSOC);
+            $groupPendings = $db->query('SELECT expenseStatus.* , users.username, users.userIcon from expenseStatus JOIN users ON expenseStatus.userID=users.userid WHERE expenseStatus.groupID=? ORDER BY expenseTime DESC;', [$groupID])->fetchAll(PDO::FETCH_ASSOC);
+            $currUserPendings = $db->query('SELECT expenseStatus.* , users.username, users.userIcon from expenseStatus JOIN users ON expenseStatus.userID=users.userid WHERE expenseStatus.groupID=? AND users.userid=? ORDER BY expenseTime DESC;', [$groupID, $userID])->fetchAll(PDO::FETCH_ASSOC);
         }
         //If not a member, user will be redirected to the default group
         else {

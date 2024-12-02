@@ -1,19 +1,12 @@
-<!-- Add Expense Button -->
-<button id="showAddExpensePanel" onclick="showAddExpensePanel()" title="Add Expense" class="h-16 w-16 fixed bottom-4 right-64 z-50">
-    <svg class="text-gray-300 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
-    </svg>
-</button>
-
 <!-- Group Form Container -->
-<div id='addGroupExpenseForm' class="bgGreen flex flex-col border-gray-600 border-l w-96 space-y-2 px-4 pt-2 h-screen pb-36 duration-200 ease-in-out">
+<div id='addGroupExpenseForm' class="bgGreen flex flex-col border-gray-600 border-l w-96 space-y-2 px-4 pt-2 h-full overflow-auto pb-4 duration-200 ease-in-out">
     <h3 class='text-lg textGray font-semibold text-center'>Group Expense</h3>
     <div class="h-1 bg-gradient-to-r from-green-800 via-gray-600 to-green-800 rounded-lg"></div>
 
     <form class='flex flex-col flex-grow justify-between' method="POST">
         <!-- TOP -->
         <div class='space-y-2'>
-            <!-- Members List -->
+            <!-- Members List and Amount Field-->
             <ul class='space-y-2 relative'>
                 <?php
                 foreach ($groupAllMembersInfo as $index => $memberInfo) {
@@ -32,6 +25,7 @@
                     type="text"
                     name='desc'
                     class="w-full mt-1 p-2 rounded-md tlGreen textGray border-none"
+                    required
                     placeholder="Enter description" />
             </div>
 
@@ -61,6 +55,13 @@
 
     </form>
 </div>
+
+<!-- Add Expense Button -->
+<button id="showAddExpensePanel" onclick="showAddExpensePanel()" title="Add Expense" class="h-16 w-16 fixed bottom-4 right-64 z-50">
+    <svg class="text-gray-300 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
+    </svg>
+</button>
 
 <script>
     function showAddExpensePanel() {

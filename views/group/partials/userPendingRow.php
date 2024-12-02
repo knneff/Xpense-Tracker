@@ -2,18 +2,24 @@
 <div class='flex-1 textGray rounded-lg border border-gray-400'>
     <!-- title (description, dateTime) -->
     <div class='flex justify-between items-center rounded-t-lg bgGreen2 px-2 py-1'>
-        <h2 class='text-xl font-semibold' id='description'> <?= $description ?> </h2>
+        <div class='flex flex-row items-center gap-1'>
+            <h2 class='text-xl font-semibold' id='description'> <?= $description ?> </h2>
+            <p class='text-sm text-gray-300 bg-emerald-600 rounded-lg px-1'> <?= $category ?> </p>
+        </div>
         <p class='text-lg'> <?= $expenseTime ?> </p>
     </div>
     <!-- body (category, expenseType, amount) -->
-    <div class='flex flex-row justify-between items-center px-4 py-2 bgGreen rounded-b-lg'>
-        <!-- left -->
-        <div class='flex flex-col items-start gap-2'>
-            <?php require('userIcon.view.php') ?>
-            <p class='text-md text-gray-300 bgGreen2 rounded-lg px-1'> <?= $category ?> </p>
-        </div>
+    <div class='flex flex-row justify-between items-center px-4 py-4 bgGreen rounded-b-lg'>
         <!-- right -->
         <p class='text-2xl' id='amount'> ₱ <?= $amount ?> </p>
+        <!-- left -->
+        <div class='flex flex-col items-end gap-2'>
+            <div class='flex flex-row gap-2'>
+                <button class='btRed px-2 py-1 text-lg rounded-lg w-24'>Decline</button>
+                <button class='btGreen px-2 py-1 text-lg rounded-lg w-24'>Accept</button>
+            </div>
+        </div>
+
     </div>
 </div>
 

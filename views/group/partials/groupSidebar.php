@@ -1,4 +1,4 @@
-<div class="tlGreen w-16 h-screen shadow-lg z-10">
+<div class="tlGreen w-16 shadow-lg z-10">
 
     <!-- Current Group -->
     <div id='currGroup' class="flex items-center bgGreen h-16 rounded-l-xl border-gray-600 border-l border-t border-b relative">
@@ -13,10 +13,6 @@
         </button>
     </div>
 
-    <!-- Divider -->
-    <!-- <hr class="mx-2 rounded-full border-gray-700 border" /> -->
-
-    <!-- Group List (w/o the selected group) -->
     <?php
     foreach ($groups as $index => $group) {
         if ($group['groupID'] != $groupID) {

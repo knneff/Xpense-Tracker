@@ -1,5 +1,5 @@
 <!-- Group Members List -->
-<div class="flex flex-col justify-between tlGreen gap-2 h-screen w-60 px-4 pt-2 pb-20">
+<div class="flex flex-col justify-between tlGreen gap-2 h-full w-60 px-4 pt-2 pb-4">
 
   <!-- Owner and Member (TOP)-->
   <div>

@@ -2,13 +2,12 @@
 <?php require('controllers/noBars/notifications.php') ?>
 <?php require('controllers/noBars/balanceController.php') ?>
 
-<body class="tlGreen flex flex-col">
-    <?php require('controllers/noBars/balanceController.php') ?>
+<body class="tlGreen h-screen flex flex-col ">
     <!-- NAV BAR IS HERE -->
     <?php require('views/partials/navbar.php') ?>
-    <!-- SIDE BAR AND CONTENT HERE -->
-    <div class="flex flex-row flex-1">
+    <!-- SIDEBAR AND CONTENT HERE -->
+    <div class="flex flex-row h-full overflow-auto">
         <!-- SIDE BAR -->
         <?php require('views/partials/sidebar.php') ?>
         <!-- DITO NA YUNG PINAKACONTENT NINYO -->
-        <content class="flex-1">
+        <content class="w-full flex flex-row">

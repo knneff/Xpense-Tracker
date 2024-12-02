@@ -12,14 +12,28 @@ kelangan i test mga functions. need major testings
 pagsasama user settings and system settings (SI KEN NA DITO)
 - overspending alarm system
 
+- login: logo sa login and center ng panel
+- font: ayusin gawing inter for all devices
+- expenselog: center yung price
+  - bigyan ng filter search
+- lahat ng pop up panel: bgGreen instead of tlGreen
+- group: separate sidebar and shared sidebar
+- mga category: bigyan ng kulay
+
+singular body
+- para di na need i-copy and paste yung changes sa iba pang body (body, bodyNoBars, bodyGroup)
+- lagay na lang conditions for each url anong part ng body yung gagana and hindi
+
+
 notification system
 - overspending
 - invite ng group?
 - group expense notification
 
 cache or just save sa database????
-- system settings info
+- storing of system settings info
 - last group na visited (as default group kapag walang specified)
+- remembering ng inexpand and kinollapse ni user na views 
 
 Sharing
 - pending expenses
@@ -39,6 +53,7 @@ Sharing
   + CANNOT CREATE AND SEE INVITE LINK
   + ADD EXPENSE MECHANISM NOT VISIBLE??
 - MESSAGING?? (AJAX TO FOR SURE)
+- maling time naeenter sa mysql wtf
 
 dashboard
 - subscription?
