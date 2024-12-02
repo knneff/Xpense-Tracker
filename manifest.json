@@ -1,0 +1,70 @@
+{
+    "name": "Xpense Tracker",
+    "short_name": "Xpense",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#FFE9D2",
+    "theme_color": "#FFE1C4",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/assets/logo/logo_16.png",
+            "type": "image/png",
+            "sizes": "16x16"
+        },
+        {
+            "src": "/assets/logo/logo_24.png",
+            "type": "image/png",
+            "sizes": "24x24"
+        },
+        {
+            "src": "/assets/logo/logo_32.png",
+            "type": "image/png",
+            "sizes": "32x32"
+        },
+        {
+            "src": "/assets/logo/logo_48.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "/assets/logo/logo_64.png",
+            "type": "image/png",
+            "sizes": "64x64"
+        },
+        {
+            "src": "/assets/logo/logo_72.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "/assets/logo/logo_96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "/assets/logo/logo_128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "/assets/logo/logo_256.png",
+            "type": "image/png",
+            "sizes": "256x256"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "assets/screenshot/screenshot_narrow.png",
+            "sizes": "2160x3840",
+            "type": "image/png",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "assets/screenshot/screenshot_wide.png",
+            "sizes": "3840x2160",
+            "type": "image/png",
+            "form_factor": "wide"
+        }
+    ]
+}

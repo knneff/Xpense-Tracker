@@ -12,4 +12,6 @@
     <script src="styles/scripts.js"></script>
     <!-- for graphs and charts scripts -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- PWA manifest -->
+    <link rel="manifest" href="/manifest.json">
 </head>
