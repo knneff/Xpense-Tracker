@@ -26,6 +26,32 @@ $routes = [
     "/test" => __DIR__ . "/views/test.view.php",
 ];
 
+$pageTitles = [
+    //mga page na di required ng user login
+    "/" => "Home",
+    "/signup" => "Sign Up",
+    "/changepassword" => "Change Password",
+    "/login" => "Login",
+    "/logout" => "Logout",
+    "/reset" => "Reset Password",
+
+    //mga page na accessible lang kapag may nakalog-in
+    "/dashboard" => "Dashboard",
+    "/usersettings" => "User Settings",
+    "/goal" => "Goals and Plans",
+    "/expenselog" => "Expense Log",
+    "/subscriptions" => "Subscription",
+    "/audit" => "Audit Log",
+    "/settings" => "Settings",
+
+    //mga shared expense shiz
+    "/group" => "Groups",
+    "/invite" => "Invites",
+
+    //test
+    "/test" => "Test",
+];
+
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 //tatanggalin lang yung extra string sa url e.g., if "localhost/dashboard?sex=3" nilagay sa url, yung /dashboard lang
@@ -33,6 +59,7 @@ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 // this checks if nageexist yung route sa $routes sa taas
 if (array_key_exists($uri, $routes)) {
+    $pageTitle = $pageTitles[$uri];
     require($routes[$uri]);
     // e.g., ng $routes[$uri] is $routes["/add"] = "controllers/add.php"
     // meaning require("controllers/add.php") will be rendered
