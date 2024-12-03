@@ -44,7 +44,7 @@
                 </select>
             </div>
 
-            <input name='type' value='group' hidden>
+            <input name='addGroupExpense' value='true' hidden>
         </div>
 
         <!-- Add Button -->

@@ -6,13 +6,15 @@
 
 <!-- Group Content (TITLE AND CONTENT)-->
 <div class='flex flex-col flex-1'>
+
   <!-- Title and Balance (ROW) -->
-  <div class='bgGreen flex flex-row justify-between items-center h-16 pr-4 py-4 drop-shadow-lg text-white font-bold border-gray-600 border-t border-b border-r rounded-tr-lg'>
+  <div class='flex flex-row bgGreen justify-between h-16 pr-4 py-4 shadow-lg text-white font-bold border-gray-600 border-t border-b border-r rounded-tr-lg'>
     <h2 class="text-xl flex tracking-wider items-center"><?= $groupName ?></h2>
+    <?php require('views/partials/balancePanel.view.php') ?>
     <?php require('views/partials/balanceButton.view.php') ?>
   </div>
 
-  <!-- Form + Group Transaction (ROW) -->
+  <!-- Group Content -->
   <div class='flex flex-row h-full overflow-auto'>
     <!-- Form -->
     <?php require('partials/groupExpenseForm.php') ?>

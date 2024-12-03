@@ -1,65 +1,96 @@
-<!-- Expense Card -->
+<?php
+
+$tempExpenseID = $currUserPending['expenseID'];
+$tempDescription = $currUserPending['description'];
+$tempExpenseTime = $currUserPending['expenseTime'];
+$tempCategory = $currUserPending['category'];
+$tempExpenseType = $currUserPending['expenseType'];
+$tempAmount = $currUserPending['amount'];
+
+?>
+
+<!-- Pending Expense Card -->
 <div class='flex-1 textGray rounded-lg border border-gray-400'>
+
     <!-- title (description, dateTime) -->
     <div class='flex justify-between items-center rounded-t-lg bgGreen2 px-2 py-1'>
         <div class='flex flex-row items-center gap-1'>
-            <h2 class='text-xl font-semibold' id='description'> <?= $description ?> </h2>
-            <p class='text-sm text-gray-300 bg-emerald-600 rounded-lg px-1'> <?= $category ?> </p>
+            <h2 class='text-xl font-semibold' id='description'> <?= stringShortener($tempDescription, 15) ?> </h2>
+            <p class='text-sm text-gray-300 bg-emerald-600 rounded-lg px-1'> <?= $tempCategory ?> </p>
         </div>
-        <p class='text-lg'> <?= $expenseTime ?> </p>
+        <p class='text-lg'> <?= $tempExpenseTime ?> </p>
     </div>
+
     <!-- body (category, expenseType, amount) -->
     <div class='flex flex-row justify-between items-center px-4 py-4 bgGreen rounded-b-lg'>
         <!-- right -->
-        <p class='text-2xl' id='amount'> ₱ <?= $amount ?> </p>
+        <p class='text-2xl' id='amount'> ₱ <?= $tempAmount ?> </p>
         <!-- left -->
         <div class='flex flex-col items-end gap-2'>
             <div class='flex flex-row gap-2'>
-                <button class='btRed px-2 py-1 text-lg rounded-lg w-24'>Decline</button>
-                <button class='btGreen px-2 py-1 text-lg rounded-lg w-24'>Accept</button>
+                <button onclick="<?= 'showDeclinePanel' . $index . '()' ?>" class='btRed px-2 py-1 text-lg rounded-lg w-24'>Decline</button>
+                <button onclick="<?= 'showAcceptPanel' . $index . '()' ?>" class='btGreen px-2 py-1 text-lg rounded-lg w-24'>Accept</button>
             </div>
         </div>
 
     </div>
 </div>
 
-<?php
-/*
-    <!-- delete button -->
-    <button id='<?= $delBtnId ?>'>
-        <svg class='textRed h-12 w-12 hover:text-red-400' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
-            <path fill-rule='evenodd' d='M16.5 4.478v.227a48.816 48.816 0 0 1 3.878.512.75.75 0 1 1-.256 1.478l-.209-.035-1.005 13.07a3 3 0 0 1-2.991 2.77H8.084a3 3 0 0 1-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 0 1-.256-1.478A48.567 48.567 0 0 1 7.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 0 1 3.369 0c1.603.051 2.815 1.387 2.815 2.951Zm-6.136-1.452a51.196 51.196 0 0 1 3.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 0 0-6 0v-.113c0-.794.609-1.428 1.364-1.452Zm-.355 5.945a.75.75 0 1 0-1.5.058l.347 9a.75.75 0 1 0 1.499-.058l-.346-9Zm5.48.058a.75.75 0 1 0-1.498-.058l-.347 9a.75.75 0 0 0 1.5.058l.345-9Z' clip-rule='evenodd' />
-        </svg>
-    </button>
-    
-    <!-- delete confirmation message -->
-    <main id='<?= $delConfId ?>' class='hidden fixed'>
-        <div id='<?= $delConfOverlayId ?>' class='z-50 flex justify-center items-center fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50'>
-            <div class='flex justify-center text-base sm:text-lg text-gray-300 tlGreen p-8 rounded-3xl'>
-                <div>
-                    <h2 class='text-4xl font-semibold text-center textGray'>Delete Confirmation</h2>
-                    <hr class='my-4 border-gray-300' />
-                    <form method='POST' action='' class='flex flex-col text-base gap-5'>
-                        <input class='hidden' name='toDel' value='<?= $expenseId ?>'>
-                        <p>Are you sure you want to remove <i><?= $description ?></i> from your expense?</p>
-                        <button type='submit' class='py-1 text-lg sm:text-xl font-semibold btGreen2 rounded-3xl'>Delete Expense</button>
-                    </form>
-                </div>
-            </div>
+<!-- ACCEPT PANEL AND OVERLAY -->
+<div id='<?= 'acceptPanel' . $index ?>' class='hidden z-50 fixed top-0 left-0'>
+    <div id='<?= 'acceptOverlay' . $index ?>' class='w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center'>
+        <div class='bgGreen flex flex-col opacity-100 p-8 rounded-3xl textGray'>
+            <h2 class="text-4xl font-semibold text-center">Accept Payment</h2>
+            <hr class="my-4 border-gray-300" />
+            <p class='text-base text-center'>Accept payment for <b><i><?= $tempDescription ?></i></b>?</p>
+            <form method="POST" action="" class="flex flex-col text-base gap-5">
+                <input name='acceptPending' value='<?= $userID ?>' hidden>
+                <input name='desc' value='<?= $tempDescription ?>' hidden>
+                <input name='category' value='<?= $tempCategory ?>' hidden>
+                <input name='type' value='<?= $tempExpenseType ?>' hidden>
+                <input name='amount' value='<?= $tempAmount ?>' hidden>
+                <input name='expenseID' value='<?= $tempExpenseID ?>' hidden>
+                <button type="submit" class="py-1 mt-4 text-lg sm:text-xl font-semibold btGreen2 rounded-3xl">Pay $<?= $tempAmount ?> </button>
+            </form>
         </div>
-    </main>
+    </div>
+</div>
 
-    <!-- delete button behavior -->
-    <script>
-        document.getElementById('<?= $delBtnId ?>').addEventListener('click', (event) => {
-            document.getElementById('<?= $delConfId ?>').classList.toggle('hidden');
-        })
+<!-- DECLINE PANEL AND OVERLAY -->
+<div id='<?= 'declinePanel' . $index ?>' class='hidden z-50 fixed top-0 left-0'>
+    <div id='<?= 'declineOverlay' . $index ?>' class='w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center'>
+        <div class='bgGreen flex flex-col opacity-100 p-8 rounded-3xl textGray'>
+            <h2 class="text-4xl font-semibold text-center">Decline Payment</h2>
+            <hr class="my-4 border-gray-300" />
+            <p class='text-base text-center'>Decline payment for <b><i><?= $tempDescription ?></i></b>?</p>
+            <form method="POST" action="" class="flex flex-col text-base gap-5">
+                <input name='declinePending' value='<?= $userID ?>' hidden>
+                <input name='desc' value='<?= $tempDescription ?>' hidden>
+                <input name='category' value='<?= $tempCategory ?>' hidden>
+                <input name='type' value='<?= $tempExpenseType ?>' hidden>
+                <input name='amount' value='<?= $tempAmount ?>' hidden>
+                <button type="submit" class="py-1 mt-4 text-lg sm:text-xl font-semibold btRed rounded-3xl">Decline $<?= $tempAmount ?> </button>
+            </form>
+        </div>
+    </div>
+</div>
 
-        document.getElementById('<?= $delConfOverlayId ?>').addEventListener('click', (event) => {
-            if (event.target === document.getElementById('<?= $delConfOverlayId ?>')) {
-                document.getElementById('<?= $delConfId ?>').classList.add('hidden');
-            }
-        });
-    </script>
-*/
-?>
+<script>
+    function <?= 'showAcceptPanel' . $index . '()' ?> {
+        document.getElementById('<?= 'acceptPanel' . $index ?>').classList.toggle('hidden');
+    }
+    document.getElementById('<?= 'acceptOverlay' . $index ?>').addEventListener('click', (event) => {
+        if (event.target === document.getElementById('<?= 'acceptOverlay' . $index ?>')) {
+            document.getElementById('<?= 'acceptPanel' . $index ?>').classList.add('hidden');
+        }
+    });
+
+    function <?= 'showDeclinePanel' . $index . '()' ?> {
+        document.getElementById('<?= 'declinePanel' . $index ?>').classList.toggle('hidden');
+    }
+    document.getElementById('<?= 'declineOverlay' . $index ?>').addEventListener('click', (event) => {
+        if (event.target === document.getElementById('<?= 'declineOverlay' . $index ?>')) {
+            document.getElementById('<?= 'declinePanel' . $index ?>').classList.add('hidden');
+        }
+    });
+</script>

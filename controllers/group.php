@@ -77,10 +77,10 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         redirect('/invite?token=' . $inviteToken);
     }
     //when a user adds a group expense
-    else if (isset($_POST['type'])) {
+    else if (isset($_POST['addGroupExpense'])) {
         $category = $_POST['category'];
         $description = $_POST['desc'];
-        $expenseType = $_POST['type'];
+        $expenseType = 'group';
         $currentDateTime = new DateTime();
         $currentDateTimeString = $currentDateTime->format('Y-m-d H:i:s');
         $groupID = $_GET['id'];
@@ -93,19 +93,43 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             //if an amount is set to a particular user
             if (isset($_POST[$amountUserId])) {
                 $amount = $_POST[$amountUserId];
-                $sql = "INSERT INTO expenseStatus (userID, amount, category, description, expenseType, expenseTime, groupID, expenseState) VALUES (?, ?, ?, ?, ?, ?, ?,?)";
+                $sql = "INSERT INTO expensesHistory (userID, amount, category, description, expenseType, expenseTime, groupID, expenseState) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
                 $params = [$userID, $amount, $category, $description, $expenseType, $currentDateTimeString, $groupID, $expenseState];
                 $db->query($sql, $params);
             }
         }
         redirect('/group?id=' . $groupID);
     }
-    //when a user deletes a group expense
-    // else if (isset($_POST['toDel'])) {
-    //     $toDel = $_POST['toDel'];
-    //     $db->query("DELETE FROM expenses WHERE expenseID = ?;", [$toDel]);
-    //     redirect($_SERVER['REQUEST_URI']);
-    // }
+    //when a user accepts a pending expense
+    else if (isset($_POST['acceptPending'])) {
+        $amount = $_POST['amount'];
+        $category = $_POST['category'];
+        $description = $_POST['desc'];
+        $expenseType = $_POST['type'];
+        $expenseID = $_POST['expenseID'];
+        $currentDateTime = new DateTime();
+        $currentDateTimeString = $currentDateTime->format('Y-m-d H:i:s');
+        $groupID = $_GET['id'];
+
+        //update expenseshistory expenseState to 'paid' and expenseTime to Now()
+        $db->query("UPDATE expensesHistory SET expenseTime = ?, expenseState = 'paid' WHERE expenseID = ?;", [$currentDateTimeString, $expenseID]);
+
+        //insert into expenses table
+        $sql = "INSERT INTO expenses(userID, amount, category, description, expenseType, expenseTime, groupID) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $params = [$userID, $amount, $category, $description, $expenseType, $currentDateTimeString, $groupID];
+        $db->query($sql, $params);
+
+        //redirect
+        redirect('/group?id=' . $groupID);
+    }
+    //when a user declines a pending expense
+    else if (isset($_POST['declinePending'])) {
+        $expenseID = $_POST['expenseID'];
+        $currentDateTime = new DateTime();
+        $currentDateTimeString = $currentDateTime->format('Y-m-d H:i:s');
+        //update expenseshistory expenseState to 'paid' and expenseTime to Now()
+        $db->query("UPDATE expensesHistory SET expenseTime = ?, expenseState = 'declined' WHERE expenseID = ?;", [$currentDateTimeString, $expenseID]);
+    }
 }
 //EVERYTHING GET RELATED
 else if ($_SERVER['REQUEST_METHOD'] === "GET") {
@@ -140,10 +164,8 @@ else if ($_SERVER['REQUEST_METHOD'] === "GET") {
             // lists all of the group's member (owner and admin included)
             $groupAllMembersInfo = $db->query("SELECT users.username, users.userIcon, users.userid, clanMembers.roles from clanMembers join users ON clanMembers.userID = users.userid WHERE clanMembers.groupID = ? ORDER BY username ASC;", [$groupID])->fetchAll(PDO::FETCH_ASSOC);
             $groupMembersInfo = array(); //stores list of all members (owner and admin not included)
-            $groupMembersCount = 0; //stores member count in a group
             foreach ($groupAllMembersInfo as $index => $groupMemberInfo) {
                 if ($groupMemberInfo['roles'] !== 'owner') {
-                    $groupMembersCount++;
                     array_push($groupMembersInfo, $groupMemberInfo);
                 } else {
                     $groupOwnerInfo = $groupMemberInfo; //stores information about the group owner
@@ -151,10 +173,8 @@ else if ($_SERVER['REQUEST_METHOD'] === "GET") {
             }
 
             // [FOR GROUP TRANSACTION]
-            // stores information about group expenses
-            $groupExpenses = $db->query('SELECT expenses.*, users.username, users.userIcon from expenses JOIN users ON expenses.userID=users.userid WHERE expenses.groupID=? ORDER BY expenseTime DESC;', [$groupID])->fetchAll(PDO::FETCH_ASSOC);
-            $groupPendings = $db->query('SELECT expenseStatus.* , users.username, users.userIcon from expenseStatus JOIN users ON expenseStatus.userID=users.userid WHERE expenseStatus.groupID=? ORDER BY expenseTime DESC;', [$groupID])->fetchAll(PDO::FETCH_ASSOC);
-            $currUserPendings = $db->query('SELECT expenseStatus.* , users.username, users.userIcon from expenseStatus JOIN users ON expenseStatus.userID=users.userid WHERE expenseStatus.groupID=? AND users.userid=? ORDER BY expenseTime DESC;', [$groupID, $userID])->fetchAll(PDO::FETCH_ASSOC);
+            $groupTransactionHistory = $db->query('SELECT expensesHistory.* , users.username, users.userIcon from expensesHistory JOIN users ON expensesHistory.userID=users.userid WHERE expensesHistory.groupID=? ORDER BY expenseTime DESC;', [$groupID])->fetchAll(PDO::FETCH_ASSOC);
+            $currUserPendings = $db->query("SELECT expensesHistory.* , users.username, users.userIcon from expensesHistory JOIN users ON expensesHistory.userID=users.userid WHERE expensesHistory.groupID=? AND users.userid=? AND expensesHistory.expenseState=? ORDER BY expenseTime DESC;", [$groupID, $userID, 'pending'])->fetchAll(PDO::FETCH_ASSOC);
         }
         //If not a member, user will be redirected to the default group
         else {

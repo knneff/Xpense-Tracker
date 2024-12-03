@@ -3,7 +3,8 @@
 
   <!-- Owner and Member (TOP)-->
   <div>
-    <!-- Owner -->
+
+    <!-- Owner-->
     <div>
       <h3 class="text-gray-400 text-lg font-bold tracking-wider">Owner</h3>
       <?php
@@ -15,7 +16,7 @@
     <!--Members-->
     <div>
       <h3 class="text-gray-400 text-lg font-bold tracking-wider">
-        Members - <?= $groupMembersCount ?>
+        Members - <?= sizeof($groupMembersInfo) ?>
       </h3>
       <ul>
         <?php
