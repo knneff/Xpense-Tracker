@@ -15,7 +15,7 @@
         </div>
 
         <!-- CONTENT -->
-        <div id='pendingList' class='max-h-80 py-2 duration-100 ease-in-out  overflow-auto flex flex-col px-2 space-y-2 bg-black bg-opacity-10 border-gray-600 border-t border-b'>
+        <div id='pendingList' class='max-h-[500px] py-2 duration-100 ease-in-out  overflow-auto flex flex-col px-2 space-y-2 bg-black bg-opacity-10 border-gray-600 border-t border-b'>
             <?php
             $expenseSize = sizeof($currUserPendings);
             if ($expenseSize < 1) {
@@ -51,7 +51,7 @@
             </button>
         </div>
         <!-- CONTENT -->
-        <div id='expenseList' class='max-h-80 py-2 duration-100 ease-in-out  overflow-auto flex flex-col px-2 space-y-2 bg-black bg-opacity-10 border-gray-600 border-t border-b'>
+        <div id='expenseList' class='max-h-[500px] py-2 duration-100 ease-in-out overflow-auto flex flex-col px-2 space-y-2 bg-black bg-opacity-10 border-gray-600 border-t border-b'>
             <?php
             $expenseSize = sizeof($groupTransactionHistory);
             if ($expenseSize < 1) {
@@ -75,7 +75,7 @@
 
 <script>
     function collapsePending() {
-        document.getElementById('pendingList').classList.toggle('max-h-80');
+        document.getElementById('pendingList').classList.toggle('max-h-[500px]');
         document.getElementById('pendingList').classList.toggle('py-2');
         document.getElementById('pendingList').classList.toggle('h-0');
         document.getElementById('pendingCollapse').classList.toggle('hidden');
@@ -83,7 +83,7 @@
     }
 
     function collapseExpense() {
-        document.getElementById('expenseList').classList.toggle('max-h-80');
+        document.getElementById('expenseList').classList.toggle('max-h-[500px]');
         document.getElementById('expenseList').classList.toggle('py-2');
         document.getElementById('expenseList').classList.toggle('max-h-0');
         document.getElementById('expenseCollapse').classList.toggle('hidden');

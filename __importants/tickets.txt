@@ -28,7 +28,6 @@ singular body
 notification system
 - overspending
 - invite ng group?
-- group expense notification
 
 cache or just save sa database????
 - storing of system settings info
@@ -36,7 +35,6 @@ cache or just save sa database????
 - remembering ng inexpand and kinollapse ni user na views 
 
 Sharing
-- pending expenses
 - group members list
   + kicking of members (owner/admin)
   + reusable?
