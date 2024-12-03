@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['forgotPassword'])) {
     $stmt = $db->query($sql, $params);
 
     if ($stmt && $stmt->rowCount() > 0) {
-        $mail = require __DIR__ . '/../mail/mail_config.php';
+        $mail = require __DIR__ . '/../../mail/mail_config.php';
 
         $mail->setFrom("noreply@example.com", 'Xpense Tracker');
         $mail->addAddress($email);

@@ -3,7 +3,7 @@
     "short_name": "Xpense",
     "start_url": "/index.html",
     "display": "standalone",
-    "background_color": "#FFE9D2",
+    "background_color": "#072822",
     "theme_color": "#072822",
     "orientation": "portrait-primary",
     "icons": [

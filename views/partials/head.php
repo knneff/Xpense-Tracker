@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $pageTitle ?></title>
     <?php require('./styles/custom_style.html') ?>
-    <?php
-    echo '<link rel="icon" type="image/x-icon" href="assets/xpense logo-01.ico">';
-    ?>
+    <link rel="icon" type="image/x-icon" href="assets/xpense logo-01.ico">
     <script src="styles/scripts.js"></script>
     <!-- for graphs and charts scripts -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <!-- PWA manifest -->
     <link rel="manifest" href="/manifest.json">
+    <script src="/index.js"></script>
 </head>
