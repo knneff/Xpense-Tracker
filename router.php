@@ -17,6 +17,7 @@ $routes = [
     "/subscriptions" => __DIR__ . "/controllers/subscriptionList.php",
     "/audit" => __DIR__ . "/controllers/audit.php",
     "/settings" => __DIR__ . "/controllers/settings.php",
+    "/statistics" => __DIR__ . "/controllers/statistics.php",
 
     //mga shared expense shiz
     "/group" => __DIR__ . "/controllers/group.php",
@@ -43,6 +44,7 @@ $pageTitles = [
     "/subscriptions" => "Subscription",
     "/audit" => "Audit Log",
     "/settings" => "Settings",
+    "/statistics" => "Statistics",
 
     //mga shared expense shiz
     "/group" => "Groups",
