@@ -1,6 +1,6 @@
 <!-- Group Form Container -->
 <div id='addGroupExpenseForm' class="bgGreen flex-col border-gray-600 border-l pt-2 space-y-2 h-full overflow-auto pb-4
-        w-0 hidden absolute px-0 
+        w-0 hidden absolute px-0
         md:w-96 md:flex md:static md:px-4  
     ">
 
@@ -77,7 +77,7 @@
     function toggleAddExpensePanel() {
         // on property
         document.getElementById('addGroupExpenseForm').classList.toggle('w-0');
-        document.getElementById('addGroupExpenseForm').classList.toggle('w-96');
+        document.getElementById('addGroupExpenseForm').classList.toggle('w-full');
         document.getElementById('addGroupExpenseForm').classList.toggle('md:w-0');
         document.getElementById('addGroupExpenseForm').classList.toggle('md:w-96');
 

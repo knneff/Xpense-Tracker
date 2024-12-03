@@ -9,7 +9,7 @@
 
   <!-- Title and Balance (ROW) -->
   <div class='flex flex-row bgGreen justify-between h-16 pr-4 py-4 shadow-lg text-white font-bold border-gray-600 border-t border-b border-r rounded-tr-lg'>
-    <h2 class="text-xl flex tracking-wider items-center"><?= $groupName ?></h2>
+    <h2 class="text-xl flex tracking-wider items-center pl-2"><?= $groupName ?></h2>
     <!-- LEFT -->
     <?php require('views/partials/balancePanel.view.php') ?>
     <!-- RIGHT -->

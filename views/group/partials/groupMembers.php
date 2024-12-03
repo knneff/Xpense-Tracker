@@ -9,7 +9,7 @@
 
     <!-- Owner-->
     <div>
-      <div class='flex flex-row justify-between px-2'>
+      <div class='flex flex-row justify-between'>
         <h3 class="text-gray-400 text-lg font-bold tracking-wider">Owner</h3>
         <button onclick="toggleMemberMenu()" title="Menu" class="">
           <svg class="size-6 textGray hover:text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -29,11 +29,13 @@
       <h3 class="text-gray-400 text-lg font-bold tracking-wider">
         Members - <?= sizeof($groupMembersInfo) ?>
       </h3>
-      <ul>
+      <ul class='flex flex-col'>
         <?php
         foreach ($groupMembersInfo as $memberInfo) {
           $userInfoTemp = $memberInfo;
+          echo "<li>";
           require('userPanel.view.php');
+          echo "</li>";
         }
         ?>
       </ul>

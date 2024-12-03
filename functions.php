@@ -14,7 +14,7 @@ function dd(...$values)
 //checks if current url is same as $value
 function isUri($value)
 {
-    if ($_SERVER['REQUEST_URI'] === $value) {
+    if (parse_url($_SERVER['REQUEST_URI'])['path'] === $value) {
         return true;
     }
     return false;

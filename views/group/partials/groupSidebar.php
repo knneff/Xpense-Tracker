@@ -1,7 +1,7 @@
-<div class="tlGreen w-16 shadow-lg z-10">
+<div class="bgGreen w-16 shadow-lg z-10 border-gray-600 border-l rounded-tl-xl ">
 
     <!-- Current Group -->
-    <div id='currGroup' class="flex items-center bgGreen h-16 rounded-l-xl border-gray-600 border-l border-t border-b relative">
+    <div id='currGroup' class="flex items-center bgGreen h-16 rounded-tl-xl border-gray-600 border-l border-t border-b relative">
         <img
             src="<?= $groupIcon ?>"
             alt="<?= $groupName . " Icon" ?>"

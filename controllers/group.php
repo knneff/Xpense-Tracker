@@ -181,7 +181,7 @@ else if ($_SERVER['REQUEST_METHOD'] === "GET") {
 
             // [FOR MEMBER LIST & GROUP EXPENSE PANEL] 
             // lists all of the group's member (owner and admin included)
-            $groupAllMembersInfo = $db->query("SELECT users.username, users.userIcon, users.userid, clanMembers.roles from clanMembers join users ON clanMembers.userID = users.userid WHERE clanMembers.groupID = ? ORDER BY username ASC;", [$groupID])->fetchAll(PDO::FETCH_ASSOC);
+            $groupAllMembersInfo = $db->query("SELECT users.username, users.userIcon, users.userid, users.firstName, users.lastName, clanMembers.roles from clanMembers join users ON clanMembers.userID = users.userid WHERE clanMembers.groupID = ? ORDER BY username ASC;", [$groupID])->fetchAll(PDO::FETCH_ASSOC);
             $groupMembersInfo = array(); //stores list of all members (owner and admin not included)
             foreach ($groupAllMembersInfo as $index => $groupMemberInfo) {
                 if ($groupMemberInfo['roles'] !== 'owner') {
