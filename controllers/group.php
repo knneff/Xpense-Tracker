@@ -85,7 +85,12 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         $currentDateTimeString = $currentDateTime->format('Y-m-d H:i:s');
         $groupID = $_GET['id'];
         $expenseState = 'pending';
+
+        //group info
         $groupAllMembersInfo = $db->query("SELECT users.username, users.userIcon, users.userid, clanMembers.roles from clanMembers join users ON clanMembers.userID = users.userid WHERE clanMembers.groupID = ? ORDER BY username ASC;", [$groupID])->fetchAll(PDO::FETCH_ASSOC);
+        $groupInfo = $db->query("SELECT * from clan WHERE groupID = ?", [$groupID])->fetch(PDO::FETCH_ASSOC);
+        $groupName = $groupInfo['groupName'];
+        $groupIcon = $groupInfo['groupIcon'];
 
         foreach ($groupAllMembersInfo as $index => $memberInfo) {
             $userID = $memberInfo['userid'];
@@ -93,8 +98,21 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             //if an amount is set to a particular user
             if (isset($_POST[$amountUserId])) {
                 $amount = $_POST[$amountUserId];
+                //inserts pending expense in expense history database
                 $sql = "INSERT INTO expensesHistory (userID, amount, category, description, expenseType, expenseTime, groupID, expenseState) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
                 $params = [$userID, $amount, $category, $description, $expenseType, $currentDateTimeString, $groupID, $expenseState];
+                $db->query($sql, $params);
+                //inserts notification to user database
+                $title = "
+                    <div class='flex flex-row justify-between font-semibold text-md pr-2'>
+                        <p>Pending Expense!</p>
+                        <a href='/group?id=$groupID'> <img class='size-6 rounded-3xl' src='$groupIcon'> </a>
+                    </div>
+                    <hr class='text-gray-600'>
+                ";
+                $body = "An amount of <b>$$amount</b> has been added to your pending expense in the group <u>$groupName</u>. Click <a class='textTeal hover:underline' href='/group?id=$groupID'>here</a> to see!";
+                $sql = "INSERT INTO notification (userID, title, body) VALUES (?, ?, ?)";
+                $params = [$userID, $title, $body];
                 $db->query($sql, $params);
             }
         }
@@ -119,16 +137,17 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         $params = [$userID, $amount, $category, $description, $expenseType, $currentDateTimeString, $groupID];
         $db->query($sql, $params);
 
-        //redirect
         redirect('/group?id=' . $groupID);
     }
     //when a user declines a pending expense
     else if (isset($_POST['declinePending'])) {
         $expenseID = $_POST['expenseID'];
         $currentDateTime = new DateTime();
+        $groupID = $_GET['id'];
         $currentDateTimeString = $currentDateTime->format('Y-m-d H:i:s');
         //update expenseshistory expenseState to 'paid' and expenseTime to Now()
         $db->query("UPDATE expensesHistory SET expenseTime = ?, expenseState = 'declined' WHERE expenseID = ?;", [$currentDateTimeString, $expenseID]);
+        redirect('/group?id=' . $groupID);
     }
 }
 //EVERYTHING GET RELATED

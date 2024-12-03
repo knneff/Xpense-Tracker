@@ -20,7 +20,7 @@ $userInfoTemp = $transactionRow;
     <!-- body (category, expenseType, amount) -->
     <div class='flex flex-row justify-between items-center px-2 py-2 bgGreen rounded-b-lg'>
         <!-- left -->
-        <div class='flex flex-row items-center <?= ($tempExpenseState === 'paid') ? 'text-green-400' : (($tempExpenseState === 'declined') ? 'texRed' : 'text-orange-500') ?>'>
+        <div class='flex flex-row items-center <?= ($tempExpenseState === 'paid') ? 'text-green-400' : (($tempExpenseState === 'declined') ? 'textRed' : 'text-orange-500') ?>'>
             <?php
             if ($tempExpenseState === 'paid') {
                 echo "<svg class='size-14 text-green-400' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor'>

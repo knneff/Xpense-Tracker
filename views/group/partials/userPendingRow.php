@@ -69,6 +69,7 @@ $tempAmount = $currUserPending['amount'];
                 <input name='category' value='<?= $tempCategory ?>' hidden>
                 <input name='type' value='<?= $tempExpenseType ?>' hidden>
                 <input name='amount' value='<?= $tempAmount ?>' hidden>
+                <input name='expenseID' value='<?= $tempExpenseID ?>' hidden>
                 <button type="submit" class="py-1 mt-4 text-lg sm:text-xl font-semibold btRed rounded-3xl">Decline $<?= $tempAmount ?> </button>
             </form>
         </div>
