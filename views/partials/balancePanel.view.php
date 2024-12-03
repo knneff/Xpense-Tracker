@@ -1,6 +1,6 @@
-<!-- ADD BALANCE FORM -->
-<main id="balancePanel" class="hidden">
-    <div id="balanceOverlay" class="z-50 fixed top-0 left-0 w-screen h-screen flex justify-center items-center  bg-black bg-opacity-50">
+<!-- ADD BALANCE PANEL -->
+<div id="balancePanel" class="hidden ">
+    <div id="balanceOverlay" class="fixed w-screen h-screen top-0 left-0 z-50 flex justify-center items-center  bg-black bg-opacity-50">
         <div class="flex justify-center text-base sm:text-lg text-gray-300 tlGreen p-8 rounded-3xl">
             <div>
                 <h2 class="text-4xl font-semibold text-center textGray">Add Balance</h2>
@@ -20,23 +20,10 @@
             </div>
         </div>
     </div>
-</main>
-
-<!-- BALANCE ICON -->
-<div class="bg-emerald-900 text-base sm:text-xl rounded-xl h-8 flex justify-end items-center pl-1 pr-2">
-    <button id="addBalanceButton" class="h-6 w-6 mr-3">
-        <svg class="text-gray-300 hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z" clip-rule="evenodd" />
-        </svg>
-    </button>
-    <?= isset($balance) ? "₱ $balance " : '₱ 0' ?>
 </div>
 
+<!-- Panel Exist Mechanism -->
 <script>
-    document.getElementById('addBalanceButton').addEventListener('click', () => {
-        document.getElementById('balancePanel').classList.remove('hidden');
-    });
-
     document.getElementById('balanceOverlay').addEventListener('click', (event) => {
         if (event.target === document.getElementById('balanceOverlay')) {
             document.getElementById('balancePanel').classList.add('hidden');

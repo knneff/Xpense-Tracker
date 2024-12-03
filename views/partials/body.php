@@ -2,6 +2,7 @@
 <?php require('controllers/noBars/add.php') ?>
 <?php require('controllers/noBars/notifications.php') ?>
 <?php require('controllers/noBars/balanceController.php') ?>
+<?php require('views/partials/balancePanel.view.php') ?>
 
 <body class="bgGreen flex flex-col h-full">
     <!-- FLOATING ADD EXPENSE BUTTON HERE -->
