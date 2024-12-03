@@ -7,7 +7,7 @@
         <!-- TOP -->
         <div class='space-y-2'>
             <!-- Members List and Amount Field-->
-            <ul class='space-y-2 relative'>
+            <ul class='space-y-2'>
                 <?php
                 foreach ($groupAllMembersInfo as $index => $memberInfo) {
                     $userInfoTemp = $memberInfo;
