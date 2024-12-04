@@ -1,7 +1,6 @@
 <?php require('views/partials/head.php') ?>
 <?php require('controllers/noBars/notifications.php') ?>
 <?php require('controllers/noBars/balanceController.php') ?>
-
 <?php require('views/group/partials/panelInvite.view.php') ?>
 
 <body class="tlGreen h-screen flex flex-col ">
@@ -12,4 +11,4 @@
         <!-- SIDE BAR -->
         <?php require('views/partials/sidebar.php') ?>
         <!-- DITO NA YUNG PINAKACONTENT NINYO -->
-        <content class="w-full flex flex-row">
+        <content class="w-full flex flex-row pl-12 sm:pl-0">

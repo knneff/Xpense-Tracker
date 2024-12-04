@@ -5,6 +5,8 @@
 <?php require('views/partials/balancePanel.view.php') ?>
 
 <body class="bgGreen flex flex-col h-full">
+    <!-- required sa body ng page para sa mga may charts -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <!-- FLOATING ADD EXPENSE BUTTON HERE -->
     <?php require('add.view.php') ?>
     <!-- NAV BAR IS HERE -->

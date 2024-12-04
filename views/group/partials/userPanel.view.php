@@ -15,7 +15,7 @@ $tempUserRole = $userInfoTemp['roles'];
     </button>
 
     <!-- user panel -->
-    <div id='<?= 'userPanel' . $tempUserID ?>' class='z-50 hidden absolute -top-10 right-60 bgGreen rounded-xl  flex-col border-gray-600 border p-4 textGray w-56'>
+    <div id='<?= 'userPanel' . $tempUserID ?>' class='z-50 hidden absolute -top-10 right-48 bgGreen rounded-xl  flex-col border-gray-600 border p-4 textGray w-56'>
         <div class='flex flex-row gap-2'>
             <?php require('userIcon.view.php') ?>
             <p class='text-sm px-1 bgGreen2 rounded-lg'><?= $tempUserRole ?></p>

@@ -32,11 +32,11 @@
 
             <!-- Description Field -->
             <div>
-                <label class="block text-gray-300 font-semibold">Description</label>
+                <label class="block textGray font-semibold">Description</label>
                 <input
                     type="text"
                     name='desc'
-                    class="w-full mt-1 p-2 rounded-md tlGreen textGray border-none"
+                    class="w-full mt-1 p-2 rounded-md bgGreen tlGreen textGray border-none"
                     required
                     placeholder="Enter description" />
             </div>
