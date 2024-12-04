@@ -13,8 +13,10 @@ $userInfo = $db->query('select * from users where userid = ?;', [$userID])->fetc
 $expenses = $db->query('select expenses.amount, expenses.description, expenses.category from users join expenses on users.userID=expenses.userID where users.userID=? ORDER BY expenses.expenseTime;', [$userID])->fetchAll(PDO::FETCH_ASSOC);
 $subscriptions = $db->query('select amount, description, period, category from subscriptions WHERE userid=? ORDER BY paymentDateTime DESC LIMIT 4;', [$userID])->fetchAll(PDO::FETCH_ASSOC);
 
+// title ng page
+$title = "Hello, {$userInfo['username']}!";
 
-//categories
+// mga information sa charts potangina bawal maduling dito
 $categories = [
     'food' => [
         'label' => 'Food',
@@ -85,7 +87,6 @@ foreach ($expenses as $index => $expense) {
     }
     $totalExpense += $expense['amount'];
 }
-
 $values = [
     round(($categories['food']['amount'] == 0) ? 0 : $categories['food']['amount'] * 100 / $totalExpense, 2),
     round(($categories['enter']['amount'] == 0) ? 0 : $categories['enter']['amount'] * 100 / $totalExpense, 2),
@@ -120,6 +121,5 @@ $colors = [
     $categories['others']['color'],
 ];
 
-$title = "Hello, {$userInfo['username']}!";
 
 require('views/dashboard/dashboard.view.php');

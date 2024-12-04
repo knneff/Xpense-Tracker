@@ -81,13 +81,13 @@ if (!isset($values)) {
                             total: {
                                 showAlways: true,
                                 show: true,
-                                label: "ASADS Nikko Lozano",
+                                label: "Total",
                                 fontFamily: "Inter, sans-serif",
                                 formatter: function(w) {
                                     const sum = w.globals.seriesTotals.reduce((a, b) => {
                                         return a + b
                                     }, 0)
-                                    return '=' + sum + '%'
+                                    return '100%' // ganito value neto before: '=' + sum + '%' ambobo
                                 },
                                 color: '#d1d5db',
                             },
