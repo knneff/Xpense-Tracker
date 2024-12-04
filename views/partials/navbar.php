@@ -47,10 +47,18 @@
                         src="<?= $_SESSION['userIcon'] ?>">
                 </button>
             </div>
-            <div id="targetDiv" class="absolute hidden z-50 top-16 right-10 mt-2 w-48 rounded-md py-2 tlGreen shadow-lg text-gray-200">
-                <a href="/usersettings" class="hover:bg-emerald-800 block px-4 py-2 text-sm">Your Profile</a>
-                <a href="#" class="hover:bg-emerald-800 block px-4 py-2 text-sm">Settings</a>
-                <a href="/logout" class="hover:bg-emerald-800 block px-4 py-2 text-sm">Sign out</a>
+            <!-- Name -->
+
+            <div id="targetDiv" class="p-4 absolute hidden z-50 top-16 right-10 mt-2 w-52 rounded-md py-2 tlGreen shadow-lg text-gray-200 border border-gray-600">
+                <!-- user first and last name -->
+                <div class='flex flex-row gap-1 text-xl pb-2'>
+                    <p><?= $_SESSION['firstName'] ?></p>
+                    <p><?= $_SESSION['lastName'] ?></p>
+                </div>
+                <hr class='border-gray-300'>
+                <a href="/usersettings" class="px-2 hover:bg-emerald-800 block py-2 text-sm">Your Profile</a>
+                <a href="#" class="px-2 hover:bg-emerald-800 block  py-2 text-sm">Settings</a>
+                <a href="/logout" class="px-2 hover:bg-emerald-800 block  py-2 text-sm">Sign out</a>
             </div>
         </div>
     </div>

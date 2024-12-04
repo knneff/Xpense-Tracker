@@ -13,6 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         session_start();
         $_SESSION['userid'] = $user['userid'];
         $_SESSION['userIcon'] = $user['userIcon'];
+        $_SESSION['firstName'] = $user['firstName'];
+        $_SESSION['lastName'] = $user['lastName'];
         redirect('/dashboard');
     }
 }

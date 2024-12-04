@@ -104,13 +104,18 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                 $db->query($sql, $params);
                 //inserts notification to user database
                 $title = "
-                    <div class='flex flex-row justify-between font-semibold text-md pr-2'>
-                        <p>Pending Expense!</p>
+                    <div class='flex flex-row justify-between font-semibold text-md pr-1'>
+                        <p>Group Pending Expense!</p>
                         <a href='/group?id=$groupID'> <img class='size-6 rounded-3xl' src='$groupIcon'> </a>
                     </div>
                     <hr class='text-gray-600'>
                 ";
-                $body = "An amount of <b>$$amount</b> has been added to your pending expense in the group <u>$groupName</u>. Click <a class='textTeal hover:underline' href='/group?id=$groupID'>here</a> to see!";
+                $body = "
+                    <p class='px-1'>
+                        An amount of <b>$$amount</b> has been added to your pending expense in the group <u>$groupName</u>. 
+                        Click <a class='textTeal hover:underline' href='/group?id=$groupID'>here</a> to see!
+                    </p>
+                ";
                 $sql = "INSERT INTO notification (userID, title, body) VALUES (?, ?, ?)";
                 $params = [$userID, $title, $body];
                 $db->query($sql, $params);
