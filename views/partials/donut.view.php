@@ -2,9 +2,9 @@
 
 //DEFAULT VALUES (ITO MGA LILITAW KAPAG WALANG ININPUT NA VALUES $values) [FOR TESTING]
 if (!isset($values)) {
-    $values = "[28, 49, 20, 3]";
-    $labels = "['Food', 'Entertainment', 'Transportation', 'Others']";
-    $colors = "['#1C64F2', '#16BDCA', '#FDBA8C', '#E74694']";
+    $values = [28, 49, 20, 3];
+    $labels = ['Food', 'Entertainment', 'Transportation', 'Others'];
+    $colors = ['#1C64F2', '#16BDCA', '#FDBA8C', '#E74694'];
 }
 
 ?>
@@ -56,9 +56,9 @@ if (!isset($values)) {
 <script>
     const getChartOptions = () => {
         return {
-            series: <?= $values ?>,
-            colors: <?= $colors ?>,
-            labels: <?= $labels ?>,
+            series: <?= json_encode($values) ?>,
+            colors: <?= json_encode($colors) ?>,
+            labels: <?= json_encode($labels) ?>,
             chart: {
                 height: 360,
                 width: "100%",
