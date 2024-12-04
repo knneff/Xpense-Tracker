@@ -14,7 +14,7 @@
         </svg>
     </div>
 </button>
-<div id="panelNotif" class="hidden absolute z-40 top-16 right-10 mt-2 w-60 sm:w-80 rounded-md py-2 pl-2 sm:py-4 sm:pl-4 tlGreen shadow-lg text-gray-200">
+<div id="panelNotif" class="hidden absolute z-40 top-16 right-10 mt-2 w-60 sm:w-80 rounded-md py-2 pl-2 sm:py-4 sm:pl-4 bgGreen shadow-lg text-gray-200 border border-gray-400">
     <div class="flex justify-between mb-2 pr-4">
         <div class="text-xl sm:text-2xl font-semibold">
             Notifications
@@ -35,7 +35,7 @@
             No Notification Yet
         </div>
         <?php foreach ($notifications as $notification) : ?>
-            <div class="<?= $notification['isViewed'] ? 'bgGreen' : 'bg-emerald-900'; ?> notifPanel mr-2 sm:mr-4 p-2 rounded-md">
+            <div class="<?= $notification['isViewed'] ? 'bg-emerald-900' : 'bg-emerald-800'; ?> notifPanel mr-2 sm:mr-4 p-2 rounded-md">
                 <div class="font-semibold text-base sm:text-lg">
                     <?= $notification['title'] ?>
                 </div>
@@ -54,8 +54,8 @@
 
     buttonNotif.addEventListener("click", function(event) {
         event.stopPropagation();
-        panelNotif.classList.remove("hidden");
-        isNotifDisplayed = true;
+        panelNotif.classList.toggle("hidden");
+        isNotifDisplayed = !isNotifDisplayed;
 
         if (!isInnerListenerAdded) {
             var countArray = <?php echo json_encode($count); ?>;
@@ -82,8 +82,8 @@
             document.getElementById("notifCountDisplay").classList.add("hidden");
 
             document.querySelectorAll('.notifPanel').forEach(panel => {
-                panel.classList.add('bgGreen');
-                panel.classList.remove('bg-emerald-900');
+                panel.classList.add('bg-emerald-900');
+                panel.classList.remove('bg-emerald-800');
             });
             isNotifDisplayed = false;
         }

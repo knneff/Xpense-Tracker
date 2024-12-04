@@ -49,16 +49,16 @@
             </div>
             <!-- Name -->
 
-            <div id="targetDiv" class="p-4 absolute hidden z-50 top-16 right-10 mt-2 w-52 rounded-md py-2 tlGreen shadow-lg text-gray-200 border border-gray-600">
+            <div id="targetDiv" class="p-4 absolute hidden z-50 top-16 right-10 mt-2 w-52 rounded-md py-2 bgGreen shadow-lg text-gray-200 border border-gray-400">
                 <!-- user first and last name -->
                 <div class='flex flex-row gap-1 text-xl pb-2'>
                     <p><?= $_SESSION['firstName'] ?></p>
                     <p><?= $_SESSION['lastName'] ?></p>
                 </div>
-                <hr class='border-gray-300'>
-                <a href="/usersettings" class="px-2 hover:bg-emerald-800 block py-2 text-sm">Your Profile</a>
-                <a href="#" class="px-2 hover:bg-emerald-800 block  py-2 text-sm">Settings</a>
-                <a href="/logout" class="px-2 hover:bg-emerald-800 block  py-2 text-sm">Sign out</a>
+                <hr class='border-gray-300 my-2'>
+                <a href="/usersettings" class="rounded-md px-2 hover:bg-emerald-800 block py-2 text-sm">Your Profile</a>
+                <a href="#" class="rounded-md px-2 hover:bg-emerald-800 block  py-2 text-sm">Settings</a>
+                <a href="/logout" class="rounded-md px-2 hover:bg-emerald-800 block  py-2 text-sm">Sign out</a>
             </div>
         </div>
     </div>
