@@ -237,4 +237,5 @@
   </section>
 </footer>
 
+<?php require('views/partials/footerContent.php') ?>
 <?php require('views/partials/footer.php') ?>

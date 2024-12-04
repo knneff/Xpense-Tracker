@@ -306,4 +306,5 @@
     </div>
 </main>
 
+<?php require('partials/footerContent.php') ?>
 <?php require('partials/footer.php') ?>

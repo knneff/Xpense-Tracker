@@ -1,3 +1,6 @@
+ayusin subscription list
+
+merge user settings and system settings
 
 lagyan ng contact support page, parang chat.
 

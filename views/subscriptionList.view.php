@@ -1,7 +1,7 @@
 <?php require('partials/body.php') ?>
 
 
-<div class="container mx-auto p-4">
+<div class="container mx-auto p-4 min-h-96">
 
     <!-- Simplified View -->
 
@@ -90,4 +90,5 @@
 
 </div>
 
+<?php require('partials/footerContent.php') ?>
 <?php require('partials/footer.php') ?>

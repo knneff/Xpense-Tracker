@@ -1,15 +1,15 @@
 <?php require('partials/body.php') ?>
-
-<?php if (isset($message)) : ?>
-    <p class="text-gray-300 my-4 text-center text-xl "><?= $message ?></p>
-<?php endif; ?>
-<main class="grid grid-cols-1 lg:grid-cols-2 gap-7">
-    <?php foreach ($goals as $goal) : ?>
-        <?php $percent = floor($goal['paidAmount'] / $goal['amount'] * 100) ?>
-        <button
-            class="active:scale-95 transition-transform hover:scale-[1.03]"
-            type="button"
-            onclick="showPanelGoalUpdate(
+<div class=" min-h-96">
+    <?php if (isset($message)) : ?>
+        <p class="text-gray-300 my-4 text-center text-xl "><?= $message ?></p>
+    <?php endif; ?>
+    <main class="grid grid-cols-1 lg:grid-cols-2 gap-7">
+        <?php foreach ($goals as $goal) : ?>
+            <?php $percent = floor($goal['paidAmount'] / $goal['amount'] * 100) ?>
+            <button
+                class="active:scale-95 transition-transform hover:scale-[1.03]"
+                type="button"
+                onclick="showPanelGoalUpdate(
                 '<?= $goal['goalID'] ?>', 
                 '<?= $goal['description'] ?>', 
                 '<?= $goal['amount'] ?>', 
@@ -19,42 +19,43 @@
                 '<?= $percent ?>'
                 
             )">
-            <div class="p-4 flex rounded-lg tlGreen textGray gap-3 shadow-lg">
-                <div>
-                    <img
-                        class="h-16 w-16 object-cover border border-gray-400"
-                        src="<?= $goal['groupIcon'] ?>">
-                </div>
-                <div class="w-full">
-                    <div class="grid sm:flex justify-between w-full">
-                        <div class="font-bold text-base sm:text-xl text-start">
-                            <?= $goal['description'] ?>
+                <div class="p-4 flex rounded-lg tlGreen textGray gap-3 shadow-lg">
+                    <div>
+                        <img
+                            class="h-16 w-16 object-cover border border-gray-400"
+                            src="<?= $goal['groupIcon'] ?>">
+                    </div>
+                    <div class="w-full">
+                        <div class="grid sm:flex justify-between w-full">
+                            <div class="font-bold text-base sm:text-xl text-start">
+                                <?= $goal['description'] ?>
+                            </div>
+                            <div class="text-sm sm:text-lg font-semibold items-center text-start">
+                                ₱ <?= $goal['paidAmount'] ?> / ₱ <?= $goal['amount'] ?>
+                            </div>
                         </div>
-                        <div class="text-sm sm:text-lg font-semibold items-center text-start">
-                            ₱ <?= $goal['paidAmount'] ?> / ₱ <?= $goal['amount'] ?>
+                        <div class="mt-1 sm:mt-3 relative">
+                            <div class="w-full bg-[#064E3B] rounded-sm h-4 sm:h-6 items-center flex">
+                                <div class="bg-[#15956B] rounded-sm h-4 sm:h-6" style="width: <?= $percent ?>%;"></div>
+                                <div class="absolute w-full text-center text-lg sm:text-base font-semibold"><?= $percent ?>%</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="mt-1 sm:mt-3 relative">
-                        <div class="w-full bg-[#064E3B] rounded-sm h-4 sm:h-6 items-center flex">
-                            <div class="bg-[#15956B] rounded-sm h-4 sm:h-6" style="width: <?= $percent ?>%;"></div>
-                            <div class="absolute w-full text-center text-lg sm:text-base font-semibold"><?= $percent ?>%</div>
-                        </div>
-                    </div>
                 </div>
+            </button>
+        <?php endforeach ?>
+        <button
+            class="active:scale-95 transition-transform hover:scale-[1.03]"
+            type="button"
+            onclick="showPanelGoal()">
+            <div class="flex items-center justify-center border-2 border-dashed hover:border-white border-gray-300 rounded-lg h-20 sm:h-24">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="text-gray-300 w-10 h-10 sm:w-14 sm:h-14">
+                    <path d="M4 12H20M12 4V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
             </div>
         </button>
-    <?php endforeach ?>
-    <button
-        class="active:scale-95 transition-transform hover:scale-[1.03]"
-        type="button"
-        onclick="showPanelGoal()">
-        <div class="flex items-center justify-center border-2 border-dashed hover:border-white border-gray-300 rounded-lg h-20 sm:h-24">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="text-gray-300 w-10 h-10 sm:w-14 sm:h-14">
-                <path d="M4 12H20M12 4V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-        </div>
-    </button>
-</main>
+    </main>
+</div>
 <main id="goalPanel" class="hidden">
     <div id="goalOverlay" class="z-50 flex justify-center items-center fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50">
         <div class="flex flex-col justify-center text-base sm:text-lg text-gray-300 tlGreen p-8 rounded-3xl">
@@ -336,4 +337,6 @@
         }
     });
 </script>
+
+<?php require('partials/footerContent.php') ?>
 <?php require('partials/footer.php') ?>
