@@ -101,10 +101,8 @@
     </div>
 
     <!-- RIGHT CHART HERE -->
-    <div class='order-1 md:order-2 w-96 h-96 shadow-lg tlGreen hover:bg-emerald-900 duration-150 rounded-3xl textGray '>
-
-        <?php require('views/partials/pie.view.php') ?>
-
+    <div class='order-1 w-full h-fit md:w-96 md:order-2 p-4 shadow-lg tlGreen rounded-3xl'>
+        <?php require('views/partials/donut.view.php') ?>
     </div>
 </main>
 
