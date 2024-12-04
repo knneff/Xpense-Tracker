@@ -47,6 +47,7 @@
         return {
             series: [28, 49, 20, 3],
             colors: ["#1C64F2", "#16BDCA", "#FDBA8C", "#E74694"],
+            labels: ["Food", "Entertainment", "Transportation", "Others"],
             chart: {
                 height: 360,
                 width: "100%",
@@ -69,15 +70,15 @@
                             total: {
                                 showAlways: true,
                                 show: true,
-                                label: "Jan Nikko Lozano",
+                                label: "ASADS Nikko Lozano",
                                 fontFamily: "Inter, sans-serif",
-                                color: '#d1d5db',
                                 formatter: function(w) {
                                     const sum = w.globals.seriesTotals.reduce((a, b) => {
                                         return a + b
                                     }, 0)
                                     return '=' + sum + '%'
                                 },
+                                color: '#d1d5db',
                             },
                             value: {
                                 show: true,
@@ -98,7 +99,6 @@
                     top: -2,
                 },
             },
-            labels: ["Food", "Entertainment", "Transportation", "Others"],
             dataLabels: {
                 enabled: false,
             },
