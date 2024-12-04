@@ -1,3 +1,14 @@
+<?php
+
+//DEFAULT VALUES (ITO MGA LILITAW KAPAG WALANG ININPUT NA VALUES $values) [FOR TESTING]
+if (!isset($values)) {
+    $values = "[28, 49, 20, 3]";
+    $labels = "['Food', 'Entertainment', 'Transportation', 'Others']";
+    $colors = "['#1C64F2', '#16BDCA', '#FDBA8C', '#E74694']";
+}
+
+?>
+
 <!-- TITLE  -->
 <div class="flex justify-start border-b border-gray-300 pb-6 mb-4">
     <div class="flex justify-center items-center">
@@ -45,9 +56,9 @@
 <script>
     const getChartOptions = () => {
         return {
-            series: [28, 49, 20, 3],
-            colors: ["#1C64F2", "#16BDCA", "#FDBA8C", "#E74694"],
-            labels: ["Food", "Entertainment", "Transportation", "Others"],
+            series: <?= $values ?>,
+            colors: <?= $colors ?>,
+            labels: <?= $labels ?>,
             chart: {
                 height: 360,
                 width: "100%",
