@@ -19,6 +19,7 @@ $labels = ['Food', 'Entertainment', 'Transportation', 'Others'];
 $colors = ['#1C64F2', '#16BDCA', '#FDBA8C', '#E74694'];
 
 $subscriptions = $db->query('select amount, description, period, category from subscriptions WHERE userid=? ORDER BY paymentDateTime DESC LIMIT 4;', [$userID])->fetchAll(PDO::FETCH_ASSOC);
+$goals = $db->query('select amount, description, paidAmount from goals WHERE userid=? ORDER BY goalID DESC LIMIT 6;', [$userID])->fetchAll(PDO::FETCH_ASSOC);
 
 $title = "Hello, {$userInfo['username']}!";
 
