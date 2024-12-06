@@ -12,7 +12,7 @@
     <script src="styles/scripts.js"></script>
     <!-- for graphs and charts scripts -->
     <!-- PWA manifest -->
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
     <script src="/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
