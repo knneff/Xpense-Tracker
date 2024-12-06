@@ -17,7 +17,7 @@
                     $display = stringShortener($goal['description'], 15);
                     echo "<li class='textGray flex justify-between items-center'>
                                     <p><span class='bgGreen2 rounded-lg px-1 text-xs'>{$percent}%</span> $display</p>
-                                    <span class='bgGreen2 rounded-lg px-1 text-xs'>{$goal['paidAmount']} / {$goal['amount']}</span>
+                                    <span class='bgGreen2 rounded-lg px-1 text-xs'>$ {$goal['amount']}</span>
                                 </li>";
                 }
             }
