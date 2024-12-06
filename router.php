@@ -11,6 +11,7 @@ $routes = [
 
     //mga page na accessible lang kapag may nakalog-in
     "/dashboard" => __DIR__ . "/controllers/dashboard.php",
+    "/aboutus" => __DIR__ . "/controllers/aboutUs.php",
     "/usersettings" => __DIR__ . "/controllers/userSettings.php",
     "/goal" => __DIR__ . "/controllers/goal.php",
     "/expenselog" => __DIR__ . "/controllers/expenseLog.php",
@@ -38,6 +39,7 @@ $pageTitles = [
 
     //mga page na accessible lang kapag may nakalog-in
     "/dashboard" => "Dashboard",
+    "/aboutus" => "About Us",
     "/usersettings" => "User Settings",
     "/goal" => "Goals and Plans",
     "/expenselog" => "Expense Log",
