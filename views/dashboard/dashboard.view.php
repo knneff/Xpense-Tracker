@@ -12,8 +12,8 @@
     </div>
 
     <!-- RIGHT CHART HERE -->
-    <div class='order-1 w-full h-fit sm:w-96 sm:order-2 p-4 shadow-lg tlGreen rounded-3xl'>
-        <?php require('views/partials/donut.view.php') ?>
+    <div class='order-1 w-full h-fit sm:w-96 sm:order-2 shadow-lg tlGreen rounded-3xl'>
+        <?php require('views/partials/pie.view.php') ?>
 
     </div>
 </main>

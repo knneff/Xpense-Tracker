@@ -16,7 +16,7 @@ if (!isset($values)) {
     </div>
 </div>
 
-<div class="flex justify-between items-center pb-6">
+<div class="flex justify-between items-center pb-2">
     <!-- Button -->
     <button
         id="dropdownDefaultButton"
@@ -29,6 +29,8 @@ if (!isset($values)) {
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
         </svg>
     </button>
+
+    <!-- drop down ng days -->
     <div id="lastDaysdropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
         <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
             <li>
@@ -48,10 +50,11 @@ if (!isset($values)) {
             </li>
         </ul>
     </div>
+
 </div>
 
 <!-- Donut Chart Is Here -->
-<div class="pb-4" id="donut-chart"></div>
+<div class="py-4 tlGreen2 rounded-xl" id="donut-chart"></div>
 
 <script>
     const getChartOptions = () => {

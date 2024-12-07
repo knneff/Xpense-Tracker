@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $pageTitle ?></title>
     <link rel="icon" type="image/x-icon" href="assets/xpense logo-01.ico" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" />
     <?php require('./styles/custom_style.html') ?>
-
     <script src="styles/scripts.js"></script>
-    <!-- for graphs and charts scripts -->
     <!-- PWA manifest -->
     <link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
     <script src="/index.js"></script>
+    <!-- for graphs and charts scripts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>

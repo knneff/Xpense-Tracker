@@ -9,59 +9,59 @@ $userID = $_SESSION['userid'];
 //stores information about current user
 $userInfo = $db->query('select * from users where userid = ?;', [$userID])->fetch(PDO::FETCH_ASSOC);
 
+// title ng page
+$title = "Hello, {$userInfo['username']}!";
+
 //fetch all the current user's expenses and subscription (for expenseTile and subscriptionTile)
 $expenses = $db->query('select expenses.amount, expenses.description, expenses.category from users join expenses on users.userID=expenses.userID where users.userID=? ORDER BY expenses.expenseTime;', [$userID])->fetchAll(PDO::FETCH_ASSOC);
 $subscriptions = $db->query('select amount, description, period, category from subscriptions WHERE userid=? ORDER BY paymentDateTime DESC LIMIT 4;', [$userID])->fetchAll(PDO::FETCH_ASSOC);
 $goals = $db->query('select amount, description, paidAmount from goals WHERE userid=? ORDER BY goalID DESC LIMIT 6;', [$userID])->fetchAll(PDO::FETCH_ASSOC);
 
-// title ng page
-$title = "Hello, {$userInfo['username']}!";
-
 // mga information sa charts potangina bawal maduling dito
 $categories = [
     'food' => [
         'label' => 'Food',
-        'color' => '#1C64F2',
+        'color' => '#F98080',
         'amount' => 0,
     ],
     'enter' => [
         'label' => 'Entertainment',
-        'color' => '#FDBA8C',
+        'color' => '#E3A008',
         'amount' => 0,
     ],
     'trans' => [
         'label' => 'Transportation',
-        'color' => '#16BDCA',
+        'color' => '#4B5563',
         'amount' => 0,
     ],
     'PC' => [
         'label' => 'Personal Care',
-        'color' => '#F6FD87',
+        'color' => '#F17EB8',
         'amount' => 0,
     ],
     'HW' => [
         'label' => 'Health & Wellness',
-        'color' => '#B6FD8E',
+        'color' => '#31C48D',
         'amount' => 0,
     ],
     'shopping' => [
         'label' => 'Shopping',
-        'color' => '#FD9D78',
+        'color' => '#76A9FA',
         'amount' => 0,
     ],
     'utils' => [
         'label' => 'Utilities',
-        'color' => '#B9E0FD',
+        'color' => '#AC94FA',
         'amount' => 0,
     ],
     'misc' => [
         'label' => 'Miscellaneous',
-        'color' => '#F0B1FD',
+        'color' => '#8DA2FB',
         'amount' => 0,
     ],
     'others' => [
         'label' => 'Others',
-        'color' => '#E74694',
+        'color' => '#9CA3AF',
         'amount' => 0,
     ]
 ];
