@@ -26,20 +26,6 @@ $goals = $db->query('select amount, description, paidAmount, groupIcon from goal
 $groups = $db->query("SELECT clan.groupName, clan.groupIcon, clan.groupID FROM clan join clanMembers ON clan.groupID=clanMembers.groupID WHERE clanMembers.userid = ? ORDER BY clan.groupID DESC LIMIT 3", [$userID])->fetchAll(PDO::FETCH_ASSOC);
 
 // for overspendingTile
-$expenseLimit = 1000;  // set limit, temporrary as of now
-$alarmThreshold = 80;  // 80% it alarms
-
-$todayStart = date('Y-m-d 00:00:00');
-$todayEnd = date('Y-m-d 23:59:59');
-
-$totalExpense = $db->query(
-    'SELECT SUM(amount) as totalAmount FROM expenses WHERE expenseTime BETWEEN ? AND ? AND userID = ?',
-    [$todayStart, $todayEnd, $userID]
-)->fetch(PDO::FETCH_ASSOC);
-
-$expenseToday = floatval($totalExpense['totalAmount']); 
-
-$expensePercent = floor($expenseToday/ $expenseLimit * 100);
 
 // mga information sa charts potangina bawal maduling dito
 

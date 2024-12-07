@@ -39,7 +39,7 @@
                 </button>
             </div>
 
-            <div id="targetDiv" class="p-4 absolute hidden z-50 top-16 right-10 mt-2 w-52 rounded-md py-2 bgGreen shadow-lg text-gray-200 border border-gray-400">
+            <div id="targetDiv" class="p-4 absolute hidden z-50 top-16 right-10 mt-2 w-52 rounded-md py-2 bgGreen shadow-lg text-gray-200 border-2 border-gray-300">
                 <!-- user first and last name -->
                 <div class='flex flex-row gap-1 text-xl pb-2'>
                     <p><?= $_SESSION['firstName'] ?></p>

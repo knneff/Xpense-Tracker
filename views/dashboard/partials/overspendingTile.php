@@ -1,15 +1,15 @@
 <!-- OVERSPENDING ALARM -->
-<div class='shadow-lg tlGreen rounded-3xl w-full sm:w-48 h-48 mx-2 my-2 px-4'>
-    <div class="textGray text-xl font-semibold py-1">
+<div class='shadow-lg tlGreen rounded-3xl w-full sm:w-56 px-4 h-48 mx-2 my-2 textGray'>
+    <div class="text-xl font-semibold py-1">
         Today's Expense
     </div>
     <hr class='border border-1 border-gray-400'>
-    <div class="font-semibold textGray">
+    <div class="font-semibold">
         <?= "₱" . $expenseToday . " / ₱" . $expenseLimit ?>
     </div>
     <div class="">
         <div id="donut-chart2" class="relative">
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-300 font-bold text-2xl">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold text-2xl">
                 <?= $expensePercent ?>%
             </div>
         </div>
