@@ -2,7 +2,7 @@
 <div class='flex flex-row justify-center gap-4 sm:gap-6 md:gap-8 shrink-0 w-full overflow-x-auto'>
 
     <!-- Expense Card -->
-    <div class='w-96 sm:w-[400px] md:w-[600px] lg:w-[800px] textGray rounded-lg border border-gray-400 '>
+    <div class='w-full textGray rounded-lg border border-gray-400 '>
         <!-- title (description, dateTime) -->
         <div class='flex justify-between items-center rounded-t-lg bgGreen2 px-4 py-2'>
             <h2 class='text-2xl font-semibold' id='description'> <?= $description ?> </h2>
