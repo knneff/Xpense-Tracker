@@ -53,8 +53,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['addExpense'])) {
         $db->query($sql, $params);
 
         if ($_POST['payToday'] === 'on') {
-            $sql = "INSERT INTO expenses (userID, amount, category, description, expenseType, expenseTime, subscriptionID)
-                    VALUES (:userID, :amount, :category, :description, :expenseType, :expenseTime, :subscriptionID)";
+            $sql = "INSERT INTO expensesHistory (userID, amount, category, description, expenseType, expenseTime, subscriptionID, expenseState)
+                    VALUES (:userID, :amount, :category, :description, :expenseType, :expenseTime, :subscriptionID, :expenseState)";
 
             $params = [
                 ':userID' => $userID,
@@ -63,7 +63,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['addExpense'])) {
                 ':description' => $description,
                 ':expenseType' => 'subscription',
                 ':expenseTime' => $paymentDateToday,
-                ':subscriptionID' => $db->connection->lastInsertId()
+                ':subscriptionID' => $db->connection->lastInsertId(),
+                ':expenseState' => 'pending'
+            ];
+
+            $db->query($sql, $params);
+
+            $sql = "INSERT INTO notification (userID, title, body) VALUES (:userID, :title, :body)";
+
+            $params = [
+                ':userID' => $userID,
+                ':title' => 'Subscription Pending Expense! <hr class="text-gray-600">',
+                ':body' => 'An amount of <b>$' . $amount . '</b> has been added to your pending expense from ' . $description . ' subscription.'
             ];
 
             $db->query($sql, $params);
