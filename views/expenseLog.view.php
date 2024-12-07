@@ -1,15 +1,15 @@
 <?php require('partials/body.php') ?>
 
 <div class='flex flex-col gap-5 sm:px-8 md:px-16 lg:px-24 xl:px-42'>
-    <form class='textGray gap-4 flex flex-row justify-between items-center'>
+    <form class='textGray gap-4 flex flex-row justify-between sm:items-center'>
         <!-- FILTERS -->
-        <div class='flex flex-row gap-4'>
+        <div class='flex flex-col sm:flex-row gap-4'>
             <div class='flex flex-row justify-start items-center gap-1'>
                 <p>Category</p>
                 <select
                     name="category"
                     required
-                    class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none">
+                    class="flex-1 px-2 py-1 rounded-lg border border-gray-400 tlGreen focus:outline-none">
                     <option value="All" <?= ($categ === 'All') ? 'selected' : '' ?>>All</option>
                     <option value="Food" <?= ($categ === 'Food') ? 'selected' : '' ?>>Food</option>
                     <option value="Transportation" <?= ($categ === 'Transportation') ? 'selected' : '' ?>>Transportation</option>
@@ -21,13 +21,12 @@
                     <option value="Miscellaneous" <?= ($categ === 'Miscellaneous') ? 'selected' : '' ?>>Miscellaneous</option>
                 </select>
             </div>
-
             <div class='flex flex-row justify-start items-center gap-1'>
                 <p>Type</p>
                 <select
                     name="type"
                     required
-                    class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none">
+                    class="flex-1 px-2 py-1 rounded-lg border border-gray-400 tlGreen focus:outline-none">
                     <option value="All" <?= ($type === 'All') ? 'selected' : '' ?>>All</option>
                     <option value="basic" <?= ($type === 'basic') ? 'selected' : '' ?>>Basic</option>
                     <option value="group" <?= ($type === 'group') ? 'selected' : '' ?>>Group</option>
@@ -39,7 +38,7 @@
 
         <!-- RELOAD BUTTON -->
         <button class='btGreen p-2 rounded-lg flex flex-row justify-center items-center gap-2'>
-            <svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <svg class="hidden sm:flex size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                 <path fill-rule="evenodd" d="M4.755 10.059a7.5 7.5 0 0 1 12.548-3.364l1.903 1.903h-3.183a.75.75 0 1 0 0 1.5h4.992a.75.75 0 0 0 .75-.75V4.356a.75.75 0 0 0-1.5 0v3.18l-1.9-1.9A9 9 0 0 0 3.306 9.67a.75.75 0 1 0 1.45.388Zm15.408 3.352a.75.75 0 0 0-.919.53 7.5 7.5 0 0 1-12.548 3.364l-1.902-1.903h3.183a.75.75 0 0 0 0-1.5H2.984a.75.75 0 0 0-.75.75v4.992a.75.75 0 0 0 1.5 0v-3.18l1.9 1.9a9 9 0 0 0 15.059-4.035.75.75 0 0 0-.53-.918Z" clip-rule="evenodd" />
             </svg>
             <p class='text-center'>Reload Results</p>
