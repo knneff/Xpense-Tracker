@@ -1,8 +1,9 @@
 <?php
 
 $tempExpenseID = $currUserPending['expenseID'];
+$tempSubscriptionID = $currUserPending['subscriptionID'];
 $tempDescription = $currUserPending['description'];
-$tempExpenseTime = $currUserPending['expenseTime'];
+$tempExpenseTime = formatDateTime($currUserPending['expenseTime']);
 $tempCategory = $currUserPending['category'];
 foreach ($categories as $index => $value) {
     if ($tempCategory === $value['label']) {
@@ -58,6 +59,7 @@ $tempAmount = $currUserPending['amount'];
                 <input name='type' value='<?= $tempExpenseType ?>' hidden>
                 <input name='amount' value='<?= $tempAmount ?>' hidden>
                 <input name='expenseID' value='<?= $tempExpenseID ?>' hidden>
+                <input name='subscriptionID' value='<?= $tempSubscriptionID ?>' hidden>
                 <button type="submit" class="py-1 mt-4 text-lg sm:text-xl font-semibold btGreen2 rounded-3xl">Pay $<?= $tempAmount ?> </button>
             </form>
         </div>

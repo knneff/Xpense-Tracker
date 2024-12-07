@@ -27,7 +27,7 @@
             } else {
                 echo "<ul class='flex flex-col gap-2'>";
                 foreach ($currUserPendings as $index => $currUserPending) {
-                    require('userPendingRow.php');
+                    require('views/partials/userPendingRow.php');
                 }
                 echo "</ul>";
             }

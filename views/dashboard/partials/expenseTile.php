@@ -3,7 +3,7 @@
     <!-- Title and Link to Full List -->
     <div class='flex flex-row justify-between items-baseline py-1'>
         <p class="textGray text-xl font-semibold">Recent Expenses</p>
-        <a href='/expenselog' class='textTeal hover:underline'>See Full List</a>
+        <a href='/expenselog' class='textTeal hover:underline'>See All</a>
     </div>
 
     <!-- divider -->
