@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['addExpense'])) {
             $params = [
                 ':userID' => $userID,
                 ':title' => 'Subscription Pending Expense! <hr class="text-gray-600">',
-                ':body' => 'An amount of <b>$' . $amount . '</b> has been added to your pending expense from ' . $description . ' subscription.'
+                ':body' => 'An amount of $' . $amount . ' has been added to your pending expense from ' . $description . ' subscription.'
             ];
 
             $db->query($sql, $params);

@@ -1,13 +1,6 @@
-ayusin subscription list
-
-merge user settings and system settings
+scrollbar-custom  lagyan ng ganyang class ung mga scrollbared divs
 
 lagyan ng contact support page, parang chat.
-
-gmail verification???
-
-gumawa ng decent custom message to welcome message and reset password message to users thru gmail
-- wag na di naman testest ni sir yan
 
 kelangan i test mga functions. need major testings
 =============================================================================================================
