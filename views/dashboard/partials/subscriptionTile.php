@@ -11,9 +11,6 @@
     <!-- divider -->
     <hr class='border border-1 border-gray-400'>
 
-    <!-- divider 2 -->
-    <hr class='border border-1 border-gray-600'>
-
 
     <!-- List -->
     <ul class='pt-2 flex flex-col gap-2'>
@@ -38,7 +35,7 @@
                 }
                 $display = stringShortener($description, 16);
                 echo "<li class='textGray flex items-center gap-2 justify-between'>
-                                <p>$ $amount - $display</p>
+                                <p>₱$amount - $display</p>
                                 <span class='bgGreen2 rounded-lg px-1 py-[0.5]'>$periodDisplay</span>
                             </li>";
             }

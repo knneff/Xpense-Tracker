@@ -20,7 +20,7 @@
             for ($i = 0; $i < $expenseSize; $i++) {
                 $amount = $expenses[$i]['amount'];
                 $description = $expenses[$i]['description'];
-                $display = stringShortener('$ ' . $amount . ' - ' . $description, 22);
+                $display = stringShortener('₱' . $amount . ' - ' . $description, 22);
                 $category = $expenses[$i]['category'];
                 foreach ($categories as $index => $value) {
                     if ($category === $value['label']) {
