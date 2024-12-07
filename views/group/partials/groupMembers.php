@@ -29,7 +29,7 @@
       <h3 class="text-gray-400 text-lg font-bold tracking-wider">
         Members - <?= sizeof($groupMembersInfo) ?>
       </h3>
-      <ul class='flex flex-col'>
+      <ul class='flex flex-col max-h-96 overflow-auto'>
         <?php
         foreach ($groupMembersInfo as $memberInfo) {
           $userInfoTemp = $memberInfo;

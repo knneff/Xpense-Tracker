@@ -8,18 +8,20 @@
 
     <!-- divider -->
     <hr class='border border-1 border-gray-400'>
-        <?php
-            if (empty($goals)) {
-                echo "<p class='text-center py-12 font-semibold textGray'>No Goals and Plans Found :/</p>";
-            } else {
-                foreach ($goals as $goal) {
-                    $percent = floor($goal['paidAmount'] / $goal['amount'] * 100);
-                    $display = stringShortener($goal['description'], 15);
-                    echo "<li class='textGray flex justify-between items-center'>
-                                    <p><span class='bgGreen2 rounded-lg px-1 text-xs'>{$percent}%</span> $display</p>
-                                    <span class='bgGreen2 rounded-lg px-1 text-xs'>$ {$goal['amount']}</span>
-                                </li>";
-                }
-            }
-        ?>
+    <?php
+    if (empty($goals)) {
+        echo "<p class='text-center py-12 font-semibold textGray'>No Goals and Plans Found :/</p>";
+    } else {
+        foreach ($goals as $goal) {
+            $percent = floor($goal['paidAmount'] / $goal['amount'] * 100);
+            $display = stringShortener($goal['description'], 15);
+            echo "
+                <li class='textGray flex justify-between items-center'>
+                    <p><span class='bgGreen2 rounded-lg px-1 text-xs'>{$percent}%</span> $display</p>
+                    <span class='bgGreen2 rounded-lg px-1 text-xs'>$ {$goal['amount']}</span>
+                </li>
+            ";
+        }
+    }
+    ?>
 </div>
