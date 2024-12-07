@@ -10,6 +10,8 @@ if (!isset($values)) {
 ?>
 
 
+
+
 <div class="max-w-sm w-full rounded-lg shadow p-4 md:p-6">
 
     <div class="flex justify-between items-center w-full pb-2">
@@ -56,6 +58,8 @@ if (!isset($values)) {
 </div>
 
 
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
 <script>
     const getChartOptions = () => {
         return {
@@ -86,9 +90,16 @@ if (!isset($values)) {
                 enabled: true,
                 style: {
                     fontFamily: "Inter, sans-serif",
+                    // colors: ['#FFFFFF'],
                 },
             },
             legend: {
+                // show: false,
+                labels: {
+                    colors: '#FFFFFF',
+                    useSeriesColors: false,
+                },
+                // colors: '#FFFFFF',
                 position: "bottom",
                 fontFamily: "Inter, sans-serif",
             },
