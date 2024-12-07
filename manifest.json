@@ -1,7 +1,7 @@
 {
     "name": "Xpense Tracker",
     "short_name": "Xpense",
-    "start_url": "/index.html",
+    "start_url": "/dashboard",
     "display": "standalone",
     "background_color": "#072822",
     "theme_color": "#072822",
@@ -55,8 +55,14 @@
     ],
     "screenshots": [
         {
-            "src": "assets/screenshot/screenshot_narrow.png",
-            "sizes": "2160x3840",
+            "src": "assets/screenshot/screenshot_narrow1.png",
+            "sizes": "1000x2000",
+            "type": "image/png",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "assets/screenshot/screenshot_narrow2.png",
+            "sizes": "1000x2000",
             "type": "image/png",
             "form_factor": "narrow"
         },

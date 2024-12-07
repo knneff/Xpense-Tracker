@@ -12,10 +12,12 @@
     <!-- List -->
     <ul class='pt-1'>
         <?php
+        $expenseSize = 6 > count($expenses) ? count($expenses) : 6;
+
         if (empty($expenses)) {
             echo "<p class='text-center py-12 font-semibold textGray'>No Expense Found :/</p>";
         } else {
-            for ($i = 0; $i < 6; $i++) {
+            for ($i = 0; $i < $expenseSize; $i++) {
                 $amount = $expenses[$i]['amount'];
                 $description = $expenses[$i]['description'];
                 $display = stringShortener('$ ' . $amount . ' - ' . $description, 22);
