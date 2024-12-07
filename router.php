@@ -26,6 +26,7 @@ $routes = [
 
     //test
     "/test" => __DIR__ . "/views/test.view.php",
+    "/test2" => __DIR__ . "/views/test2.view.php",
 ];
 
 $pageTitles = [
@@ -54,6 +55,7 @@ $pageTitles = [
 
     //test
     "/test" => "Test",
+    "/test2" => "TESTTT",
 ];
 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];

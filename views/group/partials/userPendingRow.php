@@ -4,6 +4,14 @@ $tempExpenseID = $currUserPending['expenseID'];
 $tempDescription = $currUserPending['description'];
 $tempExpenseTime = $currUserPending['expenseTime'];
 $tempCategory = $currUserPending['category'];
+foreach ($categories as $index => $value) {
+    if ($tempCategory === $value['label']) {
+        $tempCategoryColor = $value['color'];
+        break;
+    } else {
+        $tempCategoryColor = $categories['others']['color'];
+    }
+}
 $tempExpenseType = $currUserPending['expenseType'];
 $tempAmount = $currUserPending['amount'];
 
@@ -16,7 +24,7 @@ $tempAmount = $currUserPending['amount'];
     <div class='flex justify-between items-center rounded-t-lg bgGreen2 px-2 py-1'>
         <div class='flex flex-row items-center gap-1'>
             <h2 class='text-xl font-semibold' id='description'> <?= stringShortener($tempDescription, 15) ?> </h2>
-            <p class='text-sm text-gray-300 bg-emerald-600 rounded-lg px-1'> <?= $tempCategory ?> </p>
+            <p class='text-sm text-white bg-[<?= $tempCategoryColor ?>] rounded-lg px-1'> <?= $tempCategory ?> </p>
         </div>
         <p class='text-lg'> <?= $tempExpenseTime ?> </p>
     </div>

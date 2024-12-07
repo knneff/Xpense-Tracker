@@ -3,6 +3,14 @@
 $tempDescription = $transactionRow['description']; //
 $tempExpenseTime = formatDateTime($transactionRow['expenseTime']); //
 $tempCategory = $transactionRow['category']; //
+foreach ($categories as $index => $value) {
+    if ($tempCategory === $value['label']) {
+        $tempCategoryColor = $value['color'];
+        break;
+    } else {
+        $tempCategoryColor = $categories['others']['color'];
+    }
+}
 $tempAmount = $transactionRow['amount']; //
 $tempExpenseId = $transactionRow['expenseID']; //
 $tempExpenseState = $transactionRow['expenseState'];
@@ -44,7 +52,7 @@ $userInfoTemp = $transactionRow;
         <!-- right -->
         <div class='flex flex-col items-end gap-2'>
             <?php require('userIcon.view.php') ?>
-            <p class='text-md text-gray-300 bgGreen2 rounded-lg px-1'> <?= $tempCategory ?> </p>
+            <p class='text-md text-white bg-[<?= $tempCategoryColor ?>] rounded-lg px-1'> <?= $tempCategory ?> </p>
         </div>
     </div>
 </div>

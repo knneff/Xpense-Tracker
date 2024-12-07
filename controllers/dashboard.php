@@ -9,62 +9,18 @@ $userID = $_SESSION['userid'];
 //stores information about current user
 $userInfo = $db->query('select * from users where userid = ?;', [$userID])->fetch(PDO::FETCH_ASSOC);
 
+// title ng page
+$title = "Hello, {$userInfo['username']}!";
+
 //fetch all the current user's expenses and subscription (for expenseTile and subscriptionTile)
 $expenses = $db->query('select amount, description, category from expenses where userID=? ORDER BY expenses.expenseTime DESC;', [$userID])->fetchAll(PDO::FETCH_ASSOC);
 $subscriptions = $db->query('select amount, description, period, category from subscriptions WHERE userid=? ORDER BY paymentDateTime DESC LIMIT 4;', [$userID])->fetchAll(PDO::FETCH_ASSOC);
 $goals = $db->query('select amount, description, paidAmount from goals WHERE userid=? ORDER BY goalID DESC LIMIT 6;', [$userID])->fetchAll(PDO::FETCH_ASSOC);
-
-// title ng page
-$title = "Hello, {$userInfo['username']}!";
+$groups = $db->query("SELECT clan.groupName, clan.groupIcon, clan.groupID FROM clan join clanMembers ON clan.groupID=clanMembers.groupID WHERE clanMembers.userid = ? ORDER BY clan.groupID DESC LIMIT 3", [$userID])->fetchAll(PDO::FETCH_ASSOC);
 
 // mga information sa charts potangina bawal maduling dito
-$categories = [
-    'food' => [
-        'label' => 'Food',
-        'color' => '#1C64F2',
-        'amount' => 0,
-    ],
-    'enter' => [
-        'label' => 'Entertainment',
-        'color' => '#FDBA8C',
-        'amount' => 0,
-    ],
-    'trans' => [
-        'label' => 'Transportation',
-        'color' => '#16BDCA',
-        'amount' => 0,
-    ],
-    'PC' => [
-        'label' => 'Personal Care',
-        'color' => '#F6FD87',
-        'amount' => 0,
-    ],
-    'HW' => [
-        'label' => 'Health & Wellness',
-        'color' => '#B6FD8E',
-        'amount' => 0,
-    ],
-    'shopping' => [
-        'label' => 'Shopping',
-        'color' => '#FD9D78',
-        'amount' => 0,
-    ],
-    'utils' => [
-        'label' => 'Utilities',
-        'color' => '#B9E0FD',
-        'amount' => 0,
-    ],
-    'misc' => [
-        'label' => 'Miscellaneous',
-        'color' => '#F0B1FD',
-        'amount' => 0,
-    ],
-    'others' => [
-        'label' => 'Others',
-        'color' => '#E74694',
-        'amount' => 0,
-    ]
-];
+
+require('controllers/noBars/categories.php');
 $totalExpense = 0;
 foreach ($expenses as $index => $expense) {
     if ($expense['category'] === $categories['food']['label']) {
