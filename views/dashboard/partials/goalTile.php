@@ -1,5 +1,5 @@
 <!-- GOALS -->
-<div class='shadow-lg tlGreen rounded-3xl w-80 h-48 mx-2 my-2 px-4'>
+<div class='shadow-lg tlGreen rounded-3xl w-full sm:w-80 h-48 mx-2 my-2 px-4'>
     <!-- Title and Link to Full List -->
     <div class='flex flex-row justify-between items-baseline py-1'>
         <p class="textGray text-xl font-semibold">Goals and Plans</p>

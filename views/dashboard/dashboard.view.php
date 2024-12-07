@@ -5,9 +5,9 @@
     <!-- LEFT PANELS HERE-->
     <div class='order-2 sm:order-1 flex-1 flex flex-wrap'>
         <?php require('partials/expenseTile.php') ?>
-        <?php require('partials/goalTile.php') ?>
-        <?php require('partials/subscriptionTile.php') ?>
         <?php require('partials/groupTile.php') ?>
+        <?php require('partials/subscriptionTile.php') ?>
+        <?php require('partials/goalTile.php') ?>
         <?php require('partials/overspendingTile.php') ?>
     </div>
 
