@@ -81,6 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         $category = $_POST['category'];
         $description = $_POST['desc'];
         $expenseType = 'group';
+        date_default_timezone_set('Asia/Manila');
         $currentDateTime = new DateTime();
         $currentDateTimeString = $currentDateTime->format('Y-m-d H:i:s');
         $groupID = $_GET['id'];
@@ -126,13 +127,20 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     //when a user accepts a pending expense
     else if (isset($_POST['acceptPending'])) {
         $amount = $_POST['amount'];
+        $groupID = $_GET['id'];
+
+        //WHEN USER HAS INSUFFICIENT BALANCE?
+        if ($amount > $_SESSION['balance']) {
+            alertRedirect("Insufficient Balance!", '/group?id=' . $groupID);
+        }
+
         $category = $_POST['category'];
         $description = $_POST['desc'];
         $expenseType = $_POST['type'];
         $expenseID = $_POST['expenseID'];
+        date_default_timezone_set('Asia/Manila');
         $currentDateTime = new DateTime();
         $currentDateTimeString = $currentDateTime->format('Y-m-d H:i:s');
-        $groupID = $_GET['id'];
 
         //update expenseshistory expenseState to 'paid' and expenseTime to Now()
         $db->query("UPDATE expensesHistory SET expenseTime = ?, expenseState = 'paid' WHERE expenseID = ?;", [$currentDateTimeString, $expenseID]);
@@ -147,8 +155,9 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     //when a user declines a pending expense
     else if (isset($_POST['declinePending'])) {
         $expenseID = $_POST['expenseID'];
-        $currentDateTime = new DateTime();
         $groupID = $_GET['id'];
+        date_default_timezone_set('Asia/Manila');
+        $currentDateTime = new DateTime();
         $currentDateTimeString = $currentDateTime->format('Y-m-d H:i:s');
         //update expenseshistory expenseState to 'paid' and expenseTime to Now()
         $db->query("UPDATE expensesHistory SET expenseTime = ?, expenseState = 'declined' WHERE expenseID = ?;", [$currentDateTimeString, $expenseID]);

@@ -1,12 +1,19 @@
 <div class='shadow-lg tlGreen rounded-3xl w-full sm:w-80 h-48 mx-2 my-2 px-4'>
     <!-- Title and Link to Full List -->
     <div class='flex flex-row justify-between items-baseline py-1'>
-        <p class="textGray text-xl font-semibold">Subscriptions</p>
-        <a href='/subscriptions' class='textTeal hover:underline'>See Full List</a>
+        <div class='flex flex-row gap-1 textGray items-center'>
+            <p class=" text-xl font-semibold">Subscriptions</p>
+            <?= ($pendingSubCount > 0) ? "<span class='text-sm px-2 bgRed rounded-3xl text-center'>$pendingSubCount</span>" : "" ?>
+        </div>
+        <a href='/subscriptions' class='textTeal hover:underline'>See All</a>
     </div>
 
     <!-- divider -->
     <hr class='border border-1 border-gray-400'>
+
+    <!-- divider 2 -->
+    <hr class='border border-1 border-gray-600'>
+
 
     <!-- List -->
     <ul class='pt-2 flex flex-col gap-2'>
@@ -38,7 +45,6 @@
                             </li>";
             }
         }
-
         ?>
     </ul>
 </div>
