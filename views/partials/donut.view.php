@@ -9,6 +9,17 @@ if (!isset($values)) {
 
 ?>
 
+<style>
+    #donut-chart .apexcharts-legend-text {
+        color: #d1d5db !important;
+    }
+    
+    #donut-chart .apexcharts-datalabel-value,
+    #donut-chart .apexcharts-datalabel-label {
+        fill: #d1d5db !important;
+    }
+</style>
+
 <!-- TITLE  -->
 <div class="flex justify-start border-b border-gray-300 pb-6 mb-4">
     <div class="flex justify-center items-center">
@@ -54,7 +65,7 @@ if (!isset($values)) {
 </div>
 
 <!-- Donut Chart Is Here -->
-<div class="py-4 tlGreen2 rounded-xl" id="donut-chart"></div>
+<div class="py-4 tlGreen rounded-xl" id="donut-chart"></div>
 
 <script>
     const getChartOptions = () => {
@@ -86,21 +97,21 @@ if (!isset($values)) {
                                 show: true,
                                 label: "Total",
                                 fontFamily: "Inter, sans-serif",
+                                color: "#d1d5db",  // Ensure this is applied correctly
                                 formatter: function(w) {
                                     const sum = w.globals.seriesTotals.reduce((a, b) => {
                                         return a + b
                                     }, 0)
                                     return '100%' // ganito value neto before: '=' + sum + '%' ambobo
                                 },
-                                color: '#d1d5db',
                             },
                             value: {
                                 show: true,
                                 fontFamily: "Inter, sans-serif",
                                 offsetY: -20,
-                                color: '#d1d5db',
+                                color: "#d1d5db",  // Same color for value labels inside donut slices
                                 formatter: function(value) {
-                                    return value + "%"
+                                    return value + "%";
                                 },
                             },
                         },
@@ -150,4 +161,5 @@ if (!isset($values)) {
         const chart = new ApexCharts(document.getElementById("donut-chart"), getChartOptions());
         chart.render();
     }
+
 </script>
