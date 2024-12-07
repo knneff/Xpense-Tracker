@@ -29,12 +29,10 @@
                 } else {
                     $periodDisplay = '???';
                 }
-                $tag = $periodDisplay . ' $' . $amount;
                 $display = stringShortener($description, 16);
-                $category = $subscription['category'];
-                echo "<li class='textGray flex items-center gap-2'>
-                                <span class='bgGreen2 rounded-lg px-1'>$tag</span>
-                                <p>$display</p>
+                echo "<li class='textGray flex items-center gap-2 justify-between'>
+                                <p>$ $amount - $display</p>
+                                <span class='bgGreen2 rounded-lg px-1 py-[0.5]'>$periodDisplay</span>
                             </li>";
             }
         }

@@ -16,10 +16,14 @@
             $percent = floor($goal['paidAmount'] / $goal['amount'] * 100);
             $display = stringShortener($goal['description'], 15);
             echo "
-                <li class='textGray flex justify-between items-center'>
-                    <p><span class='bgGreen2 rounded-lg px-1 text-xs'>{$percent}%</span> $display</p>
-                    <span class='bgGreen2 rounded-lg px-1 text-xs'>$ {$goal['amount']}</span>
-                </li>
+                <div class='textGray flex justify-between items-center my-2'>
+                    <div class='flex gap-x-2'> 
+                        <img class = 'size-7 rounded-3xl' src ='{$goal['groupIcon']}'>
+                        <div class='bgGreen2 rounded-lg px-1 text-base'>{$percent}%</div>
+                        <div>$display</div>
+                    </div>
+                    <div class='bgGreen2 rounded-lg px-1 text-base'>$ {$goal['amount']}</div>
+                </div>
             ";
         }
     }
