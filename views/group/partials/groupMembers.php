@@ -8,7 +8,7 @@
   <div>
 
     <!-- Owner-->
-    <div>
+    <div class=>
       <div class='flex flex-row justify-between'>
         <h3 class="text-gray-400 text-lg font-bold tracking-wider">Owner</h3>
         <button onclick="toggleMemberMenu()" title="Menu" class="">
@@ -29,7 +29,7 @@
       <h3 class="text-gray-400 text-lg font-bold tracking-wider">
         Members - <?= sizeof($groupMembersInfo) ?>
       </h3>
-      <ul class='flex flex-col max-h-96 overflow-auto'>
+      <ul class='flex flex-col'>
         <?php
         foreach ($groupMembersInfo as $memberInfo) {
           $userInfoTemp = $memberInfo;

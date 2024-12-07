@@ -163,6 +163,45 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         $db->query("UPDATE expensesHistory SET expenseTime = ?, expenseState = 'declined' WHERE expenseID = ?;", [$currentDateTimeString, $expenseID]);
         redirect('/group?id=' . $groupID);
     }
+    //when a user is kicked
+    else if (isset($_POST['kick'])) {
+        $userToKick = $_POST['kick'];
+        $groupID = $_POST['group'];
+        $role = $_POST['role'];
+        // if owner is being kicked
+        if ($role === 'owner') {
+            $membersList = $db->query("SELECT userID from clanMembers WHERE groupID = ? and roles = ?", [$groupID, 'member'])->fetchAll(PDO::FETCH_ASSOC);
+            if (sizeof($membersList) > 0) {
+                // change the role of the first member result to owner 
+                $nextOwner = $membersList[0]['userID'];
+                $db->query("UPDATE clanMembers SET roles = 'owner' WHERE userID = ?;", [$nextOwner]);
+
+                // change group owner from clan [niner]
+                $db->query("UPDATE clan SET groupOwnerID = ? WHERE groupID = ?;", [$nextOwner, $groupID]);
+
+                // remove association from the group [KICK from group] [niner]
+                $db->query("DELETE FROM clanMembers WHERE userID = ? AND groupID = ?;", [$userToKick, $groupID]);
+            }
+            // when there's no other member from the group other than the owner [NO ONE LEFT THE GROUP]
+            else {
+                // remove association from the group [KICK from group]
+                $db->query("DELETE FROM clanMembers WHERE userID = ? AND groupID = ?;", [$userToKick, $groupID]);
+
+                //delete group photo if it's not the _default.png
+                $groupIcon = $db->query("SELECT groupIcon from clan WHERE groupID = ?;", [$groupID])->fetchColumn();
+                if ($groupIcon != 'assets/icons/group/_default.png') {
+                    unlink($groupIcon);
+                }
+
+                //delete group
+                $db->query("DELETE FROM clan WHERE groupID = ?;", [$groupID]);
+            }
+        } else {
+            // remove association from the group [KICK from group]
+            $db->query("DELETE FROM clanMembers WHERE userID = ? AND groupID = ?;", [$userToKick, $groupID]);
+        }
+        redirect('/group?id=' . $groupID);
+    }
 }
 //EVERYTHING GET RELATED
 else if ($_SERVER['REQUEST_METHOD'] === "GET") {
