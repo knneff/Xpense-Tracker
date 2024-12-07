@@ -1,5 +1,5 @@
 <!-- Group Members List -->
-<div id='memberMenu' class="flex-col justify-between tlGreen gap-2 h-full px-4 pb-4 top-0 right-0 
+<div id='memberMenu' class="z-50 flex-col justify-between tlGreen gap-2 h-full px-4 pb-4 top-0 right-0 
   hidden w-0 fixed pt-20
   md:w-60 md:flex md:static md:pt-4
   ">

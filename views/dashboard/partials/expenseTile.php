@@ -24,6 +24,8 @@
                     if ($category === $value['label']) {
                         $categoryColor = $value['color'];
                         break;
+                    } else {
+                        $categoryColor = $categories['others']['color'];
                     }
                 }
                 echo "

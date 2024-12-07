@@ -207,4 +207,5 @@ else if ($_SERVER['REQUEST_METHOD'] === "GET") {
     }
 }
 
+require('controllers/noBars/categories.php');
 require('views/group/group.view.php');

@@ -17,5 +17,6 @@ $userID = $_SESSION['userid'];
 $expenses = $db->query('select * from expenses where userid=? ORDER BY expenseTime DESC;', [$userID])->fetchAll(PDO::FETCH_ASSOC);
 
 $title = 'Expenses Log';
+require('controllers/noBars/categories.php');
 
 require('views/expenselog.view.php');
