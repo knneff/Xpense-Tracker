@@ -140,7 +140,7 @@
 </main>
 <main id="goalUpdatePanel" class="hidden">
     <div id="goalUpdateOverlay" class="z-50 flex justify-center items-center fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50">
-        <div class="flex flex-col relative justify-center text-base sm:text-lg text-gray-300 tlGreen p-8 rounded-3xl max-w-xs sm:max-w-none">
+        <div class="flex flex-col relative justify-center text-base sm:text-lg text-gray-300 bgGreen p-8 rounded-3xl max-w-xs sm:max-w-none">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -152,7 +152,7 @@
                     id="goalUpdateDescription"
                     name="goalUpdateDescription"
                     type="text"
-                    class="h-auto sm:h-11 text-left text-2xl sm:text-4xl font-bold textGray tlGreen focus:outline-none mr-8 sm:mr-10">
+                    class="h-auto sm:h-11 text-left text-2xl sm:text-4xl font-bold textGray bgGreen focus:outline-none mr-8 sm:mr-10">
                 <hr class="border-gray-300 mt-2 mb-5" />
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div class="flex items-center justify-center h-full">
@@ -207,7 +207,7 @@
                             min="0"
                             max=""
                             step="0.01"
-                            class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none" />
+                            class="p-3 rounded-lg border border-gray-400 bgGreen focus:outline-none" />
                         <div
                             class="text-2xl sm:text-3xl font-semibold textGray"
                             id="complete">

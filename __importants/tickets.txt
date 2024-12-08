@@ -3,12 +3,10 @@ IMPORTANT NOTES:
 
 TICKETS [MOST IMPORTANT TO LEAST]:
 - Establish a website / domain (AASK PA TO KAY SIR TOM THOUGH)
-- Ayusin system Settings (KEN DITO)
  + storing of system settings info ??
  + pagsasama user settings and system settings ()
 - GENERATE INVITE LINK SIRA
 - Statistics Page Completion 
-- lahat ng pop up panel: bgGreen instead of tlGreen (KEN DITO)
 - Bugs: ayusin mga overlay issues
 - audit log looks
 - Editing of group info
@@ -17,12 +15,14 @@ TICKETS [MOST IMPORTANT TO LEAST]:
 - Transferring of ownership sa group
 - Role-based access functionalities (e.g., member cannot create invite link, kick, and add expense)
 - group and group icons (_default.png) [Standard default name]
-- Better balance editing system (KEN DITO)
 - landing - get started behavior (dashboard kapag may nakalogin)
-- bug sa userSettings: walang error message kapag naginput ng invalid email (KEN DITO)
 - default group selection (remember last visited group sa database)
+
+- Better balance editing system (KEN DITO)
+- bug sa userSettings: walang error message kapag naginput ng invalid email (KEN DITO)
 - Input validators: proper case first and last name input and strong passwords (KEN DITO)
 - Currency change sa sytem settings (KEN DITO)
+- Ayusin system Settings (KEN DITO)
 
 === Other concerns ===
 

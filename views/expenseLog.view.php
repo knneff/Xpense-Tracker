@@ -4,7 +4,7 @@
     <form class='textGray gap-4 flex flex-row justify-between sm:items-center'>
         <!-- FILTERS -->
         <div class='flex flex-col sm:flex-row gap-4'>
-            <div class='flex flex-row justify-start items-center gap-1'>
+            <div class='flex flex-row justify-start items-center gap-1 tlGreen p-2 rounded-md'>
                 <p>Category</p>
                 <select
                     name="category"
@@ -21,7 +21,7 @@
                     <option value="Miscellaneous" <?= ($categ === 'Miscellaneous') ? 'selected' : '' ?>>Miscellaneous</option>
                 </select>
             </div>
-            <div class='flex flex-row justify-start items-center gap-1'>
+            <div class='flex flex-row justify-start items-center gap-1 tlGreen p-2 rounded-md'>
                 <p>Type</p>
                 <select
                     name="type"

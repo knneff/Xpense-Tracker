@@ -8,7 +8,7 @@
 <!-- Add Panel -->
 <main id="addPanel" class="hidden">
     <div id="addOverlay" class="z-50 flex justify-center items-center fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50">
-        <div class="flex justify-center text-base sm:text-lg text-gray-300 tlGreen p-8 rounded-3xl">
+        <div class="flex justify-center text-base sm:text-lg text-gray-300 bgGreen p-8 rounded-3xl">
             <div>
                 <h2 class="text-4xl font-semibold text-center textGray">Add Expense</h2>
                 <hr class="my-4 border-gray-300" />
@@ -38,14 +38,14 @@
                         min="0"
                         step="0.01"
                         required
-                        class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none">
+                        class="p-3 rounded-lg border border-gray-400 bgGreen focus:outline-none">
                     <div id="forms2" class="hidden">
                         <div class="flex">
                             <div class="w-3/5">
                                 <select
                                     id="form2"
                                     name="period"
-                                    class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none w-full">
+                                    class="p-3 rounded-lg border border-gray-400 bgGreen focus:outline-none w-full">
                                     <option value="" disabled selected>Subscription Plan</option>
                                     <option value="1">Daily</option>
                                     <option value="7">Weekly</option>
@@ -70,7 +70,7 @@
                         id="category"
                         name="category"
                         required
-                        class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none">
+                        class="p-3 rounded-lg border border-gray-400 bgGreen focus:outline-none">
                         <option value="" selected disabled>Category</option>
                         <option value="Food">Food</option>
                         <option value="Transportation">Transportation</option>
@@ -89,13 +89,13 @@
                         minlength="1"
                         maxlength="50"
                         required
-                        class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none">
+                        class="p-3 rounded-lg border border-gray-400 bgGreen focus:outline-none">
                     <input
                         type="datetime-local"
                         id="datetime"
                         name="datetime"
                         required
-                        class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none">
+                        class="p-3 rounded-lg border border-gray-400 bgGreen focus:outline-none">
                     <input
                         type="hidden"
                         id="type"
