@@ -1,116 +1,45 @@
-scrollbar-custom  lagyan ng ganyang class ung mga scrollbared divs
+IMPORTANT NOTES:
+- scrollbar-custom  lagyan ng ganyang class ung mga scrollbared divs
 
-=============================================================================================================
-
-pagsasama user settings and system settings (SI KEN NA DITO)
-
-- font: ayusin gawing inter for all devices
-- expenselog: center yung price
-  - bigyan ng filter search
+TICKETS [MOST IMPORTANT TO LEAST]:
+- Establish a website / domain (AASK PA TO KAY SIR TOM THOUGH)
+- Ayusin system Settings (KEN DITO)
+ + storing of system settings info ??
+ + pagsasama user settings and system settings ()
+- Statistics Page Completion
+- Overspending System
 - lahat ng pop up panel: bgGreen instead of tlGreen
-- group: separate sidebar and shared sidebar
-- mga category: bigyan ng kulay
+- Bugs: ayusin mga overlay issues
+- Ayusin About Us / Contacts Page
+  + Picture
+  + Phone Numbers
+  + Email Address
+- audit log looks
+- lagyan ng contact support page, parang chat.
+- Editing of group info
+- finalizing database (clean audit log)
+- assigning admin user (can only see audit log)
+- Transferring of ownership sa group
+- Role-based access functionalities (e.g., member cannot create invite link, kick, and add expense)
+- group and group icons (_default.png) [Standard default name]
+- Better balance editing system
+- landing - get started behavior (dashboard kapag may nakalogin)
+- bug sa userSettings: walang error message kapag naginput ng invalid email
+- default group selection (remember last visited group sa database)
+- Input validators: proper case first and last name input and strong passwords
 
-Statistics
-- nigga text??
-- choosing of time period
-- expenseType pie????
 
-expense log
-- filter
-- chart to display
+=== Other concerns ===
 
 singular body
 - para di na need i-copy and paste yung changes sa iba pang body (body, bodyNoBars, bodyGroup)
 - lagay na lang conditions for each url anong part ng body yung gagana and hindi
 
-notification system
-- overspending
-
-cache or just save sa database????
-- storing of system settings info
-- last group na visited (as default group kapag walang specified)
-- remembering ng inexpand and kinollapse ni user na views 
-
-Sharing
-- group members list
-  + kicking of members (owner/admin)
-    + transfer of ownership if owner yung nakick
-    + deleting ng group of group when no members
-  + reusable?
-  + hover sa user sa member ng group to show more details (e.g., full name)???
-- admin/owner functionalities
-  + deleting of group?
-    + what happens to members?
-    + what happens to expenses when its group is deleted? (group deleted message?)
-  + editing of group info?
-  + ADD EXPENSE MECHANISM
-  + Transferring of ownership?
-- member functionalities
-  + leaving group
-  + CANNOT CREATE AND SEE INVITE LINK
-  + ADD EXPENSE MECHANISM NOT VISIBLE??
-- MESSAGING?? (AJAX TO FOR SURE)
-- maling time naeenter sa mysql wtf
-- unlinking of image when group is deleted
-- pendings icon
-
-dashboard
-- subscription?
-- overspending?
-- groups?
- + group list
-- goals?
-
-subscription list??
-- bars to include subscription list as well sa expense log???
-
-uniform style default icons
-- standard name (_defualt.png)
-- user icons (OKS NA)
-- group icons (OKS NA)
-- goal icons (select?)
-
-Input Validators
-- proper case first and last name input
-- strong passwords
-
-bug
-- userSettings: walang error message kapag naginput ng invalid email
-- overlay issue sa mga absolute na element sa share
-
-landing
-- get started behavior (dashboard kapag may nakalogin)
-- ayusin logo sa navbar
-
-nav bar
-- more info sa profile pic icon nav bar (e.g., usernamem, firstName, lastName)
-
-Audit Log
-- Admin User: audit log accessible only to admin user system
-
-Goal setting
-- link sa database
-
-Statistics page
-- mechanism?
-- link sa database e.g., how to search expenses that are within 7 days ago
-
-search sa expense history?
-
-=== Other concerns ===
-
-finalize mysql
-- finalize columns to put
-- clean triggers for audit log
-
-pwa manifest file??
-
 === MGA IF MAY TIME PA ===
+- Statistics period ????
 - edit/set balance functionality??
-- Refund balance dialogue when expense is deleted
-- Custom sharing expense (individually set for each)
-  + subscription on groups
+- Contacts Page
+- Not pre-defined user icon
 - Income (automatic add ng time and transaction sa bank)
 - currency conversion (for shared expense tapos magkaiba currency settings)
 - OCR / Receipt Scanner

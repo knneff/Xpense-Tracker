@@ -4,7 +4,7 @@
         <?php require('userIcon.view.php') ?>
     </div>
     <!-- Add Expense Button -->
-    <div class='flex flex-row justify-center items-center gap-1' id='addAmountField<?= $index ?>'>
+    <div class='flex flex-row justify-center items-center gap-1 pr-2' id='addAmountField<?= $index ?>'>
         <button onclick='addBtn<?= $index ?>()' type='button' class='btGreen rounded-lg py-1 px-2'>Add Expense</button>
     </div>
     <!-- Behavior -->
