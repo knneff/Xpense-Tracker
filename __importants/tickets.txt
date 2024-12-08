@@ -17,7 +17,7 @@ TICKETS [MOST IMPORTANT TO LEAST]:
 - landing - get started behavior (dashboard kapag may nakalogin)
 - default group selection (remember last visited group sa database)
 
-- Input validators: proper case first and last name input and strong passwords (KEN DITO)
+- Input validators: min & max on all input fields (KEN DITO)
 - Currency change sa sytem settings (KEN DITO)
 - Ayusin system Settings (KEN DITO)
 
