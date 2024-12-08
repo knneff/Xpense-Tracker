@@ -1,6 +1,6 @@
 <?php require('partials/bodyGroup.php') ?>
 
-<div class="flex justify-center gap-10 h-full items-center">
+<div class="flex justify-center gap-10 h-full w-full bgGreen items-center">
 
   <!-- CREATE GROUP -->
   <div class="tlGreen text-gray-300 p-8 rounded-3xl shadow-lg w-11/12 max-w-md">
