@@ -6,6 +6,7 @@ TICKETS [MOST IMPORTANT TO LEAST]:
 - Ayusin system Settings (KEN DITO)
  + storing of system settings info ??
  + pagsasama user settings and system settings ()
+- GENERATE INVITE LINK SIRA
 - Statistics Page Completion 
 - lahat ng pop up panel: bgGreen instead of tlGreen (KEN DITO)
 - Bugs: ayusin mga overlay issues
@@ -40,3 +41,5 @@ singular body
 - Multiple Wallet
 - Messaging (for sharing)
 - Timezones
+
+

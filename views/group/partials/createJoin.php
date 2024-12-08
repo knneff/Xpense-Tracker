@@ -1,4 +1,4 @@
-<section id="createJoinGroupPanel" class="hidden justify-center items-center fixed inset-0 bg-black bg-opacity-50 transition-opacity">
+<section id="createJoinGroupPanel" class="z-50 hidden justify-center items-center fixed inset-0 bg-black bg-opacity-50 transition-opacity">
     <div class=" tlGreen text-gray-300 p-8 rounded-3xl shadow-lg w-11/12 max-w-md">
         <!-- Heading -->
         <h2 id="panelHeading" class="text-4xl font-semibold text-center mb-4">Create a Group</h2>

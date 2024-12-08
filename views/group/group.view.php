@@ -5,7 +5,7 @@
 <?php require('partials/groupSidebar.php'); ?>
 
 <!-- Group Content (TITLE AND CONTENT)-->
-<div class='flex flex-col flex-1'>
+<div class='z-45 flex flex-col flex-1'>
 
   <!-- Title and Balance (ROW) -->
   <div class='flex flex-row bgGreen justify-between h-16 pr-4 py-4 shadow-lg text-white font-bold border-gray-600 border-t border-b border-r rounded-tr-lg'>

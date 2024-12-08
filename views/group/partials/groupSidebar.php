@@ -1,4 +1,4 @@
-<div class="bgGreen w-16 shadow-lg z-20 border-gray-600 border-l rounded-tl-xl ">
+<div class="bgGreen w-16 shadow-lg  border-gray-600 border-l rounded-tl-xl ">
 
     <!-- Current Group -->
     <div id='currGroup' class="flex items-center bgGreen h-16 rounded-tl-xl border-gray-600 border-l border-t border-b relative">
@@ -13,6 +13,7 @@
         </button>
     </div>
 
+    <!-- OTHER GROUPS -->
     <?php
     foreach ($groups as $index => $group) {
         if ($group['groupID'] != $groupID) {
@@ -23,7 +24,7 @@
           <img
             src='$tempGroupIcon'
             class='h-12 w-12 rounded-3xl mt-2 mb-2 mx-auto hover:rounded-xl transition-all ease-linear cursor-pointer shadow-lg' />
-          <div class='bg-gray-900 text-white absolute left-20 rounded-md top-2 shadow-md p-2 text-xs font-bold min-w-max group-hover:scale-100 transition-all duration-100 scale-0 origin-left'>
+          <div class='z-50 bg-gray-900 text-white absolute left-20 rounded-md top-2 shadow-md p-2 text-xs font-bold min-w-max group-hover:scale-100 transition-all duration-100 scale-0 origin-left'>
             $tempGroupName
           </div>
         </a>

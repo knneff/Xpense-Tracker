@@ -176,11 +176,12 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                 $nextOwner = $membersList[0]['userID'];
                 $db->query("UPDATE clanMembers SET roles = 'owner' WHERE userID = ?;", [$nextOwner]);
 
-                // change group owner from clan [niner]
+                // change group owner from clan
                 $db->query("UPDATE clan SET groupOwnerID = ? WHERE groupID = ?;", [$nextOwner, $groupID]);
 
-                // remove association from the group [KICK from group] [niner]
+                // remove association from the group [KICK from group]
                 $db->query("DELETE FROM clanMembers WHERE userID = ? AND groupID = ?;", [$userToKick, $groupID]);
+                dd($userToKick, $groupID);
             }
             // when there's no other member from the group other than the owner [NO ONE LEFT THE GROUP]
             else {
