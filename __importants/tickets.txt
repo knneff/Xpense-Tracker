@@ -5,7 +5,6 @@ TICKETS [MOST IMPORTANT TO LEAST]:
 - Establish a website / domain (AASK PA TO KAY SIR TOM THOUGH)
  + storing of system settings info ??
  + pagsasama user settings and system settings ()
-- GENERATE INVITE LINK SIRA
 - Statistics Page Completion 
 - Bugs: ayusin mga overlay issues
 - audit log looks

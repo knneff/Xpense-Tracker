@@ -172,7 +172,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         if ($role === 'owner') {
             $membersList = $db->query("SELECT userID from clanMembers WHERE groupID = ? and roles = ?", [$groupID, 'member'])->fetchAll(PDO::FETCH_ASSOC);
             if (sizeof($membersList) > 0) {
-                // change the role of the first member result to owner 
+                // change the role of the first member result to owner
                 $nextOwner = $membersList[0]['userID'];
                 $db->query("UPDATE clanMembers SET roles = 'owner' WHERE userID = ?;", [$nextOwner]);
 
@@ -181,7 +181,8 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
                 // remove association from the group [KICK from group]
                 $db->query("DELETE FROM clanMembers WHERE userID = ? AND groupID = ?;", [$userToKick, $groupID]);
-                dd($userToKick, $groupID);
+
+                dd('userid to kick: ' . $userToKick, 'from group: ' . $groupID, 'new owner: ' . $nextOwner);
             }
             // when there's no other member from the group other than the owner [NO ONE LEFT THE GROUP]
             else {

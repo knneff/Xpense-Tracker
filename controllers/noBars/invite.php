@@ -5,12 +5,12 @@ $userID = $_SESSION['userid'];
 
 //generate token
 if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['groupID'])) {
-
     //generate grouptoken
     $groupID = $_POST['groupID'];
     $userID = $_SESSION['userid'];
     $token = bin2hex(random_bytes(16));
     $token_hash = hash("sha256", $token);
+    date_default_timezone_set('Asia/Manila');
     $expiry = date("Y-m-d H:i:s", time() + 60 * 30);
 
     //stores token to group
