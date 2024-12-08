@@ -58,7 +58,7 @@
 </div>
 <main id="goalPanel" class="hidden">
     <div id="goalOverlay" class="z-50 flex justify-center items-center fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50">
-        <div class="flex flex-col justify-center text-base sm:text-lg text-gray-300 tlGreen p-8 rounded-3xl">
+        <div class="flex flex-col justify-center text-base sm:text-lg text-gray-300 bgGreen p-8 rounded-3xl">
             <h2 class="text-4xl font-semibold text-center textGray">Goals and Plans</h2>
             <hr class="mt-4 mb-6 border-gray-300" />
             <form id="goalForm" method="POST" class="flex flex-col text-base gap-5" enctype="multipart/form-data">
@@ -101,7 +101,7 @@
                             placeholder="Name of Goal or Plan"
                             minlength="1"
                             maxlength="30"
-                            class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none"
+                            class="p-3 rounded-lg border border-gray-400 bgGreen focus:outline-none"
                             required />
                         <input
                             type="number"
@@ -109,13 +109,13 @@
                             placeholder="Amount to Achieve"
                             min="0"
                             step="0.01"
-                            class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none"
+                            class="p-3 rounded-lg border border-gray-400 bgGreen focus:outline-none"
                             required />
                         <select
                             id="goalCategory"
                             name="goalCategory"
                             required
-                            class="p-3 rounded-lg border border-gray-400 tlGreen focus:outline-none">
+                            class="p-3 rounded-lg border border-gray-400 bgGreen focus:outline-none">
                             <option value="" selected disabled>Category</option>
                             <option value="Food">Food</option>
                             <option value="Transportation">Transportation</option>

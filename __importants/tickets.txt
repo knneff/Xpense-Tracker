@@ -1,33 +1,27 @@
 IMPORTANT NOTES:
-- scrollbar-custom  lagyan ng ganyang class ung mga scrollbared divs
+- scrollbar-custom  lagyan ng ganyang class ung mga scrollbared divs (KEN DITO)
 
 TICKETS [MOST IMPORTANT TO LEAST]:
 - Establish a website / domain (AASK PA TO KAY SIR TOM THOUGH)
 - Ayusin system Settings (KEN DITO)
  + storing of system settings info ??
  + pagsasama user settings and system settings ()
-- Statistics Page Completion
-- Overspending System
-- lahat ng pop up panel: bgGreen instead of tlGreen
+- Statistics Page Completion 
+- lahat ng pop up panel: bgGreen instead of tlGreen (KEN DITO)
 - Bugs: ayusin mga overlay issues
-- Ayusin About Us / Contacts Page
-  + Picture
-  + Phone Numbers
-  + Email Address
 - audit log looks
-- lagyan ng contact support page, parang chat.
 - Editing of group info
 - finalizing database (clean audit log)
 - assigning admin user (can only see audit log)
 - Transferring of ownership sa group
 - Role-based access functionalities (e.g., member cannot create invite link, kick, and add expense)
 - group and group icons (_default.png) [Standard default name]
-- Better balance editing system
+- Better balance editing system (KEN DITO)
 - landing - get started behavior (dashboard kapag may nakalogin)
-- bug sa userSettings: walang error message kapag naginput ng invalid email
+- bug sa userSettings: walang error message kapag naginput ng invalid email (KEN DITO)
 - default group selection (remember last visited group sa database)
-- Input validators: proper case first and last name input and strong passwords
-
+- Input validators: proper case first and last name input and strong passwords (KEN DITO)
+- Currency change sa sytem settings (KEN DITO)
 
 === Other concerns ===
 
