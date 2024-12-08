@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $cPassword = $_POST['confirmPassword'];
-    $userIcon = 'assets/twitter-logo.jpg';
+    $userIcon = 'assets/user/_default.png';
 
     //check for already existing email and username
     $findUsername = $db->query('select * from users where username = ?;', [$username])->fetch(PDO::FETCH_ASSOC);
