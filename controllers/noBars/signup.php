@@ -19,10 +19,18 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         $errorMessage = "Username already taken!";
     } else if (isset($findEmail['email'])) {
         $errorMessage = "Email already taken!";
-    } else if ($password == "") {
-        $errorMessage = "Invalid password!";
+    } else if (strlen($password) < 8) {
+        $errorMessage = "Password must be at least 8 characters long!";
+    } else if (!preg_match('/[A-Z]/', $password)) {
+        $errorMessage = "Password must include at least one uppercase letter!";
+    } else if (!preg_match('/[a-z]/', $password)) {
+        $errorMessage = "Password must include at least one lowercase letter!";
+    } else if (!preg_match('/\d/', $password)) {
+        $errorMessage = "Password must include at least one number!";
+    } else if (!preg_match('/[!@#$%^&*(),.?":{}|<>]/', $password)) {
+        $errorMessage = "Password must include at least one special character!";
     } else if ($password != $cPassword) {
-        $errorMessage = "Password do not match!";
+        $errorMessage = "Passwords do not match!";
     } else {
         $passwordEncrypted = password_hash($_POST['password'], PASSWORD_BCRYPT);
         $db->query('INSERT INTO `users` (`username`, `password`, `firstName`, `lastName`, `email`, `userIcon`) VALUES (?, ?, ?, ?, ?, ?);', [$username, $passwordEncrypted, $fN, $lN, $email, $userIcon]);

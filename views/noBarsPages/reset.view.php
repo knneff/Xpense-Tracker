@@ -10,15 +10,17 @@
         <form method="POST" class="space-y-5">
             <input
                 id="newPassword"
-                type="text"
+                type="password"
                 name="newPassword"
+                value="<?= $password ?? '' ?>"
                 placeholder="New Password"
                 class="w-full p-3 border border-gray-400 textGray bg-transparent rounded-lg focus:outline-none"
                 required />
             <input
                 id="confirmPassword"
-                type="text"
+                type="password"
                 name="confirmPassword"
+                value="<?= $cPassword ?? '' ?>"
                 placeholder="Confirm Password"
                 class="w-full p-3 border border-gray-400 textGray bg-transparent rounded-lg focus:outline-none"
                 required />

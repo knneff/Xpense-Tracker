@@ -14,12 +14,14 @@
                     type="text"
                     name="firstName"
                     placeholder="First Name"
+                    value="<?= $fN ?? '' ?>"
                     class="w-1/2 p-3 border border-gray-400 textGray bg-transparent rounded-lg focus:outline-none"
                     required />
                 <input
                     type="text"
                     name="lastName"
                     placeholder="Last Name"
+                    value="<?= $lN ?? '' ?>"
                     class="w-1/2 p-3 border border-gray-400 textGray bg-transparent rounded-lg focus:outline-none"
                     required />
             </div>
@@ -28,6 +30,7 @@
                 type="text"
                 name="username"
                 placeholder="Username"
+                value="<?= $username ?? '' ?>"
                 class="w-full p-3 border border-gray-400 textGray bg-transparent rounded-lg focus:outline-none"
                 required />
             <!-- Email -->
@@ -35,6 +38,7 @@
                 type="email"
                 name="email"
                 placeholder="Email Address"
+                value="<?= $email ?? '' ?>"
                 class="w-full p-3 border border-gray-400 textGray bg-transparent rounded-lg focus:outline-none"
                 required />
             <!-- Password -->
@@ -42,20 +46,23 @@
                 type="password"
                 name="password"
                 placeholder="Password"
+                value="<?= $password ?? '' ?>"
                 class="w-full p-3 border border-gray-400 textGray bg-transparent rounded-lg focus:outline-none"
                 required />
             <!-- Confirm Password -->
             <input
+                id="password2"
                 type="password"
                 name="confirmPassword"
                 placeholder="Confirm Password"
+                value="<?= $cPassword ?? '' ?>"
                 class="w-full p-3 border border-gray-400 textGray bg-transparent rounded-lg focus:outline-none"
                 required />
 
             <!-- Submit -->
             <div>
                 <!-- ERROR MESSAGE TO NAKAHIDE KAPAG WALANG ERROR -->
-                <div class="<?= isset($errorMessage) ? '' : 'hidden' ?> bg-red-400 rounded-lg text-center py-2">
+                <div class="<?= isset($errorMessage) ? '' : 'hidden' ?> bgRed rounded-3xl text-white text-center py-2">
                     <?= $errorMessage ?>
                 </div>
                 <button
