@@ -2,7 +2,7 @@ IMPORTANT NOTES:
 - scrollbar-custom  lagyan ng ganyang class ung mga scrollbared divs
 
 TICKETS [MOST IMPORTANT TO LEAST]:
-- Establish a website / domain
+- Establish a website / domain (AASK PA TO KAY SIR TOM THOUGH)
 - Ayusin system Settings (KEN DITO)
  + storing of system settings info ??
  + pagsasama user settings and system settings ()
@@ -20,9 +20,9 @@ TICKETS [MOST IMPORTANT TO LEAST]:
 - finalizing database (clean audit log)
 - assigning admin user (can only see audit log)
 - Transferring of ownership sa group
-- Better balance editing system
 - Role-based access functionalities (e.g., member cannot create invite link, kick, and add expense)
 - group and group icons (_default.png) [Standard default name]
+- Better balance editing system
 - landing - get started behavior (dashboard kapag may nakalogin)
 - bug sa userSettings: walang error message kapag naginput ng invalid email
 - default group selection (remember last visited group sa database)
@@ -39,8 +39,6 @@ singular body
 - Statistics period ????
 - edit/set balance functionality??
 - Contacts Page
-- Custom sharing expense (individually set for each)
-  + subscription on groups
 - Not pre-defined user icon
 - Income (automatic add ng time and transaction sa bank)
 - currency conversion (for shared expense tapos magkaiba currency settings)
