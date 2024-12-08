@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['forgotPassword'])) {
         $mail->Subject = "Password Reset";
         $mail->Body = <<<END
 
-            Hello, click <a href="http://localhost/reset?token=$token">here</a> to reset your password. Link expires in 30 minutes.
+            Hello, click <a href="{$_SERVER["HTTP_HOST"]}/reset?token=$token">here</a> to reset your password. Link expires in 30 minutes.
         END;
 
         try {

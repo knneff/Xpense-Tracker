@@ -22,7 +22,7 @@
                     </li>
 
                     <li>
-                        <a href="#" rel="noreferrer" target="_blank" class="text-teal-700 transition hover:text-teal-700/75 dark:text-teal-500 dark:hover:text-teal-500/75">
+                        <a href="https://github.com/xpense-tracker" rel="noreferrer" target="_blank" class="text-teal-700 transition hover:text-teal-700/75 dark:text-teal-500 dark:hover:text-teal-500/75">
                             <span class="sr-only">Twitter</span>
                             <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
@@ -46,25 +46,25 @@
                     <p class="text-lg font-medium text-gray-900 dark:text-white">Our Services</p>
                     <ul class="mt-8 space-y-4 text-sm">
                         <li>
-                            <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75" href="#">
+                            <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75" href="/dashboard">
                                 Budget Tracking
                             </a>
                         </li>
 
                         <li>
-                            <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75" href="#">
-                                Expense Management
+                            <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75" href="/group">
+                                Group Expense Management
                             </a>
                         </li>
 
                         <li>
-                            <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75" href="#">
+                            <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75" href="/statistics">
                                 Financial Insights
                             </a>
                         </li>
 
                         <li>
-                            <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75" href="#">
+                            <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75" href="/goal">
                                 Goal Setting & Tracking
                             </a>
                         </li>
@@ -75,25 +75,25 @@
                     <p class="text-lg font-medium text-gray-900 dark:text-white">Developemnt</p>
                     <ul class="mt-8 space-y-4 text-sm">
                         <li>
-                            <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75" href="#">
+                            <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75" href="https://github.com/knneff/Xpense-Tracker/commits/main/" target="_blank">
                                 Developer Docs
                             </a>
                         </li>
 
                         <li>
-                            <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75" href="#">
+                            <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75" href="https://github.com/knneff/Xpense-Tracker.git">
                                 GitHub Repository
                             </a>
                         </li>
 
                         <li>
-                            <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75" href="#">
+                            <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75" href="https://github.com/knneff/Xpense-Tracker/issues" target="_blank">
                                 Open Issues
                             </a>
                         </li>
 
                         <li>
-                            <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75" href="#">
+                            <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75" href="https://github.com/knneff/Xpense-Tracker/graphs/contributors" target="_blank">
                                 Contribution Guidelines
                             </a>
                         </li>
@@ -129,9 +129,11 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            <address class="-mt-0.5 flex-1 not-italic text-gray-700 dark:text-gray-300">
-                                Bacolor, Pampanga
-                            </address>
+                            <a href="https://maps.app.goo.gl/QmKEnk4u32imE67y6" target="_blank">
+                                <address class="-mt-0.5 flex-1 not-italic text-gray-700 dark:text-gray-300">
+                                    DHVSU - Bacolor, Pampanga
+                                </address>
+                            </a>
                         </li>
                     </ul>
                 </div>

@@ -13,13 +13,12 @@
                 </button>
             </form>
         </div>
-
     </div>
     <hr class='border-gray-300 my-4 mr-2 sm:mr-4'>
     <div class="scrollbar-custom max-h-96 overflow-auto gap-2 grid">
         <?php $bellColor = "gray-300" ?>
         <?php if ($expensePercent >= 100): ?>
-            <?php $bellColor = "red-400" ?>
+            <?php $bellColor = "red-500" ?>
             <div class="mr-2 sm:mr-4 p-2 rounded-md text-white bg-red-500">
                 <div class="font-bold text-base sm:text-lg">
                     Expense Limit Reached!!!

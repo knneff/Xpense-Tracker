@@ -48,6 +48,7 @@
                 <hr class='border-gray-300 my-2'>
                 <a href="/usersettings" class="rounded-md px-2 hover:bg-emerald-800 block py-2 text-sm">Your Profile</a>
                 <a href="#" class="rounded-md px-2 hover:bg-emerald-800 block  py-2 text-sm">Settings</a>
+                <a href="/support" class="rounded-md px-2 hover:bg-emerald-800 block  py-2 text-sm">Contact Suport</a>
                 <a href="/logout" class="rounded-md px-2 hover:bg-emerald-800 block  py-2 text-sm">Sign out</a>
             </div>
         </div>

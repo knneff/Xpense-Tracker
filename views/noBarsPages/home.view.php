@@ -33,7 +33,7 @@
           <h1 class="text-3xl md:text-2xl lg:text-4xl xl:text-6xl font-bold text-center md:text-left">Simplify Spending, Master Your Money</h1>
         </div>
         <div class="pt-4 gap-6 grid justify-center lg:flex lg:justify-start">
-          <a href="/login">
+          <a href="/dashboard">
             <button class="h-16 md:h-14 w-48 cursor-pointer pb-0.5 transition-transform rounded-full text-gray-300 uppercase text-xl font-semibold hover:scale-110 bg-[#1a664d] hover:bg-[#278a6a]">
               Get Started
             </button>

@@ -8,6 +8,7 @@ $routes = [
     "/login" => __DIR__ . "/controllers/noBars/login.php",
     "/logout" => __DIR__ . "/controllers/noBars/logout.php",
     "/reset" => __DIR__ . "/controllers/noBars/reset.php",
+    "/support" => __DIR__ . "/controllers/noBars/support.php",
 
     //mga page na accessible lang kapag may nakalog-in
     "/dashboard" => __DIR__ . "/controllers/dashboard.php",
@@ -37,6 +38,7 @@ $pageTitles = [
     "/login" => "Login",
     "/logout" => "Logout",
     "/reset" => "Reset Password",
+    "/support" => "Support",
 
     //mga page na accessible lang kapag may nakalog-in
     "/dashboard" => "Dashboard",
