@@ -4,12 +4,12 @@
     <form class='textGray gap-4 flex flex-row justify-between sm:items-center'>
         <!-- FILTERS -->
         <div class='flex flex-col sm:flex-row gap-4'>
-            <div class='flex flex-row justify-start items-center gap-1 tlGreen p-2 rounded-md'>
+            <div class='flex flex-row justify-start items-center gap-1 bg-emerald-900 p-2 rounded-md'>
                 <p>Category</p>
                 <select
                     name="category"
                     required
-                    class="flex-1 px-2 py-1 rounded-lg border border-gray-400 tlGreen focus:outline-none">
+                    class="flex-1 px-2 py-1 rounded-lg border border-gray-400 bg-emerald-900 focus:outline-none">
                     <option value="All" <?= ($categ === 'All') ? 'selected' : '' ?>>All</option>
                     <option value="Food" <?= ($categ === 'Food') ? 'selected' : '' ?>>Food</option>
                     <option value="Transportation" <?= ($categ === 'Transportation') ? 'selected' : '' ?>>Transportation</option>
@@ -21,12 +21,12 @@
                     <option value="Miscellaneous" <?= ($categ === 'Miscellaneous') ? 'selected' : '' ?>>Miscellaneous</option>
                 </select>
             </div>
-            <div class='flex flex-row justify-start items-center gap-1 tlGreen p-2 rounded-md'>
+            <div class='flex flex-row justify-start items-center gap-1 bg-emerald-900 p-2 rounded-md'>
                 <p>Type</p>
                 <select
                     name="type"
                     required
-                    class="flex-1 px-2 py-1 rounded-lg border border-gray-400 tlGreen focus:outline-none">
+                    class="flex-1 px-2 py-1 rounded-lg border border-gray-400 bg-emerald-900 focus:outline-none">
                     <option value="All" <?= ($type === 'All') ? 'selected' : '' ?>>All</option>
                     <option value="basic" <?= ($type === 'basic') ? 'selected' : '' ?>>Basic</option>
                     <option value="group" <?= ($type === 'group') ? 'selected' : '' ?>>Group</option>
