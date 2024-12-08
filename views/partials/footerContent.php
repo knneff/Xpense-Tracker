@@ -129,11 +129,12 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            <a href="https://maps.app.goo.gl/QmKEnk4u32imE67y6" target="_blank">
-                                <address class="-mt-0.5 flex-1 not-italic text-gray-700 dark:text-gray-300">
+
+                            <address class="-mt-0.5 flex-1 not-italic text-gray-700 dark:text-gray-300">
+                                <a href="https://maps.app.goo.gl/QmKEnk4u32imE67y6" target="_blank">
                                     DHVSU - Bacolor, Pampanga
-                                </address>
-                            </a>
+                                </a>
+                            </address>
                         </li>
                     </ul>
                 </div>

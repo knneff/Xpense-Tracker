@@ -1,12 +1,8 @@
 scrollbar-custom  lagyan ng ganyang class ung mga scrollbared divs
 
-lagyan ng contact support page, parang chat.
-
-kelangan i test mga functions. need major testings
 =============================================================================================================
 
 pagsasama user settings and system settings (SI KEN NA DITO)
-- overspending alarm system
 
 - font: ayusin gawing inter for all devices
 - expenselog: center yung price
@@ -112,11 +108,9 @@ pwa manifest file??
 
 === MGA IF MAY TIME PA ===
 - edit/set balance functionality??
-- Contacts Page
 - Refund balance dialogue when expense is deleted
 - Custom sharing expense (individually set for each)
   + subscription on groups
-- Not pre-defined user icon
 - Income (automatic add ng time and transaction sa bank)
 - currency conversion (for shared expense tapos magkaiba currency settings)
 - OCR / Receipt Scanner
