@@ -15,7 +15,15 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $findEmail = $db->query('select * from users where email = ?;', [$email])->fetch(PDO::FETCH_ASSOC);
 
     //validate entered credentials
-    if (isset($findUsername['username'])) {
+    if (!ctype_alpha(str_replace(' ', '', $fN))) {
+        $errorMessage = "First name contains invalid characters.";
+    } else if (!ctype_alpha(str_replace(' ', '', $lN))) {
+        $errorMessage = "Last name contains invalid characters.";
+    } else if (!preg_match('/^[A-Z][a-z]*( [A-Z][a-z]*)*$/', $fN)) {
+        $errorMessage = "First name is not properly capitalized.";
+    } else if (!preg_match('/^[A-Z][a-z]*( [A-Z][a-z]*)*$/', $lN)) {
+        $errorMessage = "Last name is not properly capitalized.";
+    } else if (isset($findUsername['username'])) {
         $errorMessage = "Username already taken!";
     } else if (isset($findEmail['email'])) {
         $errorMessage = "Email already taken!";

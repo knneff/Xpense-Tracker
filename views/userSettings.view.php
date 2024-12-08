@@ -2,6 +2,11 @@
 
 <div class="flex flex-col gap-5 items-center justify-center">
     <div class="w-full max-w-3xl p-8 pt-0 sm:pt-8 tlBgGreen rounded-3xl shadow-none sm:shadow-lg ">
+        <?php if (isset($message)) : ?>
+            <p class="text-white text-center bg-emerald-900 rounded-3xl font-semibold p-2 mb-2">
+                <?= $message ?>
+            </p>
+        <?php endif; ?>
         <form method="POST" class="flex flex-col" enctype="multipart/form-data">
             <!-- UPPER FIELD PANELS -->
             <div class="text-gray-300 text-base sm:text-lg grid grid-cols-1 sm:grid-cols-2">
@@ -49,7 +54,7 @@
                                 type="text"
                                 name="firstName"
                                 class="w-full p-1 sm:p-2 border border-gray-400 textGray bg-transparent rounded-lg focus:outline-none"
-                                value="<?= $userInfo['firstname'] ?>"
+                                value="<?= $firstname ?? $userInfo['firstname'] ?>"
                                 required />
                         </div>
                         <div>
@@ -58,7 +63,7 @@
                                 type="text"
                                 name="lastName"
                                 class="w-full p-1 sm:p-2 border border-gray-400 textGray bg-transparent rounded-lg focus:outline-none"
-                                value="<?= $userInfo['lastname'] ?>"
+                                value="<?= $lastname ?? $userInfo['lastname'] ?>"
                                 required />
                         </div>
                     </div>
@@ -70,7 +75,7 @@
                             type="text"
                             name="username"
                             class="w-full p-1 sm:p-2 border border-gray-400 textGray bg-transparent rounded-lg focus:outline-none"
-                            value="<?= $userInfo['username'] ?>"
+                            value="<?= $username ?? $userInfo['username'] ?>"
                             required />
                     </div>
 
@@ -82,20 +87,31 @@
                             type="email"
                             name="email"
                             class="w-full p-1 sm:p-2 border border-gray-400 textGray bg-transparent rounded-lg focus:outline-none"
-                            value="<?= $userInfo['email'] ?>"
+                            value="<?= $email ?? $userInfo['email'] ?>"
                             required />
                     </div>
+                    <input
+                        value="<?= $userInfo['email'] ?>"
+                        name="currentEmail"
+                        type="hidden">
+                    <input
+                        value="<?= $userInfo['username'] ?>"
+                        name="currentUsername"
+                        type="hidden">
                 </div>
             </div>
 
             <!-- REVERT and SAVE BUTTON -->
             <div class="flex justify-center space-x-5">
+
                 <button
                     type="button"
-                    onclick="window.location.reload()"
                     class="py-2 mt-8 w-full sm:w-1/3 text-base sm:text-xl self-center font-semibold textGray btGreen rounded-3xl">
-                    Revert Changes
+                    <a href="/usersettings">
+                        Revert Changes
+                    </a>
                 </button>
+
                 <button
                     type="submit"
                     name="changeProfile"
@@ -109,9 +125,6 @@
                 Change your Password?
                 <a href="/changepassword" class="textTeal hover:underline">Reset here</a>
             </p>
-            <?php if (isset($message)) : ?>
-                <p class="text-gray-300 mt-4 text-center"><?= $message ?></p>
-            <?php endif; ?>
         </form>
     </div>
 </div>
