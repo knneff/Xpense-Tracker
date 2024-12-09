@@ -1,10 +1,10 @@
-<div class="flex flex-col justify-start border-b border-gray-300 pb-6 mb-4">
+<div class="flex flex-row justify-between border-b border-gray-300 pb-6 mb-4">
     <div class="flex justify-start items-center">
-        <h5 class="text-2xl font-semibold leading-none textGray pe-1">$12,423</h5>
+        <p class="text-2xl font-semibold leading-none textGray pe-1">Weekly Xpense</p>
     </div>
 
-    <div class="flex justify-start items-center">
-        <p class="text-base font-normal textGray">Xpense this week</p>
+    <div class="flex justify-end items-center">
+        <h5 class="text-2xl font-semibold leading-none textGray pe-1">$12,423</h5>
     </div>
 </div>
 
