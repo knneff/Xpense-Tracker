@@ -1,7 +1,7 @@
 <?php require('partials/body.php') ?>
 
 <div class="flex flex-col gap-5 items-center justify-center">
-    <div class="w-full max-w-3xl p-8 pt-0 sm:pt-8 tlBgGreen rounded-3xl shadow-none sm:shadow-lg ">
+    <div class="w-full max-w-3xl p-8 pt-0 sm:pt-8 bgGreen rounded-3xl">
         <?php if (isset($message)) : ?>
             <p class="text-white text-center bg-emerald-900 rounded-3xl font-semibold p-2 mb-2">
                 <?= $message ?>
