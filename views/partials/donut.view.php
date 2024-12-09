@@ -30,9 +30,6 @@ if (!isset($values)) {
 <!-- Donut Chart Is Here -->
 <div class="py-4" id="donut-chart"></div>
 
-<div class="border-gray-300 border-t mt-6 pb-4">
-</div>
-
 <script>
     const getChartOptions = () => {
         return {

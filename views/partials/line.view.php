@@ -1,4 +1,4 @@
-<div class="flex flex-row justify-between border-b border-gray-300 pb-6 mb-4">
+<div class="flex flex-row justify-between border-b border-gray-300 pb-6 mb-0 md:mb-4">
     <div class="flex justify-start items-center">
         <p class="text-2xl font-semibold leading-none textGray pe-1">Weekly Xpense</p>
     </div>
@@ -9,16 +9,17 @@
 </div>
 
 <!--CHART HERE-->
-<div id="labels-chart" class=""></div>
-  
-<div class="border-gray-300 border-t mt-6 pb-4">
-</div>
+<div id="labels-chart" class="py-0 md:py-4"></div>
 
 <script>
+    const getChartHeight = () => {
+        return window.innerWidth <= 768 ? 200 : 360; // 180px on small screens (<=768px), 360px otherwise
+    };
+
     const options = {
         chart: {
             type: "area", // Keep as area to use the gradient fill
-            height: "140%",
+            height: getChartHeight(),
             width: "100%",
             fontFamily: "Inter, sans-serif",
             dropShadow: {
@@ -40,20 +41,20 @@
                 show: true,
                 style: {
                     fontFamily: "Inter, sans-serif",
-                    cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
+                    cssClass: 'text-xs font-normal fill-gray-300'
                 }
             },
             axisBorder: {
                 show: true,
-                color: '#e2e8f0', // Border color for x-axis
+                color: '#D1D5DB', // Border color for x-axis
             },
             axisTicks: {
                 show: true,
-                color: '#e2e8f0', // Tick color
+                color: '#D1D5DB', // Tick color
             },
             grid: {
                 show: true,  // Show vertical grid lines
-                borderColor: '#e2e8f0', // Color for the vertical lines
+                borderColor: '#9CA3AF', // Color for the vertical lines
                 strokeDashArray: 4, // Optional: make lines dashed
                 opacity: 0.5, // Optional: make the lines less opaque
             }
@@ -67,7 +68,7 @@
                 show: true,
                 style: {
                     fontFamily: "Inter, sans-serif",
-                    cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
+                    cssClass: 'text-xs font-normal fill-gray-300'
                 },
                 formatter: function (value) {
                     return '$' + value; // Formatter to show currency
@@ -75,11 +76,11 @@
             },
             axisBorder: {
                 show: true,
-                color: '#e2e8f0', // Border color for y-axis
+                color: '#D1D5DB', // Border color for y-axis
             },
             axisTicks: {
                 show: true,
-                color: '#e2e8f0', // Tick color
+                color: '#D1D5DB', // Tick color
             },
             grid: {
                 show: false, // Hide horizontal grid lines
@@ -143,7 +144,7 @@
 
         grid: {
             show: true, // Show overall grid
-            borderColor: '#e2e8f0', // Color of the grid lines
+            borderColor: '#9CA3AF', // Color of the grid lines
             strokeDashArray: 8, // Dashed grid lines
             opacity: 0.5, // Optional: make grid lines less opaque
             position: 'back', // Ensure grid lines are behind the chart
@@ -153,5 +154,14 @@
     if (document.getElementById("labels-chart") && typeof ApexCharts !== 'undefined') {
         const chart = new ApexCharts(document.getElementById("labels-chart"), options);
         chart.render();
+
+        // Re-render chart on window resize to adjust height dynamically
+        window.addEventListener('resize', () => {
+            chart.updateOptions({
+                chart: {
+                    height: getChartHeight() // Dynamically update height on window resize
+                }
+            });
+        });
     }
 </script>
