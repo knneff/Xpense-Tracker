@@ -4,7 +4,7 @@
             <div>
                 <div>
                     <a href="aboutus">
-                        <h1 class="text-5xl font-semibold text-center sm:text-left textTeal hover:underline">About Us</h1>
+                        <h1 class="text-3xl sm:text-5xl font-semibold text-center sm:text-left textTeal hover:underline">About Us</h1>
                     </a>
                     <p class="mt-6 max-w-md text-center sm:text-left leading-relaxed text-gray-200">
                         Xpense Tracker provides a simple and effective solution for managing personal finances, allowing users to efficiently track their expenses, make informed financial decisions, and maintain better control over their budgets. The platform is designed to help individuals achieve their financial goals and improve their overall financial well-being.

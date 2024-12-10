@@ -4,7 +4,7 @@
     <form class="grid gap-6" method="POST">
         <!-- Notification -->
         <div class="flex justify-between">
-            <div class="mb-2 text-2xl textGray">Notifications</div>
+            <div class="mb-2 text-lg sm:text-2xl textGray">Notifications</div>
             <label class="inline-flex items-center cursor-pointer">
                 <input type="checkbox" name="notification" value="on" class="sr-only peer" <?= $systemInfo["notification"] ? 'checked' : '' ?>>
                 <div class="relative w-11 h-6 bg-gray-700 rounded-full peer-checked:bg-emerald-700 peer-focus:ring-0 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
@@ -15,7 +15,7 @@
 
         <!-- UNIT CURRENCY -->
         <div class="flex justify-between">
-            <label for="currency" class="mb-2 text-2xl textGray">Currency Symbol</label>
+            <label for="currency" class="mb-2 text-lg sm:text-2xl textGray">Currency Symbol</label>
             <select
                 name="currency"
                 id="currency"
@@ -31,7 +31,7 @@
 
         <!-- OVERSPENDING ALARM -->
         <div class="flex justify-between">
-            <label for="limit" class="mb-2 text-2xl textGray">Daily Spending Limit Notify</label>
+            <label for="limit" class="mb-2 text-lg sm:text-2xl textGray">Daily Spending Limit</label>
             <div class="flex gap-2">
                 <input
                     type="number"
@@ -39,12 +39,12 @@
                     name="limit"
                     placeholder="Spending Limit"
                     value="<?= $systemInfo["expenseLimit"] ?>"
-                    class="text-lg w-32 pl-4 border border-gray-300 textGray bg-transparent rounded-lg focus:outline-none"
+                    class="text-base sm:text-lg w-24 sm:w-32 pl-4 border border-gray-300 textGray bg-transparent rounded-lg focus:outline-none"
                     required />
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
-                    class="size-8">
+                    class="size-6 sm:size-8">
                     <path fill="#d1d5db" d="M 18 2 L 15.585938 4.4140625 L 19.585938 8.4140625 L 22 6 L 18 2 z M 14.076172 5.9238281 L 3 17 L 3 21 L 7 21 L 18.076172 9.9238281 L 14.076172 5.9238281 z"></path>
                 </svg>
             </div>
@@ -55,8 +55,8 @@
         <div>
             <!-- Threshold -->
             <div class="flex justify-between pb-2">
-                <label for="labels-range-input" class="mb-2 text-2xl textGray">Spending Threshold Notify</label>
-                <div id="percentage-display" class="text-lg w-16 border border-gray-300 textGray bg-transparent rounded-lg focus:outline-none flex items-center justify-center">
+                <label for="labels-range-input" class="mb-2 text-lg sm:text-2xl textGray">Spending Threshold</label>
+                <div id="percentage-display" class="text-base sm:text-lg w-16 border border-gray-300 textGray bg-transparent rounded-lg focus:outline-none flex items-center justify-center">
                     <div>
                         <?= $systemInfo["alarmThreshold"] ?>%
                     </div>
