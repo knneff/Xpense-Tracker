@@ -1,7 +1,7 @@
 <?php require('partials/body.php') ?>
 
 <div class="flex flex-col gap-5 items-center justify-center">
-    <div class="w-full max-w-3xl p-8 pt-0 sm:pt-8 bgGreen rounded-3xl">
+    <div class="w-full max-w-3xl p-8 pt-0 sm:pt-8 tlBgGreen rounded-3xl">
         <?php if (isset($message)) : ?>
             <p class="text-white text-center bg-emerald-900 rounded-3xl font-semibold p-2 mb-2">
                 <?= $message ?>
@@ -102,11 +102,11 @@
             </div>
 
             <!-- REVERT and SAVE BUTTON -->
-            <div class="flex justify-center space-x-5">
+            <div class="flex justify-between space-x-5">
 
                 <button
                     type="button"
-                    class="py-2 mt-8 w-full sm:w-1/3 text-base sm:text-xl self-center font-semibold textGray btGreen rounded-3xl">
+                    class="py-1 mt-8 w-full sm:w-1/3 text-base sm:text-lg self-center font-semibold textGray border-2 border-gray-300 rounded-3xl active:scale-95 transition-transform">
                     <a href="/usersettings">
                         Revert Changes
                     </a>
@@ -115,7 +115,7 @@
                 <button
                     type="submit"
                     name="changeProfile"
-                    class="py-2 mt-8 w-full sm:w-1/3 text-base sm:text-xl self-center font-semibold textGray btGreen rounded-3xl">
+                    class="py-1 mt-8 w-full sm:w-1/3 text-base sm:text-lg self-center font-semibold textGray btGreen rounded-3xl">
                     Save Changes
                 </button>
             </div>

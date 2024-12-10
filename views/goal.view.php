@@ -144,7 +144,7 @@
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                class="absolute right-8 top-8 sm:top-10 justify-self-end self-center w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0">
+                class="absolute right-8 top-9 sm:top-10 justify-self-end self-center w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0">
                 <path fill="#d1d5db" d="M 18 2 L 15.585938 4.4140625 L 19.585938 8.4140625 L 22 6 L 18 2 z M 14.076172 5.9238281 L 3 17 L 3 21 L 7 21 L 18.076172 9.9238281 L 14.076172 5.9238281 z"></path>
             </svg>
             <form id="goalUpdateForm" method="POST" class="flex flex-col text-base" enctype="multipart/form-data">
