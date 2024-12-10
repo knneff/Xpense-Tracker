@@ -1,5 +1,5 @@
 <!-- NAVBAR CONTENT -->
-<nav class="sticky top-0 tlGreen z-40 w-full shadow-lg h-16 flex px-3 sm:pr-6 lg:pr-8 justify-between items-center">
+<nav class="sticky top-0 tlGreen z-[47] w-full shadow-lg h-16 flex px-3 sm:pr-6 lg:pr-8 justify-between items-center">
     <!-- NAV Left -->
     <a href='/'>
         <svg class='w-28' viewBox="0 0 2754 756" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
@@ -39,7 +39,7 @@
                 </button>
             </div>
 
-            <div id="targetDiv" class="p-4 absolute hidden z-50 top-16 right-10 mt-2 w-52 rounded-md py-2 bgGreen shadow-lg text-gray-200 border-2 border-gray-300">
+            <div id="targetDiv" class="z-50 hidden p-4 absolute top-16 right-10 mt-2 w-52 rounded-md py-2 bgGreen shadow-lg text-gray-200 border-2 border-gray-300">
                 <!-- user first and last name -->
                 <div class='flex flex-row gap-1 text-xl pb-2'>
                     <p><?= $_SESSION['firstName'] ?></p>
