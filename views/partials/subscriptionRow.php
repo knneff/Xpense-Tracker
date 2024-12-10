@@ -37,7 +37,7 @@ $delConfOverlayId = 'delConfOverlay' . $index;
             </div>
 
             <!-- right -->
-            <p class='text-xl sm:text-2xl md:text-3xl' id='amount'> ₱ <?= $amount ?> </p>
+            <p class='text-xl sm:text-2xl md:text-3xl' id='amount'><?= $_SESSION["currency"] . " " . $amount ?> </p>
         </div>
     </div>
 

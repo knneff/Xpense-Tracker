@@ -17,7 +17,6 @@
                 '<?= $goal['groupIcon'] ?>',
                 '<?= $goal['category'] ?>',
                 '<?= $percent ?>'
-                
             )">
                 <div class="p-4 flex rounded-lg tlGreen textGray gap-3 shadow-lg">
                     <div>
@@ -31,7 +30,7 @@
                                 <?= $goal['description'] ?>
                             </div>
                             <div class="text-sm sm:text-lg font-semibold items-center text-start">
-                                ₱ <?= $goal['paidAmount'] ?> / ₱ <?= $goal['amount'] ?>
+                                <?= $_SESSION["currency"] . " " . $goal['paidAmount'] ?> / <?= $_SESSION["currency"] . " " . $goal['amount'] ?>
                             </div>
                         </div>
                         <div class="mt-1 sm:mt-3 relative">
@@ -189,9 +188,9 @@
                     <div class="flex flex-col justify-center gap-y-4">
                         <div>
                             <div class=" font-semibold text-lg">
-                                <span>₱ </span>
+                                <span><?= $_SESSION["currency"] ?> </span>
                                 <span id="goalUpdatePaidAmount"></span>
-                                <span> / ₱</span>
+                                <span> / <?= $_SESSION["currency"] ?></span>
                                 <span id="goalUpdateAmount"></span>
                             </div>
                             <div class="w-full bg-[#064E3B] rounded-sm h-4 sm:h-6 items-center flex relative">

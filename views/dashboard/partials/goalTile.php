@@ -22,7 +22,7 @@
                         <div class='bgGreen2 rounded-lg px-1 text-base'>{$percent}%</div>
                         <div>$display</div>
                     </div>
-                    <div class='bgGreen2 rounded-lg px-1 text-base'>₱{$goal['amount']}</div>
+                    <div class='bgGreen2 rounded-lg px-1 text-base'>{$_SESSION["currency"]} {$goal['amount']}</div>
                 </div>
             ";
         }

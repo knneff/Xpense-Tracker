@@ -15,6 +15,20 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         $_SESSION['userIcon'] = $user['userIcon'];
         $_SESSION['firstName'] = $user['firstName'];
         $_SESSION['lastName'] = $user['lastName'];
+        $_SESSION['alarmThreshold'] = $user['alarmThreshold'];
+        $_SESSION['notification'] = $user['notification'];
+
+        $_SESSION['expenseLimit'] = $user['expenseLimit'];
+        if ($user["currency"] === "yen") {
+            $_SESSION["currency"] = "¥";
+        } else if ($user["currency"] === "dollar") {
+            $_SESSION["currency"] = "$";
+        } else if ($user["currency"] === "euro") {
+            $_SESSION["currency"] = "€";
+        } else {
+            $_SESSION["currency"] = "₱";
+        }
+
         redirect('/dashboard');
     }
 }

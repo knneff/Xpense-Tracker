@@ -17,7 +17,7 @@
             </div>
 
             <!-- right -->
-            <p class='text-3xl' id='amount'> ₱ <?= $amount ?> </p>
+            <p class='text-3xl' id='amount'><?= $_SESSION["currency"] . " " . $amount ?> </p>
         </div>
     </div>
 

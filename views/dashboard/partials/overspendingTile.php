@@ -5,7 +5,7 @@
     </div>
     <hr class='border border-1 border-gray-400'>
     <div class="font-semibold">
-        <?= "₱" . $expenseToday . " / ₱" . $expenseLimit ?>
+        <?= $_SESSION["currency"] . " " . $expenseToday . " / " . $_SESSION["currency"] . " " . $expenseLimit ?>
     </div>
     <div class="">
         <div id="donut-chart2" class="relative">

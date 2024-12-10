@@ -4,7 +4,7 @@
     </div>
 
     <div class="flex justify-end items-center">
-        <h5 class="text-2xl font-semibold leading-none textGray pe-1">₱ <?= $weeklyTotal ?></h5>
+        <h5 class="text-2xl font-semibold leading-none textGray pe-1"><?= $_SESSION["currency"] . " " . $weeklyTotal ?></h5>
     </div>
 </div>
 
@@ -71,7 +71,7 @@
                     cssClass: 'text-xs font-normal fill-gray-300'
                 },
                 formatter: function(value) {
-                    return '₱' + value; // Formatter to show currency
+                    return <?= json_encode($_SESSION["currency"]) ?> + value; // Formatter to show currency
                 }
             },
             axisBorder: {

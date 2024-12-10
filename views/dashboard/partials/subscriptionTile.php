@@ -35,7 +35,7 @@
                 }
                 $display = stringShortener($description, 16);
                 echo "<li class='textGray flex items-center gap-2 justify-between'>
-                                <p>₱$amount - $display</p>
+                                <p>{$_SESSION["currency"]} $amount - $display</p>
                                 <span class='bgGreen2 rounded-lg px-1 py-[0.5]'>$periodDisplay</span>
                             </li>";
             }

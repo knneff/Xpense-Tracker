@@ -33,7 +33,7 @@ $tempAmount = $currUserPending['amount'];
     <!-- body (category, expenseType, amount) -->
     <div class='flex flex-row justify-between items-center px-2 sm:px-4 py-2 sm:py-4 bgGreen rounded-b-lg'>
         <!-- right -->
-        <p class='text-2xl' id='amount'> ₱ <?= $tempAmount ?> </p>
+        <p class='text-2xl' id='amount'><?= $_SESSION["currency"] . " " . $tempAmount ?> </p>
         <!-- left -->
         <div class='flex flex-col items-end gap-2'>
             <div class='flex flex-col sm:flex-row gap-1 sm:gap-2'>
@@ -60,7 +60,7 @@ $tempAmount = $currUserPending['amount'];
                 <input name='amount' value='<?= $tempAmount ?>' hidden>
                 <input name='expenseID' value='<?= $tempExpenseID ?>' hidden>
                 <input name='subscriptionID' value='<?= $tempSubscriptionID ?>' hidden>
-                <button type="submit" class="py-1 mt-4 text-lg sm:text-xl font-semibold btGreen2 rounded-3xl">Pay $<?= $tempAmount ?> </button>
+                <button type="submit" class="py-1 mt-4 text-lg sm:text-xl font-semibold btGreen2 rounded-3xl">Pay <?= $_SESSION["currency"] . $tempAmount ?> </button>
             </form>
         </div>
     </div>
@@ -80,7 +80,7 @@ $tempAmount = $currUserPending['amount'];
                 <input name='type' value='<?= $tempExpenseType ?>' hidden>
                 <input name='amount' value='<?= $tempAmount ?>' hidden>
                 <input name='expenseID' value='<?= $tempExpenseID ?>' hidden>
-                <button type="submit" class="py-1 mt-4 text-lg sm:text-xl font-semibold btRed rounded-3xl">Decline $<?= $tempAmount ?> </button>
+                <button type="submit" class="py-1 mt-4 text-lg sm:text-xl font-semibold btRed rounded-3xl">Decline <?= $_SESSION["currency"] . $tempAmount ?> </button>
             </form>
         </div>
     </div>

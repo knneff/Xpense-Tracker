@@ -5,7 +5,7 @@
         <p class="textGray text-xl font-semibold">Recent Expenses</p>
         <a href='/expenselog' class='textTeal hover:underline'>See All</a>
     </div>
-
+    
     <!-- divider -->
     <hr class='border border-1 border-gray-400'>
 
@@ -20,7 +20,7 @@
             for ($i = 0; $i < $expenseSize; $i++) {
                 $amount = $expenses[$i]['amount'];
                 $description = $expenses[$i]['description'];
-                $display = stringShortener('₱' . $amount . ' - ' . $description, 22);
+                $display = stringShortener($_SESSION["currency"] . ' ' . $amount . ' - ' . $description, 22);
                 $category = $expenses[$i]['category'];
                 foreach ($categories as $index => $value) {
                     if ($category === $value['label']) {
