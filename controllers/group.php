@@ -181,8 +181,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
                 // remove association from the group [KICK from group]
                 $db->query("DELETE FROM clanMembers WHERE userID = ? AND groupID = ?;", [$userToKick, $groupID]);
-
-                dd('userid to kick: ' . $userToKick, 'from group: ' . $groupID, 'new owner: ' . $nextOwner);
             }
             // when there's no other member from the group other than the owner [NO ONE LEFT THE GROUP]
             else {
