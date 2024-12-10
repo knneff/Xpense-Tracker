@@ -145,7 +145,7 @@
         </div>
 
         <!-- panel 2 -->
-        <div class="h-full grid place-items-center pb-4 md:pb-0 xl:pb-12 bg-[#072822] rounded-xl">
+        <div class="h-full grid place-items-center pb-4 md:pb-3 xl:pb-12 bg-[#072822] rounded-xl">
           <div class="p-10">
             <svg class="w-[5rem] h-[5rem] sm:w-[8rem] sm:h-[8rem] md:w-[11rem] md:h-[11rem] lg:w-[15rem] lg:h-[15rem] xl:w-[17rem] xl:h-[17rem]" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-127.03 -127.03 762.16 762.16" xml:space="preserve" fill="#000000">
               <g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)">
