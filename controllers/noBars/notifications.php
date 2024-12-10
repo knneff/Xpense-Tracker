@@ -6,8 +6,8 @@ $params = [
     ':userID' => $userID,
 ];
 
-$expenseLimit = 1000;  // set limit, temporrary as of now
-$alarmThreshold = 80;  // 80% it alarms
+$expenseLimit = $_SESSION["expenseLimit"];  
+$alarmThreshold = $_SESSION["alarmThreshold"];  
 date_default_timezone_set('Asia/Manila');
 $todayStart = date('Y-m-d 00:00:00');
 $todayEnd = date('Y-m-d 23:59:59');
@@ -27,14 +27,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['deleteNotif'])) {
     redirect($_SERVER['REQUEST_URI']);
 }
 
+if ($_SESSION["notification"]) {
 $sqlNotif = "SELECT * FROM notification WHERE userID = :userID ORDER BY notifID DESC";
 $sqlCount = "SELECT notifID FROM notification WHERE isViewed = 0 AND userID = :userID;";
 
 $notifications = $db->query($sqlNotif, $params)->fetchAll(PDO::FETCH_ASSOC);
 $count = $db->query($sqlCount, $params)->fetchAll(PDO::FETCH_ASSOC);
 $count = array_column($count, 'notifID');
-
-
+} else {
+    $notifications = array();
+    $count = array();
+}
 
 ?>
 
