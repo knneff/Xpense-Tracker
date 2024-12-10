@@ -1,5 +1,6 @@
 <?php require('partials/bodyNoBars.php') ?>
 
+<!-- ABOUT US -->
 <section class='h-full flex flex-col justify-center gap-2 sm:gap-6 px-4 sm:px-24'>
 
     <!-- About Us -->
@@ -30,6 +31,16 @@
             </p>
         </div>
     </section>
+
+    <div class="flex justify-center w-full bottom-0 items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 animate-ping" viewBox="0 0 1024 1024" version="1.1" fill="#ffffff">
+            <g id="SVGRepo_bgCarrier" stroke-width="0" />
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+            <g id="SVGRepo_iconCarrier">
+                <path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z" fill="#ffffff" />
+            </g>
+        </svg>
+    </div>
 
 </section>
 
