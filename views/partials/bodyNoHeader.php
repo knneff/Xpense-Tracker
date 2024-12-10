@@ -6,8 +6,6 @@
 <?php require('./styles/custom_style.html') ?>
 
 <body class="bgGreen flex flex-col h-full">
-    <!-- FLOATING ADD EXPENSE BUTTON HERE -->
-    <?php require('add.view.php') ?>
     <!-- NAV BAR IS HERE -->
     <?php require('navbar.php') ?>
     <!-- SIDE BAR AND CONTENT HERE -->
@@ -16,5 +14,3 @@
         <?php require('sidebar.php') ?>
         <!-- DITO NA YUNG PINAKACONTENT NINYO -->
         <content class="scrollbar-custom overflow-auto flex-1 pl-16 pr-4 py-4 mb-16 sm:px-6 md:px-8 lg:px-10 xl:px-12">
-            <!-- Header and Balance -->
-            <?php require('contentHeader.php') ?>

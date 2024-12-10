@@ -2,6 +2,7 @@
 
 date_default_timezone_set('Asia/Manila');
 $currDateTime = new DateTime();
+$currDateTime->modify('-6 day');
 $days = [];
 $dailyExpenses = [0, 0, 0, 0, 0, 0, 0];
 $weeklyTotal = 0;
@@ -17,7 +18,7 @@ for ($i = 0; $i < 7; $i++) {
             $weeklyTotal += $expense['amount'];
         }
     }
-    $currDateTime->modify('-1 day');
+    $currDateTime->modify('+1 day');
 }
 
 /*

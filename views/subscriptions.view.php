@@ -14,7 +14,7 @@
     </div>
 
     <!-- CONTENT -->
-    <div id='pendingList' class='max-h-[500px] py-2 duration-100 ease-in-out  overflow-auto flex flex-col px-8 space-y-2 bg-black bg-opacity-10 border-gray-600 border-t border-b'>
+    <div id='pendingList' class='max-h-[500px] py-2 duration-100 ease-in-out overflow-auto flex flex-col px-4 sm:px-8 space-y-2 bg-black bg-opacity-10 border-gray-600 border-t border-b'>
         <?php
         $expenseSize = sizeof($currUserPendings);
         if ($expenseSize < 1) {
@@ -48,7 +48,7 @@
     </div>
 
     <!-- CONTENT -->
-    <div id='subscriptionList' class='max-h-[500px] py-2 duration-100 ease-in-out  overflow-auto flex flex-col px-8 space-y-2 bg-black bg-opacity-10 border-gray-600 border-t border-b'>
+    <div id='subscriptionList' class='max-h-[500px] py-2 duration-100 ease-in-out overflow-auto flex flex-col px-4 sm:px-8 space-y-2 bg-black bg-opacity-10 border-gray-600 border-t border-b'>
         <?php
         $subscriptionsSize = sizeof($subscriptions);
         if ($subscriptionsSize < 1) {

@@ -23,7 +23,7 @@ $userInfoTemp = $transactionRow;
     <!-- title (description, dateTime) -->
     <div class='flex justify-between items-center rounded-t-lg bgGreen2 px-2 py-1'>
         <h2 class='text-xl font-semibold' id='description'> <?= stringShortener($tempDescription, 15) ?> </h2>
-        <p class='text-lg'> <?= $tempExpenseTime ?> </p>
+        <p class='text-md sm:text-lg text-end'> <?= $tempExpenseTime ?> </p>
     </div>
     <!-- body (category, expenseType, amount) -->
     <div class='flex flex-row justify-between items-center px-2 py-2 bgGreen rounded-b-lg'>
@@ -52,7 +52,7 @@ $userInfoTemp = $transactionRow;
         <!-- right -->
         <div class='flex flex-col items-end gap-2'>
             <?php require('userIcon.view.php') ?>
-            <p class='text-md text-white bg-[<?= $tempCategoryColor ?>] rounded-lg px-1'> <?= $tempCategory ?> </p>
+            <p class='text-end text-md text-white bg-[<?= $tempCategoryColor ?>] rounded-lg px-1'> <?= $tempCategory ?> </p>
         </div>
     </div>
 </div>

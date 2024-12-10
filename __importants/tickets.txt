@@ -2,10 +2,6 @@ IMPORTANT NOTES:
 - scrollbar-custom  lagyan ng ganyang class ung mga scrollbared divs (KEN DITO)
 
 TICKETS [MOST IMPORTANT TO LEAST]:
-- Establish a website / domain (AASK PA TO KAY SIR TOM THOUGH)
- + storing of system settings info ??
- + pagsasama user settings and system settings ()
-- Statistics Page Completion 
 - Bugs: ayusin mga overlay issues
 - audit log looks
 - Editing of group info
@@ -14,12 +10,13 @@ TICKETS [MOST IMPORTANT TO LEAST]:
 - Transferring of ownership sa group
 - Role-based access functionalities (e.g., member cannot create invite link, kick, and add expense)
 - group and group icons (_default.png) [Standard default name]
-- landing - get started behavior (dashboard kapag may nakalogin)
 - default group selection (remember last visited group sa database)
 
 - Input validators: min & max on all input fields (KEN DITO)
 - Currency change sa sytem settings (KEN DITO)
 - Ayusin system Settings (KEN DITO)
+ + storing of system settings info ??
+ + pagsasama user settings and system settings ()
 
 === Other concerns ===
 

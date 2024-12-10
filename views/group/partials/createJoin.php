@@ -1,5 +1,5 @@
-<section id="createJoinGroupPanel" class="z-50 hidden justify-center items-center fixed inset-0 bg-black bg-opacity-50 transition-opacity">
-    <div class=" tlGreen text-gray-300 p-8 rounded-3xl shadow-lg w-11/12 max-w-md">
+<section id="<?= isset($noGroup) ? '' : 'createJoinGroupPanel' ?>" class="<?= isset($noGroup) ? "flex w-full h-screen justify-center items-center py-24 tlGreen2" : 'hidden fixed z-50 h-screen w-screen justify-center items-center inset-0 bg-black bg-opacity-50 transition-opacity' ?> ">
+    <div class=" bgGreen text-gray-300 p-8 rounded-3xl shadow-lg w-11/12 max-w-md">
         <!-- Heading -->
         <h2 id="panelHeading" class="text-4xl font-semibold text-center mb-4">Create a Group</h2>
 
@@ -40,7 +40,7 @@
             <!-- Submit (Create Group) Button -->
             <button
                 id="submitBtn"
-                class="w-full py-2 bg-green-800 text-white font-bold rounded-lg hover:bg-green-700"
+                class="w-full py-2 btGreen text-white font-bold rounded-lg "
                 type="submit">
                 Create Group
             </button>

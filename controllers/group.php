@@ -209,6 +209,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 else if ($_SERVER['REQUEST_METHOD'] === "GET") {
     // When a user does not have a group yet
     if (sizeof($groups) < 1) {
+        $noGroup = true;
         require('views/group/noGroup.view.php');
         die();
     }

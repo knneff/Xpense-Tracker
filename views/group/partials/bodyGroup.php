@@ -11,4 +11,4 @@
         <!-- SIDE BAR -->
         <?php require('views/partials/sidebar.php') ?>
         <!-- DITO NA YUNG PINAKACONTENT NINYO -->
-        <content class="w-full flex flex-row pl-12 sm:pl-0">
+        <content class="w-full flex flex-col pl-12 sm:pl-0 overflow-auto scrollbar-custom">
