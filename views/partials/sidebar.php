@@ -25,7 +25,7 @@
 </style>
 
 
-<div id="menu" class="dsm z-47 h-full flex-shrink-0 tlGreen textGray flex-col border-r border-one border-gray-800
+<div id="menu" class="dsm z-[47] h-full flex-shrink-0 tlGreen textGray flex-col border-r border-one border-gray-800
     fixed
     sm:sticky
     ">

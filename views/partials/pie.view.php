@@ -1,22 +1,9 @@
-<?php
-//DEFAULT VALUES (ITO MGA LILITAW KAPAG WALANG ININPUT NA VALUES $values) [FOR TESTING]
-if (!isset($values)) {
-    $values = [52.8, 26.8, 20.4];
-    $labels = ["Direct", "Organic search", "Referrals"];
-    $colors = ["#1C64F2", "#16BDCA", "#9061F9"];
-}
-?>
-
-
 <div class="max-w-sm w-full rounded-lg shadow p-4 md:p-6">
     <h5 class="w-full pb-2 text-xl font-bold leading-none text-gray-900 dark:text-white me-1">Category Breakdown</h5>
     <hr>
     <!-- Line Chart -->
-    <div class="py-4 -mb-6" id="pie-chart"></div>
+    <div class="py-4 -mb-6 flex" id="pie-chart"></div>
 </div>
-
-
-<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 
 <script>
     const getChartOptions = () => {
@@ -89,3 +76,5 @@ if (!isset($values)) {
         chart.render();
     }
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>

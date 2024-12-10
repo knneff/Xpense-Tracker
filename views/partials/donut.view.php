@@ -13,7 +13,7 @@ if (!isset($values)) {
     #donut-chart .apexcharts-legend-text {
         color: #d1d5db !important;
     }
-    
+
     #donut-chart .apexcharts-datalabel-value,
     #donut-chart .apexcharts-datalabel-label {
         fill: #d1d5db !important;
@@ -60,7 +60,7 @@ if (!isset($values)) {
                                 show: true,
                                 label: "Total",
                                 fontFamily: "Inter, sans-serif",
-                                color: "#d1d5db",  // Ensure this is applied correctly
+                                color: "#d1d5db", // Ensure this is applied correctly
                                 formatter: function(w) {
                                     const sum = w.globals.seriesTotals.reduce((a, b) => {
                                         return a + b
@@ -72,7 +72,7 @@ if (!isset($values)) {
                                 show: true,
                                 fontFamily: "Inter, sans-serif",
                                 offsetY: -20,
-                                color: "#d1d5db",  // Same color for value labels inside donut slices
+                                color: "#d1d5db", // Same color for value labels inside donut slices
                                 formatter: function(value) {
                                     return value + "%";
                                 },
@@ -124,5 +124,4 @@ if (!isset($values)) {
         const chart = new ApexCharts(document.getElementById("donut-chart"), getChartOptions());
         chart.render();
     }
-
 </script>
