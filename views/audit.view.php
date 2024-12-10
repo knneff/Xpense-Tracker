@@ -1,10 +1,15 @@
-<?php require('partials/body.php') ?>
+<?php require('partials/bodyNoHeader.php') ?>
 
-<!-- <div>Audit Log Here</div> -->
+<!--  -->
+<div class="textGray font-bold text-2xl sm:text-4xl flex pb-2 mb-4 border-b border-b-gray-400">
+    <?= $title ?>
+</div>
 
-<div class="w p-5">
+<div class="">
     <table class="textGray border border-one border-gray-50">
-        <thead class="font-bold text-center">
+
+        <!-- Headers -->
+        <thead class="font-bold text-center tlGreen2">
             <tr>
                 <td class='border'>Time</td>
                 <td class='border'>Table Name</td>
@@ -13,7 +18,9 @@
                 <td class='border'>Old Value</td>
             </tr>
         </thead>
-        <tbody>
+
+        <!-- ROWS / DATA-->
+        <tbody class='tlGreen'>
             <?php
             foreach ($auditLog as $log) {
                 echo "<tr> 
@@ -26,10 +33,9 @@
             }
             ?>
         </tbody>
+
     </table>
 </div>
-
-
 
 <?php require('partials/footerContent.php') ?>
 <?php require('partials/footer.php') ?>

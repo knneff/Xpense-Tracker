@@ -1,5 +1,5 @@
 <!-- Group Transactions -->
-<div class="bgGreen overflow-auto flex-1 flex-col px-4 py-2 space-y-12 border-gray-600 border-l border-r">
+<div class="bgGreen scrollbar-custom overflow-auto flex-1 flex-col px-4 py-2 space-y-12 border-gray-600 border-l border-r">
 
     <!-- MY PENDING EXPENSES (Filters: All, Pending, Paid, Declined) -->
     <div>
@@ -15,7 +15,7 @@
         </div>
 
         <!-- CONTENT -->
-        <div id='pendingList' class='max-h-[500px] py-2 duration-100 ease-in-out overflow-auto flex flex-col px-2 space-y-2 bg-black bg-opacity-10 border-gray-600 border-t border-b'>
+        <div id='pendingList' class='max-h-[500px] py-2 duration-100 ease-in-out scrollbar-custom overflow-auto flex flex-col px-2 space-y-2 bg-black bg-opacity-10 border-gray-600 border-t border-b'>
             <?php
             $expenseSize = sizeof($currUserPendings);
             if ($expenseSize < 1) {
@@ -51,7 +51,7 @@
             </button>
         </div>
         <!-- CONTENT -->
-        <div id='expenseList' class='max-h-[500px] py-2 duration-100 ease-in-out overflow-auto flex flex-col px-2 space-y-2 bg-black bg-opacity-10 border-gray-600 border-t border-b'>
+        <div id='expenseList' class='max-h-[500px] py-2 duration-100 ease-in-out scrollbar-custom overflow-auto flex flex-col px-2 space-y-2 bg-black bg-opacity-10 border-gray-600 border-t border-b'>
             <?php
             $expenseSize = sizeof($groupTransactionHistory);
             if ($expenseSize < 1) {

@@ -3,8 +3,9 @@
 <main class="text-gray-300">
   <div class="relative">
     <section class="h-screen grid relative">
-      <div class="h-fit w-screen bg-[#03352c] flex justify-center  items-center p-44 md:px-24 md:pt-24 lg:px-32 lg:pt-32 xl:px-40 xl:pt-40"> 
+      <div class="h-fit w-screen bg-[#03352c] flex justify-center  items-center p-44 md:px-24 md:pt-24 lg:px-32 lg:pt-32 xl:px-40 xl:pt-40">
         <div class="md:w-1/2">
+
           <div class="w-screen px-8 md:px-0 md:w-[200px]">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2754 1021" version="1.1">
               <g id="surface1">
@@ -30,16 +31,27 @@
               </g>
             </svg>
           </div>
+
           <div class="pb-4">
             <h1 class="text-3xl md:text-2xl lg:text-4xl xl:text-6xl font-bold text-center md:text-left">Simplify Spending, Master Your Money</h1>
           </div>
+
           <div class="pt-4 flex justify-center md:block">
-            <a href="/login">
+            <a href="
+              <?php
+              if (isset($_SESSION['userid'])) {
+                echo '/dashboard';
+              } else {
+                echo '/login';
+              }
+              ?>
+            ">
               <button class="h-16 md:h-14 w-48 cursor-pointer pb-0.5 transition-transform rounded-full text-gray-300 uppercase text-xl font-semibold hover:scale-110 bg-[#1a664d] hover:bg-[#278a6a]">
                 Get Started
               </button>
             </a>
           </div>
+
         </div>
         <div class="w-1/2 hidden md:block">
           <img src="assets\phone.png" alt="iPhone image" class="md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] absolute md:top-[170px] md:right-[110px] lg:top-[120px] lg:right-[110px] xl:top-[70px] xl:right-[190px]">
@@ -48,14 +60,15 @@
       </div>
       <div class="flex justify-center w-full absolute bottom-0 ">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 animate-ping" viewBox="0 0 1024 1024" version="1.1" fill="#ffffff">
-          <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+          <g id="SVGRepo_bgCarrier" stroke-width="0" />
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
           <g id="SVGRepo_iconCarrier">
-            <path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z" fill="#ffffff"/>
+            <path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z" fill="#ffffff" />
           </g>
         </svg>
       </div>
     </section>
+
     <!-- how it works section -->
     <section class="bg-[#064e3b] h-1/2 md:h-screen w-screen grid place-items-center md:flex md:items-center md:p-8 relative">
       <!-- image -->

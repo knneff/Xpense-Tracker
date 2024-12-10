@@ -1,5 +1,5 @@
 <!-- NAVBAR CONTENT -->
-<nav class="sticky top-0 tlGreen z-[47] w-full shadow-lg h-16 flex px-3 sm:pr-6 lg:pr-8 justify-between items-center">
+<nav class="sticky top-0 tlGreen z-[49] w-full shadow-lg h-16 flex px-3 sm:pr-6 lg:pr-8 justify-between items-center">
     <!-- NAV Left -->
     <a href='/'>
         <svg class='w-28' viewBox="0 0 2754 756" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">

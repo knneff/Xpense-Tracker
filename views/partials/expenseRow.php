@@ -30,8 +30,8 @@
 </div>
 
 <!-- delete confirmation message -->
-<main id='<?= $delConfId ?>' class='hidden fixed'>
-    <div id='<?= $delConfOverlayId ?>' class='z-50 flex justify-center items-center fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50'>
+<main id='<?= $delConfId ?>' class='hidden fixed z-50'>
+    <div id='<?= $delConfOverlayId ?>' class='px-16 flex justify-center items-center fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50'>
         <div class='bgGreen flex justify-center text-base sm:text-lg text-gray-300  p-8 rounded-3xl'>
             <div>
                 <h2 class='text-4xl font-semibold text-center textGray'>Delete Confirmation</h2>

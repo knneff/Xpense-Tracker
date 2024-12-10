@@ -1,6 +1,6 @@
 <?php require('partials/body.php') ?>
 
-<div class='flex flex-col gap-5 sm:px-8 md:px-16 lg:px-24 xl:px-42'>
+<div class='flex flex-col gap-4 sm:px-8 md:px-16 lg:px-24 xl:px-42'>
     <form class='textGray gap-4 flex flex-row justify-between sm:items-center'>
         <!-- FILTERS -->
         <div class='flex flex-col sm:flex-row gap-4'>
@@ -57,6 +57,7 @@
             </main>
         ";
     } else {
+        echo "<ul class='flex flex-col gap-2'>";
         foreach ($expenses as $index => $expense) {
             $description = stringShortener($expense['description'], 15);
             $expenseTime = formatDateTime($expense['expenseTime']);
@@ -75,8 +76,11 @@
             $delBtnId = "delBtn" . $index;
             $delConfId = "delConf" . $index;
             $delConfOverlayId = "delConfOverlayId" . $index;
+            echo "<li>";
             require('partials/expenseRow.php');
+            echo "</li>";
         }
+        echo "</ul>";
     }
     ?>
 
