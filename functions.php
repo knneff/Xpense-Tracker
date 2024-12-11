@@ -43,7 +43,7 @@ function protectPage()
 {
     session_start();
     if (!isset($_SESSION['userid'])) {
-        alertRedirect("You must be logged in first!", '/login');
+        redirect('/login');
     }
 }
 
