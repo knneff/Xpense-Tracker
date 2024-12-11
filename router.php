@@ -17,7 +17,6 @@ $routes = [
     "/goal" => __DIR__ . "/controllers/goal.php",
     "/expenselog" => __DIR__ . "/controllers/expenseLog.php",
     "/subscriptions" => __DIR__ . "/controllers/subscriptions.php",
-    "/audit" => __DIR__ . "/controllers/audit.php",
     "/settings" => __DIR__ . "/controllers/settings.php",
     "/statistics" => __DIR__ . "/controllers/statistics.php",
 
@@ -28,6 +27,10 @@ $routes = [
     //test
     "/test" => __DIR__ . "/views/test.view.php",
     "/test2" => __DIR__ . "/views/test2.view.php",
+
+    //admin only pages
+    "/audit" => __DIR__ . "/controllers/audit.php",
+    "/tickets" => __DIR__ . "/controllers/tickets.php",
 ];
 
 $pageTitles = [
@@ -47,7 +50,6 @@ $pageTitles = [
     "/goal" => "Goals and Plans",
     "/expenselog" => "Expense Log",
     "/subscriptions" => "Subscription",
-    "/audit" => "Audit Log",
     "/settings" => "Settings",
     "/statistics" => "Statistics",
 
@@ -58,6 +60,10 @@ $pageTitles = [
     //test
     "/test" => "Test",
     "/test2" => "TESTTT",
+
+    //admin only pages
+    "/audit" => "Audit Log",
+    "/tickets" => "Tickets",
 ];
 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];

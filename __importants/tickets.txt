@@ -12,11 +12,6 @@ TICKETS [MOST IMPORTANT TO LEAST]:
 - group and group icons (_default.png) [Standard default name]
 - default group selection (remember last visited group sa database)
 
-- Input validators: min & max on all input fields (KEN DITO)
-- Currency change sa sytem settings (KEN DITO)
-- Ayusin system Settings (KEN DITO)
- + storing of system settings info ??
- + pagsasama user settings and system settings ()
 
 === Other concerns ===
 

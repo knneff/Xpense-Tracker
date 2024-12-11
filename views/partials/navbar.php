@@ -62,7 +62,9 @@
 
     button.addEventListener("click", function(event) {
         event.stopPropagation();
+        panelNotif.classList.add("hidden");
         targetDiv.classList.toggle("hidden");
+
         isSettingsDisplayed = true;
     });
 

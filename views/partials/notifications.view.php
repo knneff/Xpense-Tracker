@@ -79,6 +79,7 @@
     buttonNotif.addEventListener("click", function(event) {
         event.stopPropagation();
         panelNotif.classList.toggle("hidden");
+        targetDiv.classList.add("hidden");
         isNotifDisplayed = !isNotifDisplayed;
 
         if (!isInnerListenerAdded) {

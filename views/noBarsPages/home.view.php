@@ -36,7 +36,7 @@
             <h1 class="text-3xl md:text-2xl lg:text-4xl xl:text-6xl font-bold text-center md:text-left">Simplify Spending, Master Your Money</h1>
           </div>
 
-          <div class="pt-4 flex justify-center md:block">
+          <div class="pt-4 flex flex-wrap md:justify-start justify-center gap-5">
             <a href="
               <?php
               if (isset($_SESSION['userid'])) {
@@ -46,10 +46,13 @@
               }
               ?>
             ">
-              <button class="h-16 md:h-14 w-48 cursor-pointer pb-0.5 transition-transform rounded-full text-gray-300 uppercase text-xl font-semibold hover:scale-110 bg-[#1a664d] hover:bg-[#278a6a]">
+              <button class="h-12 sm:h-14 w-40 sm:48 cursor-pointer pb-0.5 transition-transform rounded-full text-gray-300 uppercase text-lg sm:text-xl font-semibold hover:scale-110 active:scale-100 bg-[#1a664d] hover:bg-[#278a6a]">
                 Get Started
               </button>
             </a>
+            <button id="installBtn" style="display: none;" class="h-12 sm:h-14 w-40 sm:48 text-lg sm:text-xl cursor-pointer pb-0.5 border-2 border-gray-300 text-gray-300 rounded-full hover:scale-110 active:scale-100">
+              Install App
+            </button>
           </div>
 
         </div>

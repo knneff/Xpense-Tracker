@@ -13,4 +13,4 @@
         <!-- SIDE BAR -->
         <?php require('sidebar.php') ?>
         <!-- DITO NA YUNG PINAKACONTENT NINYO -->
-        <content class="scrollbar-custom overflow-auto flex-1">
+        <content class="scrollbar-custom overflow-auto flex-1 pl-16 pr-4 py-4 mb-16 sm:px-6 md:px-8 lg:px-10 xl:px-12">
