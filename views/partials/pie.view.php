@@ -1,6 +1,5 @@
 <div class="max-w-sm w-full rounded-lg shadow p-4 md:p-6">
-    <h5 class="w-full pb-2 text-xl font-bold leading-none text-gray-900 dark:text-white me-1">Category Breakdown</h5>
-    <hr>
+    <h5 class="w-full pb-4 text-xl font-bold leading-none textGray border-b-2 border-gray-400 me-1">Category Breakdown</h5>
     <!-- Line Chart -->
     <div class="py-4 -mb-6 flex" id="pie-chart"></div>
 </div>
@@ -17,7 +16,7 @@
                 type: "pie",
             },
             stroke: {
-                colors: ["white"],
+                colors: ["#072822"],
                 lineCap: "",
             },
             plotOptions: {
@@ -41,7 +40,7 @@
             legend: {
                 // show: false,
                 labels: {
-                    colors: '#FFFFFF',
+                    colors: '#D1D5DB',
                     useSeriesColors: false,
                 },
                 // colors: '#FFFFFF',

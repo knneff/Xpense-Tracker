@@ -119,7 +119,7 @@
                             </div>
                         </div>
                         <div class="text-center flex gap-4">
-                            <a href="/" class="textTeal hover:underline px-6 py-3 text-xl rounded-lg sm:mb-0 w-1/2 font-semibold">Go Back Home</a>
+                            <a href="/dashboard" class="textTeal hover:underline px-6 py-3 text-xl rounded-lg sm:mb-0 w-1/2 font-semibold">Go Back Home</a>
                             <button name="support" type="submit" class="btGreen text-white px-6 py-3 text-xl rounded-lg sm:mb-0 w-1/2 font-semibold">Send Message</button>
                         </div>
                     </form>

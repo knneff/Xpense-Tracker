@@ -87,12 +87,12 @@
           <h1 class="text-3xl lg:text-5xl xl:text-6xl font-bold mb-5 text-center md:text-left">How it works</h1>
           <hr>
           <br>
-          <p class="text-xs md:text-base xl:text-4xl text-justify md:leading-6 font-semibold">
+          <p class="text-xs md:text-base xl:text-4xl md:leading-6">
             Xpense Tracker is a powerful yet easy-to-use web application designed to help you track, manage, and optimize your finances.
           </p>
           <br>
           <br class="hidden lg:block">
-          <p class="text-xs md:text-base xl:text-4xl text-justify md:leading-6 font-semibold">
+          <p class="text-xs md:text-base xl:text-4xl md:leading-6">
             Using intuitive tools for budgeting, expense categorization, and real-time insights, Xpense Tracker empowers you to take control of your money and achieve your financial goals effortlessly.
           </p>
         </div>

@@ -1,9 +1,9 @@
 <?php require('partials/body.php') ?>
 
-<div class="textGray">
+<div class="textGray pt-4 md:px-32">
     <form class="grid gap-6" method="POST">
         <!-- Notification -->
-        <div class="flex justify-between">
+        <div class="flex justify-between py-4">
             <div class="mb-2 text-lg sm:text-2xl textGray">Notifications</div>
             <label class="inline-flex items-center cursor-pointer">
                 <input type="checkbox" name="notification" value="on" class="sr-only peer" <?= $systemInfo["notification"] ? 'checked' : '' ?>>
@@ -14,7 +14,7 @@
         <hr class="border-gray-400">
 
         <!-- UNIT CURRENCY -->
-        <div class="flex justify-between">
+        <div class="flex justify-between py-4">
             <label for="currency" class="mb-2 text-lg sm:text-2xl textGray">Currency Symbol</label>
             <select
                 name="currency"
@@ -30,7 +30,7 @@
         <hr class="border-gray-400">
 
         <!-- OVERSPENDING ALARM -->
-        <div class="flex justify-between">
+        <div class="flex justify-between py-4">
             <label for="limit" class="mb-2 text-lg sm:text-2xl textGray">Daily Spending Limit</label>
             <div class="flex gap-2">
                 <input
@@ -52,7 +52,7 @@
 
         <hr class="border-gray-400">
 
-        <div>
+        <div class="py-4">
             <!-- Threshold -->
             <div class="flex justify-between pb-2">
                 <label for="labels-range-input" class="mb-2 text-lg sm:text-2xl textGray">Spending Threshold</label>
@@ -85,7 +85,12 @@
 
         <hr class="border-gray-400">
 
-        <button type='submit' name="systemSettings" class='btGreen2 font-semibold text-lg rounded-lg py-1 px-2'>Save Settings</button>
+        <div class="flex justify-center mt-4">
+            <button type='submit' name="systemSettings" 
+            class='w-40 btGreen2 font-semibold text-lg rounded-lg py-1 px-2'>
+            Save Settings
+            </button>
+        </div>
     </form>
 </div>
 <script>
