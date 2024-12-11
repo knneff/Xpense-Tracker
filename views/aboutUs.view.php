@@ -46,7 +46,7 @@
 </section>
 
 <!-- Our Team -->
-<section class="bgGreen2 flex flex-col text-white py-8 px-4 sm:px-44 gap-4">
+<section class="bgGreen2 flex flex-col text-white py-8 px-4 sm:px-24 gap-4">
 
     <h2 class="text-4xl font-bold text-center">Our Team</h2>
     <p class="text-lg text-center text-gray-200">
@@ -176,7 +176,7 @@
     </div>
 
     <!-- OTHERS -->
-    <div class='flex flex-row flex-wrap justify-between gap-4'>
+    <div class='grid grid-cols-1 sm:grid-cols-3 flex-wrap justify-between gap-4'>
         <!-- Developer 1 -->
         <div class="bgGreen gap-2 p-2 rounded-xl flex flex-row transform transition-transform duration-300 hover:scale-105">
             <!-- IMAGE -->

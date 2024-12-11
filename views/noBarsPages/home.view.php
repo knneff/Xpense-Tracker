@@ -57,8 +57,8 @@
 
         </div>
         <div class="w-1/2 hidden md:block">
-          <img src="assets\phone.png" alt="iPhone image" class="md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] absolute md:top-[170px] md:right-[110px] lg:top-[120px] lg:right-[110px] xl:top-[70px] xl:right-[190px]">
           <img src="assets\new phone.png" alt="iPhone image" class="md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] absolute md:top-[193px] md:right-[50px] lg:top-[143px] lg:right-[50px] xl:top-[93px] xl:right-[100px]">
+          <img src="assets\phone.png" alt="iPhone image" class="md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] absolute md:top-[170px] md:right-[110px] lg:top-[120px] lg:right-[110px] xl:top-[70px] xl:right-[190px]">
         </div>
       </div>
       <div class="flex justify-center w-full absolute bottom-0 ">
