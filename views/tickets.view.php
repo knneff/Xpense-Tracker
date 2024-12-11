@@ -27,9 +27,13 @@
         </div>
         <div class="grid">
             <?= $ticket["message"] ?>
-            <form action="">
+            <form method="POST" class="justify-self-end">
+                <input
+                    type="hidden"
+                    value="<?= $ticket["id"] ?>"
+                    name="deleteTicket">
                 <button
-                    class="bg-red-500 rounded-xl text-white py-1 w-24 justify-self-end">
+                    class="bg-red-500 rounded-xl text-white py-1 w-24">
                     Delete
                 </button>
             </form>
