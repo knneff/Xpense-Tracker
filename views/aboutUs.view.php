@@ -62,8 +62,8 @@
                 <h3 class="text-3xl font-bold text-gray-200 mb-2">Team Leader</h3>
                 <!-- Manager 1 -->
                 <div class="text-center">
-                    <img class="w-40 h-40 mx-auto rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="team-leader2.jpg" alt="Kota">
-                    <h3 class="mt-4 text-xl font-bold text-green-400">Kota</h3>
+                    <img class="w-40 h-40 mx-auto rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="assets\1x1\anthony.png" alt="Anthony Dayrit">
+                    <h3 class="mt-4 text-xl font-bold text-green-400">Anthony</h3>
                     <p class="mt-2 text-gray-400 text-lg">UI</p>
                     <div class="mt-4 flex justify-center flex-col space-y-2">
                         <!-- Email -->
@@ -72,14 +72,6 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
                             <a href="mailto:skibidi@company.com" class="text-gray-400 hover:text-green-400">skibidi@company.com</a>
-                        </div>
-
-                        <!-- Phone -->
-                        <div class="flex items-center justify-center space-x-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                            </svg>
-                            <a href="tel:+1234567890" class="text-gray-400 hover:text-green-400">+1 (234) 567-890</a>
                         </div>
 
                         <!-- GitHub -->
@@ -103,24 +95,16 @@
             <div class="flex justify-between gap-16 flex-wrap">
                 <!-- Manager 1 -->
                 <div class="text-center m-0 transform transition-transform duration-300 hover:scale-105">
-                    <img class="w-40 h-40 mx-auto rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="team-leader2.jpg" alt="Kota">
-                    <h3 class="mt-4 text-xl font-bold text-green-400">Kota</h3>
-                    <p class="mt-2 text-gray-400 text-lg">UI</p>
+                    <img class="w-40 h-40 mx-auto rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="assets\1x1\ken.jpg" alt="Ken Manalo">
+                    <h3 class="mt-4 text-xl font-bold text-green-400">Ken S. Manalo</h3>
+                    <p class="mt-2 text-gray-400 text-lg">Full Stack Developer</p>
                     <div class="mt-4 flex justify-center flex-col space-y-2">
                         <!-- Email -->
                         <div class="flex items-center justify-center space-x-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
-                            <a href="mailto:skibidi@company.com" class="text-gray-400 hover:text-green-400">skibidi@company.com</a>
-                        </div>
-
-                        <!-- Phone -->
-                        <div class="flex items-center justify-center space-x-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                            </svg>
-                            <a href="tel:+1234567890" class="text-gray-400 hover:text-green-400">+1 (234) 567-890</a>
+                            <a href="mailto:knmnltzy@gmail.com" class="text-gray-400 hover:text-green-400">knmnltzy@gmail.com</a>
                         </div>
 
                         <!-- GitHub -->
@@ -130,31 +114,23 @@
                                 <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
                                 </svg>
-                                <a href="tel:+1234567890" class="text-gray-400 hover:text-green-400">skbidi.com</a>
+                                <a href="https://github.com/knneff" class="text-gray-400 hover:text-green-400">knneff</a>
                             </a>
                         </div>
                     </div>
                 </div>
                 <!-- Manager 2 -->
                 <div class="text-center m-0 transform transition-transform duration-300 hover:scale-105">
-                    <img class="w-40 h-40 mx-auto rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="team-leader3.jpg" alt="Gorian">
-                    <h3 class="mt-4 text-xl font-bold text-green-400">Gorian</h3>
-                    <p class="mt-2 text-gray-400 text-lg">UI</p>
+                    <img class="w-40 h-40 mx-auto rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="assets\1x1\eicee.png" alt="Eicee Lance Bautsista">
+                    <h3 class="mt-4 text-xl font-bold text-green-400">Eicee Lance Austin S. Baustista</h3>
+                    <p class="mt-2 text-gray-400 text-lg">UI/Frontend Leader</p>
                     <div class="mt-4 flex justify-center flex-col space-y-2">
                         <!-- Email -->
                         <div class="flex items-center justify-center space-x-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
-                            <a href="mailto:skibidi@company.com" class="text-gray-400 hover:text-green-400">skibidi@company.com</a>
-                        </div>
-
-                        <!-- Phone -->
-                        <div class="flex items-center justify-center space-x-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                            </svg>
-                            <a href="tel:+1234567890" class="text-gray-400 hover:text-green-400">+1 (234) 567-890</a>
+                            <a href="mailto:jannikkolozano@gmail.com" class="text-gray-400 hover:text-green-400">jannikkolozano@gmail.com</a>
                         </div>
 
                         <!-- GitHub -->
@@ -164,31 +140,23 @@
                                 <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
                                 </svg>
-                                <a href="tel:+1234567890" class="text-gray-400 hover:text-green-400">skbidi.com</a>
+                                <a href="https://github.com/Astrolare" class="text-gray-400 hover:text-green-400">Astrolare</a>
                             </a>
                         </div>
                     </div>
                 </div>
                 <!-- Manager 3 -->
                 <div class="text-center m-0 transform transition-transform duration-300 hover:scale-105">
-                    <img class="w-40 h-40 mx-auto rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="team-leader4.jpg" alt="Mokujin">
-                    <h3 class="mt-4 text-xl font-bold text-green-400">Mokujin</h3>
-                    <p class="mt-2 text-gray-400 text-lg">UI</p>
+                    <img class="w-40 h-40 mx-auto rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="assets\1x1\matt.png" alt="Matt Angel Neil Ricohermoso">
+                    <h3 class="mt-4 text-xl font-bold text-green-400">Matt Angel Neil P. Ricohermoso</h3>
+                    <p class="mt-2 text-gray-400 text-lg">Front-End Developer and Project Manager</p>
                     <div class="mt-4 flex justify-center flex-col space-y-2">
                         <!-- Email -->
                         <div class="flex items-center justify-center space-x-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
-                            <a href="mailto:skibidi@company.com" class="text-gray-400 hover:text-green-400">skibidi@company.com</a>
-                        </div>
-
-                        <!-- Phone -->
-                        <div class="flex items-center justify-center space-x-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                            </svg>
-                            <a href="tel:+1234567890" class="text-gray-400 hover:text-green-400">+1 (234) 567-890</a>
+                            <a href="mailto:ricohermosomatt@gmail.com" class="text-gray-400 hover:text-green-400">ricohermosomatt@gmail.com</a>
                         </div>
 
                         <!-- GitHub -->
@@ -198,7 +166,7 @@
                                 <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
                                 </svg>
-                                <a href="tel:+1234567890" class="text-gray-400 hover:text-green-400">skbidi.com</a>
+                                <a href="https://github.com/archillectt" class="text-gray-400 hover:text-green-400">archillectt</a>
                             </a>
                         </div>
                     </div>
@@ -212,26 +180,19 @@
         <!-- Developer 1 -->
         <div class="bgGreen gap-2 p-2 rounded-xl flex flex-row transform transition-transform duration-300 hover:scale-105">
             <!-- IMAGE -->
-            <img class="w-40 h-40 rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="team-member8.jpg" alt="Max">
+            <img class="w-40 h-40 rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="assets\1x1\kit.JPG" alt="Louie Jay Guevarra">
             <!-- INFO -->
             <div class='flex flex-col justify-start'>
                 <!-- Name -->
-                <h3 class="mt-2 text-xl font-bold text-green-400">Max</h3>
+                <h3 class="mt-2 text-xl font-bold text-green-400">Louie Jay Guevarra</h3>
                 <!-- Role -->
-                <p class="text-gray-400 text-lg">UI</p>
+                <p class="text-gray-400 text-lg">Front-End Developer & Documentation</p>
                 <!-- Email -->
                 <div class="mt-2 flex gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <a href="mailto:skibidi@company.com" class="text-gray-400 hover:text-green-400">skibidi@company.com</a>
-                </div>
-                <!-- Phone -->
-                <div class="flex gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    <a href="tel:+1234567890" class="text-gray-400 hover:text-green-400">+1 (234) 567-890</a>
+                    <a href="mailto:ljay15guevarra@gmail.com" class="text-gray-400 hover:text-green-400">ljay15guevarra@gmail.com</a>
                 </div>
                 <!-- GitHub -->
                 <div class="flex gap-2">
@@ -240,7 +201,7 @@
                         <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
                         </svg>
-                        <a href="tel:+1234567890" class="text-gray-400 hover:text-green-400">skbidi.com</a>
+                        <a href="https://github.com/IamNobody0015" class="text-gray-400 hover:text-green-400">IamNobody0015</a>
                     </a>
                 </div>
             </div>
@@ -248,27 +209,21 @@
         <!-- Developer 2 -->
         <div class="bgGreen gap-2 p-2 rounded-xl flex flex-row transform transition-transform duration-300 hover:scale-105">
             <!-- IMAGE -->
-            <img class="w-40 h-40 rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="team-member8.jpg" alt="Max">
+            <img class="w-40 h-40 rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="assets\1x1\jan.jpg" alt="Jan Nikko Lozano">
             <!-- INFO -->
             <div class='flex flex-col justify-start'>
                 <!-- Name -->
-                <h3 class="mt-2 text-xl font-bold text-green-400">Max</h3>
+                <h3 class="mt-2 text-xl font-bold text-green-400">Jan Nikko M. Lozano</h3>
                 <!-- Role -->
-                <p class="text-gray-400 text-lg">UI</p>
+                <p class="text-gray-400 text-lg">Front-End Developer & Documentation</p>
                 <!-- Email -->
                 <div class="mt-2 flex gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <a href="mailto:skibidi@company.com" class="text-gray-400 hover:text-green-400">skibidi@company.com</a>
+                    <a href="mailto:ljannikko@gmail.com " class="text-gray-400 hover:text-green-400">ljannikko@gmail.com </a>
                 </div>
-                <!-- Phone -->
-                <div class="flex gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    <a href="tel:+1234567890" class="text-gray-400 hover:text-green-400">+1 (234) 567-890</a>
-                </div>
+
                 <!-- GitHub -->
                 <div class="flex gap-2">
                     <a href="https://github.com/skibidi" rel="noreferrer" target="_blank" class="text-teal-700 transition hover:text-teal-700/75 dark:text-teal-500 dark:hover:text-teal-500/75">
@@ -276,7 +231,7 @@
                         <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
                         </svg>
-                        <a href="tel:+1234567890" class="text-gray-400 hover:text-green-400">skbidi.com</a>
+                        <a href="https://github.com/ChicckenNoodleSoup" class="text-gray-400 hover:text-green-400">ChicckenNoodleSoup</a>
                     </a>
                 </div>
             </div>
@@ -284,26 +239,19 @@
         <!-- Developer 3 -->
         <div class="bgGreen gap-2 p-2 rounded-xl flex flex-row transform transition-transform duration-300 hover:scale-105">
             <!-- IMAGE -->
-            <img class="w-40 h-40 rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="team-member8.jpg" alt="Max">
+            <img class="w-40 h-40 rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="assets\1x1\mark.jpg" alt="Mark Sabile">
             <!-- INFO -->
             <div class='flex flex-col justify-start'>
                 <!-- Name -->
-                <h3 class="mt-2 text-xl font-bold text-green-400">Max</h3>
+                <h3 class="mt-2 text-xl font-bold text-green-400">Mark Eliaser Y. Sabile</h3>
                 <!-- Role -->
-                <p class="text-gray-400 text-lg">UI</p>
+                <p class="text-gray-400 text-lg">Front-End Developer & Documentation</p>
                 <!-- Email -->
                 <div class="mt-2 flex gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <a href="mailto:skibidi@company.com" class="text-gray-400 hover:text-green-400">skibidi@company.com</a>
-                </div>
-                <!-- Phone -->
-                <div class="flex gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    <a href="tel:+1234567890" class="text-gray-400 hover:text-green-400">+1 (234) 567-890</a>
+                    <a href="mailto:marksabile31@gmail.com" class="text-gray-400 hover:text-green-400">marksabile31@gmail.com</a>
                 </div>
                 <!-- GitHub -->
                 <div class="flex gap-2">
@@ -312,7 +260,7 @@
                         <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
                         </svg>
-                        <a href="tel:+1234567890" class="text-gray-400 hover:text-green-400">skbidi.com</a>
+                        <a href="https://github.com/Bananatoffee" class="text-gray-400 hover:text-green-400">Bananatoffee</a>
                     </a>
                 </div>
             </div>
@@ -320,26 +268,19 @@
         <!-- Developer 4 -->
         <div class="bgGreen gap-2 p-2 rounded-xl flex flex-row transform transition-transform duration-300 hover:scale-105">
             <!-- IMAGE -->
-            <img class="w-40 h-40 rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="team-member8.jpg" alt="Max">
+            <img class="w-40 h-40 rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="assets\1x1\lowelle.jpg" alt="Lowelle Jade Mamaradlo">
             <!-- INFO -->
             <div class='flex flex-col justify-start'>
                 <!-- Name -->
-                <h3 class="mt-2 text-xl font-bold text-green-400">Max</h3>
+                <h3 class="mt-2 text-xl font-bold text-green-400">Lowelle Jade M. Mamaradlo</h3>
                 <!-- Role -->
-                <p class="text-gray-400 text-lg">UI</p>
+                <p class="text-gray-400 text-lg">Front-End Developer & Documentation</p>
                 <!-- Email -->
                 <div class="mt-2 flex gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <a href="mailto:skibidi@company.com" class="text-gray-400 hover:text-green-400">skibidi@company.com</a>
-                </div>
-                <!-- Phone -->
-                <div class="flex gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    <a href="tel:+1234567890" class="text-gray-400 hover:text-green-400">+1 (234) 567-890</a>
+                    <a href="mailto:jadelearning2004@gmail.com" class="text-gray-400 hover:text-green-400">jadelearning2004@gmail.com</a>
                 </div>
                 <!-- GitHub -->
                 <div class="flex gap-2">
@@ -348,7 +289,7 @@
                         <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
                         </svg>
-                        <a href="tel:+1234567890" class="text-gray-400 hover:text-green-400">skbidi.com</a>
+                        <a href="https://github.com/LowelleJade" class="text-gray-400 hover:text-green-400">LowelleJade</a>
                     </a>
                 </div>
             </div>
@@ -356,26 +297,19 @@
         <!-- Developer 5 -->
         <div class="bgGreen gap-2 p-2 rounded-xl flex flex-row transform transition-transform duration-300 hover:scale-105">
             <!-- IMAGE -->
-            <img class="w-40 h-40 rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="team-member8.jpg" alt="Max">
+            <img class="w-40 h-40 rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="assets\1x1\raymond.jpg" alt="Raymond Roman">
             <!-- INFO -->
             <div class='flex flex-col justify-start'>
                 <!-- Name -->
-                <h3 class="mt-2 text-xl font-bold text-green-400">Max</h3>
+                <h3 class="mt-2 text-xl font-bold text-green-400">Raymond G. Roman</h3>
                 <!-- Role -->
-                <p class="text-gray-400 text-lg">UI</p>
+                <p class="text-gray-400 text-lg">Front-End Developer and Documentation</p>
                 <!-- Email -->
                 <div class="mt-2 flex gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <a href="mailto:skibidi@company.com" class="text-gray-400 hover:text-green-400">skibidi@company.com</a>
-                </div>
-                <!-- Phone -->
-                <div class="flex gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    <a href="tel:+1234567890" class="text-gray-400 hover:text-green-400">+1 (234) 567-890</a>
+                    <a href="mailto:raymond.g.roman10@gmail.com" class="text-gray-400 hover:text-green-400">raymond.g.roman10@gmail.com</a>
                 </div>
                 <!-- GitHub -->
                 <div class="flex gap-2">
@@ -384,7 +318,7 @@
                         <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
                         </svg>
-                        <a href="tel:+1234567890" class="text-gray-400 hover:text-green-400">skbidi.com</a>
+                        <a href="https://github.com/rainacesans" class="text-gray-400 hover:text-green-400">rainacesans</a>
                     </a>
                 </div>
             </div>
@@ -392,26 +326,19 @@
         <!-- Developer 6 -->
         <div class="bgGreen gap-2 p-2 rounded-xl flex flex-row transform transition-transform duration-300 hover:scale-105">
             <!-- IMAGE -->
-            <img class="w-40 h-40 rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="team-member8.jpg" alt="Max">
+            <img class="w-40 h-40 rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="assets\1x1\kit.JPG" alt="Keith Yamzon">
             <!-- INFO -->
             <div class='flex flex-col justify-start'>
                 <!-- Name -->
-                <h3 class="mt-2 text-xl font-bold text-green-400">Max</h3>
+                <h3 class="mt-2 text-xl font-bold text-green-400">Keith Russel R. Yamzon</h3>
                 <!-- Role -->
-                <p class="text-gray-400 text-lg">UI</p>
+                <p class="text-gray-400 text-lg">Front-End Developer, Documentation, and UI</p>
                 <!-- Email -->
                 <div class="mt-2 flex gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <a href="mailto:skibidi@company.com" class="text-gray-400 hover:text-green-400">skibidi@company.com</a>
-                </div>
-                <!-- Phone -->
-                <div class="flex gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    <a href="tel:+1234567890" class="text-gray-400 hover:text-green-400">+1 (234) 567-890</a>
+                    <a href="mailto:keithrussel632@gmail.com" class="text-gray-400 hover:text-green-400">keithrussel632@gmail.com</a>
                 </div>
                 <!-- GitHub -->
                 <div class="flex gap-2">
@@ -420,7 +347,7 @@
                         <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
                         </svg>
-                        <a href="tel:+1234567890" class="text-gray-400 hover:text-green-400">skbidi.com</a>
+                        <a href="https://github.com/yammzzon" class="text-gray-400 hover:text-green-400">yammzzon</a>
                     </a>
                 </div>
             </div>
