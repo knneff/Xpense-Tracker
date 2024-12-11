@@ -2,8 +2,15 @@
 <div class="textGray font-bold text-2xl sm:text-4xl flex pb-2 mb-4 border-b border-b-gray-400">
     <?= $title ?>
 </div>
-
-
+<?php
+    if (empty($tickets)) {
+        echo "
+                        <div class='flex justify-center items-center h-full w-full font-semibold textGray text-2xl sm:text-4xl'>
+                            No Tickets Yet..
+                        </div>
+                    ";
+    }
+?>
 <?php foreach ($tickets as $ticket) : ?>
     <?php
     $datetime = new DateTime($ticket["created_at"]);
