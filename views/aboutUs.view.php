@@ -180,7 +180,7 @@
         <!-- Developer 1 -->
         <div class="bgGreen gap-2 p-2 rounded-xl flex flex-row transform transition-transform duration-300 hover:scale-105">
             <!-- IMAGE -->
-            <img class="w-40 h-40 rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="assets\1x1\kit.JPG" alt="Louie Jay Guevarra">
+            <img class="w-40 h-40 rounded-full border-4 border-green-800 object-cover shadow-lg hover:shadow-xl transition-shadow duration-300" src="assets\1x1\jay.png" alt="Louie Jay Guevarra">
             <!-- INFO -->
             <div class='flex flex-col justify-start'>
                 <!-- Name -->
