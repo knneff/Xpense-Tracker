@@ -1,6 +1,6 @@
 <?php require('views/partials/bodyNoBars.php') ?>
 
-<div class="mt-10 flex flex-col gap-5 items-center justify-center">
+<div class="flex flex-col gap-5 items-center justify-center h-screen pb-20 md:pb-0">
     <div class="tlBgGreen w-full max-w-md p-8 rounded-3xl">
         <a href="javascript:history.back()" class="justify-start textTeal hover:underline">Go Back</a>
         <br />
