@@ -12,7 +12,7 @@
         <div class='flex flex-row justify-between items-center px-4 pb-1 sm:py-2 md:py-3 bgGreen rounded-b-lg'>
             <!-- left -->
             <div class='flex flex-col items-start gap-2'>
-                <p class='text-md sm:text-lg md:text-xl  text-gray-300'> Type: <?= $expenseType ?> </p>
+                <p class='text-md sm:text-lg md:text-xl  text-gray-300'> Type: <?= ucwords($expenseType)  ?> </p>
                 <p class='text-sm sm:text-md md:text-lg text-white bg-[<?= $categoryColor ?>] rounded-lg px-1'> <?= $category ?> </p>
             </div>
 

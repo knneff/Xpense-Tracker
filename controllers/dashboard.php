@@ -3,6 +3,7 @@
 //protects the page from being accessed when no user is logged in. 
 protectPage();
 
+
 //current user
 $userID = $_SESSION['userid'];
 

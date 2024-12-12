@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         $_SESSION['lastName'] = $user['lastName'];
         $_SESSION['alarmThreshold'] = $user['alarmThreshold'];
         $_SESSION['notification'] = $user['notification'];
+        $_SESSION['showTips'] = true;
 
         $_SESSION['expenseLimit'] = $user['expenseLimit'];
         if ($user["currency"] === "yen") {
