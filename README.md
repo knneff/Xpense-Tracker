@@ -3,7 +3,7 @@
 ## REQUIRED SETUP:
 
 - **htdocs**: all the files must be inside the "htdocs" folder. If the files are inside the folder within htdocs, the page routing will not work properly.
-- **php.ini**: the file "C:\xampp\php\php.ini". the ;extension=gd msut be enabled by removing the semicolon. This is to allow image resizing function of the application.
+- **php.ini**: in the file "C:\xampp\php\php.ini", the ;extension=gd msut be enabled by removing the semicolon. This is to allow image resizing function of the application. You can also just copy the php.ini here and replace it with the one in php folder.
 - **mysql setup**: Since our application uses remote mysql database (AIVEN), you can run the command "mysql --user avnadmin --password=AVNS_f8o7HWTkd-96oSm9STx --host mysql-6ef4ff5-xadd852x-362b.j.aivencloud.com --port 16921" to access the database in command line.
 
 ## folder conventions:
