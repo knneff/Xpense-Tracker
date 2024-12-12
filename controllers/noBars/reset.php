@@ -3,14 +3,16 @@
 $token = $_GET["token"];
 $token_hash = hash("sha256", $token);
 
-$sql = "SELECT * FROM users WHERE reset_token_hash = ?";
+$sql = "SELECT username, reset_token_expires_at, userid FROM users WHERE reset_token_hash = ?";
 
 $user = $db->query($sql, [$token_hash])->fetch(PDO::FETCH_ASSOC);
 
 if (!$user || strtotime($user["reset_token_expires_at"]) <= time()) {
     http_response_code(404);
-    require('views/404.php');
+    require('views/noBarsPages/404.php');
+    exit;
 }
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['changePassword'])) {
      $password = $_POST['newPassword'];
@@ -42,6 +44,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['changePassword'])) {
         $db->query($sql, $params);
 
         $message = 'Your password has been successfully changed. <a href="/login" class="textTeal hover:underline">Sign In</a>';
+        $password = "";
+        $cPassword = "";
+        $hide = "hidden";
     }
 }
 require('views/noBarsPages/reset.view.php');

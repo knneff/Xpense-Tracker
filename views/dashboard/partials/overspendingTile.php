@@ -7,7 +7,7 @@
     <div class="font-semibold">
         <?= $_SESSION["currency"] . " " . $expenseToday . " / " . $_SESSION["currency"] . " " . $expenseLimit ?>
     </div>
-    <div class="">
+    <div>
         <div id="donut-chart2" class="relative">
             <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold text-2xl">
                 <?= $expensePercent ?>%

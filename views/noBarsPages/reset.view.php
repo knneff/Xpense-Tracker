@@ -7,7 +7,7 @@
         <hr class="my-4 border-gray-300" />
         <br />
 
-        <form method="POST" class="space-y-5">
+        <form method="POST" class="space-y-5 <?= $hide ?? '' ?>">
             <input
                 id="newPassword"
                 type="password"
@@ -29,7 +29,7 @@
                     type="submit"
                     name="changePassword"
                     class="w-full py-3 mt-4 text-xl font-semibold textGray btGreen rounded-3xl">
-                    Send
+                    Change Password for <?= $user["username"] ?>
                 </button>
             </div>
         </form>
