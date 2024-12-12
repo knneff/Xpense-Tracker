@@ -2,14 +2,10 @@ IMPORTANT NOTES:
 - scrollbar-custom  lagyan ng ganyang class ung mga scrollbared divs (KEN DITO)
 
 TICKETS [MOST IMPORTANT TO LEAST]:
-- audit log looks
 - Editing of group info
 - assigning admin user (can only see audit log)
 - Transferring of ownership sa group
 - Role-based access functionalities (e.g., member cannot create invite link, kick, and add expense)
-- group and group icons (_default.png) [Standard default name]
-- default group selection (remember last visited group sa database)
-
 
 === Other concerns ===
 
