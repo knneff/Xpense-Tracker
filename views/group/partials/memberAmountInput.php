@@ -5,7 +5,19 @@
     </div>
     <!-- Add Expense Button -->
     <div class='flex flex-row justify-center items-center gap-1 pr-2' id='addAmountField<?= $index ?>'>
-        <button onclick='addBtn<?= $index ?>()' type='button' class='btGreen rounded-lg py-1 px-2'>Add Expense</button>
+        <p class='textGray'><?= $_SESSION['currency'] ?> </p>
+        <input
+            class='px-2 py-1 w-24 bgGreen border-none rounded-md'
+            type='decimal'
+            disabled
+            name='amount<?= $userInfoTemp['userid'] ?>'
+            required
+            placeholder='Amount' />
+        <button onclick='addBtn<?= $index ?>()' type='button' class='text-green-500 hover:text-green-300'>
+            <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+        </button>
     </div>
     <!-- Behavior -->
     <script>
@@ -28,8 +40,20 @@
 
         function delBtn<?= $index ?>() {
             document.getElementById('addAmountField<?= $index ?>').innerHTML = `
-            <button onclick='addBtn<?= $index ?>()' type='button' class='btGreen rounded-lg py-1 px-2 flex flex-row'>Add Expense</button>
-        `;
+                <p class='textGray'><?= $_SESSION['currency'] ?> </p>
+                <input
+                    class='px-2 py-1 w-24 bgGreen border-none rounded-md'
+                    type='decimal'
+                    disabled
+                    name='amount<?= $userInfoTemp['userid'] ?>'
+                    required
+                    placeholder='Amount' />
+                <button onclick='addBtn<?= $index ?>()' type='button' class='text-green-500 hover:text-green-300'>
+                    <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>
+                </button>
+            `;
         }
     </script>
 </li>
