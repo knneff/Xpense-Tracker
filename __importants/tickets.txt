@@ -2,10 +2,8 @@ IMPORTANT NOTES:
 - scrollbar-custom  lagyan ng ganyang class ung mga scrollbared divs (KEN DITO)
 
 TICKETS [MOST IMPORTANT TO LEAST]:
-- Bugs: ayusin mga overlay issues
 - audit log looks
 - Editing of group info
-- finalizing database (clean audit log)
 - assigning admin user (can only see audit log)
 - Transferring of ownership sa group
 - Role-based access functionalities (e.g., member cannot create invite link, kick, and add expense)
