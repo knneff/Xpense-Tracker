@@ -106,7 +106,8 @@
                             type="number"
                             name="goalAmount"
                             placeholder="Amount to Achieve"
-                            min="0"
+                            min="1"
+                            max="1000000"
                             step="0.01"
                             class="p-3 rounded-lg border border-gray-400 bgGreen focus:outline-none"
                             required />
@@ -150,6 +151,8 @@
                 <input
                     id="goalUpdateDescription"
                     name="goalUpdateDescription"
+                    minlength="1"
+                    maxlength="30"
                     type="text"
                     class="h-auto sm:h-11 text-left text-2xl sm:text-4xl font-bold textGray bgGreen focus:outline-none mr-8 sm:mr-10">
                 <hr class="border-gray-300 mt-2 mb-5" />

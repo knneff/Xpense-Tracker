@@ -13,6 +13,8 @@
                 <input
                     type="text"
                     name="firstName"
+                    minlength="1"
+                    maxlength="20"
                     placeholder="First Name"
                     value="<?= $fN ?? '' ?>"
                     class="w-1/2 p-3 border border-gray-400 textGray bg-transparent rounded-lg focus:outline-none"
@@ -20,6 +22,8 @@
                 <input
                     type="text"
                     name="lastName"
+                    minlength="1"
+                    maxlength="20"
                     placeholder="Last Name"
                     value="<?= $lN ?? '' ?>"
                     class="w-1/2 p-3 border border-gray-400 textGray bg-transparent rounded-lg focus:outline-none"
@@ -29,6 +33,8 @@
             <input
                 type="text"
                 name="username"
+                minlength="1"
+                maxlength="20"
                 placeholder="Username"
                 value="<?= $username ?? '' ?>"
                 class="w-full p-3 border border-gray-400 textGray bg-transparent rounded-lg focus:outline-none"

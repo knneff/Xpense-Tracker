@@ -32,6 +32,8 @@
                     type="text"
                     id="groupName"
                     name="groupName"
+                    minlength="1"
+                    maxlength="20"
                     placeholder="Group Name"
                     required
                     class="w-full p-3 border rounded-lg bg-gray-700 border-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500">

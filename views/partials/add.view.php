@@ -98,7 +98,7 @@
                         name="desc"
                         placeholder="Description"
                         minlength="1"
-                        maxlength="50"
+                        maxlength="30"
                         required
                         class="p-3 rounded-lg border border-gray-400 bgGreen focus:outline-none">
                     <input

@@ -37,6 +37,8 @@
                     type="number"
                     id="limit"
                     name="limit"
+                    min="1"
+                    max="10000000"
                     placeholder="Spending Limit"
                     value="<?= $systemInfo["expenseLimit"] ?>"
                     class="text-base sm:text-lg w-24 sm:w-32 pl-4 border border-gray-300 textGray bg-transparent rounded-lg focus:outline-none"

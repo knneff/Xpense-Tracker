@@ -52,6 +52,8 @@
                             <input
                                 type="text"
                                 name="firstName"
+                                minlength="1"
+                                maxlength="20"
                                 class="w-full p-1 sm:p-2 border border-gray-400 textGray bg-transparent rounded-lg focus:outline-none"
                                 value="<?= $firstname ?? $userInfo['firstname'] ?>"
                                 required />
@@ -61,6 +63,8 @@
                             <input
                                 type="text"
                                 name="lastName"
+                                minlength="1"
+                                maxlength="20"
                                 class="w-full p-1 sm:p-2 border border-gray-400 textGray bg-transparent rounded-lg focus:outline-none"
                                 value="<?= $lastname ?? $userInfo['lastname'] ?>"
                                 required />
@@ -73,6 +77,8 @@
                         <input
                             type="text"
                             name="username"
+                            minlength="1"
+                            maxlength="20"
                             class="w-full p-1 sm:p-2 border border-gray-400 textGray bg-transparent rounded-lg focus:outline-none"
                             value="<?= $username ?? $userInfo['username'] ?>"
                             required />
