@@ -32,11 +32,12 @@
                 <form id="addForm" method="POST" class="flex flex-col text-base gap-5">
                     <input
                         type="number"
+                        min="0"
+                        max="1000000"
+                        step="0.01"
                         id="amount"
                         name="amount"
                         placeholder="Amount"
-                        min="0"
-                        step="0.01"
                         required
                         class="p-3 rounded-lg border border-gray-400 bgGreen focus:outline-none">
                     <div id="forms2" class="hidden">

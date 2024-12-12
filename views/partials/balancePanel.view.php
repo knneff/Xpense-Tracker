@@ -15,7 +15,10 @@
                             <option value="balanceSet">Set</option>
                         </select>
                         <input
-                            type="decimal"
+                            type="number"
+                            min="0"
+                            max="1000000"
+                            step="0.01"
                             name="amountToAdd"
                             placeholder="0"
                             class="w-2/3 p-3 rounded-lg border border-gray-400 bgGreen focus:outline-none"
