@@ -59,7 +59,7 @@
     } else {
         echo "<ul class='flex flex-col gap-2'>";
         foreach ($expenses as $index => $expense) {
-            $description = stringShortener($expense['description'], 15);
+            $description = stringShortener($expense['description'], 20);
             $expenseTime = formatDateTime($expense['expenseTime']);
             $category = $expense['category'];
             foreach ($categories as $index => $value) {

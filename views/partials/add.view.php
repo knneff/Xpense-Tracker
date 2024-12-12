@@ -6,7 +6,7 @@
 </button>
 
 <!-- Add Tip -->
-<div id='addTip' class='<?= ($_SESSION['showTips'] == true) ? 'block' : 'hidden' ?> fixed bottom-7 text-right right-24 z-50 bg-white rounded-lg p-2'>
+<div id='addTip' class='<?= ($_SESSION['showTips'] == true) ? 'block' : 'hidden' ?> fixed bottom-7 text-right right-24 z-50 bg-gray-300 rounded-lg p-2'>
     You can add expenses anytime here!
     <?php
     if ($_SESSION['showTips'] == true) {
