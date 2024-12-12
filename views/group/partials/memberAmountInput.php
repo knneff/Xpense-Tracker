@@ -11,7 +11,7 @@
     <script>
         function addBtn<?= $index ?>() {
             document.getElementById('addAmountField<?= $index ?>').innerHTML = `
-            <p class='textGray'>$</p>
+            <p class='textGray'><?= $_SESSION['currency'] ?> </p>
             <input
                 class='px-2 py-1 w-24 tlGreen textGray border-none rounded-md'
                 type='decimal'

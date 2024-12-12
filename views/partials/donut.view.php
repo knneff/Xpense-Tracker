@@ -65,7 +65,7 @@ if (!isset($values)) {
                                     const sum = w.globals.seriesTotals.reduce((a, b) => {
                                         return a + b
                                     }, 0)
-                                    return '100%' // ganito value neto before: '=' + sum + '%' ambobo
+                                    return "<?= $_SESSION['currency'] ?> " + sum; // ganito value neto before: '=' + sum + '%' ambobo
                                 },
                             },
                             value: {
@@ -74,7 +74,7 @@ if (!isset($values)) {
                                 offsetY: -20,
                                 color: "#d1d5db", // Same color for value labels inside donut slices
                                 formatter: function(value) {
-                                    return value + "%";
+                                    return "<?= $_SESSION['currency'] ?> " + value;
                                 },
                             },
                         },
@@ -100,14 +100,14 @@ if (!isset($values)) {
             yaxis: {
                 labels: {
                     formatter: function(value) {
-                        return value + "%"
+                        return "<?= $_SESSION['currency'] ?> " + value;
                     },
                 },
             },
             xaxis: {
                 labels: {
                     formatter: function(value) {
-                        return value + "%"
+                        return "<?= $_SESSION['currency'] ?> " + value;
                     },
                 },
                 axisTicks: {

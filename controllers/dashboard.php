@@ -16,7 +16,7 @@ $title = "Hello, {$userInfo['username']}!";
 $expenses = $db->query('select amount, description, category from expenses where userID=? ORDER BY expenses.expenseTime DESC;', [$userID])->fetchAll(PDO::FETCH_ASSOC);
 
 // for subscriptionTile
-$subscriptions = $db->query('select amount, description, period, category from subscriptions WHERE userid=? ORDER BY paymentDateTime ASC LIMIT 3;', [$userID])->fetchAll(PDO::FETCH_ASSOC);
+$subscriptions = $db->query('select amount, description, period, category from subscriptions WHERE userid=? ORDER BY paymentDateTime ASC LIMIT 4;', [$userID])->fetchAll(PDO::FETCH_ASSOC);
 $pendingSubCount = $db->query("SELECT COUNT(expensesHistory.expenseID) from expensesHistory JOIN users ON expensesHistory.userID = users.userid WHERE expensesHistory.expenseType=? AND users.userid=? AND expensesHistory.expenseState=? ORDER BY expenseTime ASC;", ['subscription', $userID, 'pending'])->fetchColumn();
 
 // for goals tile
@@ -27,7 +27,7 @@ $groups = $db->query("SELECT clan.groupName, clan.groupIcon, clan.groupID FROM c
 
 // mga information sa charts potangina bawal maduling dito
 require('controllers/noBars/categories.php');
-require('controllers/noBars/statsPieDonut.php');
+require('controllers/noBars/statsPie.php');
 
 
 require('views/dashboard/dashboard.view.php');

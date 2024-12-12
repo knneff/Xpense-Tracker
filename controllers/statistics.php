@@ -33,7 +33,7 @@ $expenses7 = $db->query("SELECT amount, description, category, expenseTime FROM 
 require('controllers/noBars/statsLine.php');
 
 $expenses = $db->query('select amount, description, category from expenses where userID=? ORDER BY expenses.expenseTime DESC;', [$userID])->fetchAll(PDO::FETCH_ASSOC);
-require('controllers/noBars/statsPieDonut.php');
+require('controllers/noBars/statsDonut.php');
 
 
 require('views/statistics.view.php');
