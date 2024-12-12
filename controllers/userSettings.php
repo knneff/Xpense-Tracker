@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_FILES['icon']) && isset($_P
             $currentIconPath = $userInfo['userIcon'];
 
             // if profile pic is already there
-            if (!empty($currentIconPath) && file_exists($currentIconPath)) {
+            if (!empty($currentIconPath) && file_exists($currentIconPath) && $currentIconPath !== "assets/icons/user/_default.png") {
                 unlink($currentIconPath);
             }
 

@@ -35,7 +35,7 @@
                     id="toggleButton">
                     <img
                         class="size-8 sm:size-10 rounded-full object-cover border-2 border-gray-300 "
-                        src="<?= $_SESSION['userIcon'] ?>">
+                        src="<?= $userInfo['userIcon'] ?? "assets/icons/user/_default.png" ?>">         
                 </button>
             </div>
 

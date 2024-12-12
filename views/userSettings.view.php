@@ -15,8 +15,7 @@
                     <div class="relative">
                         <img
                             id="profileImage"
-                            src="<?= $userInfo['userIcon'] ?>"
-                            alt="Profile"
+                            src="<?= $userInfo['userIcon'] ?? "assets/icons/user/_default.png" ?>"
                             class="w-28 h-28 md:w-36 md:h-36 rounded-full border-4 border-gray-400 object-cover" />
                         <button
                             type="button"
