@@ -106,7 +106,7 @@
                         id="datetime"
                         name="datetime"
                         required
-                        class="p-3 rounded-lg border border-gray-400 bgGreen focus:outline-none">
+                        class="p-3 w-full rounded-lg border border-gray-400 bgGreen focus:outline-none">
                     <input
                         type="hidden"
                         id="type"
