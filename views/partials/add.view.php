@@ -5,18 +5,15 @@
     </svg>
 </button>
 
-
-<?php
-if ($_SESSION['showTips'] == true) {
-    echo "
-        <div id='addTip' class='fixed bottom-7 text-right right-24 z-50 bg-white rounded-lg p-2'>
-            You can add expenses anytime here! ->
-        </div>
-    ";
-    $_SESSION['showTips'] = false;
-}
-?>
-
+<!-- Add Tip -->
+<div id='addTip' class='<?= ($_SESSION['showTips'] == true) ? 'block' : 'hidden' ?> fixed bottom-7 text-right right-24 z-50 bg-white rounded-lg p-2'>
+    You can add expenses anytime here!
+    <?php
+    if ($_SESSION['showTips'] == true) {
+        $_SESSION['showTips'] = false;
+    };
+    ?>
+</div>
 
 <!-- Add Panel -->
 <main id="addPanel" class="hidden">
